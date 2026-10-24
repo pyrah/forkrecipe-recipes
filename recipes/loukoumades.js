@@ -154,7 +154,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Plongez une cuillère dans le centre de la pâte éprouvée et tirez - la lentement — un long voile extensible de pâte devrait sortir de la cuillère avant de casser. Cette élasticité est l'air de piégeage du réseau de gluten fabriqué à la levure. Si la pâte tombe de la cuillère dans une pente sans voile, elle n'a pas été prouvée assez longtemps."
+      "feelCue": "Plongez une cuillère dans le centre de la pâte éprouvée et tirez - la lentement — un long voile extensible de pâte devrait sortir de la cuillère avant de casser. Cette élasticité est l'air de piégeage du réseau de gluten fabriqué à la levure. Si la pâte tombe de la cuillère dans une infusion sans voile, elle n'a pas été prouvée assez longtemps."
     },
     {
       "nodeId": "step_2",

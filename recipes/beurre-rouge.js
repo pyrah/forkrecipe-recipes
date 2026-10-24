@@ -102,7 +102,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sérum",
+      "action": "Couper en dés",
       "inputs": [
         "ing_03"
       ],
@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "wine_reduction",
         "ing_04"
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "mounted_beurre_rouge",
         "ing_05",

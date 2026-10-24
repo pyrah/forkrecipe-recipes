@@ -101,7 +101,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "scalded_milk"
       ],

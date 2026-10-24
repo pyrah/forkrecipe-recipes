@@ -102,7 +102,7 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 3,
       "defaultUnit": "tbsp",
       "substitutions": [
@@ -209,7 +209,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Le bouillon est trop doux ou trop aigre — un ajustement est allé trop loin.",
-            "action": "Corriger progressivement: ajouter de la chaux pour l'aur, du sucre pour le sucré, de la sauce de poisson pour le sel et la profondeur, de l'eau pour diluer."
+            "action": "Corriger progressivement: ajouter du citron vert pour l'aur, du sucre pour le sucré, de la sauce de poisson pour le sel et la profondeur, de l'eau pour diluer."
           }
         ]
       },
@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "seasoned_pork_mix"
       ],
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "grilled_patties",
         "nuoc_cham_broth"

@@ -121,7 +121,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -158,13 +158,13 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "cured_belly",
         "ing_09"
       ],
       "outputState": "confited_belly",
-      "instructions": "Préchauffer le four à 90°C (195°F). Faire fondre la graisse de porc dans un plat de rôtissage profond ou un four hollandais assez grand pour tenir le ventre. Placez la peau du ventre vers le bas, versez suffisamment de gras chaud pour la submerger complètement — la graisse devrait couvrir le ventre d'au moins 1 cm. Placer un morceau de parchemin sur la surface, puis sur le couvercle ou le papier. Transférer au four et cuire 6-8 heures. Ne précipitez pas cela avec plus de chaleur. À 90°C, le collagène dans le tissu conjonctif et la peau se convertit progressivement en gélatine sans jamais forcer la graisse à frire — la distinction entre confit et braconnage dans la graisse.",
+      "instructions": "Préchauffer le four à 90°C (195°F). Faire fondre la graisse de porc dans un plat de rôtissage profond ou un four hollandais assez grand pour tenir le ventre. Placez la peau du ventre vers le bas, versez suffisamment de gras chaud pour la submerger complètement — la graisse devrait couvrir le ventre d'au moins 1 cm. Placer un morceau de parchemin sur la surface, puis sur le couvercle ou le papier. Transférer au four et cuire 6-8 heures. Ne précipitez pas cela avec plus de chaleur. À 90°C, le collagène dans le tissu conjonctif et la peau se convertit progressivement en gélatine sans jamais forcer la graisse à frire — la distinction entre confit et pochage dans la graisse.",
       "visualCue": {
         "primaryTarget": "Le ventre est passé du rose pâle à une couleur opaque de crème d'ivoire. Entouré d'un léger tremblement, d'une graisse limpide, sans bouillonner ni frire. Une fine sonde insérée dans la viande ne présente presque aucune résistance.",
         "spectrum": [
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "confited_belly"
       ],
@@ -219,7 +219,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "pressed_belly"
       ],

@@ -109,7 +109,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "miso_marinade",
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "glazed_broiled_salmon",
         "ing_07"

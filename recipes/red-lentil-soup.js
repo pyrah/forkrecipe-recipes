@@ -161,7 +161,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_09",
         "ing_02",
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_soup_base",
         "ing_01",
@@ -231,7 +231,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cooked_lentil_soup",
         "ing_11"
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_13",
         "ing_14"
@@ -293,7 +293,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "smooth_lentil_soup",
         "chili_butter"

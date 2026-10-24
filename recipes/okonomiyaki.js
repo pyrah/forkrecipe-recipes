@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "okonomiyaki_batter",
         "ing_01",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "okonomiyaki_mix",
         "ing_05",
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "cooked_okonomiyaki",
         "ing_09",

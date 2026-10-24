@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "pastry_dough"
       ],
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "rested_pastry"
       ],

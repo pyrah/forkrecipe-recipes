@@ -115,7 +115,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_01"
       ],
@@ -145,7 +145,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "hot_fat",
         "ing_02",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "bloomed_spice_fat",
         "ing_07"

@@ -137,7 +137,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "kofta_mixture"
       ],
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "shaped_kofta"
       ],

@@ -149,7 +149,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -218,7 +218,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_12",
         "ing_01"
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "hot_dolsot",
         "seasoned_namul",

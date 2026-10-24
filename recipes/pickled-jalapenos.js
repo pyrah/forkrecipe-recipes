@@ -118,7 +118,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_01",
         "ing_06",
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "packed_jar",
         "pickling_brine"
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "brined_jalapenos"
       ],

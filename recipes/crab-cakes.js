@@ -132,7 +132,7 @@ export default {
       "ratioValue": 5,
       "defaultUnit": "parts",
       "substitutions": [
-        "Chaux"
+        "citron vert"
       ]
     }
   ],
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_01",
         "ing_07",
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "crab_mixture"
       ],
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "chilled_patties",
         "ing_08",
@@ -267,7 +267,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "seared_crab_cakes",
         "ing_10"

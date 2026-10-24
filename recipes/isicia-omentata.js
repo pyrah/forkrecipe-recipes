@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_05",
         "ing_04",
@@ -145,11 +145,11 @@ export default {
       "outputState": "toasted_aromatics",
       "instructions": "Dans une poêle sèche à feu moyen, faire griller les pignons jusqu'à ce qu'ils deviennent d'or pâle et sentent la noix, 2-3 minutes, en tremblant constamment. Retirez-les, puis réchauffez brièvement le poivre fissuré, le cumin et la graine de love dans la chaleur résiduelle jusqu'à odorat, environ 30 secondes. Écraser grossièrement les pignons refroidis afin qu'ils gardent une bouchée.",
       "visualCue": {
-        "primaryTarget": "Les noix de pin sont uniformément glandées avec quelques bords ambres; les épices sentent vifs et chaudes, sans fumée montant de la poêle.",
+        "primaryTarget": "Les pignons de pin sont uniformément glandées avec quelques bords ambres; les épices sentent vifs et chaudes, sans fumée montant de la poêle.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les noix de pin sont encore blanc crayeux et les épices sentent plat et cru.",
+            "description": "Les pignons de pin sont encore blanc crayeux et les épices sentent plat et cru.",
             "action": "Continuez à griller et à trembler — la noisette fleurit seulement une fois qu'elle prend de la couleur."
           },
           {
@@ -160,7 +160,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les noix sont brun foncé et amer, les épices sont acrides et commencent à fumer.",
-            "action": "Jeter les noix brûlées et remettre en état un lot frais; les noix de pin brûlées vont amer la patty entière."
+            "action": "Jeter les noix brûlées et remettre en état un lot frais; les pignons de pin brûlées vont amer la patty entière."
           }
         ]
       },
@@ -177,9 +177,9 @@ export default {
         "ing_07"
       ],
       "outputState": "seasoned_forcemeat",
-      "instructions": "Dans un grand bol, mélanger la menthe de boeuf avec les noix de pin grillées et les épices, le pain trempé au vin, le garum et le vin. Travaillez le mélange avec vos mains pendant environ une minute jusqu'à ce que le garum soit uniformément distribué et que la viande commence juste à se sentir collante et cohésive. Ne le surmenez pas dans une pâte — vous voulez une miette tendre, ouverte, pas une saucisse dense.",
+      "instructions": "Dans un grand bol, mélanger la menthe de boeuf avec les pignons de pin grillées et les épices, le pain trempé au vin, le garum et le vin. Travaillez le mélange avec vos mains pendant environ une minute jusqu'à ce que le garum soit uniformément distribué et que la viande commence juste à se sentir collante et cohésive. Ne le surmenez pas dans une pâte — vous voulez une miette tendre, ouverte, pas une saucisse dense.",
       "visualCue": {
-        "primaryTarget": "Une viande de force brillante et uniformément mouchetée qui tient ensemble lorsqu'elle est pressée, mais qui montre toujours la texture de la vis et des vis de la noix de pin.",
+        "primaryTarget": "Une viande de force brillante et uniformément mouchetée qui tient ensemble lorsqu'elle est pressée, mais qui montre toujours la texture de la vis et des vis de la pignons de pin.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "wrapped_patties",
         "ing_09"

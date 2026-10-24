@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "sauced_spaghetti",
         "ing_06",

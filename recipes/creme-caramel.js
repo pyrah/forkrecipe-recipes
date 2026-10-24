@@ -88,7 +88,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_04",
         "ing_06"
@@ -119,7 +119,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_05"

@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -158,7 +158,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_08"
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "toasted_rice",
         "green_puree"
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "color_absorbed_rice",
         "ing_07",
@@ -252,7 +252,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "cooked_arroz_verde"
       ],

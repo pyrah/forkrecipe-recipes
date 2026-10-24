@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_chiles",
         "charred_aromatics",
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "ing_01",
         "birria_chile_paste"
@@ -257,7 +257,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "braised_birria"
       ],

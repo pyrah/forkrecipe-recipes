@@ -181,7 +181,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_11",
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "softened_soffritto",
         "ing_06"
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "wine_base",
         "ing_07",
@@ -313,7 +313,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_shanks",
         "ing_13"
@@ -344,7 +344,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_sauce",
         "ing_14",

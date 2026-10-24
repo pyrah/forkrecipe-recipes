@@ -211,7 +211,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_16",
         "ing_07",
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "soffritto_base",
         "ing_09",
@@ -277,7 +277,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "wine_base",
         "ing_06",
@@ -311,7 +311,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "tomato_broth",
         "ing_01",
@@ -346,7 +346,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_cioppino",
         "ing_15",

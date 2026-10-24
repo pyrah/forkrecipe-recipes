@@ -4,7 +4,7 @@ export default {
   "slug": "larb-dressing",
   "author": "ForkRecipe Kitchen",
   "title": "Dressage de la feuille",
-  "description": "La vinaigrette poinçonnée, grillée au riz épais de la lao-thaï – sauce de poisson, chaux, chili séché, et kao kua (poudre de riz grillée) se mélangent, donnant à la salade finie sa croûte aux noix et son poinçon à base de plantes.",
+  "description": "La vinaigrette poinçonnée, grillée au riz épais de la lao-thaï – sauce de poisson, citron vert, chili séché, et kao kua (poudre de riz grillée) se mélangent, donnant à la salade finie sa croûte aux noix et son poinçon à base de plantes.",
   "cuisine": "Thaï",
   "culture": "Lao / Nord de la Thaïlande",
   "category": "condiments",
@@ -59,7 +59,7 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 3,
       "defaultUnit": "parts",
       "substitutions": []
@@ -104,7 +104,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01"
       ],
@@ -130,11 +130,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Après le broyage, pincez une petite quantité de poudre et frottez - la entre vos doigts; elle doit être sèche comme du poivre fin et laisser une tache sèche et bronzée, et non un frottis huileux. Tenez une pincée sous votre nez: vous devriez obtenir une chaleur presque biscuit, propre et noisette, avant l'ajout de la chaux et de la sauce de poisson."
+      "feelCue": "Après le broyage, pincez une petite quantité de poudre et frottez - la entre vos doigts; elle doit être sèche comme du poivre fin et laisser une tache sèche et bronzée, et non un frottis huileux. Tenez une pincée sous votre nez: vous devriez obtenir une chaleur presque biscuit, propre et noisette, avant l'ajout du citron vert et de la sauce de poisson."
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "toasted_rice_powder",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "larb_dressing_base",
         "ing_06",
@@ -186,12 +186,12 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les herbes sont légèrement enduites et commencent tout juste à ramollir là où elles contactent l'acide dans le jus de chaux. Le parfum de menthe est vif et frais contre la base aigre.",
+            "description": "Les herbes sont légèrement enduites et commencent tout juste à ramollir là où elles contactent l'acide dans le jus de citron vert. Le parfum de menthe est vif et frais contre la base aigre.",
             "action": "Verser immédiatement sur la viande de larbe chaude et disperser le reste de la poudre de riz sur le dessus. La chaleur de la viande fait le travail final."
           },
           {
             "state": "Overdone",
-            "description": "Les herbes ont été assises dans la vinaigrette acide trop longtemps et sont maintenant olive-drabe et boiteux, le parfum de menthe remplacé par une odeur vert terne cuite.",
+            "description": "Les herbes ont été assises dans la vinaigrette acide trop longtemps et sont maintenant olive-drabe et mou, le parfum de menthe remplacé par une odeur vert terne cuite.",
             "action": "Ajouter une petite poignée d'herbe fraîche à la fin pour restaurer la luminosité. Faire la vinaigrette et ajouter les herbes au plus 5 minutes avant de servir."
           }
         ]

@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_05"
       ],
@@ -186,7 +186,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "blanched_pork",
         "caramelized_sugar"
@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "coated_pork",
         "ing_02",
@@ -255,7 +255,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_pork"
       ],

@@ -4,7 +4,7 @@ export default {
   "slug": "thai-larb",
   "author": "ForkRecipe Kitchen",
   "title": "Thai Larb Gai",
-  "description": "Poulet haché cuit rapidement jeté avec de la poudre de riz grillée, de la chaux, de la sauce de poisson, et une avalanche d'herbes fraîches – vives, vives et texturales.",
+  "description": "Poulet haché cuit rapidement jeté avec de la poudre de riz grillée, du citron vert, de la sauce de poisson, et une avalanche d'herbes fraîches – vives, vives et texturales.",
   "cuisine": "Thaï",
   "culture": "Isan/Thaïlandais du Nord",
   "category": "proteins",
@@ -62,7 +62,7 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 45,
       "defaultUnit": "ml",
       "substitutions": [
@@ -147,7 +147,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02"
       ],
@@ -177,12 +177,12 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01"
       ],
       "outputState": "cooked_chicken",
-      "instructions": "Chauffer un wok à feu vif jusqu'à ce qu'il fume. Ajouter le poulet moulu sans huile — la graisse naturelle de la viande est suffisante et l'huile causerait de la vapeur. Séparer rapidement la viande avec une spatule, la répandre mince sur la surface du wok chaud. Cuire jusqu'à ce qu'il ne soit plus rose, environ 3-4 minutes. Ne pas cuire complètement — la chaleur résiduelle et l'acide de chaux finiront. Le but est à peine cuit, le poulet encore juteux.",
+      "instructions": "Chauffer un wok à feu vif jusqu'à ce qu'il fume. Ajouter le poulet moulu sans huile — la graisse naturelle de la viande est suffisante et l'huile causerait de la vapeur. Séparer rapidement la viande avec une spatule, la répandre mince sur la surface du wok chaud. Cuire jusqu'à ce qu'il ne soit plus rose, environ 3-4 minutes. Ne pas cuire complètement — la chaleur résiduelle et l'acide de citron vert finiront. Le but est à peine cuit, le poulet encore juteux.",
       "visualCue": {
         "primaryTarget": "Le poulet est blanc ivoire pâle dans l'ensemble avec un soupçon de brun doré sur certains morceaux. Pas de rose restant, mais pas de brunissement profond non plus.",
         "spectrum": [
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "cooked_chicken",
         "ing_03",
@@ -216,7 +216,7 @@ export default {
         "ing_11"
       ],
       "outputState": "dressed_chicken",
-      "instructions": "Travailler pendant que le poulet est encore très chaud (la chaleur aide à pénétrer la vinaigrette), ajouter la sauce de poisson, le jus de lime, les flocons de chili séchés et le sucre. Jetez vigoureusement. Goûtez immédiatement — l'équilibre est le plat. Il devrait d'abord frapper le aigre, puis le sel, puis chauffer le bâtiment à l'arrière de la gorge. Ajuster : plus de chaux pour la luminosité, plus de sauce poisson pour la profondeur, plus de chili pour le feu.",
+      "instructions": "Travailler pendant que le poulet est encore très chaud (la chaleur aide à pénétrer la vinaigrette), ajouter la sauce de poisson, le jus de lime, les flocons de chili séchés et le sucre. Jetez vigoureusement. Goûtez immédiatement — l'équilibre est le plat. Il devrait d'abord frapper le aigre, puis le sel, puis chauffer le bâtiment à l'arrière de la gorge. Ajuster : plus de citron vert pour la luminosité, plus de sauce poisson pour la profondeur, plus de chili pour le feu.",
       "visualCue": {
         "primaryTarget": "Le poulet a absorbé la vinaigrette et brille. La surface semble humide plutôt que humide. Les flocons de Chili sont également distribués.",
         "spectrum": [
@@ -227,7 +227,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Chaque morceau de poulet est enduit et scintillement. Le liquide est absorbé, non mis en commun. L'arôme est de la chaux vive et des poissons fermentés, les deux distincts.",
+            "description": "Chaque morceau de poulet est enduit et scintillement. Le liquide est absorbé, non mis en commun. L'arôme est du citron vert vive et des poissons fermentés, les deux distincts.",
             "action": "Ajouter les herbes et la poudre de riz immédiatement tout en restant chaud."
           },
           {
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "dressed_chicken",
         "ing_06",

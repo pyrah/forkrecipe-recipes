@@ -117,7 +117,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "egg_mixture",
         "ing_01",
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "dorayaki_batter",
         "ing_09"
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooked_pancakes",
         "ing_08"

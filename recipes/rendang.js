@@ -66,7 +66,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Aromatic",
-      "name": "Feuilles de chaux de Kaffir (pourpre de jeruk)",
+      "name": "Feuilles de citron vert de Kaffir (pourpre de jeruk)",
       "ratioValue": 10,
       "defaultUnit": "g",
       "substitutions": []
@@ -184,7 +184,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_09",
         "ing_10",
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "rempah_paste",
         "ing_03",
@@ -254,7 +254,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "fried_rempah",
         "ing_01",
@@ -289,7 +289,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "simmering_rendang"
       ],

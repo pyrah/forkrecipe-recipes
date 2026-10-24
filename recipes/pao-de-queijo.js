@@ -94,7 +94,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -126,7 +126,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "scalded_liquid"
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "scalded_dough",
         "ing_04",
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "cheese_dough"
       ],

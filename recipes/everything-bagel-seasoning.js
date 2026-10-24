@@ -90,7 +90,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01"
       ],
@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "toasted_white_sesame",
         "ing_02",

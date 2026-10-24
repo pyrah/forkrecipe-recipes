@@ -73,7 +73,7 @@ export default {
       "defaultUnit": "g",
       "substitutions": [
         "noix de cajou",
-        "pécans"
+        "noix de noix de pécan"
       ]
     },
     {

@@ -99,7 +99,7 @@ export default {
       "ratioValue": 30,
       "defaultUnit": "pieces",
       "substitutions": [
-        "noix de pin",
+        "pignons de pin",
         "Pistaches"
       ]
     },
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "basbousa_batter",
         "ing_07"
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_08",
         "ing_09",

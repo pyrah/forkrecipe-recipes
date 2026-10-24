@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01"
       ],
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "spice_paste",
         "ing_07"
@@ -228,7 +228,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_spice_base",
         "peanut_paste",

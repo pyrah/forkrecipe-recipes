@@ -170,7 +170,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_15",
         "ing_05",

@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "almond_garlic_paste",
         "ing_01",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "tomato_herb_mixture",
         "ing_05",

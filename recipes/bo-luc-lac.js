@@ -150,7 +150,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "marinated_beef",
         "ing_06",
@@ -216,14 +216,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_07",
         "ing_08",
         "ing_09"
       ],
       "outputState": "dipping_sauce",
-      "instructions": "Dans un petit plat, mélanger le jus de lime frais, le sel grossier et le poivre noir fissuré. Remuer brièvement. Il s'agit d'un des condiments vietnamiens les plus anciens et les plus simples. Goûtez-le: la chaux doit être vive et aigre, le sel vers l'avant, et le poivre noir doit piquer l'arrière de la gorge avec une chaleur sèche. Ajuster avec plus de chaux ou de sel au besoin. Chaque diner trempe le cube de bœuf chaud dans la sauce immédiatement après avoir mangé, de sorte que le contraste entre l'extérieur caramélisé chaud du boeuf et la sauce fraîche, brillante et poivrée est immédiat.",
+      "instructions": "Dans un petit plat, mélanger le jus de lime frais, le sel grossier et le poivre noir fissuré. Remuer brièvement. Il s'agit d'un des condiments vietnamiens les plus anciens et les plus simples. Goûtez-le: le citron vert doit être vive et aigre, le sel vers l'avant, et le poivre noir doit piquer l'arrière de la gorge avec une chaleur sèche. Ajuster avec plus de citron vert ou de sel au besoin. Chaque diner trempe le cube de bœuf chaud dans la sauce immédiatement après avoir mangé, de sorte que le contraste entre l'extérieur caramélisé chaud du boeuf et la sauce fraîche, brillante et poivrée est immédiat.",
       "visualCue": {
         "primaryTarget": "Une petite piscine de jus de lime jaune pâle avec des cristaux de sel visibles et des flocons de poivre noir fissurés, simples et tranchants.",
         "spectrum": [
@@ -235,20 +235,20 @@ export default {
           {
             "state": "Perfect",
             "description": "Lumineux, aigre, salé et poivreux. Un plongeon du doigt devrait produire une réponse salivaire presque immédiatement. Il devrait avoir un goût assez bon pour manger par lui-même, mais clairement conçu pour travailler comme une feuille pour le boeuf riche et gras.",
-            "action": "Servir dans des petits plats de trempage individuels à côté du bœuf plaqué. Faites - la fraiche — elle ne s'améliore pas avec la chaux qui s'oxyde."
+            "action": "Servir dans des petits plats de trempage individuels à côté du bœuf plaqué. Faites - la fraiche — elle ne s'améliore pas avec le citron vert qui s'oxyde."
           },
           {
             "state": "Overdone",
             "description": "Le poivre noir a été broyé à une poudre fine plutôt que fissuré et a transformé la sauce uniformément gris foncé et poivré en bouche.",
-            "action": "Diluer avec plus de jus de lime. Utilisez du poivre grossièrement craqué la prochaine fois — le contraste textural du poivre contre la chaux fraîche fait partie de l'expérience."
+            "action": "Diluer avec plus de jus de lime. Utilisez du poivre grossièrement craqué la prochaine fois — le contraste textural du poivre contre le citron vert fraîche fait partie de l'expérience."
           }
         ]
       },
-      "feelCue": "Plongez un bout de doigt et touchez-le à l'extrémité de votre langue — la chaux devrait vous faire saliver sur les côtés de votre bouche, le sel devrait s'enregistrer instantanément au centre, et le poivre noir devrait arriver 2 secondes plus tard comme un picotement sec à l'arrière. Tous les trois en séquence signifie que la sauce est prête."
+      "feelCue": "Plongez un bout de doigt et touchez-le à l'extrémité de votre langue — le citron vert devrait vous faire saliver sur les côtés de votre bouche, le sel devrait s'enregistrer instantanément au centre, et le poivre noir devrait arriver 2 secondes plus tard comme un picotement sec à l'arrière. Tous les trois en séquence signifie que la sauce est prête."
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "seared_beef",
         "dipping_sauce",

@@ -83,7 +83,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -111,11 +111,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Un grain de dal d'urad trempé pressé entre les ongles doit se diviser proprement sans résistance — entièrement mou et donnant partout."
+      "feelCue": "Un grain de dal d'urad trempé pressé entre les ongles doit se diviser proprement sans résistance — entièrement ramollis et donnant partout."
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "soaked_grains",
         "ing_04"
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ground_batter",
         "ing_03"

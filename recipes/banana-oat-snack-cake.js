@@ -147,7 +147,7 @@ export default {
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": [
-        "pécans",
+        "noix de noix de pécan",
         "croustilles de chocolat"
       ]
     }
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "banana_wet_mix",
         "ing_07",
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "snack_cake_batter",
         "ing_12"

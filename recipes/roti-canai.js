@@ -129,7 +129,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "roti_dough"
       ],
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "developed_dough",
         "ing_04"
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "rested_dough",
         "ing_04"
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "layered_flatbread",
         "ing_04"

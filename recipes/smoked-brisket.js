@@ -73,7 +73,7 @@ export default {
       "ratioValue": 4,
       "defaultUnit": "pieces",
       "substitutions": [
-        "bois de pécan",
+        "bois de noix de pécan",
         "hickory (utiliser parcimonieusement une fumée plus forte)"
       ]
     },
@@ -121,7 +121,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "trimmed_brisket",
         "ing_02",
@@ -154,7 +154,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fumée",
+      "action": "Fumer",
       "inputs": [
         "rubbed_brisket",
         "ing_04"
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "smoked_brisket_unwrapped"
       ],
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "wrapped_brisket"
       ],
@@ -245,7 +245,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "rested_brisket"
       ],

@@ -111,7 +111,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Brosse",
+      "action": "Badigeonner",
       "inputs": [
         "ing_03"
       ],
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "buttered_ramekins",
         "ing_01",
@@ -170,7 +170,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Trop de crème a été ajoutée et déborde le bord du ramekin.",
-            "action": "Enlevez une cuillère à café de crème avant de la faire cuire — le surremplissage provoque le braconnage de l'œuf plutôt que de faire cuire et empêche le blanc de se fixer proprement."
+            "action": "Enlevez une cuillère à café de crème avant de la faire cuire — le surremplissage provoque le pochage de l'œuf plutôt que de faire cuire et empêche le blanc de se fixer proprement."
           }
         ]
       },
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_cocotte"
       ],

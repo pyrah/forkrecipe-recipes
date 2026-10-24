@@ -161,7 +161,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "browned_mushrooms",
         "ing_02",
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "creamy_barley",
         "browned_mushrooms",

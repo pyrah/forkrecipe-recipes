@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_meat",
         "ing_03",
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "simmering_broth",
         "ing_05",
@@ -210,7 +210,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Tous les légumes donnent à un couteau sans résistance. Les poireaux sont complètement boiteux mais ne se désintègrent pas. Les carottes ont une légère lueur dorée du bouillon.",
+            "description": "Tous les légumes donnent à un couteau sans résistance. Les poireaux sont complètement mou mais ne se désintègrent pas. Les carottes ont une légère lueur dorée du bouillon.",
             "action": "Soulevez tout du bouillon. Servir le bouillon tendu d'abord, puis la viande et les légumes."
           },
           {
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "cooked_pot_au_feu"
       ],

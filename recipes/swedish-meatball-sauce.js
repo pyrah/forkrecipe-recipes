@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "pale_roux",
         "ing_03"
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "veloute_base",
         "ing_04",

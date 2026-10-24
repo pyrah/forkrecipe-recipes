@@ -129,7 +129,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "pastry_dough",
         "ing_04"
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_05",
         "ing_10",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "infused_milk",
         "ing_06",
@@ -258,7 +258,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "laminated_pastry",
         "custard_filling"

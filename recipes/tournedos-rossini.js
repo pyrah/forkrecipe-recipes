@@ -144,7 +144,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_03",
         "ing_04"
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "fried_croutons",
         "ing_01",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "rested_filet",
         "ing_02",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "seared_foie",
         "ing_07",

@@ -111,7 +111,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_07"
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "salted_eggplant",
         "ing_05"
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_eggplant",
         "filling",

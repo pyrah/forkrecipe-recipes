@@ -133,7 +133,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01",
         "minced_anchovies",
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "compound_butter_mixture"
       ],
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "rolled_anchovy_butter"
       ],

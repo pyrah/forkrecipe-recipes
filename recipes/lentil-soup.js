@@ -131,7 +131,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "softened_aromatics",
         "ing_01",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cooked_lentil_soup"
       ],
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_08",
         "ing_06"
@@ -258,7 +258,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "blended_soup",
         "paprika_butter",

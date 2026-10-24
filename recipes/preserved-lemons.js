@@ -43,7 +43,7 @@ export default {
       "ratioValue": 100,
       "defaultUnit": "parts",
       "substitutions": [
-        "chaux (les chaux conservées sont également classiques dans certaines traditions nord-africaines)"
+        "citron vert (les citron vert conservées sont également classiques dans certaines traditions nord-africaines)"
       ]
     },
     {
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "packed_preservation_jar"
       ],
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "curing_preserved_lemons"
       ],

@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "churro_dough"
       ],
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "rested_dough",
         "ing_07"
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "fried_churros",
         "ing_05",

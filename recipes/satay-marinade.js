@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "satay_marinade"
       ],

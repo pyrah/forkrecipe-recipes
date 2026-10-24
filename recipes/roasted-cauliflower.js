@@ -116,7 +116,7 @@ export default {
     {
       "ingId": "ing_09",
       "role": "Garnish",
-      "name": "Persil coupé et noix de pin grillées",
+      "name": "Persil coupé et pignons de pin grillées",
       "ratioValue": 4,
       "defaultUnit": "parts",
       "substitutions": [
@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "dressed_cauliflower"
       ],
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "roasted_cauliflower",
         "ing_03",
@@ -232,7 +232,7 @@ export default {
         "ing_09"
       ],
       "outputState": "finished_roasted_cauliflower",
-      "instructions": "Transférer la tête reposée dans un plateau chaud. Pressez sur le jus de la moitié restante du citron, dispersez avec du sel feuilleté et quelques moulures de poivre noir, puis douchez avec du persil haché et des noix de pin grillées. Portez le tout à la table et découpez les coins épais de la couronne à travers la tige tendre, en cuillant l'huile de poêle épicée sur chaque portion.",
+      "instructions": "Transférer la tête reposée dans un plateau chaud. Pressez sur le jus de la moitié restante du citron, dispersez avec du sel feuilleté et quelques moulures de poivre noir, puis douchez avec du persil haché et des pignons de pin grillées. Portez le tout à la table et découpez les coins épais de la couronne à travers la tige tendre, en cuillant l'huile de poêle épicée sur chaque portion.",
       "visualCue": {
         "primaryTarget": "Une tête en bronze brillant aux herbes vertes et aux pignons de pin dorés, coupant en coins qui tiennent ensemble de la couronne croustillante au noyau doux et assaisonné.",
         "spectrum": [

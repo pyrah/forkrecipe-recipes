@@ -169,7 +169,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_09",
         "ing_10",
@@ -270,7 +270,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooked_lentils",
         "tahini_sauce",

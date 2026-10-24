@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "softened_alliums",
         "ing_02",
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "steamed_mussels",
         "ing_05",

@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_07",
         "ing_06",
@@ -242,7 +242,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "semolina_dough",
         "ing_04"
@@ -273,7 +273,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "laminated_dough",
         "ricotta_filling"
@@ -304,7 +304,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_sfogliatelle",
         "ing_12"

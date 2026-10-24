@@ -1,13 +1,8 @@
-ForkRecipe — Open Recipe Dataset
-Copyright © 2026 FoodML (https://foodml.xyz) and the ForkRecipe contributors named in data/users.js.
+ForkRecipe — Catalogue de recettes ouvert
+Copyright © 2026 FoodML (https://foodml.xyz) et les contributeurs ForkRecipe nommés dans data/users.js.
 
-The recipes and data in this repository are licensed under Creative Commons Attribution-ShareAlike 4.0
-International (CC BY-SA 4.0); see LICENSE. Reuse and remix them freely, with credit, and share adaptations under the
-same licence. Recipes adapted from public-domain sources remain free of copyright in their original form.
+Les recettes et les données de ce dépôt sont publiées sous la licence Creative Commons Attribution — Partage dans les mêmes conditions 4.0 International (CC BY-SA 4.0) ; voir LICENSE. Vous pouvez les réutiliser et les adapter librement, avec attribution, et devez partager les adaptations sous la même licence. Les recettes adaptées de sources du domaine public restent libres de droits dans leur forme originale.
 
-"ForkRecipe", the ForkRecipe logo, "FoodML" and "alcheMISE" are trademarks of FoodML. CC BY-SA 4.0 does not grant
-trademark rights (section 2(b)(2)): you may say your work uses or is adapted from the ForkRecipe dataset, but you may
-not name your product, site or dataset "ForkRecipe" or suggest FoodML endorses it.
+« ForkRecipe », le logo ForkRecipe, « FoodML » et « alcheMISE » sont des marques de FoodML. La licence CC BY-SA 4.0 ne confère aucun droit sur ces marques (article 2(b)(2)) : vous pouvez indiquer que votre travail utilise le jeu de données ForkRecipe ou en est adapté, mais vous ne pouvez pas nommer votre produit, site ou jeu de données « ForkRecipe », ni laisser entendre que FoodML l’approuve.
 
-The ForkRecipe app at forkrecipe.com (the fork/diff engine, auth, the AI content pipeline, admin tooling) is not in
-this repository and is not licensed under CC BY-SA.
+L’application ForkRecipe sur forkrecipe.com (moteur de forks et de différences, authentification, pipeline de contenu IA et outils d’administration) n’est pas incluse dans ce dépôt et n’est pas couverte par la licence CC BY-SA.

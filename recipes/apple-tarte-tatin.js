@@ -104,7 +104,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_02"
       ],
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "butter_caramel",
         "ing_01"
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooked_apple_base",
         "ing_04"
@@ -228,7 +228,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_tatin"
       ],
@@ -258,7 +258,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "baked_tatin",
         "ing_06"

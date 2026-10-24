@@ -95,7 +95,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_05",
@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seasoned_pork",
         "ing_02",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "braised_pork"
       ],
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "shredded_rillettes"
       ],

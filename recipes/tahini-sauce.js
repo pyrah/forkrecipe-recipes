@@ -126,7 +126,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "stirred_tahini",
         "ing_02",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "tahini_seized",
         "ing_04"

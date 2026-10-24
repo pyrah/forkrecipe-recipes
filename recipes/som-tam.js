@@ -13,7 +13,7 @@ export default {
     "papaye",
     "salade",
     "estan",
-    "Chaux",
+    "citron vert",
     "Chili",
     "végétalien-adaptable",
     "poisson-sauce"
@@ -82,7 +82,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais (à partir de 2 chaux)",
+      "name": "Jus de citron vert frais (à partir de 2 citron vert)",
       "ratioValue": 1.5,
       "defaultUnit": "parts",
       "substitutions": [
@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "chili_garlic_paste",
         "ing_06",
@@ -194,7 +194,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "La robe est lisse, profondément colorée et équilibrée. Le goût est assaisonné avec agressivité — c'est exact. Les crevettes sont brisées en petits morceaux. Sens de chaux et de fruits de mer séchés.",
+            "description": "La robe est lisse, profondément colorée et équilibrée. Le goût est assaisonné avec agressivité — c'est exact. Les crevettes sont brisées en petits morceaux. Sens de citron vert et de fruits de mer séchés.",
             "action": "Ajouter les tomates et les haricots longs."
           },
           {
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "seasoning_base",
         "ing_09",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "bruised_vegetable_base",
         "ing_01",

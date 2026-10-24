@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01"
       ],
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "toasted_vermicelli",
         "soaked_rice",
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "cooked_pilaf",
         "toasted_vermicelli",
@@ -220,13 +220,13 @@ export default {
         "ing_08"
       ],
       "outputState": "finished_rice_pilaf",
-      "instructions": "Flûtez le pilaf avec une fourchette, en tournant doucement du bas vers le haut. Sur un plateau de service chaud. Éparpiller les noix de pin doré sur le dessus et finir avec le persil haché. Servir immédiatement.",
+      "instructions": "Flûtez le pilaf avec une fourchette, en tournant doucement du bas vers le haut. Sur un plateau de service chaud. Éparpiller les pignons de pin doré sur le dessus et finir avec le persil haché. Servir immédiatement.",
       "visualCue": {
         "primaryTarget": "Un monticule de riz blanc d'ambre couronné de pignons de pin dorés et de persil vert vif.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les noix de pin sont pâles et farineuses plutôt que dorées; elles n'apportent aucune saveur.",
+            "description": "Les pignons de pin sont pâles et farineuses plutôt que dorées; elles n'apportent aucune saveur.",
             "action": "Servir séparément dans une casserole sèche pendant 1 minute avant de disperser."
           },
           {
@@ -241,7 +241,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Le pilaf fini doit se sentir léger et aéré sur la cuillère de service, chaque fil de révélation fourchu de nouilles grillées et la croûte occasionnelle de noix de pin."
+      "feelCue": "Le pilaf fini doit se sentir léger et aéré sur la cuillère de service, chaque fil de révélation fourchu de nouilles grillées et la croûte occasionnelle de pignons de pin."
     }
   ]
 };

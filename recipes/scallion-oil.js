@@ -77,7 +77,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -95,7 +95,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les pétoncles sont boiteux et translucides, immergés dans de l'huile bouillonnante. L'huile a pris une faible teinte dorée et la cuisine sent doucement de l'échon et du gingembre.",
+            "description": "Les pétoncles sont ramollis et translucides, immergés dans de l'huile bouillonnante. L'huile a pris une faible teinte dorée et la cuisine sent doucement de l'échon et du gingembre.",
             "action": "Continuez à surveiller de près — une fois que le bouillonnement ralentira, le brunissement commencera rapidement."
           },
           {
@@ -120,7 +120,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les pétoncles sont encore verts et boiteux, mais pas encore dorés — la couleur n'est pas passée du jade à l'or jaune, et le bouillonnement est encore vigoureux, ce qui signifie que l'humidité s'évapore encore.",
+            "description": "Les pétoncles sont encore verts et mou, mais pas encore dorés — la couleur n'est pas passée du jade à l'or jaune, et le bouillonnement est encore vigoureux, ce qui signifie que l'humidité s'évapore encore.",
             "action": "Continuez à frire avec patience. La transition de couleur du vert à l'or est le signal clé, pas un minuteur."
           },
           {
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "fried_scallion_oil",
         "ing_04"

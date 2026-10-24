@@ -159,7 +159,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_03"
       ],
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_10",
@@ -257,7 +257,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "seared_scallops",
         "ing_06",
@@ -289,7 +289,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "pea_puree",
         "basted_scallops",

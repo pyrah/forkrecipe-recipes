@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "complete_marinade",
         "ing_06",

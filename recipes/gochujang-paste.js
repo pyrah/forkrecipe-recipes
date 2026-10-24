@@ -95,7 +95,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "gochujang_mixture"
       ],

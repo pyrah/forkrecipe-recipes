@@ -69,7 +69,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -100,7 +100,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "hard_cider",
         "ing_03"
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "inoculated_cider"
       ],

@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_07"
       ],
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "softened_aromatics",
         "ing_05",
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "concentrated_sofrito",
         "saffron_water",

@@ -122,7 +122,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01"
       ],
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_03",
         "ing_02"
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_paste",
         "pounded_peanuts",

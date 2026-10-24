@@ -112,7 +112,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "cooking_rice",
         "ing_03"
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "thickened_pudding",
         "ing_06"
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "set_pudding",
         "ing_08"

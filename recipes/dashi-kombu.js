@@ -100,7 +100,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "wiped_kombu",
         "ing_02"
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "steeped_dashi",
         "ing_03"

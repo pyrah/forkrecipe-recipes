@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "clafouti_batter",
         "ing_06",
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "unbaked_clafouti"
       ],
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "baked_clafouti",
         "ing_09"

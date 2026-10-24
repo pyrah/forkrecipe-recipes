@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "stuffed_branzino",
         "salt_crust_mixture"
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "encased_branzino"
       ],
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "baked_branzino",
         "ing_08"

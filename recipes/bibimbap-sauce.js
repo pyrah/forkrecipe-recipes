@@ -114,7 +114,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "sauce_mixture"
       ],
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "bloomed_sauce",
         "ing_08"

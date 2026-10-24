@@ -4,7 +4,7 @@ export default {
   "slug": "thai-som-tum",
   "author": "ForkRecipe Kitchen",
   "title": "Som Tum (Salade de papaye verte thaïlandaise)",
-  "description": "La papaye crue s'est éparpillée d'ail et de piment dans un mortier, puis a été jetée avec de la chaux, de la sauce de poisson, du sucre de palme et des crevettes séchées — augure-chaud-doux-sel dans un équilibre si précis que chaque composant disparaît en un seul coup électrisant.",
+  "description": "La papaye crue s'est éparpillée d'ail et de piment dans un mortier, puis a été jetée avec du citron vert, de la sauce de poisson, du sucre de palme et des crevettes séchées — augure-chaud-doux-sel dans un équilibre si précis que chaque composant disparaît en un seul coup électrisant.",
   "cuisine": "Thaï",
   "culture": "Isaan",
   "category": "vegetables",
@@ -13,7 +13,7 @@ export default {
     "Sans gluten",
     "Thaï",
     "papaye",
-    "Chaux",
+    "citron vert",
     "épicé",
     "mortier et peste"
   ],
@@ -90,7 +90,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 45,
       "defaultUnit": "ml",
       "substitutions": []
@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "pounded_aromatics",
         "ing_07",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "pounded_salad_base",
         "ing_04",
@@ -210,7 +210,7 @@ export default {
         "ing_06"
       ],
       "outputState": "finished_som_tum",
-      "instructions": "Ajouter le sucre de palme, la sauce de poisson et le jus de lime au mortier. Toss et légèrement tout battre ensemble pour combiner. Goûter constamment — le som tum est sur l'équilibre de précision entre les quatre saveurs: aigre (lime), salé (sauce de poisson), doux (sucre), et umami-chaud (chili + sauce de poisson). Ajuster un élément à la fois : plus de chaux pour la luminosité, plus de sauce de poisson pour la profondeur et le sel, plus de sucre pour adoucir si trop dur. Aucun lot n'est identique: le jus de lime et l'acidité naturelle de la papaye varient. La salade finie devrait être assaisonnée de façon agressive selon les normes occidentales — c'est intentionnel.",
+      "instructions": "Ajouter le sucre de palme, la sauce de poisson et le jus de lime au mortier. Toss et légèrement tout battre ensemble pour combiner. Goûter constamment — le som tum est sur l'équilibre de précision entre les quatre saveurs: aigre (lime), salé (sauce de poisson), doux (sucre), et umami-chaud (chili + sauce de poisson). Ajuster un élément à la fois : plus de citron vert pour la luminosité, plus de sauce de poisson pour la profondeur et le sel, plus de sucre pour adoucir si trop dur. Aucun lot n'est identique: le jus de lime et l'acidité naturelle de la papaye varient. La salade finie devrait être assaisonnée de façon agressive selon les normes occidentales — c'est intentionnel.",
       "visualCue": {
         "primaryTarget": "Un pansement brillant et teinté d'ambre pour chaque brin de papaye. Le jus de tomate et la vinaigrette se sont combinés dans une piscine à la base du mortier.",
         "spectrum": [
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_som_tum",
         "ing_10"

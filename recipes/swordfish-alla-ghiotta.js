@@ -216,24 +216,24 @@ export default {
         "ing_11"
       ],
       "outputState": "agrodolce_base",
-      "instructions": "Dans la même poêle, réduire à feu moyen et ajouter le reste de l'huile. Ajouter l'oignon et le céleri. Cuire en remuant pendant 6 à 8 minutes jusqu'à ce que l'oignon soit complètement doux et translucide et commence à devenir doré. Ajoutez les noix de pin et faites cuire 2 minutes jusqu'à ce qu'elles soient légèrement grillées. Ajouter les raisins secs et remuer pendant 30 secondes jusqu'à ce qu'ils s'enfoncent légèrement.",
+      "instructions": "Dans la même poêle, réduire à feu moyen et ajouter le reste de l'huile. Ajouter l'oignon et le céleri. Cuire en remuant pendant 6 à 8 minutes jusqu'à ce que l'oignon soit complètement doux et translucide et commence à devenir doré. Ajoutez les pignons de pin et faites cuire 2 minutes jusqu'à ce qu'elles soient légèrement grillées. Ajouter les raisins secs et remuer pendant 30 secondes jusqu'à ce qu'ils s'enfoncent légèrement.",
       "visualCue": {
         "primaryTarget": "L'oignon et le céleri sont doux et translucides, les pignons sont un tandem d'or pâle, les raisins secs sont plumés et brillants. La poêle a récupéré le fond résiduel du poisson.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "L'oignon est encore raide et opaque, le céleri cru. Les noix de pin sont blanches et crues.",
+            "description": "L'oignon est encore raide et opaque, le céleri cru. Les pignons de pin sont blanches et crues.",
             "action": "Cuire encore 3 minutes. La base doit être entièrement douce ou la sauce aura un goût cru et dur."
           },
           {
             "state": "Perfect",
-            "description": "L'oignon et le céleri sont complètement doux et sucrés. Les noix de pin sont dorées. Les raisins secs sont durs et commencent à libérer leur douceur.",
+            "description": "L'oignon et le céleri sont complètement doux et sucrés. Les pignons de pin sont dorées. Les raisins secs sont durs et commencent à libérer leur douceur.",
             "action": "Ajouter les tomates, les câpres et les olives."
           },
           {
             "state": "Overdone",
-            "description": "Les noix de pin sont brun foncé et amères. L'oignon est caramélisé en ambre foncé.",
-            "action": "Enlevez les noix de pin si elles sont très sombres. La douceur de l'oignon caramélisé profond nécessitera un vinaigre supplémentaire pour équilibrer."
+            "description": "Les pignons de pin sont brun foncé et amères. L'oignon est caramélisé en ambre foncé.",
+            "action": "Enlevez les pignons de pin si elles sont très sombres. La douceur de l'oignon caramélisé profond nécessitera un vinaigre supplémentaire pour équilibrer."
           }
         ]
       },

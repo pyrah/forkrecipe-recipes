@@ -187,7 +187,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Le vin est arrivé à un ébullition enroulé; il sent le boozy-flat et pique le nez avec de la vapeur d'alcool.",
-            "action": "Enlève-le immédiatement. Vous avez perdu un peu de parfum et de luminosité — compensez avec un peu plus d'épices et une touche plus de miel pendant la pente."
+            "action": "Enlève-le immédiatement. Vous avez perdu un peu de parfum et de luminosité — compensez avec un peu plus d'épices et une touche plus de miel pendant l’infusion."
           }
         ]
       },
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "honeyed_wine"
       ],
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "infused_wine"
       ],

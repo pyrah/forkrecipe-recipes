@@ -138,7 +138,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "raw_glaze_mixture"
       ],

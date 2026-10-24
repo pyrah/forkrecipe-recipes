@@ -79,7 +79,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_01"
       ],
@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "curdled_milk",
         "ing_03",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "drained_curds"
       ],

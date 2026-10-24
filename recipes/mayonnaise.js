@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "seasoned_base",
         "ing_04"
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "tight_emulsion",
         "ing_06",

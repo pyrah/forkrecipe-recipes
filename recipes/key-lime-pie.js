@@ -12,7 +12,7 @@ export default {
     "tarte",
     "agrumes",
     "Floride",
-    "Chaux",
+    "citron vert",
     "Coutard",
     "dessert",
     "tarte"
@@ -96,11 +96,11 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Citrus",
-      "name": "Zeste de chaux clé",
+      "name": "Zeste de citron vert clé",
       "ratioValue": 1,
       "defaultUnit": "tbsp",
       "substitutions": [
-        "Zeste de chaux perse"
+        "Zeste de citron vert perse"
       ]
     },
     {
@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -176,7 +176,7 @@ export default {
         "ing_08"
       ],
       "outputState": "lime_custard",
-      "instructions": "Dans un bol moyen, mélanger les jaunes d'œufs et le zeste de lime. fouetter vigoureusement pendant 2 minutes jusqu'à ce que les jaunes s'éclaircissent légèrement de couleur et que le zeste libère ses huiles dans le jaune, en tournant le mélange un jaune-vert vif. Ajouter le lait condensé sucré et fouetter pour le combiner — il sera épais et collant. Enfin, ajouter le jus de lime clé et fouetter jusqu'à ce que le remplissage soit complètement lisse et uniforme. Attention: l'acide citrique dans le jus de chaux clé commencera à fixer chimiquement (denature) les protéines du lait condensé immédiatement au contact, épaississant sensiblement le mélange. C'est exact — c'est le mécanisme qui permet à la tarte à la chaux clé de se fixer sans gélatine. Ne pas ajouter de jus de citron, ne pas substituer de jus en bouteille — les aromatiques volatils de la chaux à clé fraîche sont l'âme de ce dessert. La garniture doit avoir un goût de tarte agressive avec un parfum floral et tropical. Ça va refroidir dans le four.",
+      "instructions": "Dans un bol moyen, mélanger les jaunes d'œufs et le zeste de lime. fouetter vigoureusement pendant 2 minutes jusqu'à ce que les jaunes s'éclaircissent légèrement de couleur et que le zeste libère ses huiles dans le jaune, en tournant le mélange un jaune-vert vif. Ajouter le lait condensé sucré et fouetter pour le combiner — il sera épais et collant. Enfin, ajouter le jus de lime clé et fouetter jusqu'à ce que le remplissage soit complètement lisse et uniforme. Attention: l'acide citrique dans le jus de citron vert clé commencera à fixer chimiquement (denature) les protéines du lait condensé immédiatement au contact, épaississant sensiblement le mélange. C'est exact — c'est le mécanisme qui permet à la tarte au citron vert clé de se fixer sans gélatine. Ne pas ajouter de jus de citron, ne pas substituer de jus en bouteille — les aromatiques volatils du citron vert à clé fraîche sont l'âme de ce dessert. La garniture doit avoir un goût acidulé agressive avec un parfum floral et tropical. Ça va refroidir dans le four.",
       "visualCue": {
         "primaryTarget": "Une crème jaune-vert craie pâle. Assez épais pour tomber du fouet dans un ruban lent et continu. Specques de zeste vert visibles dans l'ensemble.",
         "spectrum": [
@@ -187,7 +187,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Jaune pâle-vert, lisse, et tombe du fouet dans un ruban épais qui tient un sentier sur la surface pendant 2 secondes. Intensément parfumé de chaux clé.",
+            "description": "Jaune pâle-vert, lisse, et tombe du fouet dans un ruban épais qui tient un sentier sur la surface pendant 2 secondes. Intensément parfumé de citron vert clé.",
             "action": "Verser immédiatement dans la croûte refroidie."
           },
           {
@@ -197,17 +197,17 @@ export default {
           }
         ]
       },
-      "feelCue": "Plongez votre bout de doigt dans le remplissage — la tarte doit être extrêmement tranchante, presque abreuvante. C'est correct et intentionnel. L'odeur florale musky-tart de la chaux clé doit être nettement différente d'une chaux perse : plus complexe, légèrement amère aux bords, avec une douceur tropicale derrière."
+      "feelCue": "Plongez votre bout de doigt dans le remplissage — la tarte doit être extrêmement tranchante, presque abreuvante. C'est correct et intentionnel. L'odeur florale musky-tart du citron vert clé doit être nettement différente d'un citron vert perse : plus complexe, légèrement amère aux bords, avec une douceur tropicale derrière."
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "lime_custard",
         "baked_crust"
       ],
       "outputState": "baked_pie",
-      "instructions": "Verser la crème à la chaux dans la croûte refroidie de graham. Le remplissage doit se situer presque au bord de la croûte — pas plus de 1/4 pouce en dessous. Basculez doucement la poêle pour mettre le remplissage à niveau sans perturber la croûte. Cuire à 325°F (163°C) — en dessous de la croûte — pendant 15–17 minutes. Le remplissage est fait lorsque le pouce extérieur est complètement réglé et que le centre de 3 à 4 pouces oscille encore doucement lorsque vous sautez la poêle, comme un Jell-O à peine fixé. C'est important : un centre complet signifie que les œufs ont trop cuit. Le remplissage continue d'être réglé par la chaleur de report lorsqu'il refroidit. Ne pas surprendre — la texture d'une tarte à la chaux parfaite est à peine tringlante, presque panna-cotta-like, pas ferme et cheesecake-like.",
+      "instructions": "Verser la crème au citron vert dans la croûte refroidie de graham. Le remplissage doit se situer presque au bord de la croûte — pas plus de 1/4 pouce en dessous. Basculez doucement la poêle pour mettre le remplissage à niveau sans perturber la croûte. Cuire à 325°F (163°C) — en dessous de la croûte — pendant 15–17 minutes. Le remplissage est fait lorsque le pouce extérieur est complètement réglé et que le centre de 3 à 4 pouces oscille encore doucement lorsque vous sautez la poêle, comme un Jell-O à peine fixé. C'est important : un centre complet signifie que les œufs ont trop cuit. Le remplissage continue d'être réglé par la chaleur de report lorsqu'il refroidit. Ne pas surprendre — la texture d'une tarte au citron vert parfaite est à peine tringlante, presque panna-cotta-like, pas ferme et cheesecake-like.",
       "visualCue": {
         "primaryTarget": "La surface de la tarte est uniformément mate et jaune-vert pâle. L'anneau extérieur est complètement immobile; le centre oscille comme de l'eau quand la poêle est bouchée.",
         "spectrum": [
@@ -232,14 +232,14 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "baked_pie",
         "ing_09",
         "ing_10"
       ],
       "outputState": "finished_key_lime_pie",
-      "instructions": "Réfrigérer la tarte refroidie pendant au moins 2 heures ou jusqu'à la nuit. Le remplissage sera considérablement ferme dans le froid — c'est là qu'il atteint son dernier ensemble tremblant. Juste avant de servir, fouetter la crème lourde réfrigérée avec le sucre en poudre dans un bol froid à l'aide d'un mélangeur à main ou d'un mélangeur de support. Commencez à basse vitesse et augmentez à moyen-élevé. Des pics à pointes moyennes — la crème devrait tenir une boucle douce lorsque les batteurs sont levés, mais l'extrémité du pic devrait tomber doucement d'un côté plutôt que de rester rigide. La crème trop fouettée semble granuleuse et borde le beurre. Spoon ou pipe la crème fouettée sur la tarte: vous pouvez couvrir toute la surface pour une présentation traditionnelle, ou pipe rosettes décoratives autour du périmètre. Terminer avec quelques fines rondelles de chaux clé ou une saupoudrée de zeste. Couper avec un couteau trempé dans de l'eau chaude et essuyer entre les coupes pour des bords propres.",
+      "instructions": "Réfrigérer la tarte refroidie pendant au moins 2 heures ou jusqu'à la nuit. Le remplissage sera considérablement ferme dans le froid — c'est là qu'il atteint son dernier ensemble tremblant. Juste avant de servir, fouetter la crème lourde réfrigérée avec le sucre en poudre dans un bol froid à l'aide d'un mélangeur à main ou d'un mélangeur de support. Commencez à basse vitesse et augmentez à moyen-élevé. Des pics à pointes moyennes — la crème devrait tenir une boucle douce lorsque les batteurs sont levés, mais l'extrémité du pic devrait tomber doucement d'un côté plutôt que de rester rigide. La crème trop fouettée semble granuleuse et borde le beurre. Spoon ou pipe la crème fouettée sur la tarte: vous pouvez couvrir toute la surface pour une présentation traditionnelle, ou pipe rosettes décoratives autour du périmètre. Terminer avec quelques fines rondelles de citron vert clé ou une saupoudrée de zeste. Couper avec un couteau trempé dans de l'eau chaude et essuyer entre les coupes pour des bords propres.",
       "visualCue": {
         "primaryTarget": "Crème fouettée blanche glissée avec des pics mous et saillants assis au sommet de la garniture jaune-vert pâle. Une tranche de citron vert ou une boucle de zeste comme accent final.",
         "spectrum": [
@@ -260,7 +260,7 @@ export default {
           }
         ]
       },
-      "feelCue": "La tarte finie, tranchée et plaquée, doit se sentir comme une étude miniature en contrastes : la douceur croquante et douce de la croûte craquelante sous la fourchette, le fraicheur frais et sucrée du remplissage donnant immédiatement, et le nuage aéré de crème se dissolvant avant même que la crémosité de la chaux ne s'enregistre. Le parfum est très floral et agrumes-électrique."
+      "feelCue": "La tarte finie, tranchée et plaquée, doit se sentir comme une étude miniature en contrastes : la douceur croquante et douce de la croûte craquelante sous la fourchette, le fraicheur frais et sucrée du remplissage donnant immédiatement, et le nuage aéré de crème se dissolvant avant même que la crémosité du citron vert ne s'enregistre. Le parfum est très floral et agrumes-électrique."
     }
   ]
 };

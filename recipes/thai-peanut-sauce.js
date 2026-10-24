@@ -14,7 +14,7 @@ export default {
     "Thaï",
     "noix de coco",
     "trempage-sauce",
-    "Chaux",
+    "citron vert",
     "poisson-sauce"
   ],
   "difficulty": 2,
@@ -81,7 +81,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 15,
       "defaultUnit": "parts",
       "substitutions": [
@@ -122,7 +122,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -154,7 +154,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_coconut_base",
         "ing_01"
@@ -194,7 +194,7 @@ export default {
         "ing_08"
       ],
       "outputState": "finished_thai_peanut_sauce",
-      "instructions": "Hors du feu, mélanger le sucre de palme jusqu'à dissolution, puis ajouter la sauce de poisson et le jus de lime. Goûtez et ajustez : cette sauce doit d'abord être sucrée, puis la sauce salée-saucie, puis la chaux vive, avec la chaleur qui monte lentement à l'arrière. Tuez chaque élément en petites doses — une cuillère à café de chaux soulève plus que vous ne vous attendez, quelques gouttes de sauce de poisson s'approfondissent sans la pousser salée. Ajouter de l'eau si nécessaire pour atteindre une consistance qui s'accroche à une brochette mais s'écoule d'une cuillère. Verser dans un bol, disperser avec des cacahuètes écrasées et du chili tranché, et servir au chaud.",
+      "instructions": "Hors du feu, mélanger le sucre de palme jusqu'à dissolution, puis ajouter la sauce de poisson et le jus de lime. Goûtez et ajustez : cette sauce doit d'abord être sucrée, puis la sauce salée-saucie, puis le citron vert vive, avec la chaleur qui monte lentement à l'arrière. Tuez chaque élément en petites doses — une cuillère à café de citron vert soulève plus que vous ne vous attendez, quelques gouttes de sauce de poisson s'approfondissent sans la pousser salée. Ajouter de l'eau si nécessaire pour atteindre une consistance qui s'accroche à une brochette mais s'écoule d'une cuillère. Verser dans un bol, disperser avec des cacahuètes écrasées et du chili tranché, et servir au chaud.",
       "visualCue": {
         "primaryTarget": "Une sauce riche, brillante, en terre cuite, assise dans un bol surmonté d'arachides croquantes et de chili rouge vif, assez épaisse pour s'y remplir lentement après qu'une cuillère l'ait traversé.",
         "spectrum": [
@@ -205,7 +205,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "La douceur arrive en premier, suivie d'une profondeur savoureuse, puis la luminosité de la chaux se coupe, et la chaleur persiste. La texture est épaisse mais versable.",
+            "description": "La douceur arrive en premier, suivie d'une profondeur savoureuse, puis la luminosité du citron vert se coupe, et la chaleur persiste. La texture est épaisse mais versable.",
             "action": "Garnir et servir à la fois avec satay, crudités ou légumes à la vapeur."
           },
           {

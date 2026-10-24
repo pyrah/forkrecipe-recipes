@@ -103,7 +103,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "miso_marinade"
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "marinated_cod",
         "ing_06",

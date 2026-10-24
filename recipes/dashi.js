@@ -69,7 +69,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -100,7 +100,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "cold_kombu_water"
       ],
@@ -130,7 +130,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "warmed_kombu_dashi",
         "ing_02"
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "bonito_dashi"
       ],

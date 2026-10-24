@@ -99,7 +99,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_02",
         "ing_05"
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_mole_paste",
         "ing_03"
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "mole_sauce",
         "browned_chicken"
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "braised_chicken_mole",
         "ing_06"

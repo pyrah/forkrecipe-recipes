@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_02",
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "softened_onion",
         "ing_01",
@@ -160,7 +160,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les poivrons sont nettement boiteux, les couleurs sont encore vives (rouge, orange, jaune), et un bassin important de liquide de poivre sucré remplit le pot. Ils sont tendres mais ont encore une certaine structure.",
+            "description": "Les poivrons sont nettement mou, les couleurs sont encore vives (rouge, orange, jaune), et un bassin important de liquide de poivre sucré remplit le pot. Ils sont tendres mais ont encore une certaine structure.",
             "action": "Ajouter les tomates et le braise à découvert."
           },
           {
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "braising_peppers",
         "ing_03"
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "finished_peperonata",
         "ing_07",

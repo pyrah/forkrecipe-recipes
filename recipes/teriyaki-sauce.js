@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "teriyaki_mixture",
         "ing_05"

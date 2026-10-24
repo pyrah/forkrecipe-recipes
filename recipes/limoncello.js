@@ -77,7 +77,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Zeste",
+      "action": "Prélever le zeste",
       "inputs": [
         "ing_01"
       ],
@@ -107,7 +107,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "lemon_zest",
         "ing_02"
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "lemon_infused_spirit",
         "simple_syrup"

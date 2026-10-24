@@ -112,7 +112,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -145,7 +145,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_06"
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "seared_salmon",
         "teriyaki_glaze",

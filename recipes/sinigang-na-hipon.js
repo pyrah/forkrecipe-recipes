@@ -148,7 +148,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_10",
         "ing_03",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "aromatic_broth",
         "ing_02",
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "soured_broth",
         "ing_01",
@@ -241,11 +241,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Soulevez une crevette et pliez-la délicatement — une crevette parfaitement cuite se fléchit au milieu plutôt que de se casser raide ou de flipper complètement boiteux."
+      "feelCue": "Soulevez une crevette et pliez-la délicatement — une crevette parfaitement cuite se fléchit au milieu plutôt que de se casser raide ou de flipper complètement mou."
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "cooked_shrimp",
         "ing_07",

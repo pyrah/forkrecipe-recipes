@@ -109,7 +109,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "salt_bedded_beets"
       ],

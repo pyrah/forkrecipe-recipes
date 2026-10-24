@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_01",
         "spice_paste"
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "tandoori_marinade"
       ],
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "marinated_protein"
       ],

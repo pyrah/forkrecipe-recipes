@@ -130,7 +130,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_07"
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "al_dente_pasta",
         "rendered_guanciale",
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "tossed_pasta",
         "ing_03",

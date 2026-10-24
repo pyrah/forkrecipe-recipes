@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "floured_sole",
         "ing_04"
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "beurre_noisette",
         "golden_sole",

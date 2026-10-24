@@ -50,7 +50,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais (choix de chaux clé)",
+      "name": "Jus de citron vert frais (choix de citron vert clé)",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": [
@@ -99,7 +99,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "dry_shaken_base",
         "ing_06"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "chilled_cocktail",
         "ing_05"
@@ -190,7 +190,7 @@ export default {
           }
         ]
       },
-      "feelCue": "La mousse doit se sentir comme de la crème fouettée raide sur la langue — aérée et immédiate — suivie par le coup aigu de la chaux, la chaleur sèche du pisco, et un murmure d'amertume sur la finale."
+      "feelCue": "La mousse doit se sentir comme de la crème fouettée raide sur la langue — aérée et immédiate — suivie par le coup aigu du citron vert, la chaleur sèche du pisco, et un murmure d'amertume sur la finale."
     }
   ]
 };

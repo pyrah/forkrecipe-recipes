@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "prepared_chicken"
       ],
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "roasted_chicken"
       ],

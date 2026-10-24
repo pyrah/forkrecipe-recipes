@@ -99,7 +99,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "melted_foaming_butter"
       ],
@@ -129,14 +129,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "browned_butter",
         "ing_02",
         "ing_03"
       ],
       "outputState": "finished_brown_butter",
-      "instructions": "Verser immédiatement le beurre brun dans un bol frais et résistant à la chaleur pour arrêter la cuisson — la poêle est encore très chaude et continuera à noircir les solides si vous les laissez dedans. Si vous utilisez comme sauce immédiatement, pressez dans le jus de citron maintenant; il arrête la cuisson instantanément et ajoute un ascenseur lumineux qui coupe la richesse. Assaisonner de sel si désiré. Le sédiment lait-solide brun est la partie la plus parfumée — ne pas l'extirper à moins que la recette exige spécifiquement du beurre brun clarifié. Utilisez immédiatement pendant que vous êtes chaud et fluide, ou laissez refroidir à une pâte dorée pour les applications de pâtisserie.",
+      "instructions": "Verser immédiatement le beurre brun dans un bol frais et résistant à la chaleur pour arrêter la cuisson — la poêle est encore très chaude et continuera à noircir les solides si vous les laissez dedans. Si vous utilisez comme sauce immédiatement, pressez dans le jus de citron maintenant; il arrête la cuisson instantanément et ajoute un ascenseur lumineux qui coupe la richesse. Assaisonner de sel si désiré. Le sédiment lait-solide brun est la partie la plus parfumée — ne pas l'extraire à moins que la recette exige spécifiquement du beurre brun clarifié. Utilisez immédiatement pendant que vous êtes chaud et fluide, ou laissez refroidir à une pâte dorée pour les applications de pâtisserie.",
       "visualCue": {
         "primaryTarget": "Un liquide ambre-or profond dans un bol frais, avec une couche de sédiment brun noisette grillé au fond. La surface mijote l'or et sent la plupart des noisettes grillées.",
         "spectrum": [

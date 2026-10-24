@@ -4,7 +4,7 @@ export default {
   "slug": "elote-callejero",
   "author": "ForkRecipe Kitchen",
   "title": "Elote Callejero (maïs de la rue mexicaine)",
-  "description": "Maïs carbonisé sur un comal ou une grille, puis slathered avec de la mayonnaise, roulé dans du fromage Cotija émietté, dépoussiéré avec du chili, et fini avec de la chaux fraîche — la plus grande collation de rue du Mexique.",
+  "description": "Maïs carbonisé sur un comal ou une grille, puis slathered avec de la mayonnaise, roulé dans du fromage Cotija émietté, dépoussiéré avec du chili, et fini avec du citron vert fraîche — la plus grande collation de rue du Mexique.",
   "cuisine": "Mexicain",
   "culture": "Nourriture de rue mexicaine",
   "category": "vegetables",
@@ -13,7 +13,7 @@ export default {
     "Mexique",
     "Alimentation de rue",
     "cotija",
-    "Chaux"
+    "citron vert"
   ],
   "difficulty": 1,
   "activeTime": "20 min",
@@ -80,7 +80,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Chaux fraîche (aspirée pour presser)",
+      "name": "citron vert fraîche (aspirée pour presser)",
       "ratioValue": 8,
       "defaultUnit": "parts",
       "substitutions": [
@@ -109,7 +109,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "ing_01"
       ],
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "charred_corn",
         "ing_02",
@@ -150,7 +150,7 @@ export default {
         "ing_07"
       ],
       "outputState": "dressed_elote",
-      "instructions": "Alors que le maïs est encore chaud à la vapeur, utilisez une cuillère ou un pinceau pour enrober toute la surface d'une couche généreuse et uniforme de mayonnaise. Enroulez ou pressez le coton enduit dans une assiette de Cotija émietté afin que le fromage adhère tout autour. Poussière en poudre de chili d'en haut. Pressez la chaux fraîche sur toute la côte. Scatter la coriandre. Terminer avec une pincée de sel.",
+      "instructions": "Alors que le maïs est encore chaud à la vapeur, utilisez une cuillère ou un pinceau pour enrober toute la surface d'une couche généreuse et uniforme de mayonnaise. Enroulez ou pressez le coton enduit dans une assiette de Cotija émietté afin que le fromage adhère tout autour. Poussière en poudre de chili d'en haut. Pressez le citron vert fraîche sur toute la côte. Scatter la coriandre. Terminer avec une pincée de sel.",
       "visualCue": {
         "primaryTarget": "La corbe est épaissement enduite de blanc avec Cotija, rouge-poussière avec de la poudre de chili, et visiblement scintille avec du jus de lime. Cilantro confetti est dispersé à travers la surface.",
         "spectrum": [

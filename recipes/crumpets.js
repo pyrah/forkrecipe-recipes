@@ -114,7 +114,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "cooking_batter",
         "ing_08"

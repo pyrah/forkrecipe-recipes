@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "sourdough_focaccia_dough"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "developed_sourdough_focaccia",
         "ing_06"
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "dimpled_sourdough_focaccia"
       ],

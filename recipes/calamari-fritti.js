@@ -4,7 +4,7 @@ export default {
   "slug": "calamari-fritti",
   "author": "ForkRecipe Kitchen",
   "title": "Calamari Fritti",
-  "description": "Des anneaux de calmars frits et des tentacules aérés dans de la semoule assaisonnée et sont tombés dans l'huile chaude jusqu'à briser l'or — servis immédiatement avec des quartiers de citron, parce que la fenêtre de trente secondes entre parfait et boiteux est réelle et impitoyable.",
+  "description": "Des anneaux de calmars frits et des tentacules aérés dans de la semoule assaisonnée et sont tombés dans l'huile chaude jusqu'à briser l'or — servis immédiatement avec des quartiers de citron, parce que la fenêtre de trente secondes entre parfait et mou est réelle et impitoyable.",
   "cuisine": "Italien",
   "culture": "Sud de l ' Italie",
   "category": "seafood",
@@ -114,7 +114,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "prepped_dry_squid",
         "ing_02",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "coated_squid",
         "ing_07"
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "fried_calamari",
         "ing_04",

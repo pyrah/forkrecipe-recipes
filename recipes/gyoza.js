@@ -149,7 +149,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_02",
         "ing_09"
@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "gyoza_filling",
         "ing_03"
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "raw_gyoza",
         "ing_11",

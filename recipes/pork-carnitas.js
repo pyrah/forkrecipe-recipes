@@ -125,7 +125,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_09"
@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "salted_pork",
         "ing_02",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "braised_pork",
         "ing_08"
@@ -228,7 +228,7 @@ export default {
         "crisped_carnitas"
       ],
       "outputState": "finished_pork_carnitas",
-      "instructions": "Transférer les carnitas sur une grande planche à découper et laisser reposer 5 minutes. Le repos est important — la chaleur résiduelle finit tout l'intérieur rose restant, et la croûte se met plutôt que de revenir à la vapeur douce. À l'aide de deux fourchettes ou de vos doigts, tirez et coupez chaque pièce dans un mélange de gros brins croustillants et de lambeaux tendres. Faites revenir une cuillère à soupe du saindoux chaud réservé sur le dessus pour les brillancer. Goûtez et assaisonnez avec une pincée de sel feuilleté et une touche de citron vert frais. Servir immédiatement sur les tortillas chaudes de maïs avec l'oignon blanc, la coriandre, la chaux et votre salsa de choix.",
+      "instructions": "Transférer les carnitas sur une grande planche à découper et laisser reposer 5 minutes. Le repos est important — la chaleur résiduelle finit tout l'intérieur rose restant, et la croûte se met plutôt que de revenir à la vapeur douce. À l'aide de deux fourchettes ou de vos doigts, tirez et coupez chaque pièce dans un mélange de gros brins croustillants et de lambeaux tendres. Faites revenir une cuillère à soupe du saindoux chaud réservé sur le dessus pour les brillancer. Goûtez et assaisonnez avec une pincée de sel feuilleté et une touche de citron vert frais. Servir immédiatement sur les tortillas chaudes de maïs avec l'oignon blanc, la coriandre, le citron vert et votre salsa de choix.",
       "visualCue": {
         "primaryTarget": "Un enchevêtrement texturé et texturé de shards dorés-mahogany et de lambeaux juteux, léché de gras rendu, ressemblant à la meilleure chose sur n'importe quel menu taco.",
         "spectrum": [

@@ -96,11 +96,11 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Citrus",
-      "name": "Zeste de chaux de Kaffir",
+      "name": "Zeste de citron vert de Kaffir",
       "ratioValue": 0.25,
       "defaultUnit": "parts",
       "substitutions": [
-        "zeste de chaux + feuille de laurier"
+        "zeste de citron vert + feuille de laurier"
       ]
     },
     {
@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_09"
       ],
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "fibrous_base",
         "ing_04",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "aromatic_base",
         "ing_06",

@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_07"
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "al_dente_pasta",
         "rendered_guanciale"
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "pasta_with_guanciale",
         "carbonara_sauce_base",

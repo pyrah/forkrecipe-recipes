@@ -143,7 +143,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_10",
         "ing_11",
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_06",
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "ing_01"
       ],
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "pastry_shells",
         "custard_base",

@@ -119,7 +119,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "caramelized_onions",
         "ing_02",
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "curry_base",
         "ing_04"

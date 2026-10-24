@@ -187,7 +187,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "seared_chuck",
         "ing_05",
@@ -258,7 +258,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "braising_pot"
       ],
@@ -322,7 +322,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "tender_pot_roast",
         "ing_16"

@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_soaked_chiles",
         "charred_vegetables",
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "blended_sauce",
         "ing_10"

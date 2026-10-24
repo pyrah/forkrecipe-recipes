@@ -4,7 +4,7 @@ export default {
   "slug": "habanero-mango-sauce",
   "author": "ForkRecipe Kitchen",
   "title": "Sauce de mangue Habanero",
-  "description": "Une sauce chaude caribéenne qui est aussi une sauce fruitière — la douceur tropicale de la mangue mûre et la chaleur florale élevée du habanero existent dans une tension parfaite et improbable. Le gingembre et la chaux les relient à quelque chose de vif et d'or qui appartient au poisson grillé, au poulet et à tout entre les deux.",
+  "description": "Une sauce chaude caribéenne qui est aussi une sauce fruitière — la douceur tropicale de la mangue mûre et la chaleur florale élevée du habanero existent dans une tension parfaite et improbable. Le gingembre et le citron vert les relient à quelque chose de vif et d'or qui appartient au poisson grillé, au poulet et à tout entre les deux.",
   "cuisine": "Caraïbes",
   "culture": "Jamaïquen",
   "category": "condiments",
@@ -76,7 +76,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 40,
       "defaultUnit": "g",
       "substitutions": [
@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "raw_blended_sauce"
       ],
@@ -183,7 +183,7 @@ export default {
         "cooked_sauce"
       ],
       "outputState": "finished_habanero_mango_sauce",
-      "instructions": "Laisser refroidir la sauce à température ambiante. Goûtez encore une fois — la sauce finie devrait être plus douce et plus ronde qu'à l'état cru, avec la chaleur florale du habanero toujours en évidence mais plus agressive. Ajustez le sel et la chaux au goût. Verser dans des bouteilles ou des pots stérilisés. Réfrigérer jusqu'à 1 mois. Pour une texture plus lisse et de style restaurant, passez à travers un tamis à mailles fines avant l'embouteillage. Pour une sauce plus rustique, corsé, laisser non tamisée.",
+      "instructions": "Laisser refroidir la sauce à température ambiante. Goûtez encore une fois — la sauce finie devrait être plus douce et plus ronde qu'à l'état cru, avec la chaleur florale du habanero toujours en évidence mais plus agressive. Ajustez le sel et le citron vert au goût. Verser dans des bouteilles ou des pots stérilisés. Réfrigérer jusqu'à 1 mois. Pour une texture plus lisse et de style restaurant, passez à travers un tamis à mailles fines avant l'embouteillage. Pour une sauce plus rustique, corsé, laisser non tamisée.",
       "visualCue": {
         "primaryTarget": "Une sauce dorée foncée et brillante dans un pot, se déplaçant lentement lorsqu'elle est inclinée, enrobant le verre dans un mince film ambre translucide.",
         "spectrum": [
@@ -204,7 +204,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Une parfaite sauce à la mangue habanero devrait offrir trois phases distinctes au goût : d'abord la douceur tropicale fraîche de la mangue, puis les agrumes vifs de la chaux, puis la chaleur florale et fruitée de la construction habanero régulièrement sur 5 secondes. Si les trois arrivent simultanément dans un mur plat de douceur et de douleur, il faut plus de chaux et encore quelques minutes de mijotage."
+      "feelCue": "Une parfaite sauce à la mangue habanero devrait offrir trois phases distinctes au goût : d'abord la douceur tropicale fraîche de la mangue, puis les agrumes vifs du citron vert, puis la chaleur florale et fruitée de la construction habanero régulièrement sur 5 secondes. Si les trois arrivent simultanément dans un mur plat de douceur et de douleur, il faut plus de citron vert et encore quelques minutes de mijotage."
     }
   ]
 };

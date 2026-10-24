@@ -71,7 +71,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mince",
+      "action": "Hacher finement",
       "inputs": [
         "ing_01",
         "ing_02",

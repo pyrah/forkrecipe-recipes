@@ -163,7 +163,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "toasted_whole_spices",
         "ing_11",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ground_spice_blend"
       ],
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "balanced_ras_el_hanout"
       ],

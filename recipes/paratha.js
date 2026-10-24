@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "rested_dough",
         "ing_03"
@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "layered_dough",
         "ing_05"

@@ -132,7 +132,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_03",
         "ing_02"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "soffritto",
         "ing_01",
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "toasted_rice",
         "saffron_broth",
@@ -259,7 +259,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "cooked_risotto",
         "ing_05",

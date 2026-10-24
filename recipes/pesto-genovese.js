@@ -4,7 +4,7 @@ export default {
   "slug": "pesto-genovese",
   "author": "ForkRecipe Kitchen",
   "title": "Pesto alla Genovese",
-  "description": "Le vert de la Ligurie, un jeune basilic meurtri contre le marbre avec de l'ail et des noix de pin jusqu'à ce qu'il saigne une huile électrique et herbacée, puis lié à deux fromages et à un fil d'huile d'olive riviera fruité dans une pâte d'émeraude grossière et scintillante qui sent l'été à l'instant il touche les pâtes chaudes.",
+  "description": "Le vert de la Ligurie, un jeune basilic meurtri contre le marbre avec de l'ail et des pignons de pin jusqu'à ce qu'il saigne une huile électrique et herbacée, puis lié à deux fromages et à un fil d'huile d'olive riviera fruité dans une pâte d'émeraude grossière et scintillante qui sent l'été à l'instant il touche les pâtes chaudes.",
   "cuisine": "Italien",
   "culture": "Ligurien",
   "category": "sauces",
@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -128,7 +128,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Une pâte uniforme et scintillante qui gronde comme de la craie mouillée, sentant la puanteur, mais n'est plus crue et acride.",
-            "action": "Ajouter les noix de pin et continuer à l'étape suivante."
+            "action": "Ajouter les pignons de pin et continuer à l'étape suivante."
           },
           {
             "state": "Overdone",
@@ -147,7 +147,7 @@ export default {
         "ing_04"
       ],
       "outputState": "nut_garlic_base",
-      "instructions": "Ajouter les noix de pin à la pâte d'ail et les moudre avec le même mouvement circulaire patient. Ils sont doux et huileux, donc ils se cassent rapidement dans une crème épaisse et sablonneuse qui relâche l'ail et arrondit sa netteté. Travaillez jusqu'à ce que vous ayez une base cohésive et beurrée sans noix entières, cette couche riche en gras est ce qui transportera et protégera la couleur du basilic dans la prochaine étape.",
+      "instructions": "Ajouter les pignons de pin à la pâte d'ail et les moudre avec le même mouvement circulaire patient. Ils sont doux et huileux, donc ils se cassent rapidement dans une crème épaisse et sablonneuse qui relâche l'ail et arrondit sa netteté. Travaillez jusqu'à ce que vous ayez une base cohésive et beurrée sans noix entières, cette couche riche en gras est ce qui transportera et protégera la couleur du basilic dans la prochaine étape.",
       "visualCue": {
         "primaryTarget": "Une pâte d'ivoire pâle, légèrement grainée avec la consistance du sable humide liant dans une crème douce, légèrement douce et résineuse au nez.",
         "spectrum": [
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "basil_paste",
         "ing_05",

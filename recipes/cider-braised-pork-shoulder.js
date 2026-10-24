@@ -179,7 +179,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "seared_pork",
         "ing_05",
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "cider_braising_base",
         "seared_pork",

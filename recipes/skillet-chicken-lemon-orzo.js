@@ -169,7 +169,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "seared_thighs",
         "ing_06",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "toasted_orzo",
         "seared_thighs",
@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "simmered_orzo_chicken",
         "ing_10",

@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "squid_ink_dough"
       ],
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "rested_pasta_dough"
       ],
@@ -254,7 +254,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les strands sont devenus boiteux et commencent à s'écraser. La surface est légèrement terne et collante. Pas de résistance quand mordu.",
+            "description": "Les strands sont devenus mou et commencent à s'écraser. La surface est légèrement terne et collante. Pas de résistance quand mordu.",
             "action": "Mettez-le dans la sauce immédiatement et sautez toute autre mijotation. Les pâtes fraîches trop cuites s'effondrent si elles sont jetées agressivement."
           }
         ]
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_ink_pasta",
         "clam_broth",

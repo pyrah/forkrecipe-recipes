@@ -139,7 +139,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_09",
         "ing_05"
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_09",
         "ing_07",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "coconut_rice",
         "sambal",

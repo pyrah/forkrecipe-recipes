@@ -88,7 +88,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.3,
       "defaultUnit": "parts",
       "substitutions": [
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "charred_vegetables",
         "ing_05",
@@ -162,7 +162,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Une sauce légèrement rustique, versable avec quelques petites taches d'omble et d'herbe. La couleur est vive, fumée vert olive, ni aqueuse ni épaisse.",
-            "action": "Goûtez au sel et à la chaux. Ajuster et laisser reposer pendant 10 minutes — la saveur continue à se développer."
+            "action": "Goûtez au sel et au citron vert. Ajuster et laisser reposer pendant 10 minutes — la saveur continue à se développer."
           },
           {
             "state": "Overdone",
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "blended_salsa",
         "ing_07",

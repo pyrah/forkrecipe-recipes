@@ -151,7 +151,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -219,7 +219,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "sauteed_mushrooms",
         "ing_08",
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "marsala_sauce",
         "seared_chicken",

@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "chocolate_batter"
       ],
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "baked_torta",
         "ing_08"

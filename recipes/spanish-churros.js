@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "churro_dough",
         "ing_06"
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "fried_churros",
         "ing_07",
@@ -272,7 +272,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_09",
         "ing_10",

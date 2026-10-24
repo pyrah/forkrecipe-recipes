@@ -152,7 +152,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "bloomed_spices",
         "boiled_potatoes",

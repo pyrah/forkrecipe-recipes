@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "switchel_concentrate"
       ],
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "rested_concentrate",
         "ing_04",

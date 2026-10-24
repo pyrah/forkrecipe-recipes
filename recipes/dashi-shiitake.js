@@ -79,7 +79,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -111,7 +111,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "cold_steeped_dashi"
       ],
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "heated_dashi",
         "ing_04"

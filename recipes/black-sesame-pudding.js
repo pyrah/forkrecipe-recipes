@@ -105,7 +105,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01"
       ],
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_sesame",
         "ing_02"
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "sesame_paste",
         "ing_03",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "sesame_milk",
         "agar_solution"

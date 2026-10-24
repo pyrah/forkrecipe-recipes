@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "prepped_components",
         "ing_07",
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "scrambled_egg_in_wok",
         "ing_01",
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "glazed_nasi_goreng",
         "ing_10"

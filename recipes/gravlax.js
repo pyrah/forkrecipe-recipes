@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "curing_mixture",
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "raw_gravlax"
       ],
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "cured_gravlax"
       ],

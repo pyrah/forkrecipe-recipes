@@ -187,7 +187,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -256,7 +256,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "stew_base",
         "ing_10",
@@ -290,7 +290,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "braised_beef",
         "ing_14",

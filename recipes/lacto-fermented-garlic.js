@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "packed_garlic_jar",
         "salt_brine"
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "brined_garlic"
       ],
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "lacto_fermented_garlic"
       ],

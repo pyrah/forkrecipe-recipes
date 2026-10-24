@@ -147,7 +147,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_04",
         "ing_02"
@@ -159,7 +159,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les légumes sont translucides et boiteux mais encore pâles — sans couleur, sans affection, et l'odeur est crue et herbacée.",
+            "description": "Les légumes sont translucides et mou mais encore pâles — sans couleur, sans affection, et l'odeur est crue et herbacée.",
             "action": "Levez légèrement la chaleur et faites cuire. Browning est d'où vient la profondeur."
           },
           {
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "browned_mirepoix",
         "ing_02",
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "brown_roux_base",
         "ing_01",
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_09",
         "ing_02"
@@ -271,11 +271,11 @@ export default {
           }
         ]
       },
-      "feelCue": "L'oignon doit siffler doucement et devenir boiteux et glissant, se dissolvant presque avec la cuillère. Il ne devrait pas y avoir de crépitement de brunissement, seulement un doux et doux étourdissement."
+      "feelCue": "L'oignon doit siffler doucement et devenir mou et glissant, se dissolvant presque avec la cuillère. Il ne devrait pas y avoir de crépitement de brunissement, seulement un doux et doux étourdissement."
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "sweated_onions",
         "ing_10"
@@ -306,14 +306,14 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "wine_reduction",
         "finished_espagnole",
         "ing_11"
       ],
       "outputState": "finished_robert",
-      "instructions": "Verser l'espagnole tendue dans l'oignon et la réduction du vin et laisser mijoter doucement pendant 8 à 10 minutes, en écrémant jusqu'à ce qu'elle soit mariée et lisse. Puis retirez complètement la poêle du feu et laissez-la cesser de bouillonner avant de fouetter dans la moutarde de Dijon. Ne laissez jamais la sauce bouillir après l'entrée de la moutarde — la moutarde bouillante devient dure et amère. Goûtez, ajustez le sel et servez au chaud.",
+      "instructions": "Verser l'espagnole tendue dans l'oignon et la réduction du vin et laisser mijoter doucement pendant 8 à 10 minutes, en écrèment jusqu'à ce qu'elle soit mariée et lisse. Puis retirez complètement la poêle du feu et laissez-la cesser de bouillonner avant de fouetter dans la moutarde de Dijon. Ne laissez jamais la sauce bouillir après l'entrée de la moutarde — la moutarde bouillante devient dure et amère. Goûtez, ajustez le sel et servez au chaud.",
       "visualCue": {
         "primaryTarget": "Une sauce marron lisse et brillante, pétrie d'oignon doux, avec la moutarde fouettée hors du feu jusqu'à une finale brillante, acidulée, moelleuse, sans amertume, sans aspect cassé ou granuleux.",
         "spectrum": [

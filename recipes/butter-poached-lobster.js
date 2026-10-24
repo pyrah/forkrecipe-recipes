@@ -12,7 +12,7 @@ export default {
     "homard",
     "beurre",
     "beurre-monte",
-    "braconnage",
+    "pochage",
     "français",
     "occasion spéciale",
     "faible temps"
@@ -102,7 +102,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
@@ -124,7 +124,7 @@ export default {
           {
             "state": "Overdone",
             "description": "La viande est blanche et opaque tout au long, commençant à contracter et ferme. Vous avez préparé le homard.",
-            "action": "Encore utilisable — votre pas de braconnage sera très bref (moins de 90 secondes) juste pour se réchauffer. Ne pas trop boire ou la viande sera caoutchouteuse."
+            "action": "Encore utilisable — votre pas de pochage sera très bref (moins de 90 secondes) juste pour se réchauffer. Ne pas trop boire ou la viande sera caoutchouteuse."
           }
         ]
       },
@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "parcooked_lobster",
         "beurre_monte"

@@ -165,7 +165,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_farro",
         "lemon_oregano_dressing",
@@ -268,7 +268,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_13",
         "ing_03"
@@ -299,7 +299,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "dressed_farro_salad",
         "seared_halloumi",
@@ -322,7 +322,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les bols sont assez longs pour que les légumes soient boiteux.",
+            "description": "Les bols sont assez longs pour que les légumes soient mou.",
             "action": "Gardez le farro et les légumes séparés pour la préparation des repas et combiner à la commande."
           }
         ]

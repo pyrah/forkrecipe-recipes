@@ -141,7 +141,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fumée",
+      "action": "Fumer",
       "inputs": [
         "rubbed_shoulder",
         "ing_11"
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "smoked_shoulder",
         "ing_10"
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "wrapped_shoulder"
       ],
@@ -271,7 +271,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "rested_shoulder"
       ],

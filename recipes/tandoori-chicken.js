@@ -163,7 +163,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "ing_01"
       ],
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "scored_chicken",
         "ing_02",
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "marinated_chicken"
       ],
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "roasted_tandoori",
         "ing_14"

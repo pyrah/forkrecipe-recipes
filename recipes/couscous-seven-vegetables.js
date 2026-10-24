@@ -330,7 +330,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "raked_couscous_and_full_stew",
         "ing_19"

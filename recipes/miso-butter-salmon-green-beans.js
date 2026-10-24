@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "roasted_salmon_beans",
         "ing_09",

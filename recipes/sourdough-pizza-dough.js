@@ -87,7 +87,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Autolyse",
+      "action": "Autolyser",
       "inputs": [
         "shaggy_mass"
       ],
@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "rested_dough",
         "ing_05",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "developed_dough"
       ],
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "bulk_dough"
       ],

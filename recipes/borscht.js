@@ -186,7 +186,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01"
       ],
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soffritto_base",
         "ing_09",
@@ -277,7 +277,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "La pomme de terre s'est brisée et a commencé à se dissoudre, épaississant le bouillon. Le chou est complètement boiteux et gris-olive.",
+            "description": "La pomme de terre s'est brisée et a commencé à se dissoudre, épaississant le bouillon. Le chou est complètement ramollis et gris-olive.",
             "action": "Procéder — la pomme de terre dissoute épaissira légèrement le borscht, que certains préfèrent. La couleur sera moins vibrante."
           }
         ]
@@ -286,7 +286,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "simmered_borscht_base",
         "roasted_beets",

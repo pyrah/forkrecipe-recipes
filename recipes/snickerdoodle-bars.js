@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "snickerdoodle_dough",
         "ing_10",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "baked_bars"
       ],

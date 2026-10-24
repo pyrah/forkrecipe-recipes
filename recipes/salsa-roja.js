@@ -104,7 +104,7 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 1,
       "defaultUnit": "parts",
       "substitutions": []
@@ -186,7 +186,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "charred_vegetables",
         "toasted_chilies",
@@ -226,7 +226,7 @@ export default {
         "ing_09"
       ],
       "outputState": "finished_salsa_roja",
-      "instructions": "Chauffer l'huile dans une casserole à feu moyen-élevé jusqu'à ce qu'elle mijote. Versez soigneusement la salsa mélangée — elle crachera et sifflera violemment. Mélanger et faire frire, en laissant la salsa tordre dans l'huile chaude pendant 3-5 minutes, en remuant fréquemment. Cette brève friture, appelée « freír la salsa », approfondit la couleur, concentre la saveur et intègre les bords bruts. La salsa va s'assombrir légèrement, réduire un peu, et développer une saveur plus unifiée, ronde. Goûtez encore pour le sel et la chaux.",
+      "instructions": "Chauffer l'huile dans une casserole à feu moyen-élevé jusqu'à ce qu'elle mijote. Versez soigneusement la salsa mélangée — elle crachera et sifflera violemment. Mélanger et faire frire, en laissant la salsa tordre dans l'huile chaude pendant 3-5 minutes, en remuant fréquemment. Cette brève friture, appelée « freír la salsa », approfondit la couleur, concentre la saveur et intègre les bords bruts. La salsa va s'assombrir légèrement, réduire un peu, et développer une saveur plus unifiée, ronde. Goûtez encore pour le sel et le citron vert.",
       "visualCue": {
         "primaryTarget": "La salsa a obscurci 1-2 nuances du mélange à une brique-rouge-brun plus profonde. Elle est activement étourdissante et saupoudrée dans l'huile, et l'arôme est torréfié et concentré plutôt que cru.",
         "spectrum": [

@@ -4,7 +4,7 @@ export default {
   "slug": "guacamole",
   "author": "ForkRecipe Kitchen",
   "title": "Guacamole",
-  "description": "La molcajete classique — mûre Hass avocats écrasés avec une pâte de serrano, d'oignon, de coriandre et de sel, illuminé avec de la chaux, gardé délibérément chunky ainsi chaque bouchée porte à la fois la chair beurrée et un éclair de chaleur verte.",
+  "description": "La molcajete classique — mûre Hass avocats écrasés avec une pâte de serrano, d'oignon, de coriandre et de sel, illuminé avec du citron vert, gardé délibérément chunky ainsi chaque bouchée porte à la fois la chair beurrée et un éclair de chaleur verte.",
   "cuisine": "Mexicain",
   "culture": "Mexicain central",
   "category": "condiments",
@@ -85,7 +85,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Citrus",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 8,
       "defaultUnit": "parts",
       "substitutions": []
@@ -127,21 +127,21 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "chile_paste",
         "ing_01",
         "ing_06"
       ],
       "outputState": "crushed_guacamole",
-      "instructions": "Coupez les avocats, retirez les fosses et creusez la chair dans la pâte. Ajouter le jus de lime. Écraser à la fourche ou au pestle, plier la pâte verte à travers l'avocat, mais arrêter pendant que le mélange est encore copieux — les morceaux visibles de l'avocat sont tout le point. La chaux devrait entrer maintenant afin que son acide enveloppe la chair coupée et ralentit le brunissement.",
+      "instructions": "Coupez les avocats, retirez les fosses et creusez la chair dans la pâte. Ajouter le jus de lime. Écraser à la fourche ou au pestle, plier la pâte verte à travers l'avocat, mais arrêter pendant que le mélange est encore copieux — les morceaux visibles de l'avocat sont tout le point. La citron vert devrait entrer maintenant afin que son acide enveloppe la chair coupée et ralentit le brunissement.",
       "visualCue": {
-        "primaryTarget": "Avocat vert pâle, partiellement broyé et partiellement en morceaux mous, rayé de la pâte de chile vert foncé. Il semble rustique et rugueux, non fouetté, et la surface est humide avec de la chaux.",
+        "primaryTarget": "Avocat vert pâle, partiellement broyé et partiellement en morceaux mous, rayé de la pâte de chile vert foncé. Il semble rustique et rugueux, non fouetté, et la surface est humide avec du citron vert.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Grand avocat non cassé moitiés glisser autour du bol, sec et non assaisonné, avec la pâte mise en commun en dessous.",
-            "action": "Couper à travers l'avocat avec le bord de la fourchette encore quelques fois et plier ainsi chaque pièce rencontre la pâte et la chaux."
+            "action": "Couper à travers l'avocat avec le bord de la fourchette encore quelques fois et plier ainsi chaque pièce rencontre la pâte et le citron vert."
           },
           {
             "state": "Perfect",
@@ -166,9 +166,9 @@ export default {
         "ing_04"
       ],
       "outputState": "finished_dish",
-      "instructions": "Plier dans l'oignon frais réservé et la coriandre pour la croûte et l'ascenseur. Bouche et correct: plus de sel pour faire sauter les saveurs, plus de chaux si elle a un goût plat ou gras, plus de serrano pour la chaleur. Servir immédiatement. En cas de maintien, appuyez sur l'enveloppe plastique directement sur la surface pour qu'aucun air ne l'atteigne.",
+      "instructions": "Plier dans l'oignon frais réservé et la coriandre pour la croûte et l'ascenseur. Bouche et correct: plus de sel pour faire sauter les saveurs, plus de citron vert si elle a un goût plat ou gras, plus de serrano pour la chaleur. Servir immédiatement. En cas de maintien, appuyez sur l'enveloppe plastique directement sur la surface pour qu'aucun air ne l'atteigne.",
       "visualCue": {
-        "primaryTarget": "Un guacamole vif et frais, cloué d'oignon blanc vif et de coriandre verte, brillant de la chaux, sans taches grises. Il fond doucement sur une cuillère.",
+        "primaryTarget": "Un guacamole vif et frais, cloué d'oignon blanc vif et de coriandre verte, brillant du citron vert, sans taches grises. Il fond doucement sur une cuillère.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -182,7 +182,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Souris et agressifs — trop de chaux ou de chile a enterré l'avocat, ou il a été assis et est devenu gris et sulfureux.",
+            "description": "Souris et agressifs — trop de citron vert ou de chile a enterré l'avocat, ou il a été assis et est devenu gris et sulfureux.",
             "action": "Mash dans un autre demi-avocat pour se mouiller et rééquilibrer, puis ré-saisonner doucement."
           }
         ]

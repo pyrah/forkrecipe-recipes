@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "prepped_roots",
         "ing_05"
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "roasting_roots",
         "ing_07",

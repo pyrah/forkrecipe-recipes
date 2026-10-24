@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "pretzel_dough"
       ],
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "developed_dough"
       ],
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "proofed_dough",
         "ing_06",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "dipped_pretzels"
       ],

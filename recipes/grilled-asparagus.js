@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "dressed_asparagus"
       ],
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "grilled_asparagus",
         "ing_03",

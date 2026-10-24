@@ -137,7 +137,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_04"
       ],
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "crisp_bacon_and_fat",
         "ing_05",
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_vegetables",
         "ing_03",

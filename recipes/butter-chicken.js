@@ -163,7 +163,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "marinated_chicken"
       ],
@@ -228,7 +228,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_11",
         "ing_08",
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "bhuna_base"
       ],
@@ -293,7 +293,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "smooth_sauce",
         "charred_chicken",

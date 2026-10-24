@@ -37,7 +37,7 @@ export default {
     {
       "ingId": "ing_01",
       "role": "Protein",
-      "name": "Gros œufs (pour le braconnage)",
+      "name": "Gros œufs (pour le pochage)",
       "ratioValue": 4,
       "defaultUnit": "whole",
       "substitutions": []
@@ -95,7 +95,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Acid",
-      "name": "Vin blanc (pour le braconnage)",
+      "name": "Vin blanc (pour le pochage)",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": [
@@ -135,7 +135,7 @@ export default {
     {
       "ingId": "ing_11",
       "role": "Hydration",
-      "name": "Eau (pour le braconnage)",
+      "name": "Eau (pour le pochage)",
       "ratioValue": 1500,
       "defaultUnit": "ml",
       "substitutions": []
@@ -144,7 +144,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -166,7 +166,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Épais, brillant et or pâle. Des chutes de la cuillère dans un ruisseau lent et intact. Goûte riche et beurré avec un bord citron clair.",
-            "action": "Gardez-vous au chaud sur le bain marin hors-chauffage et passer au braconnage."
+            "action": "Gardez-vous au chaud sur le bain marin hors-chauffage et passer au pochage."
           },
           {
             "state": "Overdone",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_11",
         "ing_07",
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -242,7 +242,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "toasted_base",
         "poached_eggs",

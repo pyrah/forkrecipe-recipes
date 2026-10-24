@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "encrusted_fish"
       ],
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "baked_salt_crust",
         "ing_07",

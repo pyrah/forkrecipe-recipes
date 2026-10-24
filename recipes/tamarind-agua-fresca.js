@@ -85,7 +85,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -116,7 +116,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "soaked_tamarind"
       ],
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "tamarind_concentrate",
         "ing_04",
@@ -171,7 +171,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Trop de sucre a terni l'aurore du tamarin et la boisson goûte plat et sucré, comme les bonbons dilués au tamarin.",
-            "action": "Presser dans une chaux ou ajouter une cuillère à soupe plus de concentré de tamarin pour réaffirmer la tartness."
+            "action": "Presser dans un citron vert ou ajouter une cuillère à soupe plus de concentré de tamarin pour réaffirmer la tartness."
           }
         ]
       },

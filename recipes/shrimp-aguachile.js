@@ -4,7 +4,7 @@ export default {
   "slug": "shrimp-aguachile",
   "author": "ForkRecipe Kitchen",
   "title": "Crevettes Aguachile",
-  "description": "La réponse de Sinaloa au ceviche — les crevettes crues au beurre frit et guéri pendant quelques minutes dans une explosion de serrano mélangé, de chaux et d'eau de concombre si vive et verte et choquante qu'elle se qualifie à peine de cuisson, mais c'est inoubliable.",
+  "description": "La réponse de Sinaloa au ceviche — les crevettes crues au beurre frit et guéri pendant quelques minutes dans une explosion de serrano mélangé, de citron vert et d'eau de concombre si vive et verte et choquante qu'elle se qualifie à peine de cuisson, mais c'est inoubliable.",
   "cuisine": "Mexicain",
   "culture": "Sinaloan",
   "category": "seafood",
@@ -12,7 +12,7 @@ export default {
     "crevettes",
     "cru",
     "aguachile",
-    "Chaux",
+    "citron vert",
     "Serrano",
     "Mexique",
     "Ceviche",
@@ -50,7 +50,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais (environ 8 chaux)",
+      "name": "Jus de citron vert frais (environ 8 citron vert)",
       "ratioValue": 60,
       "defaultUnit": "parts",
       "substitutions": []
@@ -103,12 +103,12 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
       "outputState": "prepared_shrimp",
-      "instructions": "À l'aide d'un couteau tranchant, papillonz chaque crevette en coupant le long du dos (où la veine a couru) presque tout le chemin à travers, puis appuyez dessus ouvrir plat. Cela double la surface exposée au remède et permet au jus de chaux de pénétrer plus rapidement et uniformément. Disposer les crevettes au beurre en une seule couche dans un plat froid et peu profond. Réfrigérer pendant que vous préparez l'aguachile.",
+      "instructions": "À l'aide d'un couteau tranchant, papillonz chaque crevette en coupant le long du dos (où la veine a couru) presque tout le chemin à travers, puis appuyez dessus ouvrir plat. Cela double la surface exposée au remède et permet au jus de citron vert de pénétrer plus rapidement et uniformément. Disposer les crevettes au beurre en une seule couche dans un plat froid et peu profond. Réfrigérer pendant que vous préparez l'aguachile.",
       "visualCue": {
         "primaryTarget": "Les crevettes sont plates et symétriques, ouvertes comme un livre. La chair est pâle, semi-translucide et uniforme — pas de taches foncées ni de zones opaques.",
         "spectrum": [
@@ -133,7 +133,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -152,7 +152,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Vivant, vert électrique, translucide et intensément aromatisé. Goûte comme le feu et la chaux en mesure égale.",
+            "description": "Vivant, vert électrique, translucide et intensément aromatisé. Goûte comme le feu et le citron vert en mesure égale.",
             "action": "Verser sur les crevettes immédiatement."
           },
           {
@@ -162,11 +162,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Lorsque vous goûtez l'aguachile, vous devez sentir la chaleur du serrano dans votre gorge en 3 secondes et une poussée de salivation de la chaux — les deux simultanément. Si une seule, ajustez."
+      "feelCue": "Lorsque vous goûtez l'aguachile, vous devez sentir la chaleur du serrano dans votre gorge en 3 secondes et une poussée de salivation du citron vert — les deux simultanément. Si une seule, ajustez."
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "prepared_shrimp",
         "aguachile_verde"
@@ -179,7 +179,7 @@ export default {
           {
             "state": "Underdone",
             "description": "Les crevettes sont encore généralement grises et translucides. La texture est trop brute et glissante.",
-            "action": "Cure encore 3-4 minutes. L'acide de chaux doit dénaturer la protéine extérieure."
+            "action": "Cure encore 3-4 minutes. L'acide de citron vert doit dénaturer la protéine extérieure."
           },
           {
             "state": "Perfect",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cured_shrimp",
         "ing_05",
@@ -226,7 +226,7 @@ export default {
           }
         ]
       },
-      "feelCue": "L'assiette finie sent la chaux humide, le chile vert frais et la douceur de l'océan des crevettes — propre, froide et dangereusement vivante."
+      "feelCue": "L'assiette finie sent le citron vert humide, le chile vert frais et la douceur de l'océan des crevettes — propre, froide et dangereusement vivante."
     }
   ]
 };

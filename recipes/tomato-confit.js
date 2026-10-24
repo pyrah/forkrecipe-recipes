@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "prepared_tomatoes"
       ],
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "roasted_tomatoes",
         "ing_07"

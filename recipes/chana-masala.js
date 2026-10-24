@@ -143,7 +143,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -239,7 +239,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "cooked_masala",
         "ing_01",
@@ -271,7 +271,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "braised_chickpeas",
         "ing_09",

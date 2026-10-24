@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "tkg_base",
         "ing_02",

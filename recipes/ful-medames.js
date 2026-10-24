@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soaked_beans",
         "ing_02"
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "cooked_beans",
         "ing_03",
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "crushed_ful",
         "ing_08",

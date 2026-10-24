@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "mochi_batter"
       ],
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "cooked_mochi",
         "ing_06"
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "workable_mochi",
         "ing_05",

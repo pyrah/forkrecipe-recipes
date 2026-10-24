@@ -151,7 +151,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_02",
         "ing_13"
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_13"
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_03"
       ],
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -255,7 +255,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Doré, doux, toujours boiteux. Pas encore croustillant.",
+            "description": "Doré, doux, toujours mou. Pas encore croustillant.",
             "action": "Continuez à frire: les oignons kashari doivent être croustillants, non caramélisés dans le style mujaddara."
           },
           {
@@ -274,7 +274,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -310,7 +310,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooked_lentils",
         "cooked_rice",
@@ -335,7 +335,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le bol est trop long: les oignons sont boiteux et saupoudrés de sauce. Pas de crise.",
+            "description": "Le bol est trop long: les oignons sont ramollis et saupoudrés de sauce. Pas de crise.",
             "action": "Éparpiller les oignons croustillants frais d'un lot réservé sur le dessus."
           }
         ]

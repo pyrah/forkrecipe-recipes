@@ -4,14 +4,14 @@ export default {
   "slug": "agrodolce",
   "author": "ForkRecipe Kitchen",
   "title": "Agrodolce",
-  "description": "La réduction des sucreries de la Sicile — vinaigre de vin rouge et sucre cuits ensemble jusqu'à ce qu'ils épaississent en sirop, puis aiguisés avec des noix de pin et des raisins secs ou aromatiques. Il émaille les oiseaux de gibier et le porc avec une laque acajou et une saveur qui oscille entre le caramel et l'acide avant de s'installer dans quelque chose d'ancien et complexe.",
+  "description": "Réduction aigre-douce sicilienne : du vinaigre de vin rouge et du sucre mijotent jusqu’à former un sirop, puis sont relevés de pignons, de raisins secs et d’aromates. Cette sauce brillante, couleur acajou, accompagne le gibier et le porc. Sa saveur oscille entre caramel et acidité, avec une profondeur ancienne et complexe.",
   "cuisine": "Italien",
   "culture": "Sicilien",
   "category": "sauces",
   "tags": [
     "agrodolce",
     "Italien",
-    "douce-douleur",
+    "aigre-doux",
     "sicilienne"
   ],
   "difficulty": 2,
@@ -155,7 +155,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Les échalotes devraient ressembler à des rubans boiteux dans l'huile — vous devriez pouvoir voir l'huile à travers eux. Ils se sentiront tout doux si vous appuyez un contre la poêle avec une cuillère."
+      "feelCue": "Les échalotes devraient ressembler à des rubans mou dans l'huile — vous devriez pouvoir voir l'huile à travers eux. Ils se sentiront tout doux si vous appuyez un contre la poêle avec une cuillère."
     },
     {
       "nodeId": "step_2",
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Terminer avec les noix de pin",
+      "action": "Terminer avec les pignons de pin",
       "inputs": [
         "agrodolce_sauce",
         "ing_06",
@@ -232,7 +232,7 @@ export default {
       "outputState": "finished_agrodolce",
       "instructions": "Hors du feu, plier dans les pignons grillés et assaisonner de sel et de poivre noir. Le sel aiguisera de façon spectaculaire le contraste de la saveur douce — goût après chaque pincement. Enlevez le rameau de romarin. Servir au chaud sur le canard, le filet de porc, les cuisses de poulet grillées ou la courge d'hiver rôtie.",
       "visualCue": {
-        "primaryTarget": "Une sauce foncée et brillante avec les noix de pin qui brillent à l'intérieur, les échalotes et les raisins visibles à travers la glaçure acajou – il devrait ressembler à quelque chose de laqué.",
+        "primaryTarget": "Une sauce foncée et brillante avec les pignons de pin qui brillent à l'intérieur, les échalotes et les raisins visibles à travers la glaçure acajou – il devrait ressembler à quelque chose de laqué.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -251,7 +251,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Goûtez une petite cuillère : des coups sucrés d'abord, puis l'acide soulève l'arrière du palais, puis le sel resserre tout et la richesse en noix de pin s'attarde. Si une seule note crie, ajustez-la avant que la sauce ne quitte le pot."
+      "feelCue": "Goûtez une petite cuillère : des coups sucrés d'abord, puis l'acide soulève l'arrière du palais, puis le sel resserre tout et la richesse en pignons de pin s'attarde. Si une seule note crie, ajustez-la avant que la sauce ne quitte le pot."
     }
   ]
 };

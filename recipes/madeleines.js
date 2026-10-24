@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_04",
         "ing_03",
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ribbon_mixture",
         "ing_01",
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "madeleine_batter"
       ],
@@ -255,7 +255,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "rested_batter"
       ],

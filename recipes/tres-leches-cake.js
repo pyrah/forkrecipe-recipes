@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "egg_foam",
         "ing_01",
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "sponge_batter"
       ],
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "baked_sponge",
         "ing_05",
@@ -255,7 +255,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_07",
         "ing_09"
@@ -286,7 +286,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "soaked_cake",
         "stabilized_whipped_cream",

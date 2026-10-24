@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "cured_pork_belly",
         "ing_09"
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "crackled_pork_belly"
       ],
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "rested_pork_belly"
       ],

@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "prepped_duck"
       ],
@@ -232,7 +232,7 @@ export default {
         "ing_05"
       ],
       "outputState": "sauce_base",
-      "instructions": "Blanchir les zestes d'orange dans l'eau bouillante pendant une minute pour adoucir leur amerrissement, puis égoutter. Ajouter l'échalote hachée au gastrique et adoucir brièvement, déglacer avec le vin blanc et réduire de moitié, puis verser dans le bouillon brun chaud et le jus d'orange. Laisser mijoter et réduire jusqu'à ce que la sauce sirote légèrement une cuillère, 8-12 minutes, en écrémant au besoin. Incorporer le zeste blanchi.",
+      "instructions": "Blanchir les zestes d'orange dans l'eau bouillante pendant une minute pour adoucir leur amerrissement, puis égoutter. Ajouter l'échalote hachée au gastrique et adoucir brièvement, déglacer avec le vin blanc et réduire de moitié, puis verser dans le bouillon brun chaud et le jus d'orange. Laisser mijoter et réduire jusqu'à ce que la sauce sirote légèrement une cuillère, 8-12 minutes, en écrèment au besoin. Incorporer le zeste blanchi.",
       "visualCue": {
         "primaryTarget": "Une sauce brillante, à roussissement profond, translucide aux bords, avec des rubans de zeste adoucis suspendus à l'intérieur; elle enveloppe le dos d'une cuillère et goûte vif, doux et salé à la fois.",
         "spectrum": [

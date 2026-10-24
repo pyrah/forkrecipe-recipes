@@ -13,7 +13,7 @@ export default {
     "herbes",
     "Thaï",
     "estaan",
-    "Chaux"
+    "citron vert"
   ],
   "difficulty": 2,
   "activeTime": "20 min",
@@ -48,7 +48,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais (2–3 chaux)",
+      "name": "Jus de citron vert frais (2–3 citron vert)",
       "ratioValue": 1.5,
       "defaultUnit": "parts",
       "substitutions": []
@@ -133,7 +133,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_05"
       ],
@@ -163,12 +163,12 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_01"
       ],
       "outputState": "cooked_pork",
-      "instructions": "Placez le porc haché dans un wok froid ou une casserole large — ne pas ajouter d'huile, la graisse de porc rendra. Mettre à feu moyen-vif et cuire, en brisant la menthe avec une cuillère en bois, pendant 4 à 5 minutes. Vous voulez que le porc soit cuit avec un peu de caramélisation autour des bords — pas une masse grise à la vapeur et pas un crumble dur et sec. Retirer du feu dès que le porc est cuit. Transférer immédiatement dans un grand bol de mélange. Le porc devrait encore être chaud quand vous l'habillez — la chaleur fleurit les herbes et ouvre la chaux.",
+      "instructions": "Placez le porc haché dans un wok froid ou une casserole large — ne pas ajouter d'huile, la graisse de porc rendra. Mettre à feu moyen-vif et cuire, en brisant la menthe avec une cuillère en bois, pendant 4 à 5 minutes. Vous voulez que le porc soit cuit avec un peu de caramélisation autour des bords — pas une masse grise à la vapeur et pas un crumble dur et sec. Retirer du feu dès que le porc est cuit. Transférer immédiatement dans un grand bol de mélange. Le porc devrait encore être chaud quand vous l'habillez — la chaleur fleurit les herbes et ouvre le citron vert.",
       "visualCue": {
         "primaryTarget": "Le porc est cuit à travers et brun clair avec quelques bords caramélisés. Pas de rose, pas d'eau grise autour de la viande. La graisse a rendu et la viande semble légèrement brillante.",
         "spectrum": [
@@ -201,7 +201,7 @@ export default {
         "ing_04"
       ],
       "outputState": "dressed_larb",
-      "instructions": "Travailler rapidement alors que le porc est encore très chaud, ajouter le jus de lime, la sauce de poisson et les flocons de chili grillés dans le bol. Agressivement, l'acidité de la chaux arrêtera la cuisson. Goûtez immédiatement : la vinaigrette doit être amère et salée avec un chili frappé au dos. La larde est intentionnellement audacieuse — si elle semble trop intense dans le bol, elle s'équilibrera magnifiquement avec du riz et des légumes frais. Ajuster: plus de chaux pour l'aur, plus de sauce de poisson pour la profondeur salée, plus de chili pour la chaleur.",
+      "instructions": "Travailler rapidement alors que le porc est encore très chaud, ajouter le jus de lime, la sauce de poisson et les flocons de chili grillés dans le bol. Agressivement, l'acidité du citron vert arrêtera la cuisson. Goûtez immédiatement : la vinaigrette doit être amère et salée avec un chili frappé au dos. La larde est intentionnellement audacieuse — si elle semble trop intense dans le bol, elle s'équilibrera magnifiquement avec du riz et des légumes frais. Ajuster: plus de citron vert pour l'aur, plus de sauce de poisson pour la profondeur salée, plus de chili pour la chaleur.",
       "visualCue": {
         "primaryTarget": "Le porc a l'air brillant et légèrement habillé, scintillant avec du jus de lime. La couleur est brun-rose. La vapeur monte encore.",
         "spectrum": [
@@ -212,7 +212,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Porc chaud, brillant, assaisonné agressivement. Vous le goûtez et votre bouche suce de la chaux et fleurit avec de la chaleur de chili. La sauce au poisson donne de la profondeur à l'umami.",
+            "description": "Porc chaud, brillant, assaisonné agressivement. Vous le goûtez et votre bouche suce du citron vert et fleurit avec de la chaleur de chili. La sauce au poisson donne de la profondeur à l'umami.",
             "action": "Ajouter immédiatement les herbes et la poudre de riz."
           },
           {
@@ -222,11 +222,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Lorsque vous remuez le porc habillé, il doit sentir comme un étal de larb du marché — la vapeur de chaux chaude, la sauce de poisson funk, et la chaleur de chili séchée tous frapper le visage à la fois."
+      "feelCue": "Lorsque vous remuez le porc habillé, il doit sentir comme un étal de larb du marché — la vapeur de citron vert chaude, la sauce de poisson funk, et la chaleur de chili séchée tous frapper le visage à la fois."
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "dressed_larb",
         "khao_khua",

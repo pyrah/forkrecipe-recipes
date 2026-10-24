@@ -86,7 +86,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_01"
       ],
@@ -116,7 +116,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "amber_caramel",
         "ing_02"
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "caramel_cream_base",
         "ing_03",

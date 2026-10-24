@@ -76,11 +76,11 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Aromatic",
-      "name": "Feuilles de chaux kaffir déchirées",
+      "name": "Feuilles de citron vert kaffir déchirées",
       "ratioValue": 8,
       "defaultUnit": "g",
       "substitutions": [
-        "zeste de chaux (2 chaux; bien inférieur)"
+        "zeste de citron vert (2 citron vert; bien inférieur)"
       ]
     },
     {
@@ -117,7 +117,7 @@ export default {
     {
       "ingId": "ing_09",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 25,
       "defaultUnit": "g",
       "substitutions": []
@@ -146,7 +146,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -176,11 +176,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Coupez vos mains autour de la vapeur qui s'élève du pot et respirez — vous devriez sentir la chaux de kaffir au - dessus de tout le reste, une note d'eucalyptus floral et frais coupée par la chaleur plus terreuse du galangal. Si vous sentez surtout la noix de coco, les aromatiques ont besoin de plus de temps."
+      "feelCue": "Coupez vos mains autour de la vapeur qui s'élève du pot et respirez — vous devriez sentir le citron vert de kaffir au - dessus de tout le reste, une note d'eucalyptus floral et frais coupée par la chaleur plus terreuse du galangal. Si vous sentez surtout la noix de coco, les aromatiques ont besoin de plus de temps."
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "aromatic_broth_base",
         "ing_06",
@@ -200,7 +200,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le poulet est tout simplement opaque, juteux et tendre. Les champignons se sont adoucis à une texture soyeuse. Broth sent profondément aromatique avec une faible chaleur de chile.",
-            "action": "Retirer du feu. Assaisonner avec de la sauce de poisson maintenant avant d'ajouter la chaux — chauffer l'acidité de la chaux."
+            "action": "Retirer du feu. Assaisonner avec de la sauce de poisson maintenant avant d'ajouter le citron vert — chauffer l'acidité du citron vert."
           },
           {
             "state": "Overdone",
@@ -213,21 +213,21 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "cooked_broth",
         "ing_08",
         "ing_09"
       ],
       "outputState": "seasoned_broth",
-      "instructions": "Retirer la casserole du feu avant d'ajouter la sauce de poisson et le jus de lime – l'acidité de la chaux est volatile et le topnote lumineux s'évapore lorsqu'il est cuit. Incorporer d'abord la sauce de poisson, goûter et ajuster. Puis ajouter le jus de lime par étapes, dégustation après chaque ajout. L'équilibre de ce bouillon est tout: il doit être simultanément salé, aigre et légèrement sucré de la noix de coco, avec une chaleur de fond des chilis. S'il a un goût plat, ajouter plus de sauce de poisson; s'il a un goût fin et aigre, une pincée de sucre de palme le ronge.",
+      "instructions": "Retirer la casserole du feu avant d'ajouter la sauce de poisson et le jus de lime – l'acidité du citron vert est volatile et le topnote lumineux s'évapore lorsqu'il est cuit. Incorporer d'abord la sauce de poisson, goûter et ajuster. Puis ajouter le jus de lime par étapes, dégustation après chaque ajout. L'équilibre de ce bouillon est tout: il doit être simultanément salé, aigre et légèrement sucré de la noix de coco, avec une chaleur de fond des chilis. S'il a un goût plat, ajouter plus de sauce de poisson; s'il a un goût fin et aigre, une pincée de sucre de palme le ronge.",
       "visualCue": {
         "primaryTarget": "Le bouillon est entièrement assaisonné, brillant et aromatique. La surface mijote avec une fine perle d'huile de coco et la couleur est une crème d'ivoire chaude.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le bouillon a un goût plat, unidimensionnel et riche en noix de coco — ni le salinité de la sauce de poisson ni la luminosité de la chaux ne l'ont encore ouvert.",
-            "action": "Ajouter la sauce de poisson une cuillère à café à la fois et goûter après chaque ajout avant d'ajouter de la chaux."
+            "description": "Le bouillon a un goût plat, unidimensionnel et riche en noix de coco — ni le salinité de la sauce de poisson ni la luminosité du citron vert ne l'ont encore ouvert.",
+            "action": "Ajouter la sauce de poisson une cuillère à café à la fois et goûter après chaque ajout avant d'ajouter du citron vert."
           },
           {
             "state": "Perfect",
@@ -236,8 +236,8 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Trop de jus de lime ajouté à la chaleur — le bouillon est fortement aigre et la noix de coco est submergée. Le parfum de chaux est devenu tranchant et métallique.",
-            "action": "Ajoutez un peu plus de lait de coco et une pincée de sucre de palme pour retirer l'acide. La prochaine fois, retirer le pot de chaleur avant d'ajouter de la chaux."
+            "description": "Trop de jus de lime ajouté à la chaleur — le bouillon est fortement aigre et la noix de coco est submergée. Le parfum de citron vert est devenu tranchant et métallique.",
+            "action": "Ajoutez un peu plus de lait de coco et une pincée de sucre de palme pour retirer l'acide. La prochaine fois, retirer le pot de chaleur avant d'ajouter du citron vert."
           }
         ]
       },
@@ -245,13 +245,13 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "seasoned_broth",
         "ing_11"
       ],
       "outputState": "finished_tom_kha_gai",
-      "instructions": "Déposer le bouillon dans des bols, distribuer uniformément le poulet et les champignons. Épargnez les feuilles de coriandre fraîche sur chaque bol juste avant de les servir — ne les remuez pas. Ne servez pas les feuilles de galangal, de citronnelle ou de lime kaffir comme nourriture; elles sont consommées autour. Fournissez un petit plat de quartiers de chaux et de sauce de poisson à la table afin que les invités puissent s'adapter à leur propre goût. Le bouillon est destiné à être siroté, pas seulement cuillé.",
+      "instructions": "Déposer le bouillon dans des bols, distribuer uniformément le poulet et les champignons. Épargnez les feuilles de coriandre fraîche sur chaque bol juste avant de les servir — ne les remuez pas. Ne servez pas les feuilles de galangal, de citronnelle ou de lime kaffir comme nourriture; elles sont consommées autour. Fournissez un petit plat de quartiers de citron vert et de sauce de poisson à la table afin que les invités puissent s'adapter à leur propre goût. Le bouillon est destiné à être siroté, pas seulement cuillé.",
       "visualCue": {
         "primaryTarget": "Un bol d'ivoire à la vapeur avec des morceaux de poulet pâle, des champignons soyeux, et une dispersion de coriandre vert vif flottant sur un bouillon crémeux et parfumé.",
         "spectrum": [
@@ -272,7 +272,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Tenez le bol près avant de boire — la vapeur devrait porter un double signal de chaux et de galangal qui vous fait inhaler involontairement. Ce souffle involontaire est le signe que le bouillon est prêt."
+      "feelCue": "Tenez le bol près avant de boire — la vapeur devrait porter un double signal de citron vert et de galangal qui vous fait inhaler involontairement. Ce souffle involontaire est le signe que le bouillon est prêt."
     }
   ]
 };

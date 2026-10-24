@@ -124,7 +124,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "sweated_onion",
         "ing_01"

@@ -105,7 +105,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "cold_coffee_mixture"
       ],
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "foamed_coffee"
       ],

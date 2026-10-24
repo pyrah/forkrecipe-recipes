@@ -107,7 +107,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "sugar_syrup"
       ],
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_01",
         "ing_03",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_baklava"
       ],
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "baked_baklava",
         "cooled_syrup"

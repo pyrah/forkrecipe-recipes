@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "marinated_lamb",
         "ing_09"
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_lamb",
         "ing_05",
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "braised_tagine",
         "ing_10"

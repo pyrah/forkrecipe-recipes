@@ -93,7 +93,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01"
       ],

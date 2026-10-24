@@ -195,7 +195,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -228,7 +228,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "golden_onion_base",
         "ing_04",
@@ -256,7 +256,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les taches sombres collent au fond du pot et sentent brûlé.",
-            "action": "Déglacer avec un jet d'eau; si amer, le curry fini aura besoin de lait de coco et de chaux supplémentaires pour équilibrer."
+            "action": "Déglacer avec un jet d'eau; si amer, le curry fini aura besoin de lait de coco et de citron vert supplémentaires pour équilibrer."
           }
         ]
       },
@@ -264,7 +264,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_masala",
         "ing_10",
@@ -298,7 +298,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "simmered_curry",
         "ing_13",
@@ -307,7 +307,7 @@ export default {
         "ing_17"
       ],
       "outputState": "finished_chickpea_curry",
-      "instructions": "Incorporer une poignée d'épinards à la fois; il se fane en 1–2 minutes. Enlevez le feu, pressez la chaux et ajustez le sel. Servir sur le riz basmati éparpillé de coriandre.",
+      "instructions": "Incorporer une poignée d'épinards à la fois; il se fane en 1–2 minutes. Enlevez le feu, pressez le citron vert et ajustez le sel. Servir sur le riz basmati éparpillé de coriandre.",
       "visualCue": {
         "primaryTarget": "Des rubans vert foncé d'épinards se sont effondrés dans la sauce orange, toujours vif.",
         "spectrum": [
@@ -328,7 +328,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Bouche : la chaux devrait faire lever la richesse de la noix de coco, et la chaleur devrait arriver un battement après la première avalation."
+      "feelCue": "Bouche : le citron vert devrait faire lever la richesse de la noix de coco, et la chaleur devrait arriver un battement après la première avalation."
     }
   ]
 };

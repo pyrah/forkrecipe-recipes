@@ -109,7 +109,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_05",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "softened_shallots",
         "ing_03",
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "reduced_wine_base",
         "seared_mushrooms",

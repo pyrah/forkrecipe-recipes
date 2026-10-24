@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "fibrous_paste_base",
         "charred_alliums",

@@ -96,7 +96,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sel",
+      "action": "Saler",
       "inputs": [
         "ing_01",
         "ing_05"
@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "macerated_peppers",
         "ing_02",

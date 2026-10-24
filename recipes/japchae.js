@@ -168,7 +168,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -267,7 +267,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "marinated_beef",
         "ing_12"
@@ -298,7 +298,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_noodles",
         "cooked_vegetables",

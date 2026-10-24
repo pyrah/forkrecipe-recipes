@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_04"
       ],
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "dry_caramel"
@@ -188,7 +188,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Caramel a brûlé au fond du pot. Une forte odeur brûlée.",
-            "action": "Enlevez le porc. Nettoyer le pot avec de l'eau chaude, déglacer et extirper les morceaux carbonisés avant de continuer."
+            "action": "Enlevez le porc. Nettoyer le pot avec de l'eau chaude, déglacer et extraire les morceaux carbonisés avant de continuer."
           }
         ]
       },
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "caramel_coated_pork",
         "ing_06",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "braising_pork",
         "ing_08"
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_caramel_pork",
         "ing_10",

@@ -134,7 +134,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_07"
       ],
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "detrempe_dough",
         "butter_block"
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "laminated_dough"
       ],
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_croissants"
       ],

@@ -129,7 +129,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "toasted_bread_cubes",
         "ing_02"
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "bread_wort",
         "ing_03",

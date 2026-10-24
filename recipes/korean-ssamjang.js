@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "mixed_ssamjang"
       ],

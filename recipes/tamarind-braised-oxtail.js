@@ -53,7 +53,7 @@ export default {
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": [
-        "jus de 2 chaux + 1 c. à thé mélasse"
+        "jus de 2 citron vert + 1 c. à thé mélasse"
       ]
     },
     {
@@ -176,7 +176,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_14",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "seared_oxtail",
         "ing_05",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "deglazed_pot",
         "ing_13"
@@ -279,7 +279,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "braised_oxtail",
         "ing_12"

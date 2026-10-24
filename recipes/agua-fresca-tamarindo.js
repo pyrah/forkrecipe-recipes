@@ -85,7 +85,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Citrus",
-      "name": "Jus de chaux frais (facultatif, à aiguiser)",
+      "name": "Jus de citron vert frais (facultatif, à aiguiser)",
       "ratioValue": 30,
       "defaultUnit": "g",
       "substitutions": []
@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "tamarind_liquid"
       ],
@@ -181,7 +181,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Surdoué — la tarte a été enterrée par le sucre. La couleur semble aqueuse et pâle.",
-            "action": "Ajouter plus de concentré de tamarin ou une pression de chaux pour rétablir l'équilibre aigre."
+            "action": "Ajouter plus de concentré de tamarin ou une pression de citron vert pour rétablir l'équilibre aigre."
           }
         ]
       },

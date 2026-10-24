@@ -93,7 +93,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_bones",
         "ing_03",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmered_broth"
       ],

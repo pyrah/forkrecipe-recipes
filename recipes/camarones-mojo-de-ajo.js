@@ -85,7 +85,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 10,
       "defaultUnit": "parts",
       "substitutions": [
@@ -103,7 +103,7 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Garnish",
-      "name": "Coriandre et quartiers de chaux frais (pour servir)",
+      "name": "Coriandre et quartiers de citron vert frais (pour servir)",
       "ratioValue": 3,
       "defaultUnit": "parts",
       "substitutions": []
@@ -112,7 +112,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -145,7 +145,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "mojo_de_ajo",
@@ -169,7 +169,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les crevettes se sont enroulées dans un O serré — elles sont caoutchouteuses et durs. Les bords sont passés du rose au blanc et opaques.",
-            "action": "Pas de rétablissement. Ajouter immédiatement la chaux et le beurre pour arrêter la cuisson et servir rapidement."
+            "action": "Pas de rétablissement. Ajouter immédiatement le citron vert et le beurre pour arrêter la cuisson et servir rapidement."
           }
         ]
       },
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "seared_shrimp",
         "ing_06",
@@ -185,7 +185,7 @@ export default {
         "ing_08"
       ],
       "outputState": "finished_camarones_mojo_de_ajo",
-      "instructions": "Avec la poêle encore à feu vif, pressez le jus de lime directement sur les crevettes — il crache et vapeur instantanément. Ajoutez un petit bouton final de beurre froid et faites tourner la poêle constamment pendant 30-45 secondes jusqu'à ce que le beurre s'émulsionne dans les jus de poêle, créant une sauce brillante et cohésive plutôt qu'une huile séparée. Retirer du feu et disperser la coriandre sur le dessus. Servir immédiatement avec des tortillas chaudes et plus de chaux.",
+      "instructions": "Avec la poêle encore à feu vif, pressez le jus de lime directement sur les crevettes — il crache et vapeur instantanément. Ajoutez un petit bouton final de beurre froid et faites tourner la poêle constamment pendant 30-45 secondes jusqu'à ce que le beurre s'émulsionne dans les jus de poêle, créant une sauce brillante et cohésive plutôt qu'une huile séparée. Retirer du feu et disperser la coriandre sur le dessus. Servir immédiatement avec des tortillas chaudes et plus de citron vert.",
       "visualCue": {
         "primaryTarget": "La sauce à la casserole est émulsifiée et brillante, un liquide or-orange unifié qui enrobe les crevettes, et non pas le beurre séparé et l'huile mise en commun sur les côtés.",
         "spectrum": [

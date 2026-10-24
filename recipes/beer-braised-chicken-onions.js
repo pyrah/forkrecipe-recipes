@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "seared_chicken",
         "ing_05",
@@ -254,7 +254,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "golden_onions",
         "seared_chicken",

@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "shaggy_khobz_dough"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "shaped_khobz"
       ],
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "proofed_khobz"
       ],

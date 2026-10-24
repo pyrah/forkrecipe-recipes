@@ -195,7 +195,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "roasted_shells",
         "ing_04",
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "bisque_soffritto",
         "ing_09",
@@ -297,7 +297,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "simmering_bisque"
       ],
@@ -327,7 +327,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "blended_bisque",
         "ing_15",

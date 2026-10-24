@@ -93,7 +93,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Aromatic",
-      "name": "Feuilles de chaux kaffir déchirées (ribs enlevées)",
+      "name": "Feuilles de citron vert kaffir déchirées (ribs enlevées)",
       "ratioValue": 0.3,
       "defaultUnit": "parts",
       "substitutions": []
@@ -133,13 +133,13 @@ export default {
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": [
-        "jus de chaux frais — moins complexe mais fonctionnel"
+        "jus de citron vert frais — moins complexe mais fonctionnel"
       ]
     },
     {
       "ingId": "ing_12",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.3,
       "defaultUnit": "parts",
       "substitutions": []
@@ -156,7 +156,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -190,13 +190,13 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "aromatics_paste",
         "ing_07"
       ],
       "outputState": "fried_paste",
-      "instructions": "Chauffer 2 cuillerées à soupe d'huile neutre ou d'huile de coco dans un wok ou une casserole large à feu moyen-vif jusqu'à ce qu'elles mijotent. Ajouter la pâte aromatique mélangée et les feuilles de chaux de kaffir déchirées et faire frire, en remuant constamment, jusqu'à ce que l'odeur brute de l'ail et de l'échalote ait cuit et que la pâte soit parfumée, sèche et de couleur plus profonde — 5-8 minutes. Crucieusement, cuire jusqu'à ce que vous puissiez voir l'huile commencer à se séparer et recueillir aux bords de la pâte — c'est ce qu'on appelle pecah minyak (fraction d'huile) dans la cuisine indonésienne et malaise, et cela indique que l'eau dans les aromatiques a complètement évaporé et la pâte est vraiment frite, pas simplement ragoûtée. Cette étape transforme les aromatiques bruts pointus en une base moelleuse et complexe.",
+      "instructions": "Chauffer 2 cuillerées à soupe d'huile neutre ou d'huile de coco dans un wok ou une casserole large à feu moyen-vif jusqu'à ce qu'elles mijotent. Ajouter la pâte aromatique mélangée et les feuilles de citron vert de kaffir déchirées et faire frire, en remuant constamment, jusqu'à ce que l'odeur brute de l'ail et de l'échalote ait cuit et que la pâte soit parfumée, sèche et de couleur plus profonde — 5-8 minutes. Crucieusement, cuire jusqu'à ce que vous puissiez voir l'huile commencer à se séparer et recueillir aux bords de la pâte — c'est ce qu'on appelle pecah minyak (fraction d'huile) dans la cuisine indonésienne et malaise, et cela indique que l'eau dans les aromatiques a complètement évaporé et la pâte est vraiment frite, pas simplement ragoûtée. Cette étape transforme les aromatiques bruts pointus en une base moelleuse et complexe.",
       "visualCue": {
         "primaryTarget": "Une pâte dorée plus sèche et plus profonde qui a visiblement rétréci et dont un mince anneau d'huile pâle s'est séparé aux bords de la casserole. L'odeur de légumes crus a disparu, remplacée par un arôme torréfié, doux et complexe.",
         "spectrum": [
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_paste",
         "ing_01",
@@ -254,7 +254,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "peanut_coconut_base",
         "ing_09",
@@ -263,7 +263,7 @@ export default {
         "ing_12"
       ],
       "outputState": "finished_satay_sauce",
-      "instructions": "Ajouter le sucre de palme, la sauce de poisson, la pâte de tamarin et le jus de lime à la sauce mijotée. Mélanger pour dissoudre complètement le sucre de palme et laisser mijoter 2-3 minutes de plus pour intégrer tout. Goûtez maintenant avec soin et équilibrez la sauce sur quatre axes : sel salé (sauce de poisson), doux (sucre de palm), aigre-tamarin (tamarin et chaux) et chaleur (chile). La sauce doit être riche et profondément salée d'abord, avec la douceur présente mais pas comme des bonbons, l'aurore éclaircissant plutôt que dominant, et le chile un courant de chaleur. Ajustez chaque élément progressivement — une sauce satay qui goûte sucrée et cacahuète sans complexité est incomplète; celle qui goûte seulement poissonneux a le mauvais rapport sauce poisson.",
+      "instructions": "Ajouter le sucre de palme, la sauce de poisson, la pâte de tamarin et le jus de lime à la sauce mijotée. Mélanger pour dissoudre complètement le sucre de palme et laisser mijoter 2-3 minutes de plus pour intégrer tout. Goûtez maintenant avec soin et équilibrez la sauce sur quatre axes : sel salé (sauce de poisson), doux (sucre de palm), aigre-tamarin (tamarin et citron vert) et chaleur (chile). La sauce doit être riche et profondément salée d'abord, avec la douceur présente mais pas comme des bonbons, l'aurore éclaircissant plutôt que dominant, et le chile un courant de chaleur. Ajustez chaque élément progressivement — une sauce satay qui goûte sucrée et cacahuète sans complexité est incomplète; celle qui goûte seulement poissonneux a le mauvais rapport sauce poisson.",
       "visualCue": {
         "primaryTarget": "Après assaisonnement et cuisson finale, la sauce prend une couleur ambre plus profonde du sucre de palme caramélisant légèrement dans la base de noix de coco. La surface est brillante et la sauce s'écoule dans une couche riche et lourde.",
         "spectrum": [

@@ -91,7 +91,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 10,
       "defaultUnit": "parts",
       "substitutions": []
@@ -100,7 +100,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_04"
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_02"
       ],
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cooked_tomatillos",
         "charred_chilis",
@@ -171,7 +171,7 @@ export default {
         "ing_07"
       ],
       "outputState": "finished_salsa_verde",
-      "instructions": "Mélanger les tomatillos drainés, l'ail (cuit avec eux), le chilis carbonisé, l'oignon cru, la coriandre, le sel et le jus de lime dans un mélangeur. Ajoutez quelques cuillères à soupe de liquide de cuisson réservé. Mélanger à votre consistance souhaitée : rugueux et rustique avec 6 impulsions, ou complètement lisse avec 45 secondes en hauteur. Goûtez immédiatement – ajustez le sel pour la profondeur savoureuse, la chaux pour la luminosité, et si trop de tarte, une pincée de sucre pour équilibrer. La couleur sera un vert olive vif tacheté avec des taches plus foncées du chili carbonisé.",
+      "instructions": "Mélanger les tomatillos drainés, l'ail (cuit avec eux), le chilis carbonisé, l'oignon cru, la coriandre, le sel et le jus de lime dans un mélangeur. Ajoutez quelques cuillères à soupe de liquide de cuisson réservé. Mélanger à votre consistance souhaitée : rugueux et rustique avec 6 impulsions, ou complètement lisse avec 45 secondes en hauteur. Goûtez immédiatement – ajustez le sel pour la profondeur savoureuse, le citron vert pour la luminosité, et si trop de tarte, une pincée de sucre pour équilibrer. La couleur sera un vert olive vif tacheté avec des taches plus foncées du chili carbonisé.",
       "visualCue": {
         "primaryTarget": "Une salsa olive-vert vif avec des taches d'herbe. Assez épais pour être légèrement sur une puce mais versable. La couleur est vivante et les herbes, pas terne ou gris.",
         "spectrum": [
@@ -183,7 +183,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Doux à moyen-lisse, vert olive vif, intensément aromatique. La saveur est tarte, à base de plantes et lentement épicée avec une finition propre.",
-            "action": "Goûtez au sel et à la chaux, puis servez ou réfrigérez."
+            "action": "Goûtez au sel et au citron vert, puis servez ou réfrigérez."
           },
           {
             "state": "Overdone",

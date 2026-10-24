@@ -187,7 +187,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "picarone_dough"
       ],
@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_09",
         "ing_10",
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "proofed_picarone_dough",
         "ing_08"

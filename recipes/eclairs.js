@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "piped_eclairs"
       ],
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "filled_eclairs",
         "ing_10",

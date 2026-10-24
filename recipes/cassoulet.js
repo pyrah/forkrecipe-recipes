@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_09"
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -180,7 +180,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les saucisses sont grises et bouillies plutôt que brunes. L'oignon est boiteux et translucide.",
+            "description": "Les saucisses sont grises et bouillies plutôt que brunes. L'oignon est fondant et translucide.",
             "action": "Augmentez la chaleur et faites cuire plus longtemps — les viandes non savourées ne contribuent presque pas à la complexité de la saveur du plat final."
           },
           {
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "browned_meats",
         "cooked_beans",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_cassoulet",
         "ing_10"

@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "sliced_potatoes",
         "seasoned_cream",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_gratin"
       ],
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "baked_gratin"
       ],

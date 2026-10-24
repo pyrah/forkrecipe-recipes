@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_06",
         "ing_04",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "vegetable_bed",
         "ing_01",
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "finished_greek_sea_bass",
         "ing_08"

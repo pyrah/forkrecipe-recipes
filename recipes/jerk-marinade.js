@@ -115,7 +115,7 @@ export default {
     {
       "ingId": "ing_09",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": [
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "prepped_scotch_bonnets",
         "ing_02",
@@ -235,12 +235,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "rough_jerk_paste"
       ],
       "outputState": "balanced_jerk_marinade",
-      "instructions": "Goûtez soigneusement la pâte — utilisez une très petite quantité sur un cracker ou un morceau de pain pour tamponner la chaleur et vous permettre de goûter sous le feu. La pâte doit être extrêmement chaude, profondément salée à partir de la sauce soja, parfumée d'Allspice (l'âme de l'amande), et porter la dimension tropicale-fruitée spécifique du capot scotch sous la chaleur. Il ne doit pas avoir un goût de feu unidimensionnel. Ajuster: si elle a besoin de plus de profondeur, ajouter plus de toutspice du sol; si le soja est trop dominant, ajouter plus de chaux; si la chaleur est écrasante au point d'être désagréable même pour le public prévu, ajouter plus de pétoncle et une seconde goutte d'huile pour la diluer; si elle a un goût plat, plus de sel. Le principe d'équilibre de l'arnaque est que tous les spices et le capot scotch sont des pistes co-égales — ni l'un ni l'autre ne devrait être complètement absent.",
+      "instructions": "Goûtez soigneusement la pâte — utilisez une très petite quantité sur un cracker ou un morceau de pain pour tamponner la chaleur et vous permettre de goûter sous le feu. La pâte doit être extrêmement chaude, profondément salée à partir de la sauce soja, parfumée d'Allspice (l'âme de l'amande), et porter la dimension tropicale-fruitée spécifique du capot scotch sous la chaleur. Il ne doit pas avoir un goût de feu unidimensionnel. Ajuster: si elle a besoin de plus de profondeur, ajouter plus de toutspice du sol; si le soja est trop dominant, ajouter plus de citron vert; si la chaleur est écrasante au point d'être désagréable même pour le public prévu, ajouter plus de pétoncle et une seconde goutte d'huile pour la diluer; si elle a un goût plat, plus de sel. Le principe d'équilibre de l'arnaque est que tous les spices et le capot scotch sont des pistes co-égales — ni l'un ni l'autre ne devrait être complètement absent.",
       "visualCue": {
         "primaryTarget": "Une pâte brun-vert foncée, complexe et profonde qui n'est clairement pas unidimensionnelle; les taches de thym et d'échon visible à travers; la surface scintille légèrement avec l'huile essentielle allspice.",
         "spectrum": [
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "balanced_jerk_marinade"
       ],

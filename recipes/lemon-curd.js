@@ -99,7 +99,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "raw_curd_base"
       ],
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "thickened_curd",
         "ing_04",

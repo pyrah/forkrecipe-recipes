@@ -115,7 +115,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "sugar_solution"
       ],
@@ -145,7 +145,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "hard_crack_caramel",
         "ing_04",

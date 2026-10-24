@@ -129,7 +129,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "shaggy_dough",
         "ing_04",
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "developed_dough"
       ],
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "bulk_fermented_dough"
       ],
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "shaped_loaf"
       ],
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "proofed_loaf"
       ],

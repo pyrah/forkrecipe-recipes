@@ -109,7 +109,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shucked_clams",
         "casino_stuffing",

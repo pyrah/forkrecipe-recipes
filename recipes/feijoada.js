@@ -133,7 +133,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_04",
         "ing_02",
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -198,16 +198,16 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "sofrito_base",
         "browned_pork",
         "ing_01"
       ],
       "outputState": "simmering_feijoada",
-      "instructions": "Retournez toutes les viandes brunes dans le pot. Ajouter les haricots trempés drainés. Verser suffisamment d'eau froide pour couvrir tout par 5 cm (environ 2 pouces). Porter à ébullition vigoureuse, en écrémant toute mousse grise qui monte à la surface dans les 10 premières minutes — c'est une protéine coagulée et fera le bouillon boueux si laissé. Une fois écrémé, réduire la chaleur au réglage le plus bas, couvrir partiellement et commencer le long brassage.",
+      "instructions": "Retournez toutes les viandes brunes dans le pot. Ajouter les haricots trempés drainés. Verser suffisamment d'eau froide pour couvrir tout par 5 cm (environ 2 pouces). Porter à ébullition vigoureuse, en écrèment toute mousse grise qui monte à la surface dans les 10 premières minutes — c'est une protéine coagulée et fera le bouillon boueux si laissé. Une fois écrémé, réduire la chaleur au réglage le plus bas, couvrir partiellement et commencer le long brassage.",
       "visualCue": {
-        "primaryTarget": "Après écrémage : un bouillon clair et foncé avec des haricots visibles et de la viande submergée. Le liquide est à mijoter, une ou deux bulles paresseuses montant à la surface toutes les quelques secondes.",
+        "primaryTarget": "Après écrèmege : un bouillon clair et foncé avec des haricots visibles et de la viande submergée. Le liquide est à mijoter, une ou deux bulles paresseuses montant à la surface toutes les quelques secondes.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "simmering_feijoada"
       ],
@@ -260,7 +260,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "tender_feijoada",
         "ing_09",

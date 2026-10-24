@@ -129,7 +129,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_06",
         "ing_02",
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "infused_spice_oil",
         "ing_04",
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "aromatic_oil",
         "ing_01",

@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "brezel_dough"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "shaped_brezels",
         "ing_07"
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "lye_dipped_brezels"
       ],

@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soaked_chickpeas",
         "ing_02"
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "cooked_chickpeas",
         "tahini_sauce"

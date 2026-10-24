@@ -202,7 +202,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "softened_vegetables",
         "ing_05",
@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "tomato_spice_base",
         "ing_08",
@@ -301,7 +301,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "tender_lentils",
         "ing_10",
@@ -337,7 +337,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "sloppy_joe_filling",
         "ing_16",

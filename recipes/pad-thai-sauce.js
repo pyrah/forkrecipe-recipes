@@ -42,7 +42,7 @@ export default {
       "defaultUnit": "parts",
       "substitutions": [
         "concentré de tamarin (utiliser 1 partie)",
-        "jus de chaux (perte la profondeur mais travaille)"
+        "jus de citron vert (perte la profondeur mais travaille)"
       ]
     },
     {
@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "tamarind_liquid",
         "ing_02",
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "raw_pad_thai_sauce"
       ],

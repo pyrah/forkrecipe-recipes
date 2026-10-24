@@ -88,7 +88,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "ing_02"
       ],
@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_03",
         "iced_water"
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "tempura_batter",
         "ing_05"

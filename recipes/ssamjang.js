@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "seasoned_ssamjang",
         "ing_07"

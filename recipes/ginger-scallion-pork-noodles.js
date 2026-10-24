@@ -162,7 +162,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "glazed_pork",
         "noodles_and_bok_choy",

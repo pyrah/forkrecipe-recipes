@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "chile_paste",
         "ing_07"
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "fried_paste",
         "seafood_powder"
@@ -264,7 +264,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "seafood_incorporated",
         "ing_08",

@@ -114,7 +114,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "spiced_milk_mixture"
       ],
@@ -167,7 +167,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le lait fume librement et sent intensément le curcuma, le gingembre et la cannelle. De petites bulles se forment au bord — pas d'ébullition au centre.",
-            "action": "Retirer du feu et ajouter l'édulcorant avant de l'extirper."
+            "action": "Retirer du feu et ajouter l'édulcorant avant de l'extraire."
           },
           {
             "state": "Overdone",
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "warmed_golden_milk",
         "ing_06"

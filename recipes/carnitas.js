@@ -63,7 +63,7 @@ export default {
       "ratioValue": 1,
       "defaultUnit": "whole",
       "substitutions": [
-        "1⁄2 orange + 1 chaux"
+        "1⁄2 orange + 1 citron vert"
       ]
     },
     {
@@ -125,7 +125,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_08"
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "braised_pork",
         "ing_09"
@@ -228,7 +228,7 @@ export default {
         "crisped_carnitas"
       ],
       "outputState": "finished_carnitas",
-      "instructions": "Transférer les carnitas dans une planche et les laisser reposer 5 minutes pour que les jus s'installent. Hacher ou tirer à peu près dans un mélange d'ardoises croustillantes et de lambeaux tendres, cuillerer sur un peu de gras chaud rendu pour les garder brillants. Goûtez et ajoutez une pincée plus de sel et une pression de chaux fraîche si elle a besoin d'éclaircir. Servir chaud sur les tortillas de maïs chaudes avec l'oignon, la coriandre et la salsa.",
+      "instructions": "Transférer les carnitas dans une planche et les laisser reposer 5 minutes pour que les jus s'installent. Hacher ou tirer à peu près dans un mélange d'ardoises croustillantes et de lambeaux tendres, cuillerer sur un peu de gras chaud rendu pour les garder brillants. Goûtez et ajoutez une pincée plus de sel et une pression de citron vert fraîche si elle a besoin d'éclaircir. Servir chaud sur les tortillas de maïs chaudes avec l'oignon, la coriandre et la salsa.",
       "visualCue": {
         "primaryTarget": "Un enchevêtrement de textures scintillantes — bords brunis crépités tissés à travers des lambeaux doux juteux, liquéqués mais pas gras, tenant ensemble lorsqu'ils sont écorcés sur une tortilla.",
         "spectrum": [

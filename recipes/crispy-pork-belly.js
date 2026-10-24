@@ -104,7 +104,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "ing_01"
       ],
@@ -134,7 +134,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "scored_pork",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "seasoned_pork",
         "ing_05",
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "roasted_pork"
       ],

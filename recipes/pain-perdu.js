@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "custard_batter"
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "soaked_brioche",
         "ing_07"
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "cooked_pain_perdu",
         "ing_08"

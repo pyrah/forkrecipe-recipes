@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "prepped_components",
         "ing_11",
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "seared_shrimp_and_ham",
         "ing_11",

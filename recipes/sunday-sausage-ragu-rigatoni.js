@@ -181,7 +181,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soffritto_base",
         "ing_09",
@@ -282,7 +282,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_12",
         "ing_15"
@@ -313,7 +313,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "al_dente_rigatoni",
         "sausage_ragu",

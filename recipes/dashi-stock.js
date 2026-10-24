@@ -67,7 +67,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -98,7 +98,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "kombu_infusion",
         "ing_02"

@@ -137,7 +137,7 @@ export default {
     {
       "ingId": "ing_11",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": [
@@ -168,7 +168,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -184,7 +184,7 @@ export default {
         "ing_13"
       ],
       "outputState": "jerk_paste",
-      "instructions": "Mélanger tous les ingrédients de la marinade dans un mélangeur ou un robot culinaire. Blitz à une pâte aromatique lisse et intense. Goûtez - le — il devrait être ardent, parfumé de tout l'aspice, et profondément salé. Régler le sel et la chaux. La couleur doit être un vert olive profond tacheté de rouge.",
+      "instructions": "Mélanger tous les ingrédients de la marinade dans un mélangeur ou un robot culinaire. Blitz à une pâte aromatique lisse et intense. Goûtez - le — il devrait être ardent, parfumé de tout l'aspice, et profondément salé. Régler le sel et le citron vert. La couleur doit être un vert olive profond tacheté de rouge.",
       "visualCue": {
         "primaryTarget": "Une pâte épaisse et brun-vert foncé qui s'accroche à une cuillère sans goutter. Pas de gros morceaux visibles.",
         "spectrum": [
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "jerk_paste"
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "marinated_chicken"
       ],
@@ -262,7 +262,7 @@ export default {
           {
             "state": "Overdone",
             "description": "La surface est uniformément noire et amère. La chair aux points les plus fins est séchée à chamois.",
-            "action": "Le salut par enlèvement de la couche extérieure brûlée — la chair en dessous devrait encore être juteuse. Servir avec de la chaux supplémentaire."
+            "action": "Le salut par enlèvement de la couche extérieure brûlée — la chair en dessous devrait encore être juteuse. Servir avec du citron vert supplémentaire."
           }
         ]
       },
@@ -270,7 +270,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "grilled_jerk_chicken"
       ],

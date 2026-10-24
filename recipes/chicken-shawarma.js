@@ -149,7 +149,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "shawarma_marinade"
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "marinated_shawarma"
       ],
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "roasted_shawarma"
       ],

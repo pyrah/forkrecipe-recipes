@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_03",
         "ing_06"
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sérum",
+      "action": "Couper en dés",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "chopped_herbs",
         "soaked_bulgur",
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "dressed_tabouli"
       ],

@@ -13,7 +13,7 @@ export default {
     "Choux",
     "braisés",
     "pomme",
-    "douce-douleur",
+    "aigre-doux",
     "végétalien",
     "hiver"
   ],
@@ -146,7 +146,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_03"
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "softened_onion_base",
         "ing_01",
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "braised_rotkohl"
       ],

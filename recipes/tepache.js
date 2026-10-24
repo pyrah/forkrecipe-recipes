@@ -117,7 +117,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_01",
         "sugar_water",
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "tepache_mixture"
       ],
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "fermented_tepache"
       ],

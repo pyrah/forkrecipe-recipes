@@ -245,7 +245,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "wine_fennel_base",
         "seared_thighs",

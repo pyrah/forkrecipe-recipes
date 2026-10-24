@@ -108,7 +108,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_04"
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "softened_onions",
         "ing_03",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "paprika_base",
         "ing_01",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "browned_beef",
         "ing_05"

@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "roasted_vegetables",
         "ing_01",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Abat-jour",
+      "action": "Écumer",
       "inputs": [
         "simmering_stock"
       ],
@@ -224,7 +224,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "La surface est claire avec seulement un mince film doré de graisse de dinde. Le stock ci-dessous est visiblement ambre et clair. L'écrémage est maintenant terminé.",
+            "description": "La surface est claire avec seulement un mince film doré de graisse de dinde. Le stock ci-dessous est visiblement ambre et clair. L'écrèmege est maintenant terminé.",
             "action": "Maintenez le mijoter, non perturbé, pour le temps de cuisson restant."
           },
           {
@@ -234,11 +234,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Touchez l'arrière de votre cuillère à écrémage à la surface et soulevez - si la mousse grise s'accroche dans un anneau autour du bord de la cuillère, il y a encore des protéines coagulées à enlever. Si seulement le liquide doré s'accroche, l'écumage est fait."
+      "feelCue": "Touchez l'arrière de votre cuillère à écrèmege à la surface et soulevez - si la mousse grise s'accroche dans un anneau autour du bord de la cuillère, il y a encore des protéines coagulées à enlever. Si seulement le liquide doré s'accroche, l'écumage est fait."
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "skimmed_stock"
       ],
@@ -268,7 +268,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "strained_stock"
       ],

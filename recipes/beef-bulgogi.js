@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "sliced_beef",
         "ing_02",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "marinated_bulgogi"
       ],
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "seared_bulgogi",
         "ing_10",

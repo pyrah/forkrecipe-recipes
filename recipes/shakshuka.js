@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "softened_vegetables",
         "ing_04",
@@ -206,7 +206,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "spiced_base",
         "ing_08",
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "tomato_sauce",
         "ing_10",

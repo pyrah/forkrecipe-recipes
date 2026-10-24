@@ -118,7 +118,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -130,7 +130,7 @@ export default {
         "ing_08"
       ],
       "outputState": "simmering_hock_stock",
-      "instructions": "Placer les jarrets dans un grand pot lourd et couvrir d'eau froide. Ajouter l'oignon coupé (peau sur laquelle la peau ajoute de la couleur et une douceur), le céleri, l'ail non pelé, les feuilles de laurier, les grains de poivre et le thym. Porter lentement à feu moyen à mijoter nue, en écrémant toute mousse brun-gris qui monte dans les 20 premières minutes. Réduisez à la chaleur la plus basse qui maintient une mijotée douce: de petites bulles paresseuses brisent la surface toutes les quelques secondes. Un ébullition dur rend le stock nuageux et peut durcir la peau des jarrets. Laisser mijoter pendant 2,5 à 3 heures.",
+      "instructions": "Placer les jarrets dans un grand pot lourd et couvrir d'eau froide. Ajouter l'oignon coupé (peau sur laquelle la peau ajoute de la couleur et une douceur), le céleri, l'ail non pelé, les feuilles de laurier, les grains de poivre et le thym. Porter lentement à feu moyen à mijoter nue, en écrèment toute mousse brun-gris qui monte dans les 20 premières minutes. Réduisez à la chaleur la plus basse qui maintient une mijotée douce: de petites bulles paresseuses brisent la surface toutes les quelques secondes. Un ébullition dur rend le stock nuageux et peut durcir la peau des jarrets. Laisser mijoter pendant 2,5 à 3 heures.",
       "visualCue": {
         "primaryTarget": "Un liquide d'or ambré mijotant doucement avec des spores de vapeur parfumée à la fumée, les jarrets submergés et commençant à avoir l'air gonflés et adoucis. L'oignon s'est obscurci et le céleri est devenu translucide.",
         "spectrum": [
@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "simmering_hock_stock"
       ],
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "rested_hock_stock"
       ],
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "strained_hock_stock",
         "ing_09"

@@ -130,7 +130,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_03",
         "ing_01"
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_laksa_paste",
         "ing_02",
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "laksa_broth",
         "ing_01",
@@ -251,7 +251,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les crevettes sont enroulées dans des formes O serrées et caoutchouteuses. Les nouilles se sont légèrement dissoutes dans le bouillon.",
-            "action": "Servir immédiatement avec de la chaux supplémentaire — l'acide rafraîchit un plat trop cuit."
+            "action": "Servir immédiatement avec du citron vert supplémentaire — l'acide rafraîchit un plat trop cuit."
           }
         ]
       },

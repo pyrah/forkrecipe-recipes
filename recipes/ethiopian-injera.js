@@ -84,7 +84,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -116,7 +116,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "fermented_teff_batter",
         "ing_05"
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "prepared_batter",
         "ing_04"

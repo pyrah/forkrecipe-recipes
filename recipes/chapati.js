@@ -74,7 +74,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -106,7 +106,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "chapati_dough"
       ],
@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "rested_dough"
       ],
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "rolled_rounds",
         "ing_04"

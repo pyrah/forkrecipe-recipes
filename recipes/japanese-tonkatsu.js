@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "breaded_cutlets",
         "ing_05"
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "fried_tonkatsu",
         "ing_07"

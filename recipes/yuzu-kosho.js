@@ -79,7 +79,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Zeste",
+      "action": "Prélever le zeste",
       "inputs": [
         "ing_01"
       ],
@@ -109,7 +109,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mince",
+      "action": "Hacher finement",
       "inputs": [
         "ing_02"
       ],
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "yuzu_zest",
         "minced_chili",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "yuzu_kosho_paste"
       ],

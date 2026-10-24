@@ -121,7 +121,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "softened_pears",
         "ing_04",
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "pear_puree",
         "ing_03",
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "custard_batter",
         "ing_07",

@@ -186,7 +186,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_05"
       ],
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_bones",
         "charred_aromatics",
@@ -224,7 +224,7 @@ export default {
         "ing_09"
       ],
       "outputState": "infused_broth",
-      "instructions": "Couvrez les os et la viande propres avec de l'eau froide fraîche et faites mijoter à nu — jamais ébullition. Ajouter l'oignon carbonisé et le gingembre et le sac d'épices. Maintenez à la plus douce mijoter, surface à peine frissonnante, pendant 4-6 heures. Mousse d'écrémage et graisse de surface toutes les 20-30 minutes pendant la première heure. Tirez la poitrine à 90 minutes une fois qu'elle est tendre (sauvez-la pour la trancher dans les bols); laissez les os continuer. Garnir d'eau chaude si le niveau tombe sous les os.",
+      "instructions": "Couvrez les os et la viande propres avec de l'eau froide fraîche et faites mijoter à nu — jamais ébullition. Ajouter l'oignon carbonisé et le gingembre et le sac d'épices. Maintenez à la plus douce mijoter, surface à peine frissonnante, pendant 4-6 heures. Mousse d'écrèmege et graisse de surface toutes les 20-30 minutes pendant la première heure. Tirez la poitrine à 90 minutes une fois qu'elle est tendre (sauvez-la pour la trancher dans les bols); laissez les os continuer. Garnir d'eau chaude si le niveau tombe sous les os.",
       "visualCue": {
         "primaryTarget": "Un bouillon ambré clair et brillant avec seulement une bulle paresseuse ou deux brisant la surface toutes les quelques secondes. Un mince éclat de graisse dorée, le reste s'enfuit. Arôme profond et épicé.",
         "spectrum": [
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "infused_broth",
         "ing_06",

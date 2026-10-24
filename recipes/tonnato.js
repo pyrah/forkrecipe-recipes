@@ -91,7 +91,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Liquid",
-      "name": "Eau froide ou liquide de braconnage de veau froid",
+      "name": "Eau froide ou liquide de pochage de veau froid",
       "ratioValue": 2,
       "defaultUnit": "tbsp",
       "substitutions": [
@@ -170,7 +170,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Or pâle uniforme avec une surface soyeuse et brillante. Il tombe d'une spatule dans un rideau lisse et intact. Pas de poolage d'huile visible.",
-            "action": "Ajuster la consistance avec l'eau froide ou le liquide de braconnage et la saison."
+            "action": "Ajuster la consistance avec l'eau froide ou le liquide de pochage et la saison."
           },
           {
             "state": "Overdone",
@@ -190,7 +190,7 @@ export default {
         "ing_08"
       ],
       "outputState": "finished_tonnato",
-      "instructions": "Ajouter de l'eau froide (ou du liquide de braconnage de veau froid pour une saveur plus complexe) une cuillère à soupe à la fois pour mincer la sauce à une consistance de revêtement versable mais toujours — il devrait enrober le dos d'une cuillère et tomber dans un ruban lent, ne pas courir comme de l'eau. Assaisonner avec du poivre blanc et du sel, goûter soigneusement depuis que les anchois et les câpres ont ajouté du sel significatif. Réfrigérer au moins 30 minutes avant de servir pour laisser fondre les saveurs.",
+      "instructions": "Ajouter de l'eau froide (ou du liquide de pochage de veau froid pour une saveur plus complexe) une cuillère à soupe à la fois pour mincer la sauce à une consistance de revêtement versable mais toujours — il devrait enrober le dos d'une cuillère et tomber dans un ruban lent, ne pas courir comme de l'eau. Assaisonner avec du poivre blanc et du sel, goûter soigneusement depuis que les anchois et les câpres ont ajouté du sel significatif. Réfrigérer au moins 30 minutes avant de servir pour laisser fondre les saveurs.",
       "visualCue": {
         "primaryTarget": "Une sauce en or pâle, versable qui enveloppe complètement une cuillère, tombe dans un ruban, et a un léger reflet brillant. Il devrait ressembler à une sauce crème très douce, très raffinée.",
         "spectrum": [

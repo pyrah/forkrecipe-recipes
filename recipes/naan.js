@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "shaggy_dough"
       ],
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "smooth_dough"
       ],
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "risen_dough"
       ],
@@ -264,7 +264,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "stretched_naan"
       ],
@@ -294,7 +294,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "blistered_naan",
         "ing_08",

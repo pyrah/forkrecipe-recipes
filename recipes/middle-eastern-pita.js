@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "pita_dough"
       ],
@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "rolled_pitas"
       ],

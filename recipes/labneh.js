@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "salted_yogurt"
       ],
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "hanging_labneh",
         "ing_03",

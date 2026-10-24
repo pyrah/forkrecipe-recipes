@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "herb_blend",
         "ing_01",
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "green_goddess_base"
       ],

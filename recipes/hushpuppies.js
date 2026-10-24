@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_10"
       ],
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "hushpuppy_batter",
         "hot_fry_oil"

@@ -142,7 +142,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le poisson est pliable, se déchire facilement le long des lignes de flocons, et goûte agréablement saline — comme un bouillon bien assaisonné, pas un lécher de sel.",
-            "action": "Égoutter et sécher. Passez à l'étape du braconnage."
+            "action": "Égoutter et sécher. Passez à l'étape du pochage."
           },
           {
             "state": "Overdone",
@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "desalted_cod"
       ],
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_02",
         "ing_06"
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "softened_aromatics",
         "poached_shredded_cod",
@@ -283,7 +283,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "assembled_bras",
         "ing_07",

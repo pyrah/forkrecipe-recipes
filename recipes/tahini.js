@@ -59,7 +59,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01"
       ],
@@ -89,7 +89,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "toasted_sesame"
       ],
@@ -119,7 +119,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cooled_sesame",
         "ing_02"

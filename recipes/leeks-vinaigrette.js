@@ -130,7 +130,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_10",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "braised_leeks"
       ],
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooled_leeks",
         "dijon_vinaigrette",

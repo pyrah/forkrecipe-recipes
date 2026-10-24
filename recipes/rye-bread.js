@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_06",
         "ing_03"
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "mixed_rye_dough"
       ],
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "pan_ready_loaf"
       ],

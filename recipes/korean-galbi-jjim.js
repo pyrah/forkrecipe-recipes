@@ -142,7 +142,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "blanched_ribs",
         "ing_02",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "marinated_ribs",
         "ing_08"
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_ribs"
       ],
@@ -270,7 +270,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "glazed_ribs",
         "ing_09",

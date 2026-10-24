@@ -107,7 +107,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_06"
       ],
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "rolled_tamagoyaki",
         "ing_07"

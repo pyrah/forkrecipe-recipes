@@ -112,7 +112,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mince",
+      "action": "Hacher finement",
       "inputs": [
         "prepped_garlic",
         "ing_05"
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "garlic_paste",
         "ing_02",
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "emulsifying_toum"
       ],

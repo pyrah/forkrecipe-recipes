@@ -4,7 +4,7 @@ export default {
   "slug": "shrimp-pad-thai",
   "author": "ForkRecipe Kitchen",
   "title": "Crevettes Pad Thai",
-  "description": "Les nouilles de riz frites à la chaleur volcanique avec des crevettes à la prune, des œufs brouillés directement dans la poêle, et une sauce de tamarin, de sauce de poisson et de sucre de palme — finies avec un blizzard d'arachides écrasées, un coin de chaux, et le coup de germes de haricots frais.",
+  "description": "Les nouilles de riz frites à la chaleur volcanique avec des crevettes à la prune, des œufs brouillés directement dans la poêle, et une sauce de tamarin, de sauce de poisson et de sucre de palme — finies avec un blizzard d'arachides écrasées, un coin de citron vert, et le coup de germes de haricots frais.",
   "cuisine": "Thaï",
   "culture": "Centre thaïlandais",
   "category": "seafood",
@@ -175,7 +175,7 @@ export default {
     {
       "ingId": "ing_15",
       "role": "Citrus",
-      "name": "Coins de chaux",
+      "name": "Coins de citron vert",
       "ratioValue": 5,
       "defaultUnit": "parts",
       "substitutions": []
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_07",
         "ing_01",
@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "wok_base",
         "ing_02",
@@ -301,7 +301,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "sauced_noodles",
         "ing_03",
@@ -333,7 +333,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "egg_integrated_noodles",
         "ing_12",
@@ -343,9 +343,9 @@ export default {
         "ing_16"
       ],
       "outputState": "finished_pad_thai",
-      "instructions": "Retirer le wok du feu. Ajouter les germes de haricots et mélanger deux fois — la chaleur résiduelle du wok les réchauffera légèrement mais ils ne doivent pas cuire à travers; crunch cru est structurelle au plat fini. Assiette immédiatement dans un monticule au centre d'une assiette chaude. Disposer un petit nid de pousses de haricots frais sur le dessus (brut, pas du wok), disperser généreusement les cacahuètes écrasées, ajouter des feuilles de coriandre, et ajouter un coin ou deux de chaux sur le côté. Fournir une petite pincée de flocons de chili séchés sur l'assiette. En Thaïlande, pad thai est servi avec un plateau latéral de condiments (sauce de poisson, sucre, flocons de chili et piment séché au vinaigre) pour l'auto-assaisonnement à la table — le plat à la table est le point de départ, pas la déclaration finie.",
+      "instructions": "Retirer le wok du feu. Ajouter les germes de haricots et mélanger deux fois — la chaleur résiduelle du wok les réchauffera légèrement mais ils ne doivent pas cuire à travers; crunch cru est structurelle au plat fini. Assiette immédiatement dans un monticule au centre d'une assiette chaude. Disposer un petit nid de pousses de haricots frais sur le dessus (brut, pas du wok), disperser généreusement les cacahuètes écrasées, ajouter des feuilles de coriandre, et ajouter un coin ou deux de citron vert sur le côté. Fournir une petite pincée de flocons de chili séchés sur l'assiette. En Thaïlande, pad thai est servi avec un plateau latéral de condiments (sauce de poisson, sucre, flocons de chili et piment séché au vinaigre) pour l'auto-assaisonnement à la table — le plat à la table est le point de départ, pas la déclaration finie.",
       "visualCue": {
-        "primaryTarget": "Un monticule de nouilles dorées surmonté de pousses de haricots blancs, de cacahuètes écrasées, de coriandres vertes et d'un coin de chaux brillant.",
+        "primaryTarget": "Un monticule de nouilles dorées surmonté de pousses de haricots blancs, de cacahuètes écrasées, de coriandres vertes et d'un coin de citron vert brillant.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -354,7 +354,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Un contraste vif de nouilles dorées, de pousses blanches, d'herbes vertes, de cacahuètes fauves et de chaux jaune vert vif. L'assiette sent le wok carbonisé et le tamarin.",
+            "description": "Un contraste vif de nouilles dorées, de pousses blanches, d'herbes vertes, de cacahuètes fauves et de citron vert jaune vert vif. L'assiette sent le wok carbonisé et le tamarin.",
             "action": "Servir immédiatement pendant que les nouilles sont encore chaudes et que les germes sont froids et croquants."
           },
           {

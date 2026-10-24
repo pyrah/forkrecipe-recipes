@@ -105,7 +105,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_04",
         "ing_03"
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "garlic_oil",
         "ing_02",

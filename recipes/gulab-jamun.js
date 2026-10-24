@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "dumpling_dough",
         "ing_11"
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "fried_dumplings",
         "warm_syrup"

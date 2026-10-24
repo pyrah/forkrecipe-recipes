@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "sandy_dough",
         "ing_03"
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "rested_dough"
       ],
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "rolled_tortillas"
       ],

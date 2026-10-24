@@ -150,7 +150,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -191,7 +191,7 @@ export default {
       "outputState": "soffritto",
       "instructions": "Dans la même poêle avec un film d'huile de friture, cuire le céleri tranché et l'oignon à feu moyen avec une pincée de sel jusqu'à ce qu'il soit adouci et translucide mais non doré, de 8 à 10 minutes. Le céleri devrait perdre sa croûte brute tout en gardant une petite bouchée — c'est l'épine dorsale texturale de la caponata. Mélanger souvent et baisser la chaleur si quelque chose menace de colorier.",
       "visualCue": {
-        "primaryTarget": "L'oignon est vitreux et boiteux, le céleri est brillant mais courbé, et la poêle sent doux et salé sans netteté brute.",
+        "primaryTarget": "L'oignon est vitreux et mou, le céleri est brillant mais courbé, et la poêle sent doux et salé sans netteté brute.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "soffritto",
         "ing_05",
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "tomato_base",
         "fried_eggplant",
@@ -256,7 +256,7 @@ export default {
         "ing_10"
       ],
       "outputState": "finished_caponata",
-      "instructions": "Mélangez le sucre et le vinaigre jusqu'à ce que le sucre se dissout, puis versez-le sur la base de la tomate et laissez-le buller dur pendant une minute afin que le bord dur du vinaigre cuise et que la sauce devienne brillante. Pliez doucement dans l'aubergine frite, en prenant soin de ne pas l'écraser, et réchauffez tout pendant 2 à 3 minutes. Goût et équilibre: il devrait atterrir doux, puis aigre, puis salé. Hors de la chaleur, dispersez les noix de pin et le basilic déchiré sur le dessus. Surtout, laissez-le reposer au moins quelques heures, idéalement la nuit, et servir à la température ambiante — caponata est toujours mieux le lendemain.",
+      "instructions": "Mélangez le sucre et le vinaigre jusqu'à ce que le sucre se dissout, puis versez-le sur la base de la tomate et laissez-le buller dur pendant une minute afin que le bord dur du vinaigre cuise et que la sauce devienne brillante. Pliez doucement dans l'aubergine frite, en prenant soin de ne pas l'écraser, et réchauffez tout pendant 2 à 3 minutes. Goût et équilibre: il devrait atterrir doux, puis aigre, puis salé. Hors de la chaleur, dispersez les pignons de pin et le basilic déchiré sur le dessus. Surtout, laissez-le reposer au moins quelques heures, idéalement la nuit, et servir à la température ambiante — caponata est toujours mieux le lendemain.",
       "visualCue": {
         "primaryTarget": "Un enchevêtrement brillant et acajou d'aubergines et de légumes liés dans un glaçure doux-sour brillant, tondant doucement sur une cuillère et flanqué de basilic vert et de pignons pâles.",
         "spectrum": [

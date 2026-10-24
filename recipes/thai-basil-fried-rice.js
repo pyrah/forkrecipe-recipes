@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_pork_base",
         "ing_01",
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "seasoned_fried_rice",
         "ing_09"
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_10",
         "ing_08"

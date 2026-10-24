@@ -167,7 +167,7 @@ export default {
     {
       "ingId": "ing_16",
       "role": "Acid",
-      "name": "Coins de chaux",
+      "name": "Coins de citron vert",
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": []
@@ -184,7 +184,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -192,7 +192,7 @@ export default {
       "outputState": "toasted_chilies",
       "instructions": "Faire cuire des chilis secs sur un comal sec ou une poêle à feu moyen pendant 15 à 20 secondes de chaque côté, jusqu'à ce qu'ils soient cloqués et parfumés. Transférer dans un bol, couvrir d'eau bouillante et tremper 20 minutes jusqu'à ce qu'il soit complètement adouci. Égoutter, réserver 100 g de liquide trempé.",
       "visualCue": {
-        "primaryTarget": "Les piments sont souples et profondément colorés, sentant le chocolat, les fruits secs et la fumée après le toast. Après trempe, ils sont boiteux et gonflés.",
+        "primaryTarget": "Les piments sont souples et profondément colorés, sentant le chocolat, les fruits secs et la fumée après le toast. Après trempe, ils sont ramollis et gonflés.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_chilies",
         "ing_04",
@@ -253,7 +253,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "pastor_marinade"
@@ -284,7 +284,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "marinated_pork_slices",
         "ing_11"
@@ -315,7 +315,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "roasted_pastor_meat",
         "ing_13",
@@ -325,7 +325,7 @@ export default {
         "ing_17"
       ],
       "outputState": "finished_tacos_al_pastor",
-      "instructions": "Couper ou hacher le porc rôti en petits morceaux irréguliers, y compris les bords carbonisés. Tortilles de maïs chaudes directement au-dessus d'une flamme à gaz ou d'un comal sec jusqu'à ce qu'elles soient légèrement carbonisées et pliables. Doubler les tortillas (style taqueria mexicaine). Pil de porc sur les tortillas, garnir d'oignon en dés, de coriandre et d'un carré d'ananas. Servir avec des quartiers de chaux et de la salsa.",
+      "instructions": "Couper ou hacher le porc rôti en petits morceaux irréguliers, y compris les bords carbonisés. Tortilles de maïs chaudes directement au-dessus d'une flamme à gaz ou d'un comal sec jusqu'à ce qu'elles soient légèrement carbonisées et pliables. Doubler les tortillas (style taqueria mexicaine). Pil de porc sur les tortillas, garnir d'oignon en dés, de coriandre et d'un carré d'ananas. Servir avec des quartiers de citron vert et de la salsa.",
       "visualCue": {
         "primaryTarget": "Petite tortilla de maïs double remplie de porc carbonisé pourpre, d'oignon blanc vif en dés, de coriandre verte et d'ananas doré. La salsa pooling aux bords.",
         "spectrum": [

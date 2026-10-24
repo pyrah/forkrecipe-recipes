@@ -97,7 +97,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "raw_shio_koji"
       ],
@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "fermenting_shio_koji"
       ],

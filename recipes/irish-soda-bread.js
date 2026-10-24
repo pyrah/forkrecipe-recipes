@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "dry_mix",
         "ing_02"
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "soda_bread_dough"
       ],
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_loaf"
       ],

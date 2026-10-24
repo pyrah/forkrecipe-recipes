@@ -104,7 +104,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_05"
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_01",
         "ing_03",
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Gel",
+      "action": "Congeler",
       "inputs": [
         "kulfi_mixture"
       ],

@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "cracked_eggs",
         "ing_02",

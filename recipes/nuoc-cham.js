@@ -68,7 +68,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 45,
       "defaultUnit": "ml",
       "substitutions": [
@@ -133,7 +133,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Vous avez utilisé de l'eau bouillante et le liquide est en vapeur. Le sirop dissous sent plat.",
-            "action": "Laisser refroidir jusqu'à la température du corps avant de procéder — liquide chaud va muter la sauce de poisson et les aromatiques de chaux."
+            "action": "Laisser refroidir jusqu'à la température du corps avant de procéder — liquide chaud va muter la sauce de poisson et les aromatiques de citron vert."
           }
         ]
       },
@@ -141,16 +141,16 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "sugar_syrup",
         "ing_03",
         "ing_04"
       ],
       "outputState": "base_sauce",
-      "instructions": "Ajouter la sauce de poisson, puis le jus de lime à l'eau sucrée. Mélanger doucement. Goûtez immédiatement et évaluez l'équilibre en utilisant le ratio vietnamien classique: parties égales sel, aigre, et doux en bouche, dans cet ordre d'arrivée, finissant propre. La sauce de poisson ne doit pas sentir cru ou agressif — elle doit être océanique, salée et arrondie. Ajuster à ce stade : plus de sauce de poisson pour le sel et l'umami, plus de chaux pour l'acidité, plus de sirop de sucre pour la douceur.",
+      "instructions": "Ajouter la sauce de poisson, puis le jus de lime à l'eau sucrée. Mélanger doucement. Goûtez immédiatement et évaluez l'équilibre en utilisant le ratio vietnamien classique: parties égales sel, aigre, et doux en bouche, dans cet ordre d'arrivée, finissant propre. La sauce de poisson ne doit pas sentir cru ou agressif — elle doit être océanique, salée et arrondie. Ajuster à ce stade : plus de sauce de poisson pour le sel et l'umami, plus de citron vert pour l'acidité, plus de sirop de sucre pour la douceur.",
       "visualCue": {
-        "primaryTarget": "Un liquide pâle, doré-ambre — le brun de la sauce de poisson dilué par la chaux et l'eau dans une couleur comme le thé noir faible. Clair, pas nuageux.",
+        "primaryTarget": "Un liquide pâle, doré-ambre — le brun de la sauce de poisson dilué par le citron vert et l'eau dans une couleur comme le thé noir faible. Clair, pas nuageux.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -164,8 +164,8 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "La sauce a un goût amer ou trop sucré: la chaux a été ajoutée avant d'évaluer l'équilibre.",
-            "action": "Corriger avec de petits ajouts de l'élément manquant : sauce de poisson pour le sel, sucre pour le sucre, chaux pour l'aur. Ajouter dans les gouttes et régaler."
+            "description": "La sauce a un goût amer ou trop sucré: le citron vert a été ajoutée avant d'évaluer l'équilibre.",
+            "action": "Corriger avec de petits ajouts de l'élément manquant : sauce de poisson pour le sel, sucre pour le sucre, citron vert pour l'aur. Ajouter dans les gouttes et régaler."
           }
         ]
       },
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mince",
+      "action": "Hacher finement",
       "inputs": [
         "ing_05",
         "ing_06"
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "base_sauce",
         "aromatics_prepped"
@@ -226,7 +226,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Laisser plus d'une heure à température ambiante — l'ail commence à avoir un goût fermenté et l'arôme de chaux fraîche s'estompe.",
+            "description": "Laisser plus d'une heure à température ambiante — l'ail commence à avoir un goût fermenté et l'arôme de citron vert fraîche s'estompe.",
             "action": "Une pression de jus de lime fraîche restaurera la luminosité. Pour la conservation, réfrigérer immédiatement après la perfusion de 5 minutes."
           }
         ]
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "seasoned_sauce",
         "ing_07"

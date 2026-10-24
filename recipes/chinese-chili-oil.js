@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "aromatic_oil",
         "ing_07",
@@ -186,7 +186,7 @@ export default {
           {
             "state": "Overdone",
             "description": "L'huile était trop chaude — les flocons de chili sont devenus noirs immédiatement au contact et l'huile sent l'acride et le carbonisé.",
-            "action": "L'huile peut être récupérée si elle est diluée : ajouter 50 ml d'huile fraîche et extirper les flocons les plus noirs. Sinon jetez et recommencez l'étape de la floraison."
+            "action": "L'huile peut être récupérée si elle est diluée : ajouter 50 ml d'huile fraîche et extraire les flocons les plus noirs. Sinon jetez et recommencez l'étape de la floraison."
           }
         ]
       },
@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "chili_oil_base",
         "ing_08"

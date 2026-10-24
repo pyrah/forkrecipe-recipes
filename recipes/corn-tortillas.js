@@ -80,7 +80,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -113,7 +113,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "masa_dough"
       ],
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "pressed_tortillas"
       ],

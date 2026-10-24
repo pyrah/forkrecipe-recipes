@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "smooth_dough",
         "cheese_filling"
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_khachapuri_boats",
         "ing_10"
@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "baked_khachapuri",
         "ing_11"

@@ -90,7 +90,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -122,7 +122,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "boiled_cream",
         "ing_03"
@@ -153,7 +153,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "posset_mixture"
       ],
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "set_posset",
         "ing_05"

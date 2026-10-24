@@ -162,7 +162,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_10",
         "ing_11"
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_02"
       ],
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "toasted_spices",
         "soaked_chiles",
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "raw_laksa_paste",
         "ing_12"
@@ -293,7 +293,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "fried_laksa_paste"
       ],

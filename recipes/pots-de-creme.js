@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_05"
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "yolk_mixture",
         "infused_cream",
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "custard_base"
       ],

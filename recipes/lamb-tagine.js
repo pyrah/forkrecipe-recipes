@@ -168,7 +168,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_07",
         "ing_13"
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_12",
@@ -231,7 +231,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "browned_lamb",
         "ing_02",
@@ -267,7 +267,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "braised_lamb",
         "ing_08",
@@ -299,7 +299,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "reduced_tagine",
         "ing_10",

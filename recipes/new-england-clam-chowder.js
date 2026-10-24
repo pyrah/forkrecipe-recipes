@@ -263,7 +263,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Chowder a épaissi jusqu'à une pâte dans un bol froid. Les morceaux de porc ont absorbé l'humidité et sont devenus boiteux.",
+            "description": "Chowder a épaissi jusqu'à une pâte dans un bol froid. Les morceaux de porc ont absorbé l'humidité et sont devenus mou.",
             "action": "Réchauffer doucement avec une touche de crème pour se détendre, re-garnir avec des morceaux de porc frais."
           }
         ]

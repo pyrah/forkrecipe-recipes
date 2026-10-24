@@ -135,7 +135,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_09"
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "cooked_pork",
         "ing_03",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "sauce_base",
         "ing_08",
@@ -262,7 +262,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_mapo",
         "ing_10",

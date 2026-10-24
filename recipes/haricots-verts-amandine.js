@@ -94,7 +94,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_05"
@@ -102,7 +102,7 @@ export default {
       "outputState": "blanched_beans",
       "instructions": "Portez une grande casserole d'eau à ébullition. Assaisonner de sel jusqu'à ce qu'il goûte comme de l'eau de mer douce — environ 15 g de sel par litre. Déposez les haricots et faites cuire à découvert pendant 2-3 minutes exactement : le but est croustillant, jamais doux. Préparez un grand bol d'eau glacée. Égoutter les haricots et les plonger immédiatement dans le bain de glace.",
       "visualCue": {
-        "primaryTarget": "Les haricots sont vert vif, presque fluorescent — la couleur est nettement plus brillante que brute. Ils tiennent leur forme parfaitement sans boiteux.",
+        "primaryTarget": "Les haricots sont vert vif, presque fluorescent — la couleur est nettement plus brillante que brute. Ils tiennent leur forme parfaitement sans mou.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -116,7 +116,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les haricots sont ternes à jaune-vert. Ils sont boiteux et fléchis sans résistance.",
+            "description": "Les haricots sont ternes à jaune-vert. Ils sont ramollis et fléchis sans résistance.",
             "action": "Égoutter et sécher immédiatement. Procéder — la saveur est encore bonne, mais la texture sera plus douce."
           }
         ]
@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "beurre_noisette_almonds",
         "blanched_beans",

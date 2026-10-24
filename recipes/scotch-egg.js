@@ -113,7 +113,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_02",
         "ing_06",
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "soft_boiled_eggs",
         "seasoned_sausage",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "breaded_scotch_eggs",
         "ing_08"

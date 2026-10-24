@@ -143,7 +143,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -272,7 +272,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "pastry_parcel",
         "ing_10"

@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_09",
         "ing_02",
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "sweated_shallots",
         "ing_01",
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_farro",
         "ing_05",
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "cooked_farro",
         "ing_06",

@@ -114,7 +114,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_06"
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "roasted_eggplant",
         "dengaku_glaze",

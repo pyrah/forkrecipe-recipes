@@ -99,7 +99,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "simmered_base",
         "ing_02"
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_06",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "broiled_black_cod"
       ],

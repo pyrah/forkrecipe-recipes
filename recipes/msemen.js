@@ -107,7 +107,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "rested_dough",
         "ing_06",
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "laminated_squares"
       ],

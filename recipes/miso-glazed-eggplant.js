@@ -121,7 +121,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "ing_01"
       ],
@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brosse",
+      "action": "Badigeonner",
       "inputs": [
         "scored_eggplant",
         "ing_06"
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "oiled_eggplant"
       ],
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -245,7 +245,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "softened_eggplant",
         "dengaku_glaze"
@@ -276,7 +276,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "glazed_eggplant",
         "ing_07",

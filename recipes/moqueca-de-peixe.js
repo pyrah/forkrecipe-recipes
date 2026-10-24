@@ -109,7 +109,7 @@ export default {
     {
       "ingId": "ing_09",
       "role": "Acid",
-      "name": "Jus de chaux",
+      "name": "Jus de citron vert",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": [
@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_09",
@@ -148,7 +148,7 @@ export default {
       "outputState": "marinated_fish",
       "instructions": "Couper les filets de poisson en grandes portions (environ 150 g chacune). Dans un bol, mélanger avec le jus de lime, la moitié de l'ail et le sel. Mélanger doucement pour enrober. Faire mariner de 20 à 30 minutes au réfrigérateur. Le jus de lime commencera à dénaturationr les protéines de surface, donnant au poisson un aspect légèrement opaque et une surface plus parfumée.",
       "visualCue": {
-        "primaryTarget": "Poissons dans la marinade de chaux",
+        "primaryTarget": "Poissons dans la marinade de citron vert",
         "spectrum": [
           {
             "state": "Underdone",
@@ -157,7 +157,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "La surface du poisson est légèrement opaque — légèrement « cuite » par l'acide. La chair est ferme et parfumée avec de la chaux et de l'ail. Pas de brunissement ou de gris.",
+            "description": "La surface du poisson est légèrement opaque — légèrement « cuite » par l'acide. La chair est ferme et parfumée avec du citron vert et de l'ail. Pas de brunissement ou de gris.",
             "action": "Continuez à construire le ragoût."
           },
           {
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_02",
         "ing_05",
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "layered_moqueca",
         "marinated_fish",

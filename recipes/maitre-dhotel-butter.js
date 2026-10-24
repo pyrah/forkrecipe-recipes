@@ -105,7 +105,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mince",
+      "action": "Hacher finement",
       "inputs": [
         "ing_02",
         "ing_05"
@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01",
         "minced_aromatics",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "compound_butter_mixture"
       ],

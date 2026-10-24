@@ -117,7 +117,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01"
       ],
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "thin_escalopes",
         "ing_02",
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "assembled_saltimbocca",
         "ing_04"
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "sauteed_saltimbocca",
         "ing_05",

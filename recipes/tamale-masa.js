@@ -96,7 +96,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_02",
         "ing_04",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "hydrated_masa",
         "whipped_lard"
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "beaten_tamale_masa"
       ],

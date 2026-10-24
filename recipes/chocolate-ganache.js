@@ -123,7 +123,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "hot_cream",
         "ing_01"
@@ -154,7 +154,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "emulsified_ganache",
         "ing_03",

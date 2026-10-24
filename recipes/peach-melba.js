@@ -50,7 +50,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Liquid",
-      "name": "Eau (pour le sirop de braconnage)",
+      "name": "Eau (pour le sirop de pochage)",
       "ratioValue": 120,
       "defaultUnit": "parts",
       "substitutions": []
@@ -125,7 +125,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -150,7 +150,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Le sirop diminue durement et commence à épaissir ou à colorier les bords avant d'ajouter un fruit.",
-            "action": "Ajouter un jet d'eau pour le ramener à une fine consistance de braconnage et baisser la chaleur."
+            "action": "Ajouter un jet d'eau pour le ramener à une fine consistance de pochage et baisser la chaleur."
           }
         ]
       },
@@ -158,7 +158,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "vanilla_syrup",
         "ing_01"
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "poached_peaches",
         "ing_08",

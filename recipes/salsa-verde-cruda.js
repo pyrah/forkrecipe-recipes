@@ -82,7 +82,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 20,
       "defaultUnit": "g",
       "substitutions": []
@@ -129,7 +129,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "rinsed_tomatillos",
         "ing_02",
@@ -140,7 +140,7 @@ export default {
         "ing_07"
       ],
       "outputState": "finished_salsa_verde",
-      "instructions": "Mélanger les tomatillos, le jalapeño, l'oignon, l'ail, la coriandre, le jus de lime et le sel dans un mélangeur. Pulse 8 à 12 fois — ne pas mélanger en continu. La texture doit rester légèrement volumineuse, non purifiée. Cruda signifie brut et texturé. Goûtez après les premières impulsions et ajustez : plus de jalapeño pour la chaleur, plus de chaux pour la luminosité, plus de coriandre pour la saveur verte. La salsa semble mince mais s'épaissit comme elle repose.",
+      "instructions": "Mélanger les tomatillos, le jalapeño, l'oignon, l'ail, la coriandre, le jus de lime et le sel dans un mélangeur. Pulse 8 à 12 fois — ne pas mélanger en continu. La texture doit rester légèrement volumineuse, non purifiée. Cruda signifie brut et texturé. Goûtez après les premières impulsions et ajustez : plus de jalapeño pour la chaleur, plus de citron vert pour la luminosité, plus de coriandre pour la saveur verte. La salsa semble mince mais s'épaissit comme elle repose.",
       "visualCue": {
         "primaryTarget": "Une salsa verte vive et lumineuse, avec une texture végétale et herbacées visibles, assez épaisse pour que vous puissiez voir des morceaux, suffisamment fluide pour verser.",
         "spectrum": [
@@ -151,8 +151,8 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Texturé uniformément, vert vif, légèrement chunky. Ça sent la coriandre, la chaux et le tomatillo. Verse du mélangeur dans un flux libre.",
-            "action": "Goûtez au sel et à la chaux. Reposez-vous 5 minutes avant de servir afin que la netteté de l'oignon s'adoucisse légèrement."
+            "description": "Texturé uniformément, vert vif, légèrement chunky. Ça sent la coriandre, le citron vert et le tomatillo. Verse du mélangeur dans un flux libre.",
+            "action": "Goûtez au sel et au citron vert. Reposez-vous 5 minutes avant de servir afin que la netteté de l'oignon s'adoucisse légèrement."
           },
           {
             "state": "Overdone",
@@ -161,7 +161,7 @@ export default {
           }
         ]
       },
-      "feelCue": "La salsa verde cruda finie sur la langue donne d'abord une note de tarte pointue et haute, l'acide malique et citrique du tomatillo, suivie d'une vague verte de coriandre, puis de la chaleur rampante du jalapeño. Si la séquence est inversée et que la chaleur arrive en premier, ajoutez plus de chaux."
+      "feelCue": "La salsa verde cruda finie sur la langue donne d'abord une note de tarte pointue et haute, l'acide malique et citrique du tomatillo, suivie d'une vague verte de coriandre, puis de la chaleur rampante du jalapeño. Si la séquence est inversée et que la chaleur arrive en premier, ajoutez plus de citron vert."
     }
   ]
 };

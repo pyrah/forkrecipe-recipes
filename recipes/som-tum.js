@@ -4,7 +4,7 @@ export default {
   "slug": "som-tum",
   "author": "ForkRecipe Kitchen",
   "title": "Soum Tum (Salade de papaye verte)",
-  "description": "Saupoudrer de papaye non mûre d'ail, de piments, de chaux, de sauce de poisson et de sucre de palme — un équilibre cinétique de chaleur aigre, salée, douce et incendiaire qui est simultanément rafraîchissante et addictif.",
+  "description": "Saupoudrer de papaye non mûre d'ail, de piments, de citron vert, de sauce de poisson et de sucre de palme — un équilibre cinétique de chaleur aigre, salée, douce et incendiaire qui est simultanément rafraîchissante et addictif.",
   "cuisine": "Thaï",
   "culture": "Isaan",
   "category": "vegetables",
@@ -66,7 +66,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 12,
       "defaultUnit": "parts",
       "substitutions": []
@@ -132,7 +132,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "pounded_aromatics",
         "ing_08",
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "bruised_salad_base",
         "ing_04",
@@ -204,7 +204,7 @@ export default {
         "ing_06"
       ],
       "outputState": "dressed_base",
-      "instructions": "Ajouter le sucre de palme, la sauce de poisson et le jus de lime au mortier. Utilisez le pestle pour remuer et légèrement contuser pour dissoudre le sucre de palme. Goûtez la vinaigrette à l'aide d'une cuillère — elle devrait être amère de la chaux, salée de la sauce de poisson et sucrée du sucre de palme, avec la chaleur de l'édifice chili à la fin. Ajustez le solde maintenant avant d'ajouter la papaye. La vinaigrette doit être légèrement plus intense que désiré dans le plat fini, car la papaye la diluera.",
+      "instructions": "Ajouter le sucre de palme, la sauce de poisson et le jus de lime au mortier. Utilisez le pestle pour remuer et légèrement contuser pour dissoudre le sucre de palme. Goûtez la vinaigrette à l'aide d'une cuillère — elle devrait être amère du citron vert, salée de la sauce de poisson et sucrée du sucre de palme, avec la chaleur de l'édifice chili à la fin. Ajustez le solde maintenant avant d'ajouter la papaye. La vinaigrette doit être légèrement plus intense que désiré dans le plat fini, car la papaye la diluera.",
       "visualCue": {
         "primaryTarget": "Le liquide au fond du mortier est un ambre clair et pâle avec une odeur complexe de zeste de lime, de funk de sauce de poisson et de sucre de palme sucré.",
         "spectrum": [
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "dressed_base",
         "ing_01",

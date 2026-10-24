@@ -92,7 +92,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -126,7 +126,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "seasoned_egg_mixture",
         "ing_06"
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "first_egg_layer",
         "seasoned_egg_mixture"
@@ -188,7 +188,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "tamagoyaki_roll"
       ],

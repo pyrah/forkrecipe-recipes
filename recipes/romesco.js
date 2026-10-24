@@ -155,7 +155,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Le poivre pelé doit se sentir glissant et boiteux comme de la soie humide, et la cuisine doit sentir de la fumée douce. La pâte de ñora doit être collante et tacher votre cuillère d'un bourgogne profond."
+      "feelCue": "Le poivre pelé doit se sentir glissant et mou comme de la soie humide, et la cuisine doit sentir de la fumée douce. La pâte de ñora doit être collante et tacher votre cuillère d'un bourgogne profond."
     },
     {
       "nodeId": "step_2",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "roasted_produce",
         "fried_aromatics",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "rough_paste",
         "ing_07",

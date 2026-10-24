@@ -180,7 +180,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -191,7 +191,7 @@ export default {
         "ing_11"
       ],
       "outputState": "pork_broth",
-      "instructions": "Placer les morceaux d'épaules de porc et diviser les trotteurs dans un grand pot lourd (au moins 8 litres) et couvrir d'eau froide. Porter à ébullition rapide à feu vif et écrémer la mousse grise et les impuretés importantes qui montent à la surface pendant les 10 à 15 premières minutes — cette étape de écrémage est essentielle pour un bouillon clair et propre. Ajouter les demi-oignons, les gousses d'ail non pelées, les grains de poivre noir et les graines de cumin. Réduisez à une mijotée très douce — le liquide doit se déplacer et buller paresseusement aux bords, produisant un rouleau calme, lent, jamais un ébullition vigoureux. Une ébullition dure émulsionnera la graisse et entraînera un bouillon nuageux et lourd. Laisser mijoter à découvert pendant 2 à 2 heures 30 minutes, en écrémant toute mousse ou graisse supplémentaire qui augmente. L'épaule de porc devrait devenir complètement tendre — une pièce percée d'une fourchette devrait glisser sans résistance. Retirez les morceaux de porc sur une planche et laissez-les refroidir assez pour les manipuler. Découpez la viande en gros morceaux avec vos mains, jetant les os et la graisse. Jeter les trotteurs (ils ont donné leur collagène au bouillon). Placer le bouillon dans un tamis à mailles fines. Le bouillon doit être clair, doré et intensément charnu.",
+      "instructions": "Placer les morceaux d'épaules de porc et diviser les trotteurs dans un grand pot lourd (au moins 8 litres) et couvrir d'eau froide. Porter à ébullition rapide à feu vif et écrémer la mousse grise et les impuretés importantes qui montent à la surface pendant les 10 à 15 premières minutes — cette étape de écrèmege est essentielle pour un bouillon clair et propre. Ajouter les demi-oignons, les gousses d'ail non pelées, les grains de poivre noir et les graines de cumin. Réduisez à une mijotée très douce — le liquide doit se déplacer et buller paresseusement aux bords, produisant un rouleau calme, lent, jamais un ébullition vigoureux. Une ébullition dure émulsionnera la graisse et entraînera un bouillon nuageux et lourd. Laisser mijoter à découvert pendant 2 à 2 heures 30 minutes, en écrèment toute mousse ou graisse supplémentaire qui augmente. L'épaule de porc devrait devenir complètement tendre — une pièce percée d'une fourchette devrait glisser sans résistance. Retirez les morceaux de porc sur une planche et laissez-les refroidir assez pour les manipuler. Découpez la viande en gros morceaux avec vos mains, jetant les os et la graisse. Jeter les trotteurs (ils ont donné leur collagène au bouillon). Placer le bouillon dans un tamis à mailles fines. Le bouillon doit être clair, doré et intensément charnu.",
       "visualCue": {
         "primaryTarget": "Un bouillon clair et doré qui n'est pas nuageux. Le porc éraflé est suffisamment tendre pour se détacher entre deux doigts. Une cuillère de bouillon laisse une mince couche légèrement collante sur le dos de la cuillère du collagène libéré par les trotteurs.",
         "spectrum": [
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_chiles",
         "ing_08"
@@ -279,7 +279,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "pork_broth",
         "chile_puree",
@@ -287,7 +287,7 @@ export default {
         "ing_12"
       ],
       "outputState": "finished_pozole_rojo",
-      "instructions": "Porter le bouillon de porc à mijoter dans le grand pot à feu moyen. Ajouter la purée de chile et bien remuer pour bien mélanger – le bouillon tournera immédiatement un rouge brique vif et profond. Ajouter le hominy drainé et le porc déchiqueté. Assaisonner avec du sel, en commençant par 2 cuillères à café et en s'ajustant après l'assaisonnement. Laisser mijoter le pozole assemblé à feu moyen-doux pendant 30 à 40 minutes, en remuant occasionnellement. Cette finale mijote permet à l'hominy d'absorber le bouillon de chile et les saveurs d'harmoniser - le chile vif-chauffe s'assouplira, le porc réhydratera dans le bouillon, et la gélatine des trotteurs donnera au bouillon un corps satisfaisant. Goûtez à nouveau à 30 minutes et ajustez le sel. Le pozole fini devrait avoir un bouillon riche, profondément salé avec une chaleur modérée qui construit lentement, tendre hominy avec une saveur subtile de maïs et une mâche satisfaisante, et de porc généreux dans chaque bol. Servir avec toutes les garnitures traditionnelles sur la table : chou déchiqueté, radis tranchés, origan séché, quartiers de chaux et tostadas.",
+      "instructions": "Porter le bouillon de porc à mijoter dans le grand pot à feu moyen. Ajouter la purée de chile et bien remuer pour bien mélanger – le bouillon tournera immédiatement un rouge brique vif et profond. Ajouter le hominy drainé et le porc déchiqueté. Assaisonner avec du sel, en commençant par 2 cuillères à café et en s'ajustant après l'assaisonnement. Laisser mijoter le pozole assemblé à feu moyen-doux pendant 30 à 40 minutes, en remuant occasionnellement. Cette finale mijote permet à l'hominy d'absorber le bouillon de chile et les saveurs d'harmoniser - le chile vif-chauffe s'assouplira, le porc réhydratera dans le bouillon, et la gélatine des trotteurs donnera au bouillon un corps satisfaisant. Goûtez à nouveau à 30 minutes et ajustez le sel. Le pozole fini devrait avoir un bouillon riche, profondément salé avec une chaleur modérée qui construit lentement, tendre hominy avec une saveur subtile de maïs et une mâche satisfaisante, et de porc généreux dans chaque bol. Servir avec toutes les garnitures traditionnelles sur la table : chou déchiqueté, radis tranchés, origan séché, quartiers de citron vert et tostadas.",
       "visualCue": {
         "primaryTarget": "Soupe rouge brique profonde avec des grains entiers et du porc déchiqueté. Le bouillon est légèrement épais et enrobe l'hominy. Les radis et le chou sur le côté sont blancs vifs contre le rouge.",
         "spectrum": [

@@ -106,7 +106,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "pierogi_dough",
         "potato_cheese_filling"
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "raw_pierogi",
         "ing_06",

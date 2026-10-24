@@ -105,7 +105,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "ing_02",
         "ing_06"
@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_01",
         "drained_cucumber",

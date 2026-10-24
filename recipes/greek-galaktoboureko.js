@@ -141,7 +141,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_09",
         "ing_10",
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "semolina_custard",
         "ing_07",
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_galaktoboureko"
       ],
@@ -271,7 +271,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "baked_galaktoboureko",
         "lemon_syrup"

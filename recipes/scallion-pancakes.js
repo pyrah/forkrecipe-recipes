@@ -104,7 +104,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "hot_water_dough",
         "ing_03",
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "coiled_pancake",
         "ing_06"

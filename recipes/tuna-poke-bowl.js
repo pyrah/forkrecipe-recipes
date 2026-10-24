@@ -131,7 +131,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sérum",
+      "action": "Couper en dés",
       "inputs": [
         "ing_01"
       ],
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "cubed_tuna",
         "ing_02",
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_07",
         "seasoned_poke",

@@ -97,7 +97,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -130,7 +130,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "mochi_batter"
       ],
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "cooked_mochi_dough",
         "ing_04",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "shaped_daifuku"
       ],

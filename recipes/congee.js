@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "primed_rice",
         "ing_02",
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "rolling_pot"
       ],

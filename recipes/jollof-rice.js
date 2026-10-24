@@ -177,7 +177,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_13",
         "ing_05",
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_tomato_base",
         "ing_09"
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "seasoned_cooking_liquid"
@@ -311,7 +311,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "rice_in_pot"
       ],

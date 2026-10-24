@@ -225,7 +225,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_04",
         "ing_15"
@@ -256,7 +256,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "ing_01",
         "ing_03",
@@ -299,7 +299,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_02",
         "ing_21",
@@ -333,7 +333,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "braised_lamb_masala",
         "parboiled_rice",
@@ -369,7 +369,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "assembled_biryani"
       ],

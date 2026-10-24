@@ -148,7 +148,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_bones",
         "ing_03",
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "raw_broth",
         "annatto_chili_oil",
@@ -271,7 +271,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Trop de pâte de crevettes a fait le bouillon massivement salé et agressivement funky, avec la note de pâte de crevettes dominant toutes les autres saveurs.",
-            "action": "Diluer avec du stock de porc non salé ou de l'eau, puis re-saisonner avec de la sauce de poisson (qui est plus neutre) plutôt que plus de pâte de crevette. Ajouter une pression de chaux pour éclaircir et couper à travers la lourdeur."
+            "action": "Diluer avec du stock de porc non salé ou de l'eau, puis re-saisonner avec de la sauce de poisson (qui est plus neutre) plutôt que plus de pâte de crevette. Ajouter une pression de citron vert pour éclaircir et couper à travers la lourdeur."
           }
         ]
       },

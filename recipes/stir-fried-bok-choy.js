@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "stir_fried_bok_choy",
         "ing_04",

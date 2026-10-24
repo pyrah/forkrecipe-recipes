@@ -135,14 +135,14 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
         "ing_03"
       ],
       "outputState": "cooked_lentils",
-      "instructions": "Placer les lentilles rincées dans une casserole moyenne avec l'eau et le curcuma. Porter à ébullition vigoureuse à feu vif, en écrémant toute mousse blanche qui monte à la surface. Réduire à mijoter régulièrement, couvrir partiellement et cuire pendant 20-25 minutes jusqu'à ce que les lentilles se décomposent complètement en un porridge épais et lisse. Ajouter une éclaboussure plus d'eau s'ils boivent tout le liquide avant qu'ils ne soient complètement doux.",
+      "instructions": "Placer les lentilles rincées dans une casserole moyenne avec l'eau et le curcuma. Porter à ébullition vigoureuse à feu vif, en écrèment toute mousse blanche qui monte à la surface. Réduire à mijoter régulièrement, couvrir partiellement et cuire pendant 20-25 minutes jusqu'à ce que les lentilles se décomposent complètement en un porridge épais et lisse. Ajouter une éclaboussure plus d'eau s'ils boivent tout le liquide avant qu'ils ne soient complètement doux.",
       "visualCue": {
         "primaryTarget": "Un porridge jaune doré vif sans formes distinctes de lentilles. Il devrait tomber d'une cuillère dans un ruban épais et lent.",
         "spectrum": [
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_08"
@@ -175,7 +175,7 @@ export default {
       "outputState": "softened_onion",
       "instructions": "Chauffer une petite poêle lourde à feu moyen-élevé. Ajouter la moitié du ghee, puis l'oignon coupé. Cuire en remuant fréquemment pendant 8-10 minutes jusqu'à ce que l'oignon soit doux, translucide et commence à brunir aux bords. Vous le voulez vraiment doré, pas pâle et cru.",
       "visualCue": {
-        "primaryTarget": "L'oignon est boiteux, semi-transparent et a des bords dorés-brun avec des taches caramélisées partout.",
+        "primaryTarget": "L'oignon est fondant, semi-transparent et a des bords dorés-brun avec des taches caramélisées partout.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "softened_onion",
         "ing_09"
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "cooked_lentils",
         "masala_base",
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -294,7 +294,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "seasoned_dal",
         "tadka",

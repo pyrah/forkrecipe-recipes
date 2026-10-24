@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "muffin_dough"
       ],
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "risen_dough",
         "ing_08"
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "shaped_rounds"
       ],
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "proofed_rounds"
       ],

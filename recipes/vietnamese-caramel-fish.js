@@ -129,7 +129,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_02"
       ],
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "dark_caramel",
         "ing_03",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_fish",
         "ing_10"

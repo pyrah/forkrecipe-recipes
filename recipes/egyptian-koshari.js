@@ -168,7 +168,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02"
       ],
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -210,7 +210,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les oignons sont dorés, mais encore boiteux et gras — ils ne croqueront pas sur l'assiette. Saupoudrer encore vigoureux.",
+            "description": "Les oignons sont dorés, mais encore mou et gras — ils ne croqueront pas sur l'assiette. Saupoudrer encore vigoureux.",
             "action": "Continuer à frire — la transition entre le limon et le croustillant est brusque. Donne-leur encore 3 minutes."
           },
           {
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_13",
         "ing_07",
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_15"
@@ -296,7 +296,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "rice_and_vermicelli",
         "cooked_lentils",

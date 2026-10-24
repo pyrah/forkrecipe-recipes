@@ -4,7 +4,7 @@ export default {
   "slug": "coconut-prawn-curry",
   "author": "ForkRecipe Kitchen",
   "title": "Curry de noix de coco",
-  "description": "Des crevettes tigrées mijotées dans un curry de noix de coco doré et parfumé vif avec de la citronnelle, du galangal et du curcuma frais – frais, rapide et éclatant. Le sud de la Thaïlande dans un bol: noix de coco-doux, poisson-sauce-sel, chaux-sour, chili-chauffe.",
+  "description": "Des crevettes tigrées mijotées dans un curry de noix de coco doré et parfumé vif avec de la citronnelle, du galangal et du curcuma frais – frais, rapide et éclatant. Le sud de la Thaïlande dans un bol: noix de coco-doux, poisson-sauce-sel, citron vert-sour, chili-chauffe.",
   "cuisine": "Thaï",
   "culture": "Thaï du Sud",
   "category": "seafood",
@@ -128,11 +128,11 @@ export default {
     {
       "ingId": "ing_10",
       "role": "Herb",
-      "name": "Feuilles de chaux de Kaffir (fraîches ou congelées)",
+      "name": "Feuilles de citron vert de Kaffir (fraîches ou congelées)",
       "ratioValue": 6,
       "defaultUnit": "pcs",
       "substitutions": [
-        "1 c. à thé zeste de chaux"
+        "1 c. à thé zeste de citron vert"
       ]
     },
     {
@@ -159,7 +159,7 @@ export default {
     {
       "ingId": "ing_13",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": []
@@ -221,7 +221,7 @@ export default {
         "ing_10"
       ],
       "outputState": "curry_sauce",
-      "instructions": "Verser le lait de coco dans la poêle, en grattant les morceaux dorés du fond. Ajouter les feuilles de lime kaffir, la sauce de poisson et le sucre de palme. Mélanger pour dissoudre le sucre. Porter à mijoter doucement à feu moyen — ne pas faire bouillir dur, ce qui brise le lait de coco et rend la sauce granuleuse. Laisser mijoter pendant 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit parfumée et légèrement épaissie. Bouche : il doit être salé-doux-doux avec une note d'agrumes aiguë des feuilles de chaux.",
+      "instructions": "Verser le lait de coco dans la poêle, en grattant les morceaux dorés du fond. Ajouter les feuilles de lime kaffir, la sauce de poisson et le sucre de palme. Mélanger pour dissoudre le sucre. Porter à mijoter doucement à feu moyen — ne pas faire bouillir dur, ce qui brise le lait de coco et rend la sauce granuleuse. Laisser mijoter pendant 5 minutes, en remuant occasionnellement, jusqu'à ce que la sauce soit parfumée et légèrement épaissie. Bouche : il doit être salé-doux-doux avec une note d'agrumes aiguë des feuilles de citron vert.",
       "visualCue": {
         "primaryTarget": "Une sauce lisse, jaune doré, à la mijote paresseuse — de petites bulles se cassent lentement à la surface, la couleur vive du curcuma, brillant de la graisse de noix de coco.",
         "spectrum": [
@@ -258,7 +258,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les crevettes sont toujours translucides à la tête et au corps. Ils ont l'air boiteux et n'ont pas encore frisé.",
+            "description": "Les crevettes sont toujours translucides à la tête et au corps. Ils ont l'air mou et n'ont pas encore frisé.",
             "action": "Laisser mijoter 60 à 90 secondes de plus. La crevette underdone est désagréablement glissante et goûte cru-doux."
           },
           {
@@ -269,7 +269,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les crevettes se sont enroulées dans un O serré et se sentent caoutchouteuses lorsque la coque est pressée. La viande à l'intérieur est dure et légèrement sèche.",
-            "action": "Servir immédiatement sans autre cuisson. La sauce apportera de l'humidité. Pressez la chaux supplémentaire pour éclaircir."
+            "action": "Servir immédiatement sans autre cuisson. La sauce apportera de l'humidité. Pressez le citron vert supplémentaire pour éclaircir."
           }
         ]
       },
@@ -284,7 +284,7 @@ export default {
         "ing_12"
       ],
       "outputState": "finished_curry",
-      "instructions": "Hors du feu, ajoutez le jus de lime et le goût. Ajustez l'équilibre : plus de sauce de poisson si elle a besoin de sel et de profondeur, plus de sucre de palme si elle a besoin de douceur, plus de chaux si elle a besoin de luminosité. Les quatre piliers du goût thaïlandais — sucrés, salés, aigres et chauds — devraient être équilibrés, chacun étant présent, mais aucun dominant. Attachez le basilic thaïlandais au-dessus du sommet. Servir immédiatement sur le riz jasmin.",
+      "instructions": "Hors du feu, ajoutez le jus de lime et le goût. Ajustez l'équilibre : plus de sauce de poisson si elle a besoin de sel et de profondeur, plus de sucre de palme si elle a besoin de douceur, plus de citron vert si elle a besoin de luminosité. Les quatre piliers du goût thaïlandais — sucrés, salés, aigres et chauds — devraient être équilibrés, chacun étant présent, mais aucun dominant. Attachez le basilic thaïlandais au-dessus du sommet. Servir immédiatement sur le riz jasmin.",
       "visualCue": {
         "primaryTarget": "Un curry doré vif clouté de crevettes coralliennes et de feuilles de basilic vert déchirées. La sauce est brillante et la surface montre une légère liquéfaction d'huile de coco dorée.",
         "spectrum": [
@@ -300,12 +300,12 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Trop de chaux a été ajouté — le curry goûte principalement aigre et lumineux, la douceur de la noix de coco et l'umami enterré.",
+            "description": "Trop de citron vert a été ajouté — le curry goûte principalement aigre et lumineux, la douceur de la noix de coco et l'umami enterré.",
             "action": "Incorporer une petite pincée de sucre de palme et éclabousser plus de lait de coco pour rééquilibrer."
           }
         ]
       },
-      "feelCue": "Prenez une gorgée de la sauce d'une cuillère — la séquence des goûts devrait arriver en vagues: la douceur de la noix de coco d'abord, puis la profondeur salée-savoureuse de la sauce de poisson, puis la luminosité de la chaux à travers, puis la construction chaude lente de chili. Si l'un d'eux manque, il faut l'adapter."
+      "feelCue": "Prenez une gorgée de la sauce d'une cuillère — la séquence des goûts devrait arriver en vagues: la douceur de la noix de coco d'abord, puis la profondeur salée-savoureuse de la sauce de poisson, puis la luminosité du citron vert à travers, puis la construction chaude lente de chili. Si l'un d'eux manque, il faut l'adapter."
     }
   ]
 };

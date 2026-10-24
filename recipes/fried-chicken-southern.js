@@ -150,7 +150,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -252,7 +252,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "dredged_chicken",
         "ing_12"
@@ -283,7 +283,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "fried_chicken"
       ],

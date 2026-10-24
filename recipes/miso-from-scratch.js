@@ -113,7 +113,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "soaked_soybeans",
         "ing_04"
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_miso"
       ],

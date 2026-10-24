@@ -136,7 +136,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le chou a été salé pendant plus de 2 heures et est très boiteux et translucide. Le liquide extrait est abondant.",
+            "description": "Le chou a été salé pendant plus de 2 heures et est très mou et translucide. Le liquide extrait est abondant.",
             "action": "Rincer très soigneusement sous l'eau froide pour éliminer l'excès de sel. Pressez très sec. La griffe sera plus douce mais toujours saveur."
           }
         ]
@@ -200,7 +200,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Slaw est assis depuis plus de 8 heures. Le chou est plutôt boiteux, plus comme un cornichon qu'une salade. L'habillage s'est absorbé dans le chou et mis en commun au fond.",
+            "description": "Slaw est assis depuis plus de 8 heures. Le chou est plutôt mou, plus comme un cornichon qu'une salade. L'habillage s'est absorbé dans le chou et mis en commun au fond.",
             "action": "Égoutter le liquide excédentaire du fond. Encore. Toujours bon — La griffe de style sud est en fait ce style intentionnellement."
           }
         ]

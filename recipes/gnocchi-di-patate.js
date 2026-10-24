@@ -97,7 +97,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_01"
       ],
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "gnocchi_dough"
       ],
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "shaped_gnocchi",
         "ing_06"

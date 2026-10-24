@@ -4,12 +4,12 @@ export default {
   "slug": "key-lime-curd",
   "author": "ForkRecipe Kitchen",
   "title": "Clef de lime",
-  "description": "Un caillé jaune-soleil pâle avec la tarte florale, presque tropicale, de vraies chaux clés, s'épaississait lentement sur une double chaudière jusqu'à ce qu'elle enveloppe une cuillère comme du satin liquide.",
+  "description": "Un caillé jaune-soleil pâle avec la tarte florale, presque tropicale, de vraies citron vert clés, s'épaississait lentement sur une double chaudière jusqu'à ce qu'elle enveloppe une cuillère comme du satin liquide.",
   "cuisine": "Américain",
   "culture": "Floridienne",
   "category": "desserts",
   "tags": [
-    "chaux clé",
+    "citron vert clé",
     "curd",
     "tarte",
     "Floride",
@@ -81,7 +81,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Aromatic",
-      "name": "Zeste de chaux clé (à partir de chaux jus)",
+      "name": "Zeste de citron vert clé (à partir de citron vert jus)",
       "ratioValue": 0.2,
       "defaultUnit": "parts",
       "substitutions": []
@@ -98,7 +98,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -108,7 +108,7 @@ export default {
         "ing_07"
       ],
       "outputState": "curd_base",
-      "instructions": "Dans le bol supérieur d'une double chaudière (ou d'un bol résistant à la chaleur qui s'adapte bien sur une casserole), fouetter ensemble le jus de chaux clé, le sucre, les œufs entiers, les jaunes, le zeste et le sel jusqu'à ce que le sucre montre des signes de dissolution et le mélange est uniformément combiné. Il ne devrait pas y avoir de stries jaunes non incorporées. Ne commencez pas encore à chauffer — le prémélange assure une cuisson uniforme et empêche les œufs sur le fond du bol chaud de se brouiller avant que le sucre se dissout.",
+      "instructions": "Dans le bol supérieur d'une double chaudière (ou d'un bol résistant à la chaleur qui s'adapte bien sur une casserole), fouetter ensemble le jus de citron vert clé, le sucre, les œufs entiers, les jaunes, le zeste et le sel jusqu'à ce que le sucre montre des signes de dissolution et le mélange est uniformément combiné. Il ne devrait pas y avoir de stries jaunes non incorporées. Ne commencez pas encore à chauffer — le prémélange assure une cuisson uniforme et empêche les œufs sur le fond du bol chaud de se brouiller avant que le sucre se dissout.",
       "visualCue": {
         "primaryTarget": "Un liquide jaune pâle uniforme sans stries visibles de blanc d'œuf ou de jaune. Zest distribué partout.",
         "spectrum": [
@@ -133,7 +133,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "curd_base"
       ],
@@ -159,11 +159,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Maintenez l'arrière de la cuillère et soufflez à travers elle — un caillé correctement épaissé devrait s'écrouler et rider là où le souffle le frappe plutôt que de courir librement. La vapeur qui sort du bol doit sentir uniquement de la chaux avec une douceur riche et oeuvrée en dessous."
+      "feelCue": "Maintenez l'arrière de la cuillère et soufflez à travers elle — un caillé correctement épaissé devrait s'écrouler et rider là où le souffle le frappe plutôt que de courir librement. La vapeur qui sort du bol doit sentir uniquement du citron vert avec une douceur riche et oeuvrée en dessous."
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "thickened_curd",
         "ing_05"

@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "soaked_rice",
         "ing_06"
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "blended_rice_water"
       ],
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "strained_horchata_base",
         "ing_04",

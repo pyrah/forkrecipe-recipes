@@ -4,7 +4,7 @@ export default {
   "slug": "agua-de-jamaica",
   "author": "ForkRecipe Kitchen",
   "title": "Agua de Jamaica (Hibiscus Water)",
-  "description": "L'eau pourpre du Mexique — les pétales d'hibiscus séchés, imprégnés d'eau juste bouillie jusqu'à ce que le liquide devienne un grenat profond, comme un bijou, puis sucré, pressé avec de la chaux, et dilué dans une tarte, agua fresca florale qui est à la fois rafraîchissante et complexe. La couleur seule vous arrête dans vos traces.",
+  "description": "Boisson rouge vif du Mexique, préparée en infusant des pétales d’hibiscus séchés dans de l’eau bouillante jusqu’à obtenir une teinte grenat profonde. Sucrée, relevée de citron vert et diluée, cette agua fresca florale est à la fois rafraîchissante et complexe. Sa couleur seule attire le regard.",
   "cuisine": "Mexicain",
   "culture": "Mexicain",
   "category": "beverages",
@@ -49,7 +49,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Liquid",
-      "name": "Eau bouillante (à tremper)",
+      "name": "Eau bouillante, pour l’infusion",
       "ratioValue": 1,
       "defaultUnit": "L",
       "substitutions": []
@@ -68,7 +68,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais (environ 2 chaux)",
+      "name": "Jus de citron vert frais (environ 2 citrons verts)",
       "ratioValue": 60,
       "defaultUnit": "ml",
       "substitutions": [
@@ -87,25 +87,25 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02"
       ],
       "outputState": "hibiscus_concentrate",
-      "instructions": "Placer les fleurs d'hibiscus séchées dans un pichet ou un bol résistant à la chaleur. Versez l'eau bouillante directement au - dessus d'eux; l'eau deviendra presque immédiatement pourpre. Mélanger une fois pour submerger tous les pétales, puis les laisser à découvert pendant 20 minutes. Une pente plus courte donne une agua rose mince; une pleine 20 minutes produit un concentré profond qui tient sa couleur par dilution. Incorporer le sucre pendant que le concentré est encore chaud et se dissout complètement.",
+      "instructions": "Placer les fleurs d'hibiscus séchées dans un pichet ou un bol résistant à la chaleur. Versez l'eau bouillante directement au - dessus d'eux; l'eau deviendra presque immédiatement pourpre. Mélanger une fois pour submerger tous les pétales, puis les laisser à découvert pendant 20 minutes. Une infusion plus courte donne une agua rose mince; une pleine 20 minutes produit un concentré profond qui tient sa couleur par dilution. Incorporer le sucre pendant que le concentré est encore chaud et se dissout complètement.",
       "visualCue": {
         "primaryTarget": "Un liquide rouge rubis profond, presque opaque à pleine concentration, avec les pétales obscurcis du magenta brillant au grenat terne – la couleur du vin rouge maintenu contre une lumière.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Après 5 minutes, le liquide est encore un rose fin et brillant — plus d'eau de rose que de concentré.",
-            "action": "Continuez. Toute la profondeur de couleur et de saveur de tarte prend 20 minutes."
+            "action": "Continuez. Toute la profondeur de couleur et de saveur acidulée prend 20 minutes."
           },
           {
             "state": "Perfect",
-            "description": "Un rouge rubis foncé et concentré qui enveloppe la cuillère. Les pétales ont cédé leur couleur et s'assoient pâles et boiteux. L'odeur est tarte et florale, légèrement comme la canneberge.",
-            "action": "Incorporer le sucre maintenant, bien qu'il soit chaud, pour le dissoudre complètement, puis extirper les pétales."
+            "description": "Un rouge rubis foncé et concentré qui enveloppe la cuillère. Les pétales ont cédé leur couleur et s'assoient pâles et mou. L'odeur est acidulée et florale, légèrement comme la canneberge.",
+            "action": "Incorporer le sucre maintenant, bien qu'il soit chaud, pour le dissoudre complètement, puis extraire les pétales."
           },
           {
             "state": "Overdone",
@@ -118,12 +118,12 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "hibiscus_concentrate"
       ],
       "outputState": "strained_concentrate",
-      "instructions": "Réglez un tamis à mailles fines sur un grand pot ou pichet et versez le concentré sucré d'hibiscus à travers lui. Appuyez doucement sur les pétales usés avec l'arrière d'une cuillère pour extraire chaque dernière goutte — mais ne les forcez pas à travers la maille, car ils obscurciront le liquide. Jetez les pétales usés. Le concentré tendu doit être un rubis-rouge clair et profond avec un reflet brillant du sucre dissous.",
+      "instructions": "Placez une passoire fine au-dessus d’un grand pichet et versez-y le concentré d’hibiscus sucré. Appuyez doucement sur les pétales usés avec l'arrière d'une cuillère pour extraire chaque dernière goutte — mais ne les forcez pas à travers la maille, car ils obscurciront le liquide. Jetez les pétales usés. Le concentré filtré doit être un rubis-rouge clair et profond avec un reflet brillant du sucre dissous.",
       "visualCue": {
         "primaryTarget": "Un concentré limpide, brillant, rouge profond sans débris flottants, s'enfuyant proprement du tamis avec une translucence brillante, comme un bijou lorsqu'il est tenu à la lumière.",
         "spectrum": [
@@ -134,7 +134,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Liquide rubis cristallin, sucré et profond, sentant l'hibiscus de tarte et la chaux. Il tient sa couleur sans brunir.",
+            "description": "Liquide rubis cristallin, sucré et profond, sentant l'hibiscus acidulé et le citron vert. Il tient sa couleur sans brunir.",
             "action": "Ajouter l'eau froide, le jus de lime et le goût pour équilibrer."
           },
           {
@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "strained_concentrate",
         "ing_04",

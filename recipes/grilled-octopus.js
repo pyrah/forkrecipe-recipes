@@ -155,7 +155,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -166,19 +166,19 @@ export default {
         "ing_07"
       ],
       "outputState": "poached_octopus",
-      "instructions": "Placez la pieuvre nettoyée dans un pot assez grand pour la tenir confortablement. Ajouter le vin blanc, les feuilles de laurier, le céleri, l'ail et les grains de poivre. Couvrir d'eau froide — à partir du froid; cela permet aux protéines de se détendre progressivement plutôt que de saisir dans l'eau bouillante. Porter lentement à mijoter à feu moyen, puis réduire au plus bas niveau possible : une surface à peine tremblante, pas un ébullition. Couvrir avec un couvercle serré. Cuire pendant 1 heure 30 minutes à 2 heures selon la taille. Le collagène dans le manteau a besoin d'un long et doux braconnage pour se convertir en gélatine ; un ébullition va resserrer et durcir la chair de façon irréversible. Commencez à vérifier à 1 heure 30 minutes en perçant la partie la plus épaisse d'un tentacule avec un couteau mince.",
+      "instructions": "Placez la pieuvre nettoyée dans un pot assez grand pour la tenir confortablement. Ajouter le vin blanc, les feuilles de laurier, le céleri, l'ail et les grains de poivre. Couvrir d'eau froide — à partir du froid; cela permet aux protéines de se détendre progressivement plutôt que de saisir dans l'eau bouillante. Porter lentement à mijoter à feu moyen, puis réduire au plus bas niveau possible : une surface à peine tremblante, pas un ébullition. Couvrir avec un couvercle serré. Cuire pendant 1 heure 30 minutes à 2 heures selon la taille. Le collagène dans le manteau a besoin d'un long et doux pochage pour se convertir en gélatine ; un ébullition va resserrer et durcir la chair de façon irréversible. Commencez à vérifier à 1 heure 30 minutes en perçant la partie la plus épaisse d'un tentacule avec un couteau mince.",
       "visualCue": {
         "primaryTarget": "Les tentacules sont enroulés et la peau est uniforme pourpre profond; un couteau mince glisse dans le tentacule le plus épais sans résistance, comme le beurre chaud.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Le couteau rencontre une résistance caoutchouteuse au centre du tentacule. La peau peut être patchée entre le violet et le blanc translucide.",
-            "action": "Remplacer le couvercle et continuer le braconnage, en vérifiant toutes les 15 minutes."
+            "action": "Remplacer le couvercle et continuer le pochage, en vérifiant toutes les 15 minutes."
           },
           {
             "state": "Perfect",
             "description": "Le couteau entre avec une résistance zéro. Le tentacule se produit lorsqu'il est légèrement tiré du corps. La chair est uniformément violet-mauve sans centre blanc brut.",
-            "action": "Retirer du feu et laisser refroidir la pieuvre dans son liquide de braconnage à température ambiante, ce qui la maintient humide."
+            "action": "Retirer du feu et laisser refroidir la pieuvre dans son liquide de pochage à température ambiante, ce qui la maintient humide."
           },
           {
             "state": "Overdone",
@@ -191,12 +191,12 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "poached_octopus"
       ],
       "outputState": "cooled_octopus",
-      "instructions": "Laisser refroidir complètement la pieuvre dans son liquide de braconnage. Cette période de repos n'est pas facultative: la poulpe réabsorbe l'humidité et les protéines se détendent complètement à mesure que la température diminue. Une fois à température ambiante (environ 45 minutes), transférer sur un plateau et sécher les tentacules avec des serviettes en papier. Vous pouvez réfrigérer jusqu'à 24 heures à ce point ; le repos de nuit améliore la texture du grillage, car la surface sèche légèrement et forme une meilleure croûte. Si vous le souhaitez, coupez la tête des tentacules et divisez l'amas en morceaux individuels ou en paires pour faciliter le grillage.",
+      "instructions": "Laisser refroidir complètement la pieuvre dans son liquide de pochage. Cette période de repos n'est pas facultative: la poulpe réabsorbe l'humidité et les protéines se détendent complètement à mesure que la température diminue. Une fois à température ambiante (environ 45 minutes), transférer sur un plateau et sécher les tentacules avec des serviettes en papier. Vous pouvez réfrigérer jusqu'à 24 heures à ce point ; le repos de nuit améliore la texture du grillage, car la surface sèche légèrement et forme une meilleure croûte. Si vous le souhaitez, coupez la tête des tentacules et divisez l'amas en morceaux individuels ou en paires pour faciliter le grillage.",
       "visualCue": {
         "primaryTarget": "La surface de la pieuvre est sèche mat, non mouillée, et les tentacules tiennent leur forme enroulée sans flappage.",
         "spectrum": [
@@ -213,7 +213,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Sur-reposé et séché au réfrigérateur ouvert pendant plus de 24 heures — la peau a commencé à se serrer et à craquer, à la surface crayeuse.",
-            "action": "Réhydratez très brièvement en plongeant dans un liquide de braconnage chaud pendant 30 secondes, puis faites sécher et grillez immédiatement."
+            "action": "Réhydratez très brièvement en plongeant dans un liquide de pochage chaud pendant 30 secondes, puis faites sécher et grillez immédiatement."
           }
         ]
       },
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "cooled_octopus",
         "ing_08",
@@ -254,7 +254,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "charred_octopus",
         "ing_08",

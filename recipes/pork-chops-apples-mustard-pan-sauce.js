@@ -163,7 +163,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "seasoned_chops",
         "ing_04"
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "resting_chops",
         "ing_05",
@@ -251,7 +251,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les pommes s'effondrent dans la sauce, le chou boiteux et brûlé.",
+            "description": "Les pommes s'effondrent dans la sauce, le chou mou et brûlé.",
             "action": "Procéder — il devient plus d'une compote, qui se marie encore bien."
           }
         ]

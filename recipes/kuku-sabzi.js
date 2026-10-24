@@ -84,7 +84,7 @@ export default {
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": [
-        "pécans"
+        "noix de noix de pécan"
       ]
     },
     {
@@ -143,7 +143,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_09",
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "seasoned_eggs",
         "ing_02",
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_12"
       ],
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "oiled_pan",
         "kuku_batter"

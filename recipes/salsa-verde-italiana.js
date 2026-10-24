@@ -124,7 +124,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "chopped_solids",
         "ing_08",
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "dressed_verde",
         "ing_07",
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "rested_salsa_verde"
       ],

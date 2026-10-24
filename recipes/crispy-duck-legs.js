@@ -112,7 +112,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "cured_duck_legs"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "rendered_duck_legs"
       ],
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "crispy_duck_legs",
         "ing_07",

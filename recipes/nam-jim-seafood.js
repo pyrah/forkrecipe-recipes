@@ -68,7 +68,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 4,
       "defaultUnit": "parts",
       "substitutions": []
@@ -97,7 +97,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -129,7 +129,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "aromatic_paste",
         "ing_04",
@@ -137,14 +137,14 @@ export default {
         "ing_06"
       ],
       "outputState": "finished_nam_jim",
-      "instructions": "Ajoutez le sucre de palme directement au mortier et livrez brièvement pour le casser dans la pâte — il doit se dissoudre complètement, et non pas simplement s'asseoir en morceaux. Verser ensuite le jus de lime et la sauce de poisson. Mélanger avec une cuillère pour tout combiner, en dégustant au fur et à mesure. La séquence des saveurs dans un nam jim bien équilibré fruits de mer devrait être: aigre d'abord et le plus fort, puis salé, puis doux comme un fond qui empêche l'acide d'être dur, puis une chaleur de bâtiment qui arrive en dernier et s'attarde. Ajuster la chaux pour plus d'amer, la sauce de poisson pour plus de sel, le sucre pour adoucir la dureté. Cette sauce devrait être audacieuse au point de presque-trop-much — c'est la rencontre de fruits de mer grillés qui peut la prendre.",
+      "instructions": "Ajoutez le sucre de palme directement au mortier et livrez brièvement pour le casser dans la pâte — il doit se dissoudre complètement, et non pas simplement s'asseoir en morceaux. Verser ensuite le jus de lime et la sauce de poisson. Mélanger avec une cuillère pour tout combiner, en dégustant au fur et à mesure. La séquence des saveurs dans un nam jim bien équilibré fruits de mer devrait être: aigre d'abord et le plus fort, puis salé, puis doux comme un fond qui empêche l'acide d'être dur, puis une chaleur de bâtiment qui arrive en dernier et s'attarde. Ajuster le citron vert pour plus d'amer, la sauce de poisson pour plus de sel, le sucre pour adoucir la dureté. Cette sauce devrait être audacieuse au point de presque-trop-much — c'est la rencontre de fruits de mer grillés qui peut la prendre.",
       "visualCue": {
         "primaryTarget": "Sauce fine, de couleur vert vif avec une teinte dorée du sucre de palme dissous et des graines de chili visibles et des fragments de coriandre suspendus dans un liquide clair et vibrant.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "La sauce a un goût plat et unidimensionnel — seul l'acide se distingue parce que le sucre n'a pas dissout et que la sauce de poisson n'est pas complètement intégrée.",
-            "action": "Pound le sucre dans la pâte plus agressive avant d'ajouter les liquides, et remuer pendant au moins 30 secondes après avoir combiné pour aider le sucre à se dissoudre dans le jus de chaux."
+            "action": "Pound le sucre dans la pâte plus agressive avant d'ajouter les liquides, et remuer pendant au moins 30 secondes après avoir combiné pour aider le sucre à se dissoudre dans le jus de citron vert."
           },
           {
             "state": "Perfect",
@@ -158,7 +158,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Prenez une petite gorgée d'une cuillère et maintenez-la sur votre langue pendant 3 secondes complètes. Le aigre doit s'annoncer immédiatement aux côtés de la langue. Si vous sentez principalement la chaleur, ajoutez plus de chaux. Si vous sentez principalement du sel, ajoutez plus de chaux et une pincée de sucre. Si vous vous sentez surtout sucré, ajoutez quelques gouttes de sauce de poisson."
+      "feelCue": "Prenez une petite gorgée d'une cuillère et maintenez-la sur votre langue pendant 3 secondes complètes. Le aigre doit s'annoncer immédiatement aux côtés de la langue. Si vous sentez principalement la chaleur, ajoutez plus de citron vert. Si vous sentez principalement du sel, ajoutez plus de citron vert et une pincée de sucre. Si vous vous sentez surtout sucré, ajoutez quelques gouttes de sauce de poisson."
     }
   ]
 };

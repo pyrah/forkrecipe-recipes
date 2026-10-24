@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "seasoned_duck",
         "ing_05"
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "blanched_duck",
         "ing_02",
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "lacquered_duck"
       ],

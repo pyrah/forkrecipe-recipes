@@ -133,7 +133,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_11",
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "roasted_bones",
         "ing_07"
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_bones",
         "ing_02",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmering_lamb_stock"
       ],
@@ -275,7 +275,7 @@ export default {
           {
             "state": "Underdone",
             "description": "La graisse résiduelle laissée dans le stock la rend grasse et enrobe la bouche désagréablement.",
-            "action": "Re-chiffre et re-skim. Plusieurs cycles de refroidissement et d'écrémage produisent le stock le plus propre."
+            "action": "Re-chiffre et re-skim. Plusieurs cycles de refroidissement et d'écrèmege produisent le stock le plus propre."
           },
           {
             "state": "Perfect",

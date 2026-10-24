@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "shaggy_dough"
       ],
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "topped_manakeesh"
       ],

@@ -4,7 +4,7 @@ export default {
   "slug": "elotes",
   "author": "ForkRecipe Kitchen",
   "title": "Elotes",
-  "description": "Des épis entiers charnus de maïs slathered in tanny Mexicain crema, roulés dans du Cotija salé, pulvérisés avec de la poudre de chili, et frappés avec une pression de chaux — chaque morsure est simultanément fumée, crémeuse, salée, acide, et vivante avec la chaleur.",
+  "description": "Des épis entiers charnus de maïs slathered in tanny Mexicain crema, roulés dans du Cotija salé, pulvérisés avec de la poudre de chili, et frappés avec une pression de citron vert — chaque morsure est simultanément fumée, crémeuse, salée, acide, et vivante avec la chaleur.",
   "cuisine": "Mexicain",
   "culture": "Mexicain Street Food",
   "category": "vegetables",
@@ -63,7 +63,7 @@ export default {
       "ratioValue": 2,
       "defaultUnit": "tbsp",
       "substitutions": [
-        "créma supplémentaire"
+        "crème supplémentaire"
       ]
     },
     {
@@ -84,14 +84,14 @@ export default {
       "ratioValue": 1,
       "defaultUnit": "tsp",
       "substitutions": [
-        "Tajin (ajoute du sel de chaux)",
+        "Tajin (ajoute du sel de citron vert)",
         "paprika fumé + Cayenne"
       ]
     },
     {
       "ingId": "ing_06",
       "role": "Citrus",
-      "name": "Chaux, coupée en deux",
+      "name": "citron vert, coupée en deux",
       "ratioValue": 2,
       "defaultUnit": "limes",
       "substitutions": []
@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "ing_01"
       ],
@@ -138,7 +138,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Toute l'oreille est noire. La plupart des grains sont broyés et secs. Une odeur de fumée amère domine.",
-            "action": "Débarrassez-vous du pire char. Les grains intérieurs peuvent encore être doux — assembler et servir, le créma équilibrera l'amertume."
+            "action": "Débarrassez-vous du pire char. Les grains intérieurs peuvent encore être doux — assembler et servir, le crème équilibrera l'amertume."
           }
         ]
       },
@@ -152,13 +152,13 @@ export default {
         "ing_03"
       ],
       "outputState": "crema_mixture",
-      "instructions": "Incorporer le créma et la mayonnaise dans un petit bol jusqu'à ce qu'il soit lisse. La combinaison est plus riche que l'un ou l'autre seul — le mayo ajoute corps et collage, le créma ajoute tang. Assaisonner avec une pincée de sel.",
+      "instructions": "Incorporer le crème et la mayonnaise dans un petit bol jusqu'à ce qu'il soit lisse. La combinaison est plus riche que l'un ou l'autre seul — le mayo ajoute corps et collage, le crème ajoute tang. Assaisonner avec une pincée de sel.",
       "visualCue": {
         "primaryTarget": "Une sauce uniforme, blanc ivoire, assez épaisse pour enrober une oreille de maïs sans dégoutter immédiatement.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le créma et le mayo sont encore deux couches distinctes dans le bol — non mélangés.",
+            "description": "Le crème et le mayo sont encore deux couches distinctes dans le bol — non mélangés.",
             "action": "Mélanger vigoureusement jusqu'à ce qu'il soit complètement homogène."
           },
           {
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "charred_corn",
         "crema_mixture",
@@ -187,28 +187,28 @@ export default {
         "ing_07"
       ],
       "outputState": "finished_elotes",
-      "instructions": "Travailler rapidement pendant que le maïs est chaud, brosser ou cuillèrer le mélange créma généreusement sur chaque oreille, enrober tous les côtés. Rouler immédiatement l'oreille enduite dans une assiette de Cotija émiettée, en appuyant légèrement pour que le fromage adhère. Poussière avec poudre de chili. Pressez la chaux sur chaque oreille juste avant de servir. Terminer avec une dispersion de coriandre.",
+      "instructions": "Travailler rapidement pendant que le maïs est chaud, brosser ou cuillèrer le mélange crème généreusement sur chaque oreille, enrober tous les côtés. Rouler immédiatement l'oreille enduite dans une assiette de Cotija émiettée, en appuyant légèrement pour que le fromage adhère. Poussière avec poudre de chili. Pressez le citron vert sur chaque oreille juste avant de servir. Terminer avec une dispersion de coriandre.",
       "visualCue": {
         "primaryTarget": "Blanc neigeux Cotija colle le maïs à la crème sur fond de grains carbonisés noirs et dorés. Les poudres de chili rouge-orange vivides pulvérisent la surface. Cilantro ajoute des taches de vert.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "La couche de créma est mince, la Cotija n'a pas adhéré et tombe, et le maïs semble la plupart du temps nu.",
-            "action": "Appliquer une autre couche de créma et presser fermement le fromage tandis que le maïs est encore chaud et collant."
+            "description": "La couche de crème est mince, la Cotija n'a pas adhéré et tombe, et le maïs semble la plupart du temps nu.",
+            "action": "Appliquer une autre couche de crème et presser fermement le fromage tandis que le maïs est encore chaud et collant."
           },
           {
             "state": "Perfect",
-            "description": "Le créma enveloppe complètement le maïs sous une couche pleine, même de Cotija. La poudre de Chili est visible. Le maïs s'évapore légèrement dans le revêtement. Ça sent le char, la chaux et le chili grillé.",
+            "description": "Le crème enveloppe complètement le maïs sous une couche pleine, même de Cotija. La poudre de Chili est visible. Le maïs s'évapore légèrement dans le revêtement. Ça sent le char, le citron vert et le chili grillé.",
             "action": "Servir sur des brochettes ou dans du papier ciré en 2 minutes — les élotes n'attendent personne."
           },
           {
             "state": "Overdone",
-            "description": "Le créma a glissé sur l'assiette parce que le maïs est trop frais, et le Cotija se rassemble au fond.",
+            "description": "Le crème a glissé sur l'assiette parce que le maïs est trop frais, et le Cotija se rassemble au fond.",
             "action": "Retournez à un gril ou une poêle très chaud pour réchauffer et restaurer l'adhérence du revêtement."
           }
         ]
       },
-      "feelCue": "L'oreille finie doit se sentir chaude et légèrement collante lorsque vous la ramassez — le créma et le fromage forment un manteau ferme et productif qui laisse vos doigts agréablement malsains."
+      "feelCue": "L'oreille finie doit se sentir chaude et légèrement collante lorsque vous la ramassez — le crème et le fromage forment un manteau ferme et productif qui laisse vos doigts agréablement malsains."
     }
   ]
 };

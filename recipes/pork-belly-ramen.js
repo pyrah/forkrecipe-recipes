@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "rolled_pork"
       ],
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_pork",
         "ing_02",
@@ -222,7 +222,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "braised_chashu"
       ],

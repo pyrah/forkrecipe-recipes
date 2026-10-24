@@ -170,7 +170,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -206,7 +206,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "soffritto_base",
         "ing_12",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "bouillabaisse_broth",
         "ing_01",
@@ -272,7 +272,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "finished_bouillabaisse",
         "ing_14",

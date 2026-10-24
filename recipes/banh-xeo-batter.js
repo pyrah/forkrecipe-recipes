@@ -111,7 +111,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "raw_batter",
         "ing_07"
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "rested_batter",
         "ing_08"
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "cooked_banh_xeo"
       ],
@@ -229,7 +229,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "La crêpe s'est assise plus de 3 minutes après le pliage, la vapeur du remplissage a ramolli les bords croustillants et tout est maintenant boiteux et pâle.",
+            "description": "La crêpe s'est assise plus de 3 minutes après le pliage, la vapeur du remplissage a ramolli les bords croustillants et tout est maintenant mou et pâle.",
             "action": "C'est le problème fondamental de bánh xèo — il n'attend pas. Cuire pour commander seulement et manger debout à la cuisinière si nécessaire."
           }
         ]

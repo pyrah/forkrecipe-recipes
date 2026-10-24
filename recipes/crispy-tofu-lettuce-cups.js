@@ -183,7 +183,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "aromatic_mushroom_base",
         "crispy_tofu_crumbles",
@@ -286,7 +286,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "glazed_tofu_filling",
         "ing_13",
@@ -296,7 +296,7 @@ export default {
         "ing_16"
       ],
       "outputState": "finished_lettuce_cups",
-      "instructions": "Disposer la laitue fraîche sur un plateau. Spoon dans le remplissage chaud, puis en haut avec des bâtonnets de carotte, des verts de pétoncle et des noix de cajou. Servir avec des coins de chaux pour les presser.",
+      "instructions": "Disposer la laitue fraîche sur un plateau. Spoon dans le remplissage chaud, puis en haut avec des bâtonnets de carotte, des verts de pétoncle et des noix de cajou. Servir avec des coins de citron vert pour les presser.",
       "visualCue": {
         "primaryTarget": "Gobelets verts pâles tenant un remplissage glacé foncé, surmontés de carottes orange vif et d'échalote verte.",
         "spectrum": [

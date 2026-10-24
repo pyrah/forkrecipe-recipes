@@ -5,7 +5,7 @@ export default {
   "parentSlug": null,
   "author": "ForkRecipe Kitchen",
   "title": "Soupe de poulet Tortilla",
-  "description": "Un bouillon de tomates et de chiles légèrement fumé, rouge brique, rempli de cuisses de poulet déchiquetées, de maïs sucré et de haricots noirs, fini par une pression de chaux et un enchevêtrement de lanières de tortillas de maïs croustillantes au four qui adoucissent aux bords lorsque vous mangez.",
+  "description": "Un bouillon de tomates et de chiles légèrement fumé, rouge brique, rempli de cuisses de poulet déchiquetées, de maïs sucré et de haricots noirs, fini par une pression de citron vert et un enchevêtrement de lanières de tortillas de maïs croustillantes au four qui adoucissent aux bords lorsque vous mangez.",
   "cuisine": "Mexique-Américain",
   "culture": "Cuisine maison Tex-Mex",
   "category": "proteins",
@@ -204,7 +204,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_16",
         "ing_02",
@@ -273,7 +273,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "chile_base",
         "ing_10",
@@ -315,7 +315,7 @@ export default {
         "ing_15"
       ],
       "outputState": "finished_tortilla_soup",
-      "instructions": "Poulet émietté avec deux fourchettes en morceaux de morsure et le retourner au pot avec les haricots et le maïs. Laisser mijoter 5 minutes pour chauffer. Hors du feu, mélanger le jus de lime et assaisonner avec du sel — généralement 1–2 c. à thé avec du stock de sodium faible. Servir avec des bandes de tortillas, coriandre, avocat et fresque queso. Pour congeler : refroidir la soupe (pas de garniture de chaux, pas de lanières) dans des récipients peu profonds à moins de 70°F (21°C) dans les 2 heures et réfrigérer, puis congeler jusqu'à 3 mois. Réchauffer à mijoter et ajouter la chaux fraîche.",
+      "instructions": "Poulet émietté avec deux fourchettes en morceaux de morsure et le retourner au pot avec les haricots et le maïs. Laisser mijoter 5 minutes pour chauffer. Hors du feu, mélanger le jus de lime et assaisonner avec du sel — généralement 1–2 c. à thé avec du stock de sodium faible. Servir avec des bandes de tortillas, coriandre, avocat et fresque queso. Pour congeler : refroidir la soupe (pas de garniture de citron vert, pas de lanières) dans des récipients peu profonds à moins de 70°F (21°C) dans les 2 heures et réfrigérer, puis congeler jusqu'à 3 mois. Réchauffer à mijoter et ajouter le citron vert fraîche.",
       "visualCue": {
         "primaryTarget": "Une soupe pleine et moelleuse où le poulet, les haricots et le maïs sont suspendus uniformément dans le bouillon rouge.",
         "spectrum": [
@@ -326,13 +326,13 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Tout vapeur, bouillon lumineux de chaux avec une colonne vertébrale fumée, poulet en lambeaux doux.",
+            "description": "Tout vapeur, bouillon lumineux de citron vert avec une colonne vertébrale fumée, poulet en lambeaux doux.",
             "action": "Louche et haut généreusement."
           },
           {
             "state": "Overdone",
-            "description": "Les haricots éclatent et obscurcissent le bouillon après avoir bouilli longtemps; la chaux a un goût cuit et amer.",
-            "action": "Finis avec un jet de stock et ajoutez de la chaux fraîche à la table."
+            "description": "Les haricots éclatent et obscurcissent le bouillon après avoir bouilli longtemps; le citron vert a un goût cuit et amer.",
+            "action": "Finis avec un jet de stock et ajoutez du citron vert fraîche à la table."
           }
         ]
       },

@@ -76,11 +76,11 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Herb",
-      "name": "Feuilles fraîches de chaux kaffir (makrut), déchirées",
+      "name": "Feuilles fraîches de citron vert kaffir (makrut), déchirées",
       "ratioValue": 3,
       "defaultUnit": "parts",
       "substitutions": [
-        "bandes de zeste de chaux kaffir"
+        "bandes de zeste de citron vert kaffir"
       ]
     },
     {
@@ -90,7 +90,7 @@ export default {
       "ratioValue": 1,
       "defaultUnit": "parts",
       "substitutions": [
-        "une feuille de chaux supplémentaire"
+        "une feuille de citron vert supplémentaire"
       ]
     },
     {

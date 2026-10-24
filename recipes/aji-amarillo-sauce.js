@@ -76,7 +76,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": [
@@ -108,7 +108,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01"
       ],
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "peeled_chiles",
         "softened_alliums",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "rough_puree",
         "ing_04"
@@ -263,24 +263,24 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "emulsified_sauce",
         "ing_06"
       ],
       "outputState": "finished_aji_amarillo_sauce",
-      "instructions": "Ajouter le sel en petits morceaux, goûter après chaque ajout. Le sel doit amplifier la chaleur fruitée et pimentée sans rendre la sauce salée. Une dernière pression de chaux (facultatif) peut éclaircir la sauce si les chiles étaient particulièrement sucrés. Ajuster le niveau de chaleur: si trop doux, ajouter une pincée de cayenne; si trop chaud, mélanger dans une moitié supplémentaire d'un poivron doux pelé et rôti.",
+      "instructions": "Ajouter le sel en petits morceaux, goûter après chaque ajout. Le sel doit amplifier la chaleur fruitée et pimentée sans rendre la sauce salée. Une dernière pression de citron vert (facultatif) peut éclaircir la sauce si les chiles étaient particulièrement sucrés. Ajuster le niveau de chaleur: si trop doux, ajouter une pincée de cayenne; si trop chaud, mélanger dans une moitié supplémentaire d'un poivron doux pelé et rôti.",
       "visualCue": {
         "primaryTarget": "Sauce vivante, brillante, dorée-orange qui tient un pic doux lorsqu'elle est tombée d'une cuillère. Goûte simultanément fruité, chaud et lumineux.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "La sauce a un goût plat et unidimensionnel: le piment n'a pas de lifting. La couleur peut sembler terne.",
-            "action": "Ajouter une autre pincée de sel et une petite pression de chaux — l'acide est aussi important que le sel pour que cette sauce saute."
+            "action": "Ajouter une autre pincée de sel et une petite pression de citron vert — l'acide est aussi important que le sel pour que cette sauce saute."
           },
           {
             "state": "Perfect",
-            "description": "La fructification du piment frappe d'abord, suivie d'une chaleur qui brûle lentement et qui culmine à l'arrière de la gorge. La chaux traverse l'huile sans être perceptible.",
+            "description": "La fructification du piment frappe d'abord, suivie d'une chaleur qui brûle lentement et qui culmine à l'arrière de la gorge. La citron vert traverse l'huile sans être perceptible.",
             "action": "Transférer dans un pot et réfrigérer. Garde 2 semaines."
           },
           {

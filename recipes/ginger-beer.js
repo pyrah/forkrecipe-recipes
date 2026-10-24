@@ -68,7 +68,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "g",
       "substitutions": [
@@ -87,7 +87,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -119,7 +119,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ginger_syrup",
         "ing_03",
@@ -181,11 +181,11 @@ export default {
           }
         ]
       },
-      "feelCue": "La brûlure de gingembre devrait durer 10 à 15 secondes après la dégustation. La chaux fournit une note d'agrumes élevée qui coupe le sucre."
+      "feelCue": "La brûlure de gingembre devrait durer 10 à 15 secondes après la dégustation. La citron vert fournit une note d'agrumes élevée qui coupe le sucre."
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "unbottled_ginger_beer"
       ],

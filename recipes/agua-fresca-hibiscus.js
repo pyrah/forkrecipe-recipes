@@ -4,7 +4,7 @@ export default {
   "slug": "agua-fresca-hibiscus",
   "author": "ForkRecipe Kitchen",
   "title": "Hibiscus Agua Fresca (Jamaïque)",
-  "description": "Des fleurs d'hibiscus séchées, imprégnées d'un thé pur-pourpre vibrant, sucrées et servies sur la glace avec une touche de chaux, la couleur du coucher de soleil dans un verre.",
+  "description": "Des fleurs d'hibiscus séchées, imprégnées d'un thé pur-pourpre vibrant, sucrées et servies sur la glace avec une touche de citron vert, la couleur du coucher de soleil dans un verre.",
   "cuisine": "Mexicain",
   "culture": "Mexicain",
   "category": "beverages",
@@ -76,7 +76,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 20,
       "defaultUnit": "parts",
       "substitutions": [
@@ -86,7 +86,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Garnish",
-      "name": "Coins de chaux",
+      "name": "Coins de citron vert",
       "ratioValue": 10,
       "defaultUnit": "parts",
       "substitutions": []
@@ -95,7 +95,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -126,7 +126,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "hibiscus_tea",
         "ing_04"
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "sweetened_hibiscus_concentrate",
         "ing_03",
@@ -165,9 +165,9 @@ export default {
         "ing_06"
       ],
       "outputState": "hibiscus_agua_fresca",
-      "instructions": "Incorporer l'eau froide et le jus de citron vert frais dans le concentré sucré d'hibiscus. Goûtez et ajustez - plus de chaux pour la tarte, plus de sirop de sucre pour la douceur. Réfrigérer jusqu'à froid ou servir immédiatement sur la glace. Garnir d'un coin de chaux.",
+      "instructions": "Incorporer l'eau froide et le jus de citron vert frais dans le concentré sucré d'hibiscus. Goûtez et ajustez - plus de citron vert pour la tarte, plus de sirop de sucre pour la douceur. Réfrigérer jusqu'à froid ou servir immédiatement sur la glace. Garnir d'un coin de citron vert.",
       "visualCue": {
-        "primaryTarget": "Une boisson vive et semi-transparente servie sur glace, la couleur reste profonde même lorsqu'elle est diluée, avec un coin de chaux perché sur le bord du verre.",
+        "primaryTarget": "Une boisson vive et semi-transparente servie sur glace, la couleur reste profonde même lorsqu'elle est diluée, avec un coin de citron vert perché sur le bord du verre.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -182,7 +182,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Surdilué — la couleur s'estompe au rose pâle et la saveur est plate et aqueuse.",
-            "action": "Ajouter plus de concentré d'hibiscus si disponible, ou presser dans la chaux supplémentaire et une pincée de sucre pour ramener la saveur."
+            "action": "Ajouter plus de concentré d'hibiscus si disponible, ou presser dans le citron vert supplémentaire et une pincée de sucre pour ramener la saveur."
           }
         ]
       },

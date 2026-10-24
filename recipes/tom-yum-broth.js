@@ -4,7 +4,7 @@ export default {
   "slug": "tom-yum-broth",
   "author": "ForkRecipe Kitchen",
   "title": "Tom Yum Broth",
-  "description": "Un bouillon d'une telle clarté musculaire que chaque sirote la langue avec de la chaux, brûle avec du chili, puis se retire dans la chaleur océanique profonde des crevettes et de la sauce de poisson — la citronnelle et le galangal flottant dans le bol comme le bois de dérive aromatique, dépensé mais encore parfumé. C'est le bouillon qui définit la chaleur et la chaleur.",
+  "description": "Un bouillon d'une telle clarté musculaire que chaque sirote la langue avec du citron vert, brûle avec du chili, puis se retire dans la chaleur océanique profonde des crevettes et de la sauce de poisson — la citronnelle et le galangal flottant dans le bol comme le bois de dérive aromatique, dépensé mais encore parfumé. C'est le bouillon qui définit la chaleur et la chaleur.",
   "cuisine": "Thaï",
   "culture": "Centre thaïlandais",
   "category": "stocks",
@@ -69,11 +69,11 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Herb",
-      "name": "Feuilles de chaux kaffir (makrut), déchirées",
+      "name": "Feuilles de citron vert kaffir (makrut), déchirées",
       "ratioValue": 6,
       "defaultUnit": "leaves",
       "substitutions": [
-        "Bandes de zeste de chaux (inférieures)"
+        "Bandes de zeste de citron vert (inférieures)"
       ]
     },
     {
@@ -157,7 +157,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -165,7 +165,7 @@ export default {
         "ing_04"
       ],
       "outputState": "aromatic_stock",
-      "instructions": "Mélanger le bouillon d'eau ou de crevettes avec la citronnelle meurtrie, le galangal tranché et les feuilles de lime kaffir déchirées dans une casserole moyenne. Porter à ébullition à feu vif, puis laisser mijoter vigoureusement. Laisser mijoter à découvert pendant 10 minutes, en pressant les aromatiques dans le liquide avec une cuillère toutes les quelques minutes. Le liquide diminuera légèrement et, plus important encore, il extrairea les huiles aromatiques volatiles de la citronnelle, du galangal et de la chaux kaffir. Après 10 minutes, le bouillon doit sentir fortement les trois aromatiques — le citron-citrus de citronnelle, le camphre-chaud du galangal, et le floral-citrus distinct de la chaux de kaffir. Si votre eau est très douce, les saveurs seront plus prononcées ; l'eau dure mute légèrement les aromatiques. Ne pas encore se fatiguer — les aromatiques continuent à aromatiser le bouillon à travers les étapes suivantes.",
+      "instructions": "Mélanger le bouillon d'eau ou de crevettes avec la citronnelle meurtrie, le galangal tranché et les feuilles de lime kaffir déchirées dans une casserole moyenne. Porter à ébullition à feu vif, puis laisser mijoter vigoureusement. Laisser mijoter à découvert pendant 10 minutes, en pressant les aromatiques dans le liquide avec une cuillère toutes les quelques minutes. Le liquide diminuera légèrement et, plus important encore, il extrairea les huiles aromatiques volatiles de la citronnelle, du galangal et du citron vert kaffir. Après 10 minutes, le bouillon doit sentir fortement les trois aromatiques — le citron-citrus de citronnelle, le camphre-chaud du galangal, et le floral-citrus distinct du citron vert de kaffir. Si votre eau est très douce, les saveurs seront plus prononcées ; l'eau dure mute légèrement les aromatiques. Ne pas encore se fatiguer — les aromatiques continuent à aromatiser le bouillon à travers les étapes suivantes.",
       "visualCue": {
         "primaryTarget": "Un bouillon d'or pâle avec une surface vigoureuse mijoter et des morceaux aromatiques visibles flottant partout.",
         "spectrum": [
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "aromatic_stock",
         "ing_08",
@@ -198,7 +198,7 @@ export default {
         "ing_10"
       ],
       "outputState": "seasoned_stock",
-      "instructions": "Ajouter les piments d'oiseaux légèrement meurtris et le nam prik pao (pâte de chili grillé) au stock aromatique mijotant. Le nam prik pao est le différenciateur entre le tom yum nam sai (bouillon clair, pâle) et le tom yum nam khon (bouillon nuageux, plus riche, plus foncé) — cette recette l'utilise pour la profondeur et la couleur. Mélanger jusqu'à ce que la pâte se dissout dans le bouillon — il transformera le stock en ambre-orange chaud. Ajouter les champignons déchirés et laisser mijoter 3 minutes jusqu'à ramollir. Goûtez le bouillon maintenant — avant d'ajouter la crevette, la sauce de poisson ou la chaux — et vérifiez que la chaleur de chili est à votre niveau désiré. À ce stade, vous pouvez ajouter plus de chilies meurtries. Les champignons ajouteront une profondeur d'umami qui comble l'écart entre les aromatiques pointus et les fruits de mer.",
+      "instructions": "Ajouter les piments d'oiseaux légèrement meurtris et le nam prik pao (pâte de chili grillé) au stock aromatique mijotant. Le nam prik pao est le différenciateur entre le tom yum nam sai (bouillon clair, pâle) et le tom yum nam khon (bouillon nuageux, plus riche, plus foncé) — cette recette l'utilise pour la profondeur et la couleur. Mélanger jusqu'à ce que la pâte se dissout dans le bouillon — il transformera le stock en ambre-orange chaud. Ajouter les champignons déchirés et laisser mijoter 3 minutes jusqu'à ramollir. Goûtez le bouillon maintenant — avant d'ajouter la crevette, la sauce de poisson ou le citron vert — et vérifiez que la chaleur de chili est à votre niveau désiré. À ce stade, vous pouvez ajouter plus de chilies meurtries. Les champignons ajouteront une profondeur d'umami qui comble l'écart entre les aromatiques pointus et les fruits de mer.",
       "visualCue": {
         "primaryTarget": "Un bouillon ambré-orange légèrement nuageux avec des champignons ramollis et des morceaux de chili flottant à travers.",
         "spectrum": [
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "seasoned_stock",
         "ing_05",
@@ -232,7 +232,7 @@ export default {
         "ing_12"
       ],
       "outputState": "finished_tom_yum_broth",
-      "instructions": "Porter le bouillon à ébullition complète. Ajouter les crevettes et cuire pendant 2 à 3 minutes exactement, en observant de près — les crevettes dans un bouillon chaud cuire beaucoup plus vite que prévu. Retirer la casserole du feu au moment où les crevettes sont roses et enroulées dans un C détendu. La chaux surtout ne doit pas être cuite plus loin ou sa note supérieure lumineuse devient plate et amère. Ajoutez maintenant le sucre en option si le bouillon doit être arrondi. Goût pour l'équilibre : le tom yum doit être amer et chaud avec une colonne vertébrale salée profonde et une douceur légère à la fin. Corriger si nécessaire. Déposer dans des bols, laissant les morceaux aromatiques dans le bol (ils sont décoratifs et continuent à arôme, mais ne sont pas consommés), et disperser la coriandre sur la surface.",
+      "instructions": "Porter le bouillon à ébullition complète. Ajouter les crevettes et cuire pendant 2 à 3 minutes exactement, en observant de près — les crevettes dans un bouillon chaud cuire beaucoup plus vite que prévu. Retirer la casserole du feu au moment où les crevettes sont roses et enroulées dans un C détendu. La citron vert surtout ne doit pas être cuite plus loin ou sa note supérieure lumineuse devient plate et amère. Ajoutez maintenant le sucre en option si le bouillon doit être arrondi. Goût pour l'équilibre : le tom yum doit être amer et chaud avec une colonne vertébrale salée profonde et une douceur légère à la fin. Corriger si nécessaire. Déposer dans des bols, laissant les morceaux aromatiques dans le bol (ils sont décoratifs et continuent à arôme, mais ne sont pas consommés), et disperser la coriandre sur la surface.",
       "visualCue": {
         "primaryTarget": "Crevettes roses-oranges vivides frisé à un C doux dans un bouillon ambre, avec des feuilles de coriandre verte à la surface.",
         "spectrum": [

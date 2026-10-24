@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "stiff_meringue",
         "ing_03",
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "pavlova_meringue"
       ],
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_06",
         "ing_07"
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "baked_pavlova_shell",
         "whipped_cream",

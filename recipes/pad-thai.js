@@ -73,7 +73,7 @@ export default {
       "ratioValue": 45,
       "defaultUnit": "ml",
       "substitutions": [
-        "jus de chaux + cassonade (moins de profondeur)"
+        "jus de citron vert + cassonade (moins de profondeur)"
       ]
     },
     {
@@ -186,7 +186,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01"
       ],
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_09",
         "ing_07",
@@ -281,7 +281,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "aromatic_base",
         "ing_02"
@@ -312,7 +312,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_shrimp_base",
         "soaked_noodles",
@@ -345,7 +345,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "sauced_noodles",
         "ing_11",
@@ -355,7 +355,7 @@ export default {
         "ing_15"
       ],
       "outputState": "finished_pad_thai",
-      "instructions": "Assortir le pad thai dans un monticule. D'un côté, empilez les germes de haricots et les ciboulettes d'ail crues — elles devraient être froides et croquantes contre les nouilles chaudes, offrant un contraste textural. Dispersez les cacahuètes écrasées sur le dessus. Servir avec un coin de chaux pressé contre le monticule et un petit tas de flocons de chili séchés sur le côté. Ne mélangez jamais les garnitures dans les nouilles avant de servir — chaque diner devrait mélanger son propre mélange, presser la chaux et ajuster le chili au goût. Le pad thai est traditionnellement servi avec des condiments supplémentaires sur le côté: sauce de poisson avec des chilis flottants, plus de sucre, plus de flocons de chili, et vinaigre blanc — les quatre saveurs de la table thaïlandaise.",
+      "instructions": "Assortir le pad thai dans un monticule. D'un côté, empilez les germes de haricots et les ciboulettes d'ail crues — elles devraient être froides et croquantes contre les nouilles chaudes, offrant un contraste textural. Dispersez les cacahuètes écrasées sur le dessus. Servir avec un coin de citron vert pressé contre le monticule et un petit tas de flocons de chili séchés sur le côté. Ne mélangez jamais les garnitures dans les nouilles avant de servir — chaque diner devrait mélanger son propre mélange, presser le citron vert et ajuster le chili au goût. Le pad thai est traditionnellement servi avec des condiments supplémentaires sur le côté: sauce de poisson avec des chilis flottants, plus de sucre, plus de flocons de chili, et vinaigre blanc — les quatre saveurs de la table thaïlandaise.",
       "visualCue": {
         "primaryTarget": "Composition vibrante : nouilles brun-ambre surmontées de germes vert-blanc vif, de gravats d'arachide dorés et d'un coin de citron vert vif.",
         "spectrum": [
@@ -366,7 +366,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les nouilles sont ambrées. Les pousses de haricots sont froides et vert blanc vif, à l'écart des nouilles. Les arachides sont des puces dorées visibles. La chaux est fraîche et ferme.",
+            "description": "Les nouilles sont ambrées. Les pousses de haricots sont froides et vert blanc vif, à l'écart des nouilles. Les arachides sont des puces dorées visibles. La citron vert est fraîche et ferme.",
             "action": "Servir immédiatement pendant que les nouilles sont chaudes et que les germes sont froids."
           },
           {
@@ -376,7 +376,7 @@ export default {
           }
         ]
       },
-      "feelCue": "La plaque finie devrait vous frapper avec deux zones de température distinctes: les nouilles chaudes à la vapeur et les germes frais et croquants. Lorsque vous pressez la chaux et qu'elle siffle légèrement contre les nouilles chaudes, vous savez qu'elle est prête."
+      "feelCue": "La plaque finie devrait vous frapper avec deux zones de température distinctes: les nouilles chaudes à la vapeur et les germes frais et croquants. Lorsque vous pressez le citron vert et qu'elle siffle légèrement contre les nouilles chaudes, vous savez qu'elle est prête."
     }
   ]
 };

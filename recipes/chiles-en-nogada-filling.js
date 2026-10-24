@@ -99,7 +99,7 @@ export default {
       "ratioValue": 50,
       "defaultUnit": "g",
       "substitutions": [
-        "noix de pin"
+        "pignons de pin"
       ]
     },
     {
@@ -177,7 +177,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_12",
         "ing_02",
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "softened_alliums",
         "ing_01",
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "browned_pork_base",
         "ing_04",

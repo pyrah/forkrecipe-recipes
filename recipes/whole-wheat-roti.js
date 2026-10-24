@@ -87,7 +87,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "roti_dough"
       ],
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "rolled_rotis",
         "ing_05"

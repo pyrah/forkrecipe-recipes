@@ -182,7 +182,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_05",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "battered_chicken",
         "ing_08"
@@ -279,7 +279,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "ing_09",
         "ing_10",

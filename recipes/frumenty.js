@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "swelled_wheat",
         "ing_02",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "burst_wheat",
         "ing_03",
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "gilded_pottage",
         "ing_04",

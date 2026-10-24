@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "coated_tofu",
         "ing_03"
@@ -282,7 +282,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -307,7 +307,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Pâte uniforme, brillante, cuillerée mais fine; goût salée, tarte et douce en équilibre.",
-            "action": "Goûtez — ajoutez de la chaux pour la luminosité ou de l'érable si elle est dure."
+            "action": "Goûtez — ajoutez du citron vert pour la luminosité ou de l'érable si elle est dure."
           },
           {
             "state": "Overdone",
@@ -320,7 +320,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_04"
       ],
@@ -350,7 +350,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "peanut_sauce_base",
         "ing_14",

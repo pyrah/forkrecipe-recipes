@@ -4,7 +4,7 @@ export default {
   "slug": "ceviche-de-camarones",
   "author": "ForkRecipe Kitchen",
   "title": "Ceviche de Camarones",
-  "description": "Contrairement au ceviche de poisson, le ceviche de crevettes commence par un bref braconnage — la chaleur douce mettant la protéine juste assez pour donner aux crevettes leur éclat caractéristique avant que la chaux et ají amarillo prennent le dessus et illuminent chaque bord. La leche de tigre qui s'accumule au fond du bol est tellement bonne qu'elle est traditionnellement ivre directement du verre.",
+  "description": "Contrairement au ceviche de poisson, le ceviche de crevettes commence par un bref pochage — la chaleur douce mettant la protéine juste assez pour donner aux crevettes leur éclat caractéristique avant que le citron vert et ají amarillo prennent le dessus et illuminent chaque bord. La leche de tigre qui s'accumule au fond du bol est tellement bonne qu'elle est traditionnellement ivre directement du verre.",
   "cuisine": "Péroun/Équateur",
   "culture": "Côte Amérique du Sud",
   "category": "seafood",
@@ -47,7 +47,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Citrus",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 40,
       "defaultUnit": "parts",
       "substitutions": []
@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01"
       ],
@@ -127,7 +127,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le centre des crevettes est gris et translucide. Ils se sentent boiteux et doux.",
+            "description": "Le centre des crevettes est gris et translucide. Ils se sentent mou et doux.",
             "action": "Retourner à l'eau chaude (pas bouillante) pendant 30 à 45 secondes."
           },
           {
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_04",
         "ing_08"
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "poached_shrimp",
         "macerated_onion",
@@ -189,23 +189,23 @@ export default {
         "ing_08"
       ],
       "outputState": "finished_ceviche_de_camarones",
-      "instructions": "Mélanger les crevettes refroidies, l'oignon macéré, le jus de lime, la pâte ají amarillo, le gingembre râpé, l'ail et la coriandre dans un bol froid. Mélanger doucement. Assaisonner de sel. Faire mariner 15 à 20 minutes au réfrigérateur — suffisamment de temps pour que la leche de tigre (lait de tigre — liquide de durcissement) se développe et que la chaux finisse la surface de la crevette. Servir immédiatement après la miction dans des bols réfrigérés, avec du maïs chocolaté sur le côté pour le contraste textural.",
+      "instructions": "Mélanger les crevettes refroidies, l'oignon macéré, le jus de lime, la pâte ají amarillo, le gingembre râpé, l'ail et la coriandre dans un bol froid. Mélanger doucement. Assaisonner de sel. Faire mariner 15 à 20 minutes au réfrigérateur — suffisamment de temps pour que la leche de tigre (lait de tigre — liquide de durcissement) se développe et que le citron vert finisse la surface de la crevette. Servir immédiatement après la miction dans des bols réfrigérés, avec du maïs chocolaté sur le côté pour le contraste textural.",
       "visualCue": {
         "primaryTarget": "Les crevettes sont des coraux brillants dans une leche de tigre jaune-vert vif et nuageux. L'oignon est magenta. Cilantro est vert vif.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le jus de chaux est aqueux et mince. Aucun leche de tigre n'a été développé. Les saveurs ne sont pas intégrées.",
+            "description": "Le jus de citron vert est aqueux et mince. Aucun leche de tigre n'a été développé. Les saveurs ne sont pas intégrées.",
             "action": "Faire mariner 10 minutes de plus. L'amidon libéré de la crevette pochée a besoin de temps pour épaissir le liquide."
           },
           {
             "state": "Perfect",
-            "description": "Leche de tigre est légèrement trouble et visqueux, enrobant les crevettes dans une émulsion acide brillante. Le bol sent fortement la chaux et ají amarillo.",
+            "description": "Leche de tigre est légèrement trouble et visqueux, enrobant les crevettes dans une émulsion acide brillante. Le bol sent fortement le citron vert et ají amarillo.",
             "action": "Servir immédiatement dans des bols froids. Ne pas tenir plus de 30 minutes au total."
           },
           {
             "state": "Overdone",
-            "description": "Les crevettes sont devenues farineuses et grises à cause du surcuisson acide. Le jus de chaux est devenu écrasant.",
+            "description": "Les crevettes sont devenues farineuses et grises à cause du surcuisson acide. Le jus de citron vert est devenu écrasant.",
             "action": "Servir immédiatement et ajouter ají amarillo supplémentaire et sel pour rééquilibrer."
           }
         ]

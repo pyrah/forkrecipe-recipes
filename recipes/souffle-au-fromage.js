@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_07",
         "ing_08"
@@ -230,7 +230,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "stiff_whites",
         "cheese_base"
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "souffle_batter",
         "prepared_ramekins"

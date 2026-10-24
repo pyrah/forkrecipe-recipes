@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "sifted_matcha",
         "ing_02"

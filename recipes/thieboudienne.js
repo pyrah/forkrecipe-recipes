@@ -277,7 +277,7 @@ export default {
         "braised_fish_and_vegetables"
       ],
       "outputState": "finished_thieboudienne",
-      "instructions": "Traditionnellement, la thiéboudienne est servie sur un grand plateau communal : fonder le riz au centre, arranger le poisson sur le dessus (le garder le plus complet possible même si elle a cassé pendant la cuisson), et distribuer les légumes autour du riz. Placez les croustilles à côté ou sur le dessus comme un bonus croustillant. Déposer tout liquide de braisage restant sur le poisson. Servir avec des quartiers de chaux et un côté de sauce dibi fermentée à l'oignon et au moutarde si disponible.",
+      "instructions": "Traditionnellement, la thiéboudienne est servie sur un grand plateau communal : fonder le riz au centre, arranger le poisson sur le dessus (le garder le plus complet possible même si elle a cassé pendant la cuisson), et distribuer les légumes autour du riz. Placez les croustilles à côté ou sur le dessus comme un bonus croustillant. Déposer tout liquide de braisage restant sur le poisson. Servir avec des quartiers de citron vert et un côté de sauce dibi fermentée à l'oignon et au moutarde si disponible.",
       "visualCue": {
         "primaryTarget": "Une montagne de riz rouge-ambre avec un poisson entier (ou de grandes pièces) sur le dessus, entouré de légumes-racines richement colorés. Les morceaux de croûte sont brun-orange foncé, visibles et attrayants.",
         "spectrum": [

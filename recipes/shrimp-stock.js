@@ -98,7 +98,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -130,7 +130,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "toasted_shells",
         "ing_06"
@@ -161,14 +161,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_shells",
         "ing_05",
         "ing_04"
       ],
       "outputState": "simmered_stock",
-      "instructions": "Ajouter l'eau froide et les feuilles de laurier. Porter à feu doux à feu moyen. NE PAS bouillir — les coquilles de crevettes libèrent des composés amers si elles sont cuites de façon agressive. Laisser mijoter à découvert de 25 à 30 minutes, en écrémant toute mousse qui monte dans les 10 premières minutes. Le liquide devrait à peine trembler à la surface.",
+      "instructions": "Ajouter l'eau froide et les feuilles de laurier. Porter à feu doux à feu moyen. NE PAS bouillir — les coquilles de crevettes libèrent des composés amers si elles sont cuites de façon agressive. Laisser mijoter à découvert de 25 à 30 minutes, en écrèment toute mousse qui monte dans les 10 premières minutes. Le liquide devrait à peine trembler à la surface.",
       "visualCue": {
         "primaryTarget": "Un liquide d'or pâle, légèrement rose, avec une surface de respiration calme. Mousse écrémée et jetée dans les premières minutes.",
         "spectrum": [
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmered_stock"
       ],

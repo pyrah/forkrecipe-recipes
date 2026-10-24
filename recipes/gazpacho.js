@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "rough_gazpacho"
       ],
@@ -222,7 +222,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "strained_gazpacho"
       ],

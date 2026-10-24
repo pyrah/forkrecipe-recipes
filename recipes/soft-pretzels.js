@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "shaggy_pretzel_dough"
       ],
@@ -187,7 +187,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "developed_pretzel_dough"
       ],
@@ -217,13 +217,13 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "shaped_pretzels",
         "ing_07"
       ],
       "outputState": "dipped_pretzels",
-      "instructions": "SÉCURITÉ: Portez des gants en caoutchouc et une protection oculaire. Préparer une solution de lyes de 3 à 4 % en ajoutant de l'hydroxyde de sodium à l'eau froide (jamais l'inverse – toujours ajouter de la lyre à l'eau). Travaillant avec une solution de lysse froide, submerger brièvement chaque bretzel pendant 20 à 30 secondes de chaque côté, puis transférer immédiatement sur une surface de lysse (non réactive) ou directement sur des plateaux de cuisson parcheminés. Alternativement, utiliser une solution de bicarbonate de soude (huile 1 L d'eau avec 60 g de bicarbonate de soude) pour une croûte plus sûre mais moins spectaculaire. Noter le ventre gras avec un couteau tranchant ou boiteux dans une seule coupe confiante. Saupoudrer de sel de bretzel immédiatement.",
+      "instructions": "SÉCURITÉ: Portez des gants en caoutchouc et une protection oculaire. Préparer une solution de lyes de 3 à 4 % en ajoutant de l'hydroxyde de sodium à l'eau froide (jamais l'inverse – toujours ajouter de la lyre à l'eau). Travaillant avec une solution de lysse froide, submerger brièvement chaque bretzel pendant 20 à 30 secondes de chaque côté, puis transférer immédiatement sur une surface de lysse (non réactive) ou directement sur des plateaux de cuisson parcheminés. Alternativement, utiliser une solution de bicarbonate de soude (huile 1 L d'eau avec 60 g de bicarbonate de soude) pour une croûte plus sûre mais moins spectaculaire. Noter le ventre gras avec un couteau tranchant ou mou dans une seule coupe confiante. Saupoudrer de sel de bretzel immédiatement.",
       "visualCue": {
         "primaryTarget": "Les bretzels ont pris une apparence beige-jaune, légèrement lissée, mate, après la trempe des lies. La coupe est propre et tient ouverte.",
         "spectrum": [
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "dipped_pretzels",
         "ing_08"

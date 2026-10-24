@@ -53,7 +53,7 @@ export default {
       "ratioValue": 120,
       "defaultUnit": "g",
       "substitutions": [
-        "pécans (légèrement sucrés)"
+        "noix de noix de pécan (légèrement sucrés)"
       ]
     },
     {
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "charred_peppers",
         "toasted_walnuts",

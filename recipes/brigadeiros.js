@@ -128,7 +128,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "brigadeiro_mix"
       ],
@@ -158,7 +158,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "brigadeiro_fudge"
       ],
@@ -188,7 +188,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "cooled_brigadeiro",
         "ing_04"

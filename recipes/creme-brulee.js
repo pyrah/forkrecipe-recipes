@@ -96,7 +96,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -127,7 +127,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "custard_base"
       ],
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "baked_custard",
         "ing_06"

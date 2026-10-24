@@ -183,7 +183,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "ing_01",
         "ing_09"
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_13",
         "ing_04",
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "vegetable_base",
         "acidulated_beets",
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "beet_broth",
         "ing_02",
@@ -312,7 +312,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "simmered_borscht",
         "ing_06",
@@ -345,7 +345,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_borscht",
         "ing_14",

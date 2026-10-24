@@ -102,7 +102,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -135,7 +135,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Gel",
+      "action": "Congeler",
       "inputs": [
         "mignonette_liquid"
       ],
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "shucked_oysters",
         "mignonette_granita",

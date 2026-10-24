@@ -42,7 +42,7 @@ export default {
       "ratioValue": 6,
       "defaultUnit": "parts",
       "substitutions": [
-        "jus de chaux clé",
+        "jus de citron vert clé",
         "jus de citron (moins amer)"
       ]
     },
@@ -139,7 +139,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -147,7 +147,7 @@ export default {
       "outputState": "cold_citrus_base",
       "instructions": "Verser le jus de lime et le stock de poisson froid dans un bol. Ajouter une poignée de glace et remuer jusqu'à ce que le mélange soit soigneusement refroidi — vous voulez entre 2 et 4C / 36–40F avant de mélanger. Ce n'est pas négociable: leche de tigre est mélangé froid, servi froid, et le plus froid il reste pendant la préparation, le plus brillant, plus propre, et plus vif le goût des agrumes. Le froid empêche également la protéine de poisson de cuisiner pendant l'étape de mélange, en maintenant le liquide fini propre et translucide plutôt que trouble et cuisson. Retirer la glace avant de la mélanger.",
       "visualCue": {
-        "primaryTarget": "Un liquide cristallin, glacé et tranchant de paille pâle avec une faible teinte verdâtre de la chaux. Le bol doit être perlé avec condensation à l'extérieur.",
+        "primaryTarget": "Un liquide cristallin, glacé et tranchant de paille pâle avec une faible teinte verdâtre du citron vert. Le bol doit être perlé avec condensation à l'extérieur.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -156,12 +156,12 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Le bol est très froid au toucher, le liquide est presque gelé, sent intensément la chaux fraîche. Lorsque vous plongez un doigt dedans, il fait froid dans 2 secondes.",
+            "description": "Le bol est très froid au toucher, le liquide est presque gelé, sent intensément le citron vert fraîche. Lorsque vous plongez un doigt dedans, il fait froid dans 2 secondes.",
             "action": "Enlever la glace et procéder immédiatement au mélange — ne pas la laisser se réchauffer."
           },
           {
             "state": "Overdone",
-            "description": "Le jus de chaux est assis à la température ambiante depuis plus d'une heure et a perdu ses aromatiques volatils; le bord aigu des agrumes est terni.",
+            "description": "Le jus de citron vert est assis à la température ambiante depuis plus d'une heure et a perdu ses aromatiques volatils; le bord aigu des agrumes est terni.",
             "action": "Presser le jus de lime frais et l'ajouter pour rafraîchir la base avant de mélanger."
           }
         ]
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cold_citrus_base",
         "ing_03",
@@ -204,11 +204,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Sentez le mélangeur avant de l'ouvrir — l'arôme qui s'échappe devrait être presque écrasant, un coup concentré d'acide, d'herbe et de chaleur qui fait vos yeux arroser légèrement. Si ça sent le museau ou le plat, il vous faut plus de chaux ou plus d'ají."
+      "feelCue": "Sentez le mélangeur avant de l'ouvrir — l'arôme qui s'échappe devrait être presque écrasant, un coup concentré d'acide, d'herbe et de chaleur qui fait vos yeux arroser légèrement. Si ça sent le museau ou le plat, il vous faut plus de citron vert ou plus d'ají."
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "blended_leche"
       ],
@@ -234,11 +234,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Plongez l'extrémité d'une cuillère dans le liquide et le goût tendus — la première sensation devrait être une aurence aiguë, presque violente de la chaux, suivie par la chaleur de réchauffement de l'ají, puis la profondeur océanique du poisson, puis une finition fraîche et à base de plantes de la coriandre. Si un élément est absent, ajuster avant de servir."
+      "feelCue": "Plongez l'extrémité d'une cuillère dans le liquide et le goût tendus — la première sensation devrait être une aurence aiguë, presque violente du citron vert, suivie par la chaleur de réchauffement de l'ají, puis la profondeur océanique du poisson, puis une finition fraîche et à base de plantes de la coriandre. Si un élément est absent, ajuster avant de servir."
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "strained_leche_de_tigre",
         "ing_11"
@@ -250,7 +250,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Plat, mince, pas très aigre ou épicé; la saveur se dissout en bouche sans construire; a besoin plus de chaux, plus ají, ou plus de sel.",
+            "description": "Plat, mince, pas très aigre ou épicé; la saveur se dissout en bouche sans construire; a besoin plus de citron vert, plus ají, ou plus de sel.",
             "action": "Ajouter le jus de lime frais en petites quantités, goûter au fur et à mesure; ajouter plus de pâte ají amarillo pour la chaleur; reformer."
           },
           {
@@ -260,7 +260,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "L'acide est devenu amer et dur; soit trop de chaux a été utilisé, la mauvaise partie de la chaux (pinthe) a été extraite, ou il s'est assis trop longtemps et les acides volatils se sont détériorés dans une amertume plate.",
+            "description": "L'acide est devenu amer et dur; soit trop de citron vert a été utilisé, la mauvaise partie du citron vert (pinthe) a été extraite, ou il s'est assis trop longtemps et les acides volatils se sont détériorés dans une amertume plate.",
             "action": "Équilibrez avec une petite quantité de poisson et une pincée de sel; servez immédiatement."
           }
         ]

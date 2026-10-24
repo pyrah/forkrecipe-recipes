@@ -4,7 +4,7 @@ export default {
   "slug": "enchiladas-verdes",
   "author": "ForkRecipe Kitchen",
   "title": "Enchiladas Verdes",
-  "description": "Tortilles de maïs, brièvement frites et tirées à travers une sauce tomatillo brillante et tannante, enveloppent une garniture de poulet déchiqueté et sortent du four sous une couverture de créma et de fresque queso qui adoucit le feu du chile vert.",
+  "description": "Tortilles de maïs, brièvement frites et tirées à travers une sauce tomatillo brillante et tannante, enveloppent une garniture de poulet déchiqueté et sortent du four sous une couverture de crème et de fresque queso qui adoucit le feu du chile vert.",
   "cuisine": "Mexicain",
   "culture": "Mexicain",
   "category": "proteins",
@@ -97,7 +97,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Dairy",
-      "name": "Crème créma ou aigre mexicaine",
+      "name": "Crème crème ou aigre mexicaine",
       "ratioValue": 15,
       "defaultUnit": "parts",
       "substitutions": [
@@ -108,15 +108,15 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_04"
       ],
       "outputState": "poached_chicken",
-      "instructions": "Placer les morceaux de poulet dans une casserole avec la moitié de l'oignon, une pincée de sel et suffisamment d'eau froide pour couvrir de 3cm. Portez à feu doux à feu moyen — jamais un ébullition qui durcit la viande. Écraser toute mousse qui monte. Cuire 20-25 minutes jusqu'à ce que le poulet soit cuit. Retirer et laisser refroidir assez pour manipuler, puis déchiqueter en longs brins fins. Réserve le liquide de braconnage.",
+      "instructions": "Placer les morceaux de poulet dans une casserole avec la moitié de l'oignon, une pincée de sel et suffisamment d'eau froide pour couvrir de 3cm. Portez à feu doux à feu moyen — jamais un ébullition qui durcit la viande. Écraser toute mousse qui monte. Cuire 20-25 minutes jusqu'à ce que le poulet soit cuit. Retirer et laisser refroidir assez pour manipuler, puis déchiqueter en longs brins fins. Réserve le liquide de pochage.",
       "visualCue": {
-        "primaryTarget": "Le poulet est blanc tout au long sans rose près de l'os. Le liquide de braconnage est un or pâle, limpide avec seulement une mijote douce — jamais de bulles agressives.",
+        "primaryTarget": "Le poulet est blanc tout au long sans rose près de l'os. Le liquide de pochage est un or pâle, limpide avec seulement une mijote douce — jamais de bulles agressives.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -130,8 +130,8 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Poulet sec et farineux qui s'écroule plutôt que des lambeaux. Le liquide de braconnage est nuageux.",
-            "action": "Procéder — jeter le poulet déchiqueté avec une cuillère du liquide de braconnage pour le remousser."
+            "description": "Poulet sec et farineux qui s'écroule plutôt que des lambeaux. Le liquide de pochage est nuageux.",
+            "action": "Procéder — jeter le poulet déchiqueté avec une cuillère du liquide de pochage pour le remousser."
           }
         ]
       },
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -171,13 +171,13 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "roasted_verde",
         "ing_05"
       ],
       "outputState": "salsa_verde",
-      "instructions": "Transférer les tomatillos rôtis, les chiles, l'oignon et tous leurs jus dans un mélangeur. Ajouter la coriandre fraîche et 100 ml du liquide de braconnage de poulet réservé. Mélanger en haut pendant 60 secondes jusqu'à ce qu'il soit lisse. Bouche : il doit être lumineux, acidulé, fumé et légèrement épicé. Réglez le sel. La sauce sera fine, c'est exact, elle s'épaissira au four.",
+      "instructions": "Transférer les tomatillos rôtis, les chiles, l'oignon et tous leurs jus dans un mélangeur. Ajouter la coriandre fraîche et 100 ml du liquide de pochage de poulet réservé. Mélanger en haut pendant 60 secondes jusqu'à ce qu'il soit lisse. Bouche : il doit être lumineux, acidulé, fumé et légèrement épicé. Réglez le sel. La sauce sera fine, c'est exact, elle s'épaissira au four.",
       "visualCue": {
         "primaryTarget": "Une sauce vive et opaque vert olive avec une surface légèrement mousseuse de mélange. Il coule facilement du mélangeur et sent intensément le tomatillo et l'omble.",
         "spectrum": [
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "salsa_verde",
         "poached_chicken",
@@ -210,7 +210,7 @@ export default {
         "ing_07"
       ],
       "outputState": "enchiladas_verdes",
-      "instructions": "Préchauffer le four à 190°C. Faire revenir brièvement chaque tortilla de maïs dans 1cm d'huile chaude pendant 5-10 secondes de chaque côté jusqu'à ce qu'elle soit adoucie et pliable (pas croustillante). Égoutter sur des serviettes en papier. Plongez chaque tortilla dans la salsa verde pour enrober les deux côtés. Placer 40g de poulet déchiqueté au centre, rouler fermement et déposer le côté couture dans un plat de cuisson. Verser le reste de salsa verde sur le dessus. Cuire au four pendant 15 minutes jusqu'à ce que la sauce bouillonne. Arroser de créma et écraser la fresque queso sur le dessus avant de servir.",
+      "instructions": "Préchauffer le four à 190°C. Faire revenir brièvement chaque tortilla de maïs dans 1cm d'huile chaude pendant 5-10 secondes de chaque côté jusqu'à ce qu'elle soit adoucie et pliable (pas croustillante). Égoutter sur des serviettes en papier. Plongez chaque tortilla dans la salsa verde pour enrober les deux côtés. Placer 40g de poulet déchiqueté au centre, rouler fermement et déposer le côté couture dans un plat de cuisson. Verser le reste de salsa verde sur le dessus. Cuire au four pendant 15 minutes jusqu'à ce que la sauce bouillonne. Arroser de crème et écraser la fresque queso sur le dessus avant de servir.",
       "visualCue": {
         "primaryTarget": "Les énchiladas sont emballées dans le plat, uniformément souillées, et sortent du four avec des bords bouillonnants et des taches légèrement dorées où la sauce a caramélisé.",
         "spectrum": [
@@ -222,7 +222,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Une casserole unifiée — les tortillas se sont mélangées avec la sauce, les bords sont bouillonnants et légèrement caramélisés, le remplissage est chaud partout.",
-            "action": "Ajouter le créma et la fresque queso immédiatement et servir à la table."
+            "action": "Ajouter le crème et la fresque queso immédiatement et servir à la table."
           },
           {
             "state": "Overdone",

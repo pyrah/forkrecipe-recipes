@@ -166,7 +166,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "aromatic_base",
         "ing_08",
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "spiced_base",
         "ing_01"
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "spiced_potato",
         "ing_02",
@@ -297,7 +297,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "cooked_aloo_gobi",
         "ing_13",

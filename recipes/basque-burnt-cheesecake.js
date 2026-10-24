@@ -101,7 +101,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -133,7 +133,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "creamed_base",
         "ing_03",
@@ -165,7 +165,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "egg_enriched_batter",
         "ing_04",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "cheesecake_batter"
       ],
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "baked_cheesecake"
       ],

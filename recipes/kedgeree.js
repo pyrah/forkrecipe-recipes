@@ -131,13 +131,13 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_04"
       ],
       "outputState": "poached_haddock",
-      "instructions": "Placer l'aiglefin fumé dans une grande casserole peu profonde, côté peau vers le bas. Verser le lait sur presque couvert. Ajouter une feuille de laurier et quelques grains de poivre. Porter à feu doux à feu moyen — ne pas faire bouillir. Pocher pendant 8-10 minutes jusqu'à ce que le poisson devienne opaque et flocon facilement. Retirez le poisson dans une assiette. Réservez le lait de braconnage — il porte de la fumée et du sel qui assaisonneront le riz. Lorsque le poisson est assez frais pour être manipulé, retirez la peau et flocez-le en gros morceaux irréguliers.",
+      "instructions": "Placer l'aiglefin fumé dans une grande casserole peu profonde, côté peau vers le bas. Verser le lait sur presque couvert. Ajouter une feuille de laurier et quelques grains de poivre. Porter à feu doux à feu moyen — ne pas faire bouillir. Pocher pendant 8-10 minutes jusqu'à ce que le poisson devienne opaque et flocon facilement. Retirez le poisson dans une assiette. Réservez le lait de pochage — il porte de la fumée et du sel qui assaisonneront le riz. Lorsque le poisson est assez frais pour être manipulé, retirez la peau et flocez-le en gros morceaux irréguliers.",
       "visualCue": {
         "primaryTarget": "Le poisson est uniformément opaque et blanc ivoire. La chair s'éclabousse en gros morceaux naturels lorsqu'une fourchette est pressée doucement contre la partie la plus épaisse.",
         "spectrum": [
@@ -149,7 +149,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Entièrement opaque, flocons naturels, humide. La peau se libère proprement. Les grandes pièces se tiennent ensemble lorsqu'elles sont levées.",
-            "action": "Retirer immédiatement du lait et réserver le liquide de braconnage."
+            "action": "Retirer immédiatement du lait et réserver le liquide de pochage."
           },
           {
             "state": "Overdone",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -187,7 +187,7 @@ export default {
           {
             "state": "Overdone",
             "description": "La poudre de curry brûle et l'odeur est acride. L'oignon est très brun.",
-            "action": "Ajouter immédiatement un jet de lait de braconnage pour arrêter la combustion des épices."
+            "action": "Ajouter immédiatement un jet de lait de pochage pour arrêter la combustion des épices."
           }
         ]
       },
@@ -195,14 +195,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_onion_base",
         "ing_02",
         "ing_04"
       ],
       "outputState": "cooked_spiced_rice",
-      "instructions": "Ajouter le riz rincé dans la casserole et mélanger pour enrober le beurre épicé. Verser 300 ml du lait de braconnage réservé (rempli d'eau si nécessaire). Porter à ébullition, réduire le feu à très faible et couvrir soigneusement. Cuire 12 minutes sans lever le couvercle. Retirer du feu et laisser la vapeur couverte pendant 8 minutes. Le riz doit être entièrement cuit, parfumé d'épices et légèrement jaune du curry.",
+      "instructions": "Ajouter le riz rincé dans la casserole et mélanger pour enrober le beurre épicé. Verser 300 ml du lait de pochage réservé (rempli d'eau si nécessaire). Porter à ébullition, réduire le feu à très faible et couvrir soigneusement. Cuire 12 minutes sans lever le couvercle. Retirer du feu et laisser la vapeur couverte pendant 8 minutes. Le riz doit être entièrement cuit, parfumé d'épices et légèrement jaune du curry.",
       "visualCue": {
         "primaryTarget": "Le riz est uniformément cuit, moelleux et jaune-or du curry. Une fourchette tirée à travers des canaux de grains distincts. Pas de liquide de mise en commun.",
         "spectrum": [
@@ -218,7 +218,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le riz s'est emparé et la couche de base est collante. Le lait de braconnage a trop cuit et le fond brûle.",
+            "description": "Le riz s'est emparé et la couche de base est collante. Le lait de pochage a trop cuit et le fond brûle.",
             "action": "Retirer immédiatement du feu. Spoon du centre du pot."
           }
         ]
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "cooked_spiced_rice",
         "poached_haddock",

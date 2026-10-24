@@ -127,7 +127,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -135,7 +135,7 @@ export default {
         "ing_04"
       ],
       "outputState": "poached_veal",
-      "instructions": "Attachez le veau avec la ficelle de cuisine dans un cylindre compact si nécessaire. Placez dans un pot juste assez grand pour le tenir. Ajouter le vin blanc, les feuilles de laurier, les grains de poivre et l'eau froide pour couvrir de 3 cm. Portez-vous très lentement à un ébullition nu — 80-85 C, quand de minuscules bulles s'élèvent paresseusement et la surface tremble à peine. Poché pendant 45 à 60 minutes, en maintenant cette température. Ne la laissez pas bouillir; l'ébullition va resserrer et durcir le veau. Sonde avec thermomètre à lecture instantanée: tirer à 62-63 C interne. Laisser refroidir complètement dans le liquide de braconnage.",
+      "instructions": "Attachez le veau avec la ficelle de cuisine dans un cylindre compact si nécessaire. Placez dans un pot juste assez grand pour le tenir. Ajouter le vin blanc, les feuilles de laurier, les grains de poivre et l'eau froide pour couvrir de 3 cm. Portez-vous très lentement à un ébullition nu — 80-85 C, quand de minuscules bulles s'élèvent paresseusement et la surface tremble à peine. Poché pendant 45 à 60 minutes, en maintenant cette température. Ne la laissez pas bouillir; l'ébullition va resserrer et durcir le veau. Sonde avec thermomètre à lecture instantanée: tirer à 62-63 C interne. Laisser refroidir complètement dans le liquide de pochage.",
       "visualCue": {
         "primaryTarget": "Poché surface liquide et couleur veau",
         "spectrum": [
@@ -147,7 +147,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le liquide tremble doucement à 80 °C. La surface du veau est passée de rose à mat, gris-blanc très pâle. La température interne est de 62–63 °C.",
-            "action": "Éteins la chaleur. Laisser refroidir complètement le veau dans le liquide — ce braconnage de report ajoute de la jutosité."
+            "action": "Éteins la chaleur. Laisser refroidir complètement le veau dans le liquide — ce pochage de report ajoute de la jutosité."
           },
           {
             "state": "Overdone",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -169,7 +169,7 @@ export default {
         "ing_09"
       ],
       "outputState": "tonnato_sauce",
-      "instructions": "Mélanger le thon drainé, les câpres et les jaunes d'œufs dans un mélangeur ou un robot culinaire. Mélanger jusqu'à douceur. Lorsque le moteur tourne, ajouter l'huile d'olive dans un cours d'eau mince et stable, exactement comme vous construiriez une mayonnaise, jusqu'à ce que la sauce soit épaisse, crémeuse et pâle. Ajouter le jus de citron et mélanger à nouveau. Bouche : il devrait être très salé, brillant avec du citron, et assez riche pour enrober une cuillère épaisse. Finissez avec une cuillère à soupe de liquide de braconnage si nécessaire pour une consistance plus draguée.",
+      "instructions": "Mélanger le thon drainé, les câpres et les jaunes d'œufs dans un mélangeur ou un robot culinaire. Mélanger jusqu'à douceur. Lorsque le moteur tourne, ajouter l'huile d'olive dans un cours d'eau mince et stable, exactement comme vous construiriez une mayonnaise, jusqu'à ce que la sauce soit épaisse, crémeuse et pâle. Ajouter le jus de citron et mélanger à nouveau. Bouche : il devrait être très salé, brillant avec du citron, et assez riche pour enrober une cuillère épaisse. Finissez avec une cuillère à soupe de liquide de pochage si nécessaire pour une consistance plus draguée.",
       "visualCue": {
         "primaryTarget": "Consistance de la sauce Tonnato dans le mélangeur",
         "spectrum": [
@@ -186,7 +186,7 @@ export default {
           {
             "state": "Overdone",
             "description": "La sauce est très raide, presque pâteuse. Trop d'huile pour les jaunes.",
-            "action": "Teinture avec braconnage liquide ou eau, 1 cuillère à soupe à la fois, mélange entre les ajouts."
+            "action": "Teinture avec pochage liquide ou eau, 1 cuillère à soupe à la fois, mélange entre les ajouts."
           }
         ]
       },
@@ -194,12 +194,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "poached_veal"
       ],
       "outputState": "sliced_veal",
-      "instructions": "Retirer le veau complètement froid du liquide de braconnage. À l'aide du couteau le plus tranchant disponible, couper le veau le plus fin possible – idéalement 2–3 mm, presque translucide. Une trancheuse de viande est idéale, mais un couteau long et mince fonctionne si le veau est assez froid (réfrigérer pendant 1 heure avant de trancher). Chaque tranche doit être presque transparente aux bords et presque blanche dans l'ensemble.",
+      "instructions": "Retirer le veau complètement froid du liquide de pochage. À l'aide du couteau le plus tranchant disponible, couper le veau le plus fin possible – idéalement 2–3 mm, presque translucide. Une trancheuse de viande est idéale, mais un couteau long et mince fonctionne si le veau est assez froid (réfrigérer pendant 1 heure avant de trancher). Chaque tranche doit être presque transparente aux bords et presque blanche dans l'ensemble.",
       "visualCue": {
         "primaryTarget": "Épaisseur de la tranche de veau fixée à la lumière",
         "spectrum": [
@@ -215,7 +215,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les tranches s'effondrent — trop fines pour la texture de la viande après le braconnage.",
+            "description": "Les tranches s'effondrent — trop fines pour la texture de la viande après le pochage.",
             "action": "Disposer les pièces déchirées du mieux que vous pouvez. La sauce couvrira les imperfections."
           }
         ]
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "sliced_veal",
         "tonnato_sauce",

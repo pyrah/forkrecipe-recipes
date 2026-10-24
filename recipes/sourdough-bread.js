@@ -86,7 +86,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Autolyse",
+      "action": "Autolyser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -117,7 +117,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "autolyse_dough",
         "ing_03",
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "mixed_dough"
       ],
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "bulk_dough",
         "ing_05"
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_loaf"
       ],

@@ -218,7 +218,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "rockfish_mass",
         "ing_08",
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "saffron_broth"
       ],
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "clear_base",
         "ing_06",
@@ -338,7 +338,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Poisson sec, éparpillé et cotonneux, qui commence à tomber dans le bouillon.",
-            "action": "Arrêtez le braconnage immédiatement et servez immédiatement; cuillerez un bouillon supplémentaire pour masquer la sécheresse."
+            "action": "Arrêtez le pochage immédiatement et servez immédiatement; cuillerez un bouillon supplémentaire pour masquer la sécheresse."
           }
         ]
       },

@@ -184,7 +184,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -252,7 +252,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_11",
         "ing_12",
@@ -284,7 +284,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "ing_14",
         "ing_15"
@@ -315,7 +315,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "joconde_sheets",
         "coffee_soak",
@@ -348,7 +348,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "assembled_opera",
         "ing_16",

@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "prepared_fish"
       ],

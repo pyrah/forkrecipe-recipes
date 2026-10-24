@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ribbon_yolks",
         "ing_01",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "sponge_batter"
       ],
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "baked_sponge",
         "ing_04",
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_07",
         "soaked_cake",

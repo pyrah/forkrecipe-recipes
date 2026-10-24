@@ -106,7 +106,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_04",
         "ing_02"
@@ -118,7 +118,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les légumes sont translucides et boiteux, mais encore pâles — pas de couleur, pas d'affection pour la poêle, et l'odeur est crue et herbacée.",
+            "description": "Les légumes sont translucides et mou, mais encore pâles — pas de couleur, pas d'affection pour la poêle, et l'odeur est crue et herbacée.",
             "action": "Levez légèrement la chaleur et faites cuire. Browning est d'où vient la profondeur; ne vous précipitez pas au-delà de cette étape."
           },
           {
@@ -137,7 +137,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "browned_mirepoix",
         "ing_02",
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "brown_roux",
         "ing_05"
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "pincage",
         "ing_01",
@@ -219,7 +219,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Gloire, uniforme et sans grumeaux, enroulant légèrement le fouet lorsqu'il se réchauffe, mijotant doucement avec le bouquet garni raide.",
-            "action": "Abaissez jusqu'à la plus douce mijoter et commencez la longue écrémage."
+            "action": "Abaissez jusqu'à la plus douce mijoter et commencez la longue écrèmege."
           },
           {
             "state": "Overdone",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "loose_espagnole",
         "ing_06"

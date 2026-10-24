@@ -4,7 +4,7 @@ export default {
   "slug": "tacos-de-pescado",
   "author": "ForkRecipe Kitchen",
   "title": "Tacos de poissons de Baja",
-  "description": "Des poissons blancs bercés de la côte de la Basse-Californie — incroyablement légers, éclatants et croustillants, cousus dans des tortillas de maïs chaudes avec du chou déchiqueté, du crema de chipotle et une pression de chaux qui coupe à travers la richesse comme un couteau. La nourriture de rue à son plus honnête.",
+  "description": "Des poissons blancs bercés de la côte de la Basse-Californie — incroyablement légers, éclatants et croustillants, cousus dans des tortillas de maïs chaudes avec du chou déchiqueté, du crema de chipotle et une pression de citron vert qui coupe à travers la richesse comme un couteau. La nourriture de rue à son plus honnête.",
   "cuisine": "Mexicain",
   "culture": "Baja Californie",
   "category": "seafood",
@@ -131,7 +131,7 @@ export default {
     {
       "ingId": "ing_11",
       "role": "Dairy",
-      "name": "Crème créma ou aigre mexicaine",
+      "name": "Crème crème ou aigre mexicaine",
       "ratioValue": 120,
       "defaultUnit": "ml",
       "substitutions": [
@@ -184,7 +184,7 @@ export default {
         "ing_12"
       ],
       "outputState": "chipotle_crema",
-      "instructions": "fouetter les chipotles hachés dans l'adobo dans le créma jusqu'à ce qu'ils soient complètement combinés. Commencez par la moitié du chipotle et du goût — il devrait être fumé, crémeux et modérément épicé. La chaleur fleurit après une minute de contact, alors goûtez encore avant d'ajouter plus. Transférer dans une bouteille de pression ou un petit bol. Réfrigérer jusqu'à ce qu'il soit prêt à l'emploi.",
+      "instructions": "fouetter les chipotles hachés dans l'adobo dans le crème jusqu'à ce qu'ils soient complètement combinés. Commencez par la moitié du chipotle et du goût — il devrait être fumé, crémeux et modérément épicé. La chaleur fleurit après une minute de contact, alors goûtez encore avant d'ajouter plus. Transférer dans une bouteille de pression ou un petit bol. Réfrigérer jusqu'à ce qu'il soit prêt à l'emploi.",
       "visualCue": {
         "primaryTarget": "Une crème aux teintes oranges avec des taches visibles de chipotle rouge-brun. Assez lisse pour arroser mais assez épaisse pour tenir sa forme sur le taco.",
         "spectrum": [
@@ -200,7 +200,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le créma est profondément orange et très épicé — trop chaud pour la plupart des invités.",
+            "description": "Le crème est profondément orange et très épicé — trop chaud pour la plupart des invités.",
             "action": "Whisk in more plain crema to dilute. La chaleur de chipotle est pardonne et peut toujours être coupée."
           }
         ]
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "beer_batter",
@@ -276,7 +276,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "fried_fish",
         "ing_09",
@@ -287,18 +287,18 @@ export default {
         "ing_15"
       ],
       "outputState": "finished_fish_tacos",
-      "instructions": "Tortilles chaudes directement sur une flamme de gaz ou une grille sèche jusqu'à ce qu'elles soient pliables et légèrement carbonisées aux bords. Doublez-les (le style traditionnel Baja prévient le soggisme). Calque : une pincée de chou cru, 2 à 3 bandes de poissons chauds, une bruine de chipotle créma, une dispersion de coriandre et une bande de salsa ou de jalapeños marinés. Terminer avec une forte pression de chaux. Mangez immédiatement — la croûte sur le poisson est une chose vivante et mourante qui commence à ramollir le moment où il est habillé.",
+      "instructions": "Tortilles chaudes directement sur une flamme de gaz ou une grille sèche jusqu'à ce qu'elles soient pliables et légèrement carbonisées aux bords. Doublez-les (le style traditionnel Baja prévient le soggisme). Calque : une pincée de chou cru, 2 à 3 bandes de poissons chauds, une bruine de chipotle crème, une dispersion de coriandre et une bande de salsa ou de jalapeños marinés. Terminer avec une forte pression de citron vert. Mangez immédiatement — la croûte sur le poisson est une chose vivante et mourante qui commence à ramollir le moment où il est habillé.",
       "visualCue": {
-        "primaryTarget": "Un taco à la vapeur, légèrement suralimenté. La croûte du poisson est encore visible et dorée au-dessus du chou. Crema scintille dans des rubans blanc orangé. Le jus de chaux brille à la surface.",
+        "primaryTarget": "Un taco à la vapeur, légèrement suralimenté. La croûte du poisson est encore visible et dorée au-dessus du chou. Crema scintille dans des rubans blanc orangé. Le jus de citron vert brille à la surface.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Tortilla non chauffée. Cabotage placé sous le poisson, rendant la tortilla soggy. Pas d'acide appliqué.",
-            "action": "Le jus de chaux n'est pas négociable — le taco est incomplet sans sa luminosité. Chauffer la tortilla ou elle se déchirera."
+            "action": "Le jus de citron vert n'est pas négociable — le taco est incomplet sans sa luminosité. Chauffer la tortilla ou elle se déchirera."
           },
           {
             "state": "Perfect",
-            "description": "Tortilla est chaude et flexible. Le poisson est chaud, croustillant et visible au-dessus des garnitures. Chaque morsure a le chou froid croquant, poisson croustillant chaud, créma fumé, et la chaux vive.",
+            "description": "Tortilla est chaude et flexible. Le poisson est chaud, croustillant et visible au-dessus des garnitures. Chaque morsure a le chou froid croquant, poisson croustillant chaud, crème fumé, et le citron vert vive.",
             "action": "Mangez immédiatement, le tenant dans les deux mains."
           },
           {

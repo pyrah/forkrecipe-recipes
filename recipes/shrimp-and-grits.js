@@ -153,7 +153,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -186,7 +186,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "cooked_grits",
         "ing_04",
@@ -218,7 +218,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_07"
       ],
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "rendered_tasso",
         "ing_08",
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "aromatic_base",
         "ing_06",
@@ -312,7 +312,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "cooked_shrimp",
         "ing_10"

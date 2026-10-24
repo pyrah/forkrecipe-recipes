@@ -110,7 +110,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "sifted_matcha",
         "ing_02"
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "matcha_concentrate",
         "steamed_milk",

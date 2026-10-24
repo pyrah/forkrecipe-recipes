@@ -112,7 +112,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "blond_roux",
         "ing_01"
@@ -151,7 +151,7 @@ export default {
       "outputState": "loose_veloute",
       "instructions": "Hors du feu, fouetter le bouillon de poulet blanc chaud dans le roux en trois ou quatre ajouts, laissant chacun disparaître avant le suivant. Retourner à feu moyen, porter à ébullition douce, puis laisser mijoter à nu et écrémer jusqu'à ce que la surface soit propre.",
       "visualCue": {
-        "primaryTarget": "Un poulet ivoire pâle, lisse, sans morceaux, brillant, avec une surface claire et propre après écrémage.",
+        "primaryTarget": "Un poulet ivoire pâle, lisse, sans morceaux, brillant, avec une surface claire et propre après écrèmege.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "loose_veloute",
         "ing_09"
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "reduced_supreme",
         "ing_10",

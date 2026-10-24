@@ -77,7 +77,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -108,7 +108,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "macerated_raspberries",
         "ing_03"

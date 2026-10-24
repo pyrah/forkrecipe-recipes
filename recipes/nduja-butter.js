@@ -93,7 +93,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_01"
       ],
@@ -123,7 +123,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "whipped_butter",
         "ing_02"
@@ -154,7 +154,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "nduja_butter_base",
         "ing_03",

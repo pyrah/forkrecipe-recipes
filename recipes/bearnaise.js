@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "tarragon_reduction"
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "sabayon",
         "ing_02"
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "emulsified_bearnaise",
         "ing_09",

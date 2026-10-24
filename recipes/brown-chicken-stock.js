@@ -94,7 +94,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_06"
@@ -125,7 +125,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "roasted_bones",
         "roasted_mirepoix",
@@ -188,13 +188,13 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_stock_pot",
         "ing_05"
       ],
       "outputState": "simmered_stock",
-      "instructions": "Porter le pot à ébullition à feu vif, en observant attentivement. Le moment où la mousse et la graisse commencent à augmenter, réduisez à la plus faible mijoter possible — une bulle paresseuse toutes les secondes ou deux. Ajouter le bouquet garni. Laisser mijoter à découvert pendant 4 heures, en écrémant la mousse brun-gris et la graisse de la surface toutes les 30 minutes. Ne remuez jamais; déranger le pot nuise le stock.",
+      "instructions": "Porter le pot à ébullition à feu vif, en observant attentivement. Le moment où la mousse et la graisse commencent à augmenter, réduisez à la plus faible mijoter possible — une bulle paresseuse toutes les secondes ou deux. Ajouter le bouquet garni. Laisser mijoter à découvert pendant 4 heures, en écrèment la mousse brun-gris et la graisse de la surface toutes les 30 minutes. Ne remuez jamais; déranger le pot nuise le stock.",
       "visualCue": {
         "primaryTarget": "Un liquide ambré foncé qui expire lentement avec une surface tremblante. Les premiers écréms donneront de la mousse brune; les écréms plus tard montreront de la graisse dorée propre.",
         "spectrum": [
@@ -219,7 +219,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmered_stock"
       ],

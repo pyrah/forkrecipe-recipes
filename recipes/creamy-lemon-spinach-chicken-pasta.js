@@ -167,7 +167,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -231,7 +231,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "seared_chicken_pieces",
         "ing_07",
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "lemon_cream_base",
         "al_dente_pasta",

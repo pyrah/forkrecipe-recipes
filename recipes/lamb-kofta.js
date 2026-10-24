@@ -138,7 +138,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "kofta_mixture"
       ],
@@ -207,12 +207,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "skewered_kofta"
       ],
       "outputState": "grilled_kofta",
-      "instructions": "Préparez une grille de charbon avec une zone de chaleur élevée — les charbons devraient être à la chaux et briller intensément. Si vous utilisez une grille à gaz, préchauffez au maximum. Huilez la grille légèrement. Placez les brochettes sur la grille et faites griller, tournant un quart de tour toutes les 90 secondes, pour un total de 6 à 8 minutes. Vous voulez que les quatre côtés se développent : des traces d'omble profonde, des cloques et des caramélisés avec de la graisse fondue et des flocons de charbons ci-dessous. Le kofta devrait avoir un omble gras à l'extérieur pendant que l'intérieur reste juteux — une température interne de 70 °C / 158 °F est suffisante pour la viande hachée bien mélangée. Ne pas presser avec une spatule; cela presse les jus.",
+      "instructions": "Préparez une grille de charbon avec une zone de chaleur élevée — les charbons devraient être au citron vert et briller intensément. Si vous utilisez une grille à gaz, préchauffez au maximum. Huilez la grille légèrement. Placez les brochettes sur la grille et faites griller, tournant un quart de tour toutes les 90 secondes, pour un total de 6 à 8 minutes. Vous voulez que les quatre côtés se développent : des traces d'omble profonde, des cloques et des caramélisés avec de la graisse fondue et des flocons de charbons ci-dessous. Le kofta devrait avoir un omble gras à l'extérieur pendant que l'intérieur reste juteux — une température interne de 70 °C / 158 °F est suffisante pour la viande hachée bien mélangée. Ne pas presser avec une spatule; cela presse les jus.",
       "visualCue": {
         "primaryTarget": "Les kofta sont profondément carbonisés de tous les côtés — brun foncé à presque noir dans les taches, avec des lignes de grill où ils reposaient sur la grille, et la surface scintille avec rendu gras d'agneau. Les gouttes de graisse provoquent de courtes éruptions sur les charbons ci-dessous.",
         "spectrum": [
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "grilled_kofta",
         "ing_11"

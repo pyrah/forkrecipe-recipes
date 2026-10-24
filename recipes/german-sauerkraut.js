@@ -72,7 +72,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -102,7 +102,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "shredded_cabbage",
         "ing_02",
@@ -120,7 +120,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Un bassin important de saumure claire au fond du bol. Le chou a flétri jusqu'à environ la moitié de son volume original. Les brins sont translucides et boiteux. Quand une poignée est pressée, la saumure coule.",
+            "description": "Un bassin important de saumure claire au fond du bol. Le chou a flétri jusqu'à environ la moitié de son volume original. Les brins sont translucides et mou. Quand une poignée est pressée, la saumure coule.",
             "action": "Emballez dans un pot propre immédiatement, en appuyant fermement."
           },
           {
@@ -134,7 +134,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "salted_cabbage_with_brine"
       ],
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_raw_sauerkraut"
       ],

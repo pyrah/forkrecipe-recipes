@@ -122,7 +122,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01"
       ],
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "soaked_rice",
         "softened_aromatics"
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "toasted_rice",
         "ing_05",
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "cooked_pilaf"
       ],

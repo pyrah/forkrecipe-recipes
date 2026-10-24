@@ -142,7 +142,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_06",
         "ing_07"
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "choux_paste"
       ],
@@ -267,7 +267,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_08",
         "praline_paste",
@@ -300,7 +300,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "baked_choux_ring",
         "praline_mousseline"

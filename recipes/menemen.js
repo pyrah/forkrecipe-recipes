@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_06",
@@ -136,7 +136,7 @@ export default {
       "outputState": "softened_peppers",
       "instructions": "Chauffer le beurre et l'huile d'olive dans une poêle large et peu profonde, idéalement une poêle sahan (cuivre) ou une petite poêle en fonte de 22 à 24 cm, à feu moyen. Si vous utilisez de l'oignon, ajoutez-le d'abord et faites cuire pendant 3 à 4 minutes jusqu'à translucide. Ajouter les poivrons sivri tranchés et cuire, en remuant occasionnellement, pendant 5 à 7 minutes jusqu'à ce que les poivrons soient complètement doux, limpides et légèrement cloqués aux bords. Les poivrons devraient être presque sucrés à ce moment - là — l'amertume du poivre vert s'éloigne avec le temps. Assaisonner avec une pincée de sel.",
       "visualCue": {
-        "primaryTarget": "Les poivrons sont entièrement boiteux et vert foncé, avec des cloques brun pâle aux extrémités. Le beurre a pris une faible teinte verte des jus de poivre. L'oignon (si utilisé) est entièrement translucide.",
+        "primaryTarget": "Les poivrons sont entièrement ramollis et vert foncé, avec des cloques brun pâle aux extrémités. Le beurre a pris une faible teinte verte des jus de poivre. L'oignon (si utilisé) est entièrement translucide.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -145,7 +145,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les poivrons sont vert olive foncé, complètement boiteux, et sentent doux et légèrement caramélisé. Ils s'effondrent sous une cuillère sans résistance.",
+            "description": "Les poivrons sont vert olive foncé, complètement ramollis, et sentent doux et légèrement caramélisé. Ils s'effondrent sous une cuillère sans résistance.",
             "action": "Ajouter les tomates hachées et assaisonner immédiatement."
           },
           {
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "softened_peppers",
         "ing_02",
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "jammy_tomato_base",
         "ing_01"
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "eggs_in_menemen",
         "ing_07",

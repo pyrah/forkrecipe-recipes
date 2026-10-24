@@ -4,7 +4,7 @@ export default {
   "slug": "causa-limena",
   "author": "ForkRecipe Kitchen",
   "title": "Causa Limeña",
-  "description": "Une terrine froide de limeño de pommes de terre jaunes masquée d'ají amarillo et de chaux — acidulée, ensoleillée et étonnamment audacieuse — pressée autour d'une farce de salade de thon crémeuse et tranchée d'avocat, puis réfrigérée dans une tour ferme et trancheuse qui révèle ses couches seulement lorsqu'elle est coupée.",
+  "description": "Une terrine froide de limeño de pommes de terre jaunes masquée d'ají amarillo et de citron vert — acidulée, ensoleillée et étonnamment audacieuse — pressée autour d'une farce de salade de thon crémeuse et tranchée d'avocat, puis réfrigérée dans une tour ferme et trancheuse qui révèle ses couches seulement lorsqu'elle est coupée.",
   "cuisine": "Pérou",
   "culture": "Lima",
   "category": "vegetables",
@@ -13,7 +13,7 @@ export default {
     "pommes de terre",
     "terrine",
     "Aji-amarillo",
-    "Chaux",
+    "citron vert",
     "avocat",
     "thon",
     "froid"
@@ -60,7 +60,7 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 45,
       "defaultUnit": "g",
       "substitutions": [
@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -165,7 +165,7 @@ export default {
         "ing_05"
       ],
       "outputState": "causa_dough",
-      "instructions": "Alors que les pommes de terre sont encore chaudes, passez-les à travers un rizier de pomme de terre ou pressez-les à travers une passoire à mailles fines avec une spatule — n'utilisez jamais un robot alimentaire, qui les rendra collants. Transférer la pomme de terre rizisée dans un grand bol. Ajouter la pâte ají amarillo, le jus de lime et l'huile. Plier et travailler avec une spatule flexible jusqu'à ce que complètement homogène, sans stries blanches de pommes de terre non mélangées. Assaisonner de sel. La pâte de causa doit avoir un goût audacieux de chaux et d'ají, avec une couleur jaune orange vif et la texture d'argile douce et souple.",
+      "instructions": "Alors que les pommes de terre sont encore chaudes, passez-les à travers un rizier de pomme de terre ou pressez-les à travers une passoire à mailles fines avec une spatule — n'utilisez jamais un robot alimentaire, qui les rendra collants. Transférer la pomme de terre rizisée dans un grand bol. Ajouter la pâte ají amarillo, le jus de lime et l'huile. Plier et travailler avec une spatule flexible jusqu'à ce que complètement homogène, sans stries blanches de pommes de terre non mélangées. Assaisonner de sel. La pâte de causa doit avoir un goût audacieux de citron vert et d'ají, avec une couleur jaune orange vif et la texture d'argile douce et souple.",
       "visualCue": {
         "primaryTarget": "Une masse uniforme, jaune doré vif — la couleur du jaune d'œuf — sans taches blanches de pommes de terre non mélangées et sans grumeaux visibles.",
         "spectrum": [
@@ -176,7 +176,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Uniforme or-orange, sent intensément la chaux et l'ají, tient sa forme lorsqu'il est pressé dans une boule mais est souple et lisse.",
+            "description": "Uniforme or-orange, sent intensément le citron vert et l'ají, tient sa forme lorsqu'il est pressé dans une boule mais est souple et lisse.",
             "action": "Divisez en trois parties égales. Passez à l'assemblage."
           },
           {
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "causa_dough",
         "ing_06",
@@ -198,7 +198,7 @@ export default {
         "ing_08"
       ],
       "outputState": "assembled_causa",
-      "instructions": "Mélangez le thon égoutté avec la mayonnaise et assaisonnez avec du sel et un peu de chaux — il doit goûter bien assaisonné et crémeux. Étaler un moule à pain ou un moule à anneau individuel avec du plastique. Appuyez fermement sur un tiers de la pâte causa dans la base dans une couche homogène et compacte. Déposer les tranches d'avocat dans une seule couche légèrement recoupante. Étendre le mélange de thon uniformément sur l'avocat. Appuyez sur les deux tiers restants de la pâte causa sur le thon en deux couches égales, en appuyant fermement entre chaque addition pour éliminer les vides d'air. Les couches doivent être denses et cohésives ou la causa s'effondrera lorsqu'elle sera tranchée.",
+      "instructions": "Mélangez le thon égoutté avec la mayonnaise et assaisonnez avec du sel et un peu de citron vert — il doit goûter bien assaisonné et crémeux. Étaler un moule à pain ou un moule à anneau individuel avec du plastique. Appuyez fermement sur un tiers de la pâte causa dans la base dans une couche homogène et compacte. Déposer les tranches d'avocat dans une seule couche légèrement recoupante. Étendre le mélange de thon uniformément sur l'avocat. Appuyez sur les deux tiers restants de la pâte causa sur le thon en deux couches égales, en appuyant fermement entre chaque addition pour éliminer les vides d'air. Les couches doivent être denses et cohésives ou la causa s'effondrera lorsqu'elle sera tranchée.",
       "visualCue": {
         "primaryTarget": "Du côté d'un récipient en verre, des bandes horizontales distinctes sont visibles: pomme de terre dorée, avocat vert, thon à la crème, pomme de terre dorée — chaque couche plate et de niveau.",
         "spectrum": [
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "assembled_causa",
         "ing_09"

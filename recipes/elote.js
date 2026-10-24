@@ -4,7 +4,7 @@ export default {
   "slug": "elote",
   "author": "ForkRecipe Kitchen",
   "title": "Éloté",
-  "description": "Des épis entiers de maïs ont été cloqués directement au-dessus d'une flamme ouverte jusqu'à ce que les grains caramélisent et charmentent les taches, puis ils ont été roulés dans du créma, emballés avec du cotija, pulvérisés avec de la poudre de chili, et terminés avec une pression de chaux qui s'échauffe contre la surface chaude.",
+  "description": "Des épis entiers de maïs ont été cloqués directement au-dessus d'une flamme ouverte jusqu'à ce que les grains caramélisent et laissent des marques grillées, puis ils ont été roulés dans du crème, emballés avec du cotija, pulvérisés avec de la poudre de chili, et terminés avec une pression de citron vert qui s'échauffe contre la surface chaude.",
   "cuisine": "Mexicain",
   "culture": "Mexicain Street Food",
   "category": "vegetables",
@@ -12,7 +12,7 @@ export default {
     "maïs",
     "Alimentation de rue",
     "Mexique",
-    "Chaux",
+    "citron vert",
     "Chili"
   ],
   "difficulty": 1,
@@ -45,7 +45,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Dairy",
-      "name": "Crème créma ou aigre mexicaine",
+      "name": "Crème crème ou aigre mexicaine",
       "ratioValue": 2,
       "defaultUnit": "parts",
       "substitutions": [
@@ -76,7 +76,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Citrus",
-      "name": "Chaux, coupée en deux",
+      "name": "citron vert, coupée en deux",
       "ratioValue": 2,
       "defaultUnit": "parts",
       "substitutions": []
@@ -101,7 +101,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "ing_01",
         "ing_06"
@@ -132,7 +132,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "charred_corn",
         "ing_02",
@@ -142,28 +142,28 @@ export default {
         "ing_07"
       ],
       "outputState": "finished_elote",
-      "instructions": "Travailler rapidement pendant que le maïs est encore chaud: brosser ou cuiller créma généreusement sur toute la surface, tournant pour enrober. Rouler l'oreille enduite dans une assiette de cotija émietté jusqu'à ce que le fromage adhère dans une croûte épaisse et inégale. Tenez l'oreille au-dessus de l'assiette pour attraper la chute. Poussez généreusement avec de la poudre de chili d'en haut — la chaleur du maïs fleurira immédiatement l'épice. Presser la moitié d'une chaux sur l'oreille de près; elle devrait s'étourdir contre la surface chaude. Scatter la coriandre. Servir immédiatement sur le bâton ou avec une fourchette. Ne le laissez pas s'asseoir — le créma refroidira et le fromage se desséchera.",
+      "instructions": "Travailler rapidement pendant que le maïs est encore chaud: brosser ou cuiller crème généreusement sur toute la surface, tournant pour enrober. Rouler l'oreille enduite dans une assiette de cotija émietté jusqu'à ce que le fromage adhère dans une croûte épaisse et inégale. Tenez l'oreille au-dessus de l'assiette pour attraper la chute. Poussez généreusement avec de la poudre de chili d'en haut — la chaleur du maïs fleurira immédiatement l'épice. Presser la moitié d’un citron vert sur l'oreille de près; elle devrait s'étourdir contre la surface chaude. Scatter la coriandre. Servir immédiatement sur le bâton ou avec une fourchette. Ne le laissez pas s'asseoir — le crème refroidira et le fromage se desséchera.",
       "visualCue": {
-        "primaryTarget": "Une oreille dorée et carbonisée densément incrustée de fromage blanc, tachetée de poudre de chili rouge-orange, avec coriandre vert vif. Le créma est visible aux bords où le fromage est plus mince.",
+        "primaryTarget": "Une oreille dorée et carbonisée densément incrustée de fromage blanc, tachetée de poudre de chili rouge-orange, avec coriandre vert vif. Le crème est visible aux bords où le fromage est plus mince.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Revêtement fin de créma, fromage clairsemé qui colle à peine. La surface du maïs est visible entre les garnitures.",
-            "action": "Ajouter une autre cuillère de créma et presser plus de cotija fermement contre la surface tout en tournant."
+            "description": "Revêtement fin de crème, fromage clairsemé qui colle à peine. La surface du maïs est visible entre les garnitures.",
+            "action": "Ajouter une autre cuillère de crème et presser plus de cotija fermement contre la surface tout en tournant."
           },
           {
             "state": "Perfect",
-            "description": "Généreusement, presque trop enduite. Chaque morsure aura du maïs, du créma, du fromage, de la chaleur et de l'acide simultanément. La chaux est encore étourdissante.",
+            "description": "Généreusement, presque trop enduite. Chaque morsure aura du maïs, du crème, du fromage, de la chaleur et de l'acide simultanément. La citron vert est encore étourdissante.",
             "action": "Mangez immédiatement — c'est un plat qui n'attend personne."
           },
           {
             "state": "Overdone",
             "description": "Tellement enduit que le maïs et sa saveur carbonisée sont enterrés. La salinité de l'excès de cotija est écrasante.",
-            "action": "Badigeonner une partie de la couche de fromage externe, servir avec de la chaux supplémentaire pour couper le sel, et utiliser comme leçon de retenue pour la prochaine fois."
+            "action": "Badigeonner une partie de la couche de fromage externe, servir avec du citron vert supplémentaire pour couper le sel, et utiliser comme leçon de retenue pour la prochaine fois."
           }
         ]
       },
-      "feelCue": "L'élot fini devrait être lourd dans votre main — dense avec des garnitures. Lorsque vous prenez une bouchée, vous devriez obtenir la croûte d'omble, le créma crémeux, le sel de cotija et l'acide de la chaux en un seul instant."
+      "feelCue": "L'élot fini devrait être lourd dans votre main — dense avec des garnitures. Lorsque vous prenez une bouchée, vous devriez obtenir la croûte d'omble, le crème crémeux, le sel de cotija et l'acide du citron vert en un seul instant."
     }
   ]
 };

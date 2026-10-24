@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_04",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "cut_wrappers",
         "cooked_filling"
@@ -264,7 +264,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_10",
         "ing_11",
@@ -296,7 +296,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "formed_mantu"
       ],

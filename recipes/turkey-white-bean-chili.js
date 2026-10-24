@@ -5,7 +5,7 @@ export default {
   "parentSlug": null,
   "author": "ForkRecipe Kitchen",
   "title": "Turquie & haricots blancs vert Chili",
-  "description": "Un chili pâle et crémeux de dinde hachée brune et de haricots blancs tendres, garni de chiles verts rôtis, de cumin et de chaux fraîche — chaleur moelleuse, grand confort, pas de tomate en vue.",
+  "description": "Un chili pâle et crémeux de dinde hachée brune et de haricots blancs tendres, garni de chiles verts rôtis, de cumin et de citron vert fraîche — chaleur moelleuse, grand confort, pas de tomate en vue.",
   "cuisine": "Américain",
   "culture": "Cuisine à la maison sud-ouest",
   "category": "proteins",
@@ -257,7 +257,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "green_chili_base",
         "browned_turkey",
@@ -299,7 +299,7 @@ export default {
         "ing_16"
       ],
       "outputState": "finished_green_chili",
-      "instructions": "Incorporer la masa dans le chili mijotant et cuire 5 minutes, en remuant, jusqu'à ce qu'elle épaississe et que le goût cru du maïs soit cuit. Hors du feu, ajouter le jus de lime et ajuster le sel. Servir avec la coriandre, les oignons verts et la crème aigre. Pour congeler: refroidir dans des récipients peu profonds, réfrigérer dans les 2 heures et congeler jusqu'à 4 mois; réchauffer à pleine mijoter (165°F / 74°C) et rafraîchir avec de la chaux.",
+      "instructions": "Incorporer la masa dans le chili mijotant et cuire 5 minutes, en remuant, jusqu'à ce qu'elle épaississe et que le goût cru du maïs soit cuit. Hors du feu, ajouter le jus de lime et ajuster le sel. Servir avec la coriandre, les oignons verts et la crème aigre. Pour congeler: refroidir dans des récipients peu profonds, réfrigérer dans les 2 heures et congeler jusqu'à 4 mois; réchauffer à pleine mijoter (165°F / 74°C) et rafraîchir avec du citron vert.",
       "visualCue": {
         "primaryTarget": "Un chili enrobé de cuillère qui fond légèrement sur une cuillère, avec un léger éclat.",
         "spectrum": [

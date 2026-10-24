@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "crushed_masala",
         "ing_01"
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "spiced_decoction",
         "ing_03"
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "tea_brew",
         "ing_02",

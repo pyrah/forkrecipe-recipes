@@ -162,7 +162,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "seasoned_vegetables",
         "harissa_chicken"
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "roasted_harissa_tray",
         "ing_11",

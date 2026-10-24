@@ -78,7 +78,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ing_03"
       ],
@@ -108,7 +108,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "brewed_coffee",
         "ing_04"

@@ -111,7 +111,7 @@ export default {
           {
             "state": "Underdone",
             "description": "Whey coule toujours et la ricotta sags plat et brillant-humide, baignant contre le tissu.",
-            "action": "Continue de drainer. Recueillir le cheesewet et tordre doucement pour en extirper plus, ou réfrigérer encore 20 minutes."
+            "action": "Continue de drainer. Recueillir le cheesewet et tordre doucement pour en extraire plus, ou réfrigérer encore 20 minutes."
           },
           {
             "state": "Perfect",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "libum_batter",
         "ing_05"
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "raw_cakes"
       ],
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "baked_libum",
         "ing_06"

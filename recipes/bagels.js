@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "stiff_bagel_dough"
       ],
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "developed_bagel_dough"
       ],
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "shaped_bagels"
       ],
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "proofed_bagels",
         "ing_06",
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "boiled_bagels"
       ],

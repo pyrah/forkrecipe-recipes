@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "stuffed_fish",
         "ing_02",
@@ -222,7 +222,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "salt_crusted_baked_fish"
       ],
@@ -252,7 +252,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "unveiled_salt_baked_fish",
         "ing_07",

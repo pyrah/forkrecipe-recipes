@@ -73,7 +73,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Vin blanc (pour l'eau de braconnage)",
+      "name": "Vin blanc (pour l'eau de pochage)",
       "ratioValue": 15,
       "defaultUnit": "ml",
       "substitutions": [
@@ -115,7 +115,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_06",
         "ing_07"
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "garlic_yogurt",
         "poached_eggs",

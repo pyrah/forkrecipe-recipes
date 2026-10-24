@@ -170,7 +170,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01"
       ],
@@ -200,7 +200,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_sofrito",
         "charred_tomatillos",
@@ -270,7 +270,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "green_sauce",
         "ing_10",
@@ -302,7 +302,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_shakshuka",
         "ing_12"

@@ -119,7 +119,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "initial_batter"
       ],
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "fermented_batter",
         "ing_04"
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "seasoned_batter",
         "ing_05"

@@ -128,7 +128,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "shaggy_dough"
       ],
@@ -158,7 +158,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "smooth_dough"
       ],

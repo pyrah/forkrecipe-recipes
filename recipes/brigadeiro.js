@@ -117,7 +117,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "combined_mixture"
       ],
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "brigadeiro_dough"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "cooled_brigadeiro",
         "ing_05"

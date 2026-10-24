@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "stiff_dough"
       ],
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "shaped_bagels",
         "ing_06"
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "boiled_bagels",
         "ing_07"

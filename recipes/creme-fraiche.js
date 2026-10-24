@@ -93,7 +93,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "inoculated_cream"
       ],
@@ -123,7 +123,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "fermenting_creme_fraiche"
       ],

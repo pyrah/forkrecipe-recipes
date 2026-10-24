@@ -147,7 +147,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "ing_01"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sérum",
+      "action": "Couper en dés",
       "inputs": [
         "chilled_beef"
       ],
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "hand_cut_beef",
         "ing_02",

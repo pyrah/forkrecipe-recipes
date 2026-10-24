@@ -238,7 +238,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -277,7 +277,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -311,7 +311,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_dry_components",
         "charred_wet_components",
@@ -343,7 +343,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "mole_paste",
         "ing_18",
@@ -354,7 +354,7 @@ export default {
         "ing_20"
       ],
       "outputState": "mole_negro",
-      "instructions": "Chauffer le saindoux dans un grand pot à fond lourd (de préférence en argile ou en fonte émaillée) à feu vif jusqu'à ce qu'il commence à fumer légèrement. Versez la pâte de taupe en une seule fois — elle crachera violemment, alors reculez et faites un couvercle prêt. Faire frire la pâte, en remuant constamment avec une cuillère en bois, pendant 10 à 15 minutes jusqu'à ce qu'elle s'assombrisse, épaississe et que la graisse se sépare visiblement aux bords. Cette étape de friture est ce qui transforme un mélange mélangé en une vraie mole. Réduire le feu à moyen-doux. Ajouter le bouillon chaud une louche à la fois, en remuant bien après chaque addition. Ajouter le thym séché, l'origan et le sel. Laisser mijoter doucement pendant au moins 1 heure, en écrémant toute graisse qui monte. Ajouter le chocolat haché dans les 5 dernières minutes, en remuant jusqu'à ce qu'il soit complètement fondu. Goûtez et ajustez le sel.",
+      "instructions": "Chauffer le saindoux dans un grand pot à fond lourd (de préférence en argile ou en fonte émaillée) à feu vif jusqu'à ce qu'il commence à fumer légèrement. Versez la pâte de taupe en une seule fois — elle crachera violemment, alors reculez et faites un couvercle prêt. Faire frire la pâte, en remuant constamment avec une cuillère en bois, pendant 10 à 15 minutes jusqu'à ce qu'elle s'assombrisse, épaississe et que la graisse se sépare visiblement aux bords. Cette étape de friture est ce qui transforme un mélange mélangé en une vraie mole. Réduire le feu à moyen-doux. Ajouter le bouillon chaud une louche à la fois, en remuant bien après chaque addition. Ajouter le thym séché, l'origan et le sel. Laisser mijoter doucement pendant au moins 1 heure, en écrèment toute graisse qui monte. Ajouter le chocolat haché dans les 5 dernières minutes, en remuant jusqu'à ce qu'il soit complètement fondu. Goûtez et ajustez le sel.",
       "visualCue": {
         "primaryTarget": "Une sauce de la couleur de l'obsidienne polie — presque noire — qui enveloppe complètement l'arrière d'une cuillère et tombe dans un seul rideau non cassé et lourd quand la cuillère est levée.",
         "spectrum": [

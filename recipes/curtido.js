@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_05"
@@ -133,12 +133,12 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Légèrement adouci mais tenant toujours une croûte définitive. Le vert translucide du chou flétri. Pliable mais pas boiteux.",
+            "description": "Légèrement adouci mais tenant toujours une croûte définitive. Le vert translucide du chou flétri. Pliable mais pas mou.",
             "action": "Rincer avec de l'eau froide pour arrêter le flétrissement et bien égoutter avant de combiner."
           },
           {
             "state": "Overdone",
-            "description": "Le chou est devenu boiteux, olive-drabe et humide — il a été laissé trop longtemps dans l'eau chaude ou l'eau était trop volumineuse.",
+            "description": "Le chou est devenu mou, olive-drabe et humide — il a été laissé trop longtemps dans l'eau chaude ou l'eau était trop volumineuse.",
             "action": "Égoutter très bien, presser l'excès d'eau avec vos mains, et procéder. La texture sera plus douce que idéale, mais le curtido sera encore bon."
           }
         ]
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "wilted_cabbage",
         "ing_02",
@@ -174,7 +174,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le sel a attiré tellement d'eau des légumes que le mélange nage dans le liquide et le chou semble très boiteux et pâle.",
+            "description": "Le sel a attiré tellement d'eau des légumes que le mélange nage dans le liquide et le chou semble très mou et pâle.",
             "action": "Égoutter l'excès de liquide, ajouter une cuillère à soupe de vinaigre frais et réfrigérer. Le curtido sera plus doux mais toujours bon."
           }
         ]
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "assembled_curtido"
       ],

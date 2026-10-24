@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "beignet_dough"
       ],
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "proofed_dough"
       ],
@@ -215,7 +215,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "cut_beignets",
         "ing_08"
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "fried_beignets",
         "ing_09"

@@ -176,7 +176,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_14",
         "ing_09",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "tempered_oil",
         "ing_04",
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "golden_masala_base",
         "ing_11",
@@ -276,7 +276,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_masala",
         "ing_02",
@@ -309,7 +309,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "tamarind_gravy",
         "ing_01",

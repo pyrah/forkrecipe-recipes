@@ -146,12 +146,12 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01"
       ],
       "outputState": "blanched_pork",
-      "instructions": "Placer les cubes du ventre de porc dans une casserole froide, couvrir d'eau froide. Porter à ébullition à feu vif et blanchir pendant 5 minutes, en écrémant vigoureusement la mousse grise. Égoutter et rincer chaque pièce sous l'eau froide pour éliminer tous les résidus de protéines grises. Pat complètement sec avec des serviettes en papier. Cette étape est essentielle pour une sauce propre et claire, sans aromatisants.",
+      "instructions": "Placer les cubes du ventre de porc dans une casserole froide, couvrir d'eau froide. Porter à ébullition à feu vif et blanchir pendant 5 minutes, en écrèment vigoureusement la mousse grise. Égoutter et rincer chaque pièce sous l'eau froide pour éliminer tous les résidus de protéines grises. Pat complètement sec avec des serviettes en papier. Cette étape est essentielle pour une sauce propre et claire, sans aromatisants.",
       "visualCue": {
         "primaryTarget": "Des cubes de porc gris uniformément pâles, propres et secs, sans résidus de sang ou de mousse. La peau doit être intacte.",
         "spectrum": [
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_02",
         "ing_11"
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "blanched_pork",
         "amber_caramel",
@@ -246,7 +246,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_pork_belly"
       ],

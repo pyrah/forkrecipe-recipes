@@ -137,7 +137,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "shawarma_marinade_mixed"
       ],

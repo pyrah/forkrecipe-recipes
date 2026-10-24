@@ -2,7 +2,7 @@
   "name": "forkrecipe-recipes",
   "private": true,
   "type": "module",
-  "description": "Open recipe dataset behind forkrecipe.com",
+  "description": "Jeu de données ouvert de recettes utilisé par forkrecipe.com",
   "license": "CC-BY-SA-4.0",
   "scripts": {
     "validate": "node scripts/validate-recipes.js"

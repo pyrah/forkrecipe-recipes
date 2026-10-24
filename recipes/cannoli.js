@@ -174,7 +174,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "cannoli_dough",
         "ing_08"
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "shaped_shells",
         "ing_09"
@@ -272,7 +272,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_10",
         "ing_11",
@@ -306,7 +306,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "fried_shells",
         "ricotta_filling",

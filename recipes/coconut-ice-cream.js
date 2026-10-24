@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "warm_coconut_base",
         "ing_04",
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Gel",
+      "action": "Congeler",
       "inputs": [
         "tempered_custard_base"
       ],
@@ -211,7 +211,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "frozen_ice_cream",
         "ing_07",

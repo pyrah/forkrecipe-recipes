@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "rough_aromatics",
         "ing_04",
@@ -193,7 +193,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Pâte lisse, profondément parfumée, tartinable comme un pesto épais. Brun vert foncé avec une surface brillante de l'huile.",
-            "action": "Goûtez et ajustez : ajoutez plus de chaux pour la luminosité, plus de sucre pour autour de la chaleur, ou sel pour amplifier."
+            "action": "Goûtez et ajustez : ajoutez plus de citron vert pour la luminosité, plus de sucre pour autour de la chaleur, ou sel pour amplifier."
           },
           {
             "state": "Overdone",
@@ -206,12 +206,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "rough_paste"
       ],
       "outputState": "jerk_paste",
-      "instructions": "Transférer la pâte dans un pot ou un contenant scellé et réfrigérer pendant au moins 2 heures avant d'utiliser. La période de repos permet à l'acide du jus de chaux de souder la netteté brute de l'allium, les épices de fleurir et d'intégrer, et la capsaïcine de distribuer uniformément dans la pâte. La différence de saveur entre la pâte fraîchement mélangée et la pâte reposée est significative.",
+      "instructions": "Transférer la pâte dans un pot ou un contenant scellé et réfrigérer pendant au moins 2 heures avant d'utiliser. La période de repos permet à l'acide du jus de citron vert de souder la netteté brute de l'allium, les épices de fleurir et d'intégrer, et la capsaïcine de distribuer uniformément dans la pâte. La différence de saveur entre la pâte fraîchement mélangée et la pâte reposée est significative.",
       "visualCue": {
         "primaryTarget": "Après le repos, la pâte s'assombrit légèrement et devient plus uniforme dans la couleur que les liquides d'huile et de légumes homogénéisent.",
         "spectrum": [
@@ -222,7 +222,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Après 2 heures et plus: la chaleur est encore féroce mais a maintenant une chaleur en couches sous elle. L'espice et la cannelle sont clairement présentes. La chaux est intégrée plutôt que pointue.",
+            "description": "Après 2 heures et plus: la chaleur est encore féroce mais a maintenant une chaleur en couches sous elle. L'espice et la cannelle sont clairement présentes. La citron vert est intégrée plutôt que pointue.",
             "action": "Utilisez pour mariner le poulet, le porc ou les légumes pendant au moins 4 heures, de préférence pendant la nuit."
           },
           {

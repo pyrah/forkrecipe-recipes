@@ -187,7 +187,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_15",
@@ -219,7 +219,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "roasted_shells",
         "ing_06"
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "pinced_shells",
         "ing_07",
@@ -282,7 +282,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_shells",
         "ing_02",
@@ -320,7 +320,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "simmered_bisque"
       ],
@@ -350,7 +350,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "blended_bisque",
         "ing_10",

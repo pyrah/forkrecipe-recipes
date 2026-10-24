@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "browned_meatballs",
         "ing_10",
@@ -303,7 +303,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "simmered_meatballs",
         "ing_14",

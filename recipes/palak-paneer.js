@@ -164,7 +164,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_14"
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_masala",
         "blanched_spinach",
@@ -297,7 +297,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "palak_gravy",
         "golden_paneer"

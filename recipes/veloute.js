@@ -85,7 +85,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -116,7 +116,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "blond_roux",
         "ing_01"
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Abat-jour",
+      "action": "Écumer",
       "inputs": [
         "loose_veloute"
       ],
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "skimmed_veloute",
         "ing_04",

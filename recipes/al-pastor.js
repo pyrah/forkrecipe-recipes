@@ -149,7 +149,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_chilies",
         "ing_04",
@@ -219,7 +219,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "pastor_marinade"
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "marinated_pork"
       ],

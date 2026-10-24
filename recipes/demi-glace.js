@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_04",
         "ing_02"
@@ -138,7 +138,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les légumes sont translucides et boiteux, mais encore pâles — pas de couleur, pas d'affection pour la poêle, et l'odeur est crue et herbacée.",
+            "description": "Les légumes sont translucides et mou, mais encore pâles — pas de couleur, pas d'affection pour la poêle, et l'odeur est crue et herbacée.",
             "action": "Levez légèrement la chaleur et faites cuire. Browning est d'où vient la profondeur; ne vous précipitez pas au-delà de cette étape."
           },
           {
@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "browned_mirepoix",
         "ing_02",
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "brown_roux",
         "ing_05"
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "pincage",
         "ing_01",
@@ -252,13 +252,13 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "loose_espagnole",
         "ing_06"
       ],
       "outputState": "finished_espagnole",
-      "instructions": "Maintenez la sauce à mijoter pendant 2 à 3 heures, en remuant de temps en temps et ensuite et en écrémant la graisse et la mousse grise de la surface, en rongant le pot à moitié du brûleur afin que les impuretés se rassemblent sur un côté. Assaisonner légèrement avec du sel — rappelez - vous qu'il se concentrera davantage. Lorsqu'il a réduit d'environ un tiers et enrobe une cuillère, étirer les solides et le bouquet garnir à travers un tamis fin. C'est ton espagnole de base.",
+      "instructions": "Maintenez la sauce à mijoter pendant 2 à 3 heures, en remuant de temps en temps et ensuite et en écrèment la graisse et la mousse grise de la surface, en rongant le pot à moitié du brûleur afin que les impuretés se rassemblent sur un côté. Assaisonner légèrement avec du sel — rappelez - vous qu'il se concentrera davantage. Lorsqu'il a réduit d'environ un tiers et enrobe une cuillère, étirer les solides et le bouquet garnir à travers un tamis fin. C'est ton espagnole de base.",
       "visualCue": {
         "primaryTarget": "Un espagnole clair, brillant, mahogany profond qui enveloppe légèrement l'arrière d'une cuillère, réduit d'environ un tiers, avec une surface propre exempte de graisse et de souillure.",
         "spectrum": [
@@ -283,13 +283,13 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "finished_espagnole",
         "ing_08"
       ],
       "outputState": "finished_demiglace",
-      "instructions": "Combiner l'espagnole tendu avec un volume égal de bouillon frais brun dans un pot propre large. Portez-vous à un doux mijoter et réduisez de moitié, en écrémant patiemment et constamment au fur et à mesure que les graisses et les impuretés s'élèvent. Prenez votre temps à feu doux; un ébullition agressif va nuager et bouillir. La sauce est prête quand elle a diminué de moitié, est devenue brillante et sirupeuse, et enrobe l'arrière d'une cuillère dans une nappe laquée collante.",
+      "instructions": "Combiner l'espagnole tendu avec un volume égal de bouillon frais brun dans un pot propre large. Portez-vous à un doux mijoter et réduisez de moitié, en écrèment patiemment et constamment au fur et à mesure que les graisses et les impuretés s'élèvent. Prenez votre temps à feu doux; un ébullition agressif va nuager et bouillir. La sauce est prête quand elle a diminué de moitié, est devenue brillante et sirupeuse, et enrobe l'arrière d'une cuillère dans une nappe laquée collante.",
       "visualCue": {
         "primaryTarget": "Une glaçure brillante, foncée et sirupeuse réduite de moitié qui s'accroche à l'arrière d'une cuillère dans une couche épaisse et laquée — une ligne de doigt propre tirée à travers elle tient et ne court pas. Un miroir à la surface.",
         "spectrum": [

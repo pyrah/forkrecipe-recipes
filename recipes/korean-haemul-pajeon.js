@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "assembled_pajeon_batter",
         "ing_08",

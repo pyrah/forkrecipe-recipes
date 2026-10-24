@@ -14,7 +14,7 @@ export default {
     "Sans gluten",
     "Thaï",
     "poisson-sauce",
-    "Chaux",
+    "citron vert",
     "Riz rôti"
   ],
   "difficulty": 1,
@@ -49,7 +49,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 45,
       "defaultUnit": "ml",
       "substitutions": [
@@ -63,7 +63,7 @@ export default {
       "ratioValue": 15,
       "defaultUnit": "ml",
       "substitutions": [
-        "jus de chaux supplémentaire (moins de complexité)"
+        "jus de citron vert supplémentaire (moins de complexité)"
       ]
     },
     {
@@ -118,7 +118,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_06"
       ],

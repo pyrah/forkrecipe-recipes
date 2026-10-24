@@ -78,7 +78,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Autolyse",
+      "action": "Autolyser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -109,7 +109,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "autolysed_dough",
         "ing_03",
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "bulk_fermented_dough"
       ],
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "shaped_boule"
       ],
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "cold_retarded_boule"
       ],
@@ -231,7 +231,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "scored_boule"
       ],

@@ -59,7 +59,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_01"
       ],
@@ -89,7 +89,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "hot_oil",
         "ing_02"
@@ -120,7 +120,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "blond_roux"
       ],
@@ -150,7 +150,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "dark_roux"
       ],

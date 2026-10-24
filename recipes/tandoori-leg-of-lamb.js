@@ -161,7 +161,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "ing_01"
       ],
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "scored_lamb",
         "ing_03",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "first_marinated_lamb",
         "ing_02",
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "fully_marinated_lamb",
         "ing_13"
@@ -294,7 +294,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "roasted_lamb"
       ],

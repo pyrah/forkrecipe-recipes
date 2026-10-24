@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_01",
         "ing_03",
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "soaked_bulgur",
         "chopped_herbs_and_veg",
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "dressed_tabbouleh"
       ],

@@ -149,7 +149,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_09",
         "ing_06",
@@ -183,7 +183,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "soffritto"
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "toasted_farro",
         "ing_04"
@@ -245,7 +245,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "wine_absorbed_farro",
         "ing_05",
@@ -277,7 +277,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "cooked_farrotto",
         "ing_06",

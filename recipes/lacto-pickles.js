@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_jar",
         "brine"
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "fermenting_pickles"
       ],

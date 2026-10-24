@@ -143,13 +143,13 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "L'aromatisme est encore blanc ou boiteux, entouré de bouillons vigoureux et bruyants, que le bouillonnement est l'ébullition de l'eau. L'huile sent cru et vif.",
+            "description": "L'aromatisme est encore blanc ou mou, entouré de bouillons vigoureux et bruyants, que le bouillonnement est l'ébullition de l'eau. L'huile sent cru et vif.",
             "action": "Continuez à frire. Les croustillants ne peuvent pas brunir jusqu'à ce que l'eau soit partie, alors soyez patient; ne levez pas la chaleur pour la précipiter."
           },
           {
             "state": "Perfect",
             "description": "Or pâle avec l'ambre le plus faible aux bords, bouillonnant presque arrêté, huile profondément parfumée. Ils sont légèrement doux maintenant mais seront croquants comme ils refroidissent.",
-            "action": "Empêchez immédiatement les solides de s'extirper — ils se transportent rapidement. Égoutter sur une serviette en papier et réserver l'huile dans le pot."
+            "action": "Empêchez immédiatement les solides de s'extraire — ils se transportent rapidement. Égoutter sur une serviette en papier et réserver l'huile dans le pot."
           },
           {
             "state": "Overdone",
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "infused_oil_and_crisps",
         "chili_spice_base"

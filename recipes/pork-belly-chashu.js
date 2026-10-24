@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "ing_01"
       ],
@@ -153,7 +153,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "rolled_belly",
         "ing_08"
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_chashu",
         "ing_02",
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "braised_chashu"
       ],
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "chilled_chashu"
       ],

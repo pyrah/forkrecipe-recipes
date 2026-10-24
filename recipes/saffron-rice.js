@@ -100,7 +100,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "ing_04"
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "soaked_rice",
         "ing_04"
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "layered_pot"
       ],

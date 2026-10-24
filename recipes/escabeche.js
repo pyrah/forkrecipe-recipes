@@ -106,7 +106,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -130,7 +130,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les jalapeños sont devenus vert olive terne et les carottes s'adoucissent. L'oignon est complètement boiteux.",
+            "description": "Les jalapeños sont devenus vert olive terne et les carottes s'adoucissent. L'oignon est complètement mou.",
             "action": "Continuez. L'escabéche aura encore un excellent goût, mais les légumes seront plus doux après le décapage."
           }
         ]
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "sauteed_vegetables",
         "ing_04",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "hot_escabeche"
       ],

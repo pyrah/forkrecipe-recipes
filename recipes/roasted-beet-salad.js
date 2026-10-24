@@ -62,7 +62,7 @@ export default {
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": [
-        "pécans grillés",
+        "noix de noix de pécan grillés",
         "Noix confites"
       ]
     },
@@ -170,7 +170,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_10",
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_05",
         "ing_07",
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
@@ -296,7 +296,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "sliced_beets",
         "toasted_walnuts",

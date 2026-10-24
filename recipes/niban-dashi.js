@@ -76,14 +76,14 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
         "ing_03"
       ],
       "outputState": "niban_infusion",
-      "instructions": "Placez le kombu et le katsuobushi de votre dashi ichiban dans une casserole avec de l'eau froide fraîche. Portez lentement à 140°F (60°C) à feu moyen-doux — c'est en dessous de la mijotation, et vous devriez voir un mouvement doux dans l'eau mais pas de bulles. Niban dashi est extrait à une température inférieure à la pente initiale parce que les ingrédients épuisés libèrent leurs glutamates restants et inosinent plus lentement et à des températures inférieures. Maintenez cette température pendant 15 minutes.",
+      "instructions": "Placez le kombu et le katsuobushi de votre dashi ichiban dans une casserole avec de l'eau froide fraîche. Portez lentement à 140°F (60°C) à feu moyen-doux — c'est en dessous de la mijotation, et vous devriez voir un mouvement doux dans l'eau mais pas de bulles. Niban dashi est extrait à une température inférieure à l’infusion initiale parce que les ingrédients épuisés libèrent leurs glutamates restants et inosinent plus lentement et à des températures inférieures. Maintenez cette température pendant 15 minutes.",
       "visualCue": {
         "primaryTarget": "Une chaleur douce et tremblante visible à la surface de l'eau — de minuscules lignes chatoyantes mais sans bulles. L'eau commencera à colorier doré dans les 5 minutes.",
         "spectrum": [
@@ -108,7 +108,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "niban_infusion",
         "ing_04"
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "niban_dashi_strained"
       ],

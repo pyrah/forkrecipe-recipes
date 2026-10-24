@@ -132,7 +132,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_09"
       ],
@@ -179,7 +179,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Entièrement boiteux, transparent et frais. Draps sans résistance. Facile à serrer à sec.",
+            "description": "Entièrement mou, transparent et frais. Draps sans résistance. Facile à serrer à sec.",
             "action": "Presser doucement et fondre en crème chaude à l'étape 3."
           },
           {
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_06",
         "ing_07"
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -259,7 +259,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "cheesecake_filling",
         "biscuit_base",

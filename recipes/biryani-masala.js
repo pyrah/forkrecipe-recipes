@@ -157,7 +157,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "toasted_spices"
       ],
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "cooled_spices",
         "ing_11",

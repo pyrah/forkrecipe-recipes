@@ -157,7 +157,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_03",
         "ing_13"
@@ -253,7 +253,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "roasted_squash",
         "ing_07",
@@ -285,7 +285,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "sage_brown_butter",
         "squash_sauce",

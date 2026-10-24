@@ -137,7 +137,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -175,7 +175,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "marinated_lamb"
       ],
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "grilled_lamb_chops"
       ],

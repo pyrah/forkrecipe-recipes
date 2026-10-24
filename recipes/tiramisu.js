@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "warm_sabayon",
         "ing_03",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "soaked_layer",
         "mascarpone_cream"

@@ -88,7 +88,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_04"
       ],
@@ -118,7 +118,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_05"
@@ -181,7 +181,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "al_dente_pasta",
         "bloomed_pepper",
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "pasta_with_pepper",
         "cheese_paste",

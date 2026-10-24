@@ -107,7 +107,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "ing_01",
         "egg_lemon_base"

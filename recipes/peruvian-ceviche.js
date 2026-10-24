@@ -13,7 +13,7 @@ export default {
     "Sans gluten",
     "périuvien",
     "Ceviche",
-    "Chaux",
+    "citron vert",
     "cru",
     "agrumes"
   ],
@@ -51,7 +51,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais (environ 16 chaux)",
+      "name": "Jus de citron vert frais (environ 16 citron vert)",
       "ratioValue": 240,
       "defaultUnit": "ml",
       "substitutions": []
@@ -131,7 +131,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -153,7 +153,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Le poisson a été manipulé de manière excessive et commence à se réchauffer; les bords montrent un léger adoucissement.",
-            "action": "Réfrigérer 10 minutes avant d'ajouter la chaux."
+            "action": "Réfrigérer 10 minutes avant d'ajouter le citron vert."
           }
         ]
       },
@@ -161,7 +161,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "sliced_fish",
         "ing_02",
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "ceviche_mixture",
         "ing_03",
@@ -226,7 +226,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Ceviche devrait vous frapper dans le nez avec la luminosité propre, presque pharmaceutique de la chaux fraîche avant une chaleur lente se construit à l'arrière de la gorge — si ce n'est pas, ajouter plus de chaux et plus ají."
+      "feelCue": "Ceviche devrait vous frapper dans le nez avec la luminosité propre, presque pharmaceutique du citron vert fraîche avant une chaleur lente se construit à l'arrière de la gorge — si ce n'est pas, ajouter plus de citron vert et plus ají."
     }
   ]
 };

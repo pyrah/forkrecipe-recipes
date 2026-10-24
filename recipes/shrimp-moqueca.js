@@ -48,7 +48,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 8,
       "defaultUnit": "parts",
       "substitutions": [
@@ -129,7 +129,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -137,13 +137,13 @@ export default {
         "ing_10"
       ],
       "outputState": "marinated_shrimp",
-      "instructions": "Mélanger les crevettes avec le jus de lime, l'ail haché et une pincée généreuse de sel. Couvrir et réfrigérer pendant 15 à 20 minutes. Ne pas mariner plus de 30 minutes — l'acide chaux commencera à cuire les crevettes et à les durcir.",
+      "instructions": "Mélanger les crevettes avec le jus de lime, l'ail haché et une pincée généreuse de sel. Couvrir et réfrigérer pendant 15 à 20 minutes. Ne pas mariner plus de 30 minutes — l'acide citron vert commencera à cuire les crevettes et à les durcir.",
       "visualCue": {
-        "primaryTarget": "Crevette légèrement opaque et rose aux bords mêmes de la chaux, mais toujours gris et translucide au centre.",
+        "primaryTarget": "Crevette légèrement opaque et rose aux bords mêmes du citron vert, mais toujours gris et translucide au centre.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Crevettes encore entièrement grises et crues; arôme de chaux et d'ail non encore absorbé.",
+            "description": "Crevettes encore entièrement grises et crues; arôme de citron vert et d'ail non encore absorbé.",
             "action": "Faites mariner le temps restant."
           },
           {
@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "stew_base"
       ],
@@ -226,14 +226,14 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "simmered_base",
         "marinated_shrimp",
         "ing_09"
       ],
       "outputState": "finished_moqueca",
-      "instructions": "Ajouter les crevettes marinées en une seule couche sur la base de légumes mijotés. Couvrir et cuire 3-4 minutes à feu moyen — pas plus. Les crevettes sont faites dès qu'elles sont roses et opaques. Dispersez la moitié de la coriandre dans le pot. Goûtez le bouillon et ajustez le sel et la chaux. Terminer avec la coriandre restante. Servir directement de la casserole avec du riz blanc et du farofa (farine de manioc grillée) à côté.",
+      "instructions": "Ajouter les crevettes marinées en une seule couche sur la base de légumes mijotés. Couvrir et cuire 3-4 minutes à feu moyen — pas plus. Les crevettes sont faites dès qu'elles sont roses et opaques. Dispersez la moitié de la coriandre dans le pot. Goûtez le bouillon et ajustez le sel et le citron vert. Terminer avec la coriandre restante. Servir directement de la casserole avec du riz blanc et du farofa (farine de manioc grillée) à côté.",
       "visualCue": {
         "primaryTarget": "Les crevettes sont roses et en forme de C, reposant sur le bouillon orange. Pas de taches grises. Cilantro est vert vif sur le dessus.",
         "spectrum": [

@@ -108,7 +108,7 @@ export default {
       "outputState": "salted_vegetables",
       "instructions": "Couper le concombre sur le biais en ovales de 5 mm d'épaisseur – la coupe en angle augmente la surface exposée au remède et semble élégante. Coupez le daikon en demi-lunes de 5mm. Mélanger tous les légumes préparés dans un bol à mélanger, saupoudrer de sel de mer fin et mélanger délicatement pour les distribuer. Laissez-les s'asseoir pendant 10 minutes. Le tirage initial du sel est rapide: vous verrez la saumure commencer à se mettre dans le bol en 5 minutes. Cette étape pré-souvent les parois cellulaires et enlève une certaine amertume du daikon, donnant au shio-koji une meilleure surface pour travailler avec. Après 10 minutes, rincer brièvement les légumes sous l'eau froide et les sécher avec un chiffon propre — vous voulez enlever le liquide dur tiré avant d'ajouter le shio-koji subtil.",
       "visualCue": {
-        "primaryTarget": "Les légumes sont légèrement boiteux et brillants, avec une flaque visible de liquide pâle dans le bol. Le daikon a perdu sa blancheur crayeuse et devient légèrement translucide aux bords.",
+        "primaryTarget": "Les légumes sont légèrement mou et brillants, avec une flaque visible de liquide pâle dans le bol. Le daikon a perdu sa blancheur crayeuse et devient légèrement translucide aux bords.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "curing_vegetables"
       ],

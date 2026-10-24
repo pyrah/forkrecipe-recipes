@@ -185,7 +185,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_03"
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "roasted_shells",
         "ing_02",
@@ -251,7 +251,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "sauteed_aromatics_with_shells",
         "ing_08",
@@ -284,7 +284,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_shell_base",
         "ing_09",
@@ -321,7 +321,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmering_stock"
       ],

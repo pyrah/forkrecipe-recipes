@@ -4,7 +4,7 @@ export default {
   "slug": "gougeres",
   "author": "ForkRecipe Kitchen",
   "title": "Gougères",
-  "description": "Des chaux creux, aérés, lavés de Gruyère — dorés, gonflés et parfumés de fromage chaud — la traditionnelle bouchée de bienvenue bourguignonne servie avec Champagne ou Kir.",
+  "description": "Des citron vert creux, aérés, lavés de Gruyère — dorés, gonflés et parfumés de fromage chaud — la traditionnelle bouchée de bienvenue bourguignonne servie avec Champagne ou Kir.",
   "cuisine": "Français",
   "culture": "Bourgogne",
   "category": "breads",
@@ -99,7 +99,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "panade",
         "ing_04",
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "gougere_dough"
       ],

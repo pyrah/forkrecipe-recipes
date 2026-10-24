@@ -111,7 +111,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sel",
+      "action": "Saler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -120,7 +120,7 @@ export default {
       "outputState": "salted_vegetables",
       "instructions": "Mélanger le daikon julienned et la carotte avec 1 cuillère à café du sel fin dans un grand bol. Bien mélanger et laisser reposer 10 minutes. Cela tire l'excès d'eau des légumes par osmose, qui concentre leur saveur, améliore leur texture, et permet à la saumure de mariner de pénétrer plus uniformément.",
       "visualCue": {
-        "primaryTarget": "Après 10 minutes: les légumes ont libéré une petite quantité de liquide dans le bol. Le daikon et la carotte sont légèrement flétris et plus souples, mais pas encore boiteux.",
+        "primaryTarget": "Après 10 minutes: les légumes ont libéré une petite quantité de liquide dans le bol. Le daikon et la carotte sont légèrement flétris et plus souples, mais pas encore mou.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -134,7 +134,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les légumes ont été salés trop longtemps (plus de 30 minutes) et sont très boiteux, libérant de grandes quantités de liquide. Eauux et doux.",
+            "description": "Les légumes ont été salés trop longtemps (plus de 30 minutes) et sont très mou, libérant de grandes quantités de liquide. Eauux et doux.",
             "action": "Rincer soigneusement et procéder — les cornichons seront plus doux que l'idéal, mais encore comestibles."
           }
         ]
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "salted_vegetables"
       ],
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -206,7 +206,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "rinsed_vegetables",
         "ing_07",
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "brined_vietnamese_pickles"
       ],

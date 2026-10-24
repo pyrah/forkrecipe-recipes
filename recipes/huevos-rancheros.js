@@ -139,7 +139,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_03",
         "ing_05",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "roasted_salsa_base"
       ],
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_02",
         "ing_07"
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "ing_07"
@@ -264,7 +264,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "warmed_tortillas",
         "fried_eggs",
@@ -274,7 +274,7 @@ export default {
         "ing_11"
       ],
       "outputState": "finished_huevos_rancheros",
-      "instructions": "Placer les tortillas chaudes sur une assiette. Faites glisser l'œuf frit sur le dessus. Déposer généreusement la salsa chaude sur le blanc d'œuf, laissant le jaune découvert ou à peine brossé pour qu'il reste visible et lumineux. Scatter émietté cotija et coriandre fraîche sur le dessus. Servir avec des coins de chaux sur le côté. Tout devrait arriver à la table chaude — c'est un travail d'assemblage qui prend 30 secondes.",
+      "instructions": "Placer les tortillas chaudes sur une assiette. Faites glisser l'œuf frit sur le dessus. Déposer généreusement la salsa chaude sur le blanc d'œuf, laissant le jaune découvert ou à peine brossé pour qu'il reste visible et lumineux. Scatter émietté cotija et coriandre fraîche sur le dessus. Servir avec des coins de citron vert sur le côté. Tout devrait arriver à la table chaude — c'est un travail d'assemblage qui prend 30 secondes.",
       "visualCue": {
         "primaryTarget": "Une assiette vive : la salsa rouge foncé qui s'étend autour et au-dessus du blanc, le dôme jaune orange s'élevant au-dessus, la coriandre verte et le fromage blanc contrastant contre le rouge.",
         "spectrum": [

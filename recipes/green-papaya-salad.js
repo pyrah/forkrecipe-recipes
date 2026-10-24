@@ -4,7 +4,7 @@ export default {
   "slug": "green-papaya-salad",
   "author": "ForkRecipe Kitchen",
   "title": "Som Tam (Salade de papaye verte)",
-  "description": "Pounded et meurtris dans un mortier d'argile, la papaye verte déchiquetée se transforme en un enchevêtrement vif et goutte à goutte où chaque brin porte de la chaux aigre, de la sauce de poisson salée, et assez de chaleur de chili pour rendre les bouts de vos oreilles rouges.",
+  "description": "Pounded et meurtris dans un mortier d'argile, la papaye verte déchiquetée se transforme en un enchevêtrement vif et goutte à goutte où chaque brin porte du citron vert aigre, de la sauce de poisson salée, et assez de chaleur de chili pour rendre les bouts de vos oreilles rouges.",
   "cuisine": "Thaï",
   "culture": "Isan Thai",
   "category": "vegetables",
@@ -67,7 +67,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Acid",
-      "name": "Jus de chaux frais (à partir de 2-3 chaux)",
+      "name": "Jus de citron vert frais (à partir de 2-3 citron vert)",
       "ratioValue": 15,
       "defaultUnit": "parts",
       "substitutions": []
@@ -208,7 +208,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Entièrement dissout, lisse, doré jaune vif. Goûte aigre-première, savoureuse-seconde, à peine sucré. L'arôme de chaux est vif.",
+            "description": "Entièrement dissout, lisse, doré jaune vif. Goûte aigre-première, savoureuse-seconde, à peine sucré. L'arôme de citron vert est vif.",
             "action": "Verser sur la papaye."
           },
           {
@@ -241,7 +241,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Chaque brin de papaye brille avec la vinaigrette et a absorbé la saveur de chaux-sour. La croûte est présente mais légèrement produite. Les couleurs sont vives. L'odeur est la chaux, la sauce de poisson et le chili.",
+            "description": "Chaque brin de papaye brille avec la vinaigrette et a absorbé la saveur de citron vert-sour. La croûte est présente mais légèrement produite. Les couleurs sont vives. L'odeur est le citron vert, la sauce de poisson et le chili.",
             "action": "Assortir et servir immédiatement."
           },
           {

@@ -3,8 +3,8 @@ export default {
   "parentRepoId": null,
   "slug": "chard-with-currants",
   "author": "ForkRecipe Kitchen",
-  "title": "Charde aux Currants et aux noix de pin",
-  "description": "La bruine arc-en-ciel Wilted braisée avec des raisins dorés et des noix de pin dans l'huile d'olive — l'agrodolce sicilienne douce et salée qui transforme un vert humble en quelque chose qui mérite d'être recherché.",
+  "title": "Charde aux Currants et aux pignons de pin",
+  "description": "La bruine arc-en-ciel Wilted braisée avec des raisins dorés et des pignons de pin dans l'huile d'olive — l'agrodolce sicilienne douce et salée qui transforme un vert humble en quelque chose qui mérite d'être recherché.",
   "cuisine": "Italien",
   "culture": "Sicilien",
   "category": "vegetables",
@@ -114,14 +114,14 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
       "outputState": "toasted_pine_nuts",
       "instructions": "Placer les pignons dans une poêle sèche à feu moyen-doux. Agiter ou remuer constamment pendant 2 à 3 minutes jusqu'à ce qu'ils tournent une couleur dorée profonde. Veillez sans distraction — ils vont de pâle à brûlé en moins de 30 secondes. Astucez immédiatement sur une assiette fraîche pour arrêter la cuisson.",
       "visualCue": {
-        "primaryTarget": "Les noix de pin sont un tandem chaud, même doré, de couleur bois poli, avec quelques taches de rousseur plus foncées et un arôme riche en noix.",
+        "primaryTarget": "Les pignons de pin sont un tandem chaud, même doré, de couleur bois poli, avec quelques taches de rousseur plus foncées et un arôme riche en noix.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -136,7 +136,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Brun à presque noir avec une odeur amère et huileuse.",
-            "action": "Jetez et toastez un lot frais — les noix de pin brûlées rendront le plat acride."
+            "action": "Jetez et toastez un lot frais — les pignons de pin brûlées rendront le plat acride."
           }
         ]
       },
@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_04",
@@ -167,7 +167,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Toutes les feuilles sont effondrées et tendres. Les tiges sont douces mais ont encore une légère morsure. Les raisins sont plumés. Le plat est brillant avec de l'huile d'olive et parfumé avec de l'ail et du vinaigre.",
-            "action": "Scatter les noix de pin et servir immédiatement ou à température ambiante."
+            "action": "Scatter les pignons de pin et servir immédiatement ou à température ambiante."
           },
           {
             "state": "Overdone",
@@ -180,29 +180,29 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "wilted_chard_base",
         "toasted_pine_nuts"
       ],
       "outputState": "finished_chard_with_currants",
-      "instructions": "Goût d'assaisonnement — l'équilibre agrodolce doit être présent mais subtil. Si le goût est plat, ajouter quelques gouttes de vinaigre; si trop vif, une petite pincée de sucre. Transférer dans une assiette de service et disperser les noix de pin grillées sur le dessus. Servir chaud ou à température ambiante.",
+      "instructions": "Goût d'assaisonnement — l'équilibre agrodolce doit être présent mais subtil. Si le goût est plat, ajouter quelques gouttes de vinaigre; si trop vif, une petite pincée de sucre. Transférer dans une assiette de service et disperser les pignons de pin grillées sur le dessus. Servir chaud ou à température ambiante.",
       "visualCue": {
         "primaryTarget": "Un enchevêtrement vert foncé et brillant de bûcher aux raisins dorés et éparpillé de pignons de pins chauds. L'assiette est rustique et joaillée à la fois.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le poisson a l'air inachevé — les noix de pin manquantes, aucun contraste de couleur ou de texture.",
-            "action": "Ajouter les noix de pin. Sans eux, l'équilibre amer ne se lit que comme plat."
+            "description": "Le poisson a l'air inachevé — les pignons de pin manquantes, aucun contraste de couleur ou de texture.",
+            "action": "Ajouter les pignons de pin. Sans eux, l'équilibre amer ne se lit que comme plat."
           },
           {
             "state": "Perfect",
-            "description": "Vert foncé, raisins dorés, noix de pin. L'assiette sent l'ail, le vinaigre et l'huile d'olive. Une cuillère apporte sucrée, salée et légèrement amère dans la même bouchée.",
+            "description": "Vert foncé, raisins dorés, pignons de pin. L'assiette sent l'ail, le vinaigre et l'huile d'olive. Une cuillère apporte sucrée, salée et légèrement amère dans la même bouchée.",
             "action": "Servez."
           },
           {
             "state": "Overdone",
-            "description": "Les noix de pin ont été brassées et sont maintenant douces de s'asseoir dans l'humidité chaude.",
+            "description": "Les pignons de pin ont été brassées et sont maintenant douces de s'asseoir dans l'humidité chaude.",
             "action": "Ils sont moins croquants mais ajoutent encore de la saveur. Toast quelques extras à disperser au dernier moment pour la texture."
           }
         ]

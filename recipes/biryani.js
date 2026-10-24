@@ -180,7 +180,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "marinated_chicken",
         "ing_11"
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "seared_chicken",
         "parboiled_rice",
@@ -316,7 +316,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "layered_biryani",
         "ing_16"

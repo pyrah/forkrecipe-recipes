@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "wet_baba_batter",
         "ing_03"
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "enriched_baba_dough"
       ],
@@ -250,7 +250,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "proofed_baba_molds"
       ],
@@ -280,7 +280,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_09",
         "ing_13",
@@ -313,7 +313,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "baked_babas",
         "warm_syrup_base",
@@ -345,7 +345,7 @@ export default {
     },
     {
       "nodeId": "step_7",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_11"
       ],
@@ -375,7 +375,7 @@ export default {
     },
     {
       "nodeId": "step_8",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "soaked_babas",
         "chantilly_cream"

@@ -4,7 +4,7 @@ export default {
   "slug": "italian-acqua-pazza",
   "author": "ForkRecipe Kitchen",
   "title": "Italien Acqua Pazza",
-  "description": "Le poisson braconné dans l'eau vive — un bouillon bouillonnant de tomates cerises, de vin blanc et d'huile d'olive qui se jette à ébullition dans la poêle, perfumant le poisson de la brise marine de la côte sud de l'Italie.",
+  "description": "Le poisson poché dans l'eau vive — un bouillon bouillonnant de tomates cerises, de vin blanc et d'huile d'olive qui se jette à ébullition dans la poêle, perfumant le poisson de la brise marine de la côte sud de l'Italie.",
   "cuisine": "Italien",
   "culture": "Sud de l ' Italie",
   "category": "seafood",
@@ -126,7 +126,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_04",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "acqua_pazza_broth",
         "ing_01"
@@ -175,7 +175,7 @@ export default {
           {
             "state": "Underdone",
             "description": "L'œil du poisson est encore sombre et translucide. Les coupures de score sont fermées. La chair dans la cavité du corps est rose.",
-            "action": "Couvrir et continuer le braconnage pendant 4 à 5 minutes de plus."
+            "action": "Couvrir et continuer le pochage pendant 4 à 5 minutes de plus."
           },
           {
             "state": "Perfect",
@@ -193,7 +193,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "poached_fish",
         "ing_07",
@@ -216,7 +216,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le bouillon a été réduit à une sauce épaisse plutôt qu'un léger liquide de braconnage.",
+            "description": "Le bouillon a été réduit à une sauce épaisse plutôt qu'un léger liquide de pochage.",
             "action": "Ajouter un jet d'eau chaude et remuer; servir sans cuisson ultérieure."
           }
         ]

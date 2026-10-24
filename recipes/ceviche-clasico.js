@@ -11,7 +11,7 @@ export default {
   "tags": [
     "Ceviche",
     "cru",
-    "Chaux",
+    "citron vert",
     "périuvien",
     "Aji-amarillo",
     "pas de cuisson",
@@ -140,7 +140,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_03",
         "ing_08"
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -184,16 +184,16 @@ export default {
       "outputState": "leche_de_tigre",
       "instructions": "Dans un bol en verre ou en céramique réfrigéré, mélanger les cubes de bar avec le sel et mélanger doucement pour assaisonner. Verser le jus de lime sur le poisson — le jus doit couvrir complètement chaque morceau. Ajouter la pâte ají amarillo, le gingembre râpé, l'ail râpé et la limousine ají. Mélanger très doucement avec une cuillère, tourner le poisson une ou deux fois sans casser les cubes. Ne mélangez pas vigoureusement — vous ne faites pas de salade. Placer le bol directement sur la glace ou au congélateur pendant 2 à 3 minutes. À Lima, ceviche marine seulement 2-3 minutes — le poisson est à peine touché par l'acide, restant presque cru au centre tandis que la couche externe devient opaque. C'est le style Limeño : vital et immédiat, consommé dès qu'il est prêt. Le jus de lime qui reste, maintenant chargé d'essence de poisson, de chaleur ají, de gingembre et de saumure, est la leche de tigre. C'est l'un des liquides les plus savoureux de toute la cuisson.",
       "visualCue": {
-        "primaryTarget": "Les cubes de poisson sont blancs opaques au bord très extérieur, de 1 à 2 mm de profondeur, avec un intérieur translucide à peine touché. Le jus de chaux est devenu légèrement trouble et laiteux à partir de protéines de poisson — c'est la leche de tigre qui se forme.",
+        "primaryTarget": "Les cubes de poisson sont blancs opaques au bord très extérieur, de 1 à 2 mm de profondeur, avec un intérieur translucide à peine touché. Le jus de citron vert est devenu légèrement trouble et laiteux à partir de protéines de poisson — c'est la leche de tigre qui se forme.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Les poissons sont encore complètement translucides. La chaux est parfaitement claire sans nuage. Moins d'une minute s'est écoulée.",
+            "description": "Les poissons sont encore complètement translucides. La citron vert est parfaitement claire sans nuage. Moins d'une minute s'est écoulée.",
             "action": "Le poisson est essentiellement sashimi — encore excellent si l'on utilise des sushis. Jetez encore une fois et goûtez — servez si la saveur est bonne pour vous."
           },
           {
             "state": "Perfect",
-            "description": "1–2 mm bord opaque sur chaque cube. L'intérieur est toujours translucide. La chaux est laiteuse et nuageuse avec la leche de tigre. Le poisson sent propre et agrumes-brillant.",
+            "description": "1–2 mm bord opaque sur chaque cube. L'intérieur est toujours translucide. La citron vert est laiteuse et nuageuse avec la leche de tigre. Le poisson sent propre et agrumes-brillant.",
             "action": "Ajoutez immédiatement l'oignon et la coriandre et servez - chaque seconde de retard cueille le poisson."
           },
           {
@@ -203,11 +203,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Ramassez un cube de poisson de la chaux — la surface extérieure doit se sentir légèrement tendue, presque printanière, tandis que le centre, lorsqu'il est pressé, donne comme du poisson cru. L'odeur qui sort du bol devrait vous frapper comme une vague: la chaux pure, le feu vert de l'ají, et l'odeur propre de l'océan de poissons très frais."
+      "feelCue": "Ramassez un cube de poisson du citron vert — la surface extérieure doit se sentir légèrement tendue, presque printanière, tandis que le centre, lorsqu'il est pressé, donne comme du poisson cru. L'odeur qui sort du bol devrait vous frapper comme une vague: le citron vert pure, le feu vert de l'ají, et l'odeur propre de l'océan de poissons très frais."
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "leche_de_tigre",
         "macerated_onion",
@@ -232,7 +232,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Vous avez passé trop de temps à poser et le poisson a continué à guérir dans la chaux — il est maintenant complètement opaque et la coriandre s'est flétrie.",
+            "description": "Vous avez passé trop de temps à poser et le poisson a continué à guérir dans le citron vert — il est maintenant complètement opaque et la coriandre s'est flétrie.",
             "action": "Servir immédiatement, peu importe. La saveur est encore spectaculaire même si la texture est légèrement plus ferme."
           }
         ]

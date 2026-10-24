@@ -136,7 +136,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_05",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "base_dough",
         "ing_06"
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "enriched_dough"
       ],
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "proofed_dough"
       ],
@@ -259,7 +259,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shaped_rolls",
         "ing_07"

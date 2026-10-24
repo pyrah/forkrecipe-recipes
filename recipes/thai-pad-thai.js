@@ -146,7 +146,7 @@ export default {
     {
       "ingId": "ing_13",
       "role": "Acid",
-      "name": "Coins de chaux",
+      "name": "Coins de citron vert",
       "ratioValue": 1,
       "defaultUnit": "lime",
       "substitutions": []
@@ -165,7 +165,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01"
       ],
@@ -195,7 +195,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_04",
         "ing_05",
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -261,7 +261,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "cooked_shrimp_aromatics",
         "soaked_noodles",
@@ -272,7 +272,7 @@ export default {
         "ing_12"
       ],
       "outputState": "finished_pad_thai",
-      "instructions": "Ajouter les nouilles égouttées au wok. Verser la sauce thai. Jetez constamment pendant 1-2 minutes. Poussez tout d'un côté, fendez les œufs dans le côté vide, et brouillez rapidement jusqu'à ce qu'ils soient à peine fixés, puis repliez-vous dans les nouilles. Ajouter les pousses de haricots et les oignons verts, mélanger deux fois et servir immédiatement. Garnir de cacahuètes. Servir avec de la sauce de poisson, des flocons de chili, du sucre et des quartiers de chaux à table.",
+      "instructions": "Ajouter les nouilles égouttées au wok. Verser la sauce thai. Jetez constamment pendant 1-2 minutes. Poussez tout d'un côté, fendez les œufs dans le côté vide, et brouillez rapidement jusqu'à ce qu'ils soient à peine fixés, puis repliez-vous dans les nouilles. Ajouter les pousses de haricots et les oignons verts, mélanger deux fois et servir immédiatement. Garnir de cacahuètes. Servir avec de la sauce de poisson, des flocons de chili, du sucre et des quartiers de citron vert à table.",
       "visualCue": {
         "primaryTarget": "Les nouilles sont également enrobées d'un glaçure brun caramel, avec des morceaux visibles d'œuf, de crevettes roses et des flecks d'oignon vert.",
         "spectrum": [

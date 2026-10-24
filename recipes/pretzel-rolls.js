@@ -117,7 +117,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -151,7 +151,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "pretzel_dough"
       ],
@@ -181,12 +181,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "risen_pretzel_dough"
       ],
       "outputState": "shaped_rolls",
-      "instructions": "Divisez la pâte en 8 morceaux égaux (environ 80 à 100 g chacun pour un lot typique de 500 g de farine). Pour former un rouleau rond : aplatissez chaque pièce dans un disque, repliez les bords vers le centre tout autour, puis retournez-le et roulez-le sous votre paume en coupe sur le comptoir avec une pression ferme vers le bas, se déplaçant en cercles serrés. Le but est une balle tendue et lisse avec une couture scellée sur le fond. Ou encore, marquer une croix profonde sur le dessus avec un couteau tranchant ou boiteux après la façonnage, ce qui donne le look classique de Laugenbrötchen. Placez les rouleaux en forme sur une feuille doublée de parchemin et réfrigérez à découvert pendant 30 minutes — les rouleaux froids tiennent mieux leur forme pendant le bain de lys.",
+      "instructions": "Divisez la pâte en 8 morceaux égaux (environ 80 à 100 g chacun pour un lot typique de 500 g de farine). Pour former un rouleau rond : aplatissez chaque pièce dans un disque, repliez les bords vers le centre tout autour, puis retournez-le et roulez-le sous votre paume en coupe sur le comptoir avec une pression ferme vers le bas, se déplaçant en cercles serrés. Le but est une balle tendue et lisse avec une couture scellée sur le fond. Ou encore, marquer une croix profonde sur le dessus avec un couteau tranchant ou mou après la façonnage, ce qui donne le look classique de Laugenbrötchen. Placez les rouleaux en forme sur une feuille doublée de parchemin et réfrigérez à découvert pendant 30 minutes — les rouleaux froids tiennent mieux leur forme pendant le bain de lys.",
       "visualCue": {
         "primaryTarget": "Des sphères serrées et lisses avec une couture scellée sur le fond. Pas de larmes ou de pâte. Les rouleaux réfrigérés sont fermes et tiennent leur forme lorsqu'ils sont ramassés.",
         "spectrum": [
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "lye_bathed_rolls",
         "ing_08"

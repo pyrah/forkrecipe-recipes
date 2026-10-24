@@ -142,7 +142,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_11"
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "roasted_shells",
         "ing_02",
@@ -192,7 +192,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "L'oignon est boiteux et translucide sans brunissement. Carottes ramollies mais tenant leur forme. Le pot sent doux et océanique.",
+            "description": "L'oignon est fondant et translucide sans brunissement. Carottes ramollies mais tenant leur forme. Le pot sent doux et océanique.",
             "action": "Ajouter la pâte de tomate et la mélanger."
           },
           {
@@ -206,7 +206,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "vegetable_base",
         "ing_05",
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "deglazed_base",
         "ing_07",
@@ -272,7 +272,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "raw_stock"
       ],

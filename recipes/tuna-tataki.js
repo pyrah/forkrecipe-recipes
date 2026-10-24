@@ -136,7 +136,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "ing_01"
       ],
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "cold_tuna_block",
         "ing_04",
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "seared_tuna"
       ],
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "sliced_tataki",
         "ing_02",

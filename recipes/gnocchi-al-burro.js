@@ -101,7 +101,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_01"
       ],
@@ -131,7 +131,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "riced_potato",
         "ing_02",
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "gnocchi_dough"
       ],
@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "shaped_gnocchi",
         "ing_05",

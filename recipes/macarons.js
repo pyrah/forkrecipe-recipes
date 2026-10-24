@@ -107,7 +107,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -138,7 +138,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "tant_pour_tant",
         "italian_meringue"
@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "macaron_batter"
       ],
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_07",
         "ing_08"
@@ -263,7 +263,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "macaron_shells",
         "buttercream"

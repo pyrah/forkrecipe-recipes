@@ -128,7 +128,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "tarragon_reduction",
         "ing_02",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "sabayon_base",
         "clarified_butter",

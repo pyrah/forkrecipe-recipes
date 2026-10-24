@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "rinsed_hock",
         "ing_02",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Abat-jour",
+      "action": "Écumer",
       "inputs": [
         "boiling_broth"
       ],
@@ -200,7 +200,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Un écrémage trop zélé a enlevé la graisse et le liquide doré avec la mousse.",
+            "description": "Un écrèmege trop zélé a enlevé la graisse et le liquide doré avec la mousse.",
             "action": "Continuez. Le bouillon sera légèrement plus maigre, mais la fumée et la saveur de porc sont toujours présentes dans le jarret."
           }
         ]
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "skimmed_broth"
       ],
@@ -239,7 +239,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "braised_hock"
       ],

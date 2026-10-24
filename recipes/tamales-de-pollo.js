@@ -144,7 +144,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_02",
         "ing_01",
@@ -212,7 +212,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "masa_dough",
         "salsa_verde_chicken",
@@ -266,7 +266,7 @@ export default {
           {
             "state": "Overdone",
             "description": "La masa est devenue très ferme et légèrement sèche, s'éloignant du museau en morceaux.",
-            "action": "Servir avec de la salsa verde ou du créma pour réhydrater. Toujours parfaitement comestible."
+            "action": "Servir avec de la salsa verde ou du crème pour réhydrater. Toujours parfaitement comestible."
           }
         ]
       },

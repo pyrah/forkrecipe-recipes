@@ -4,7 +4,7 @@ export default {
   "slug": "fish-fumet",
   "author": "ForkRecipe Kitchen",
   "title": "Fumet de poisson",
-  "description": "Le cousin rapide, pâle et parfumé des longs stocks bruns — les os maigres de poisson blanc transpiraient dans le beurre avec le poireau, le fenouil et un jet de vin blanc sec, puis à peine mijoté pendant une demi-heure et jamais, jamais bouilli, de sorte qu'il reste clair, délicat et prêt à devenir une sauce, un velours, ou un bain de braconnage.",
+  "description": "Le cousin rapide, pâle et parfumé des longs stocks bruns — les os maigres de poisson blanc transpiraient dans le beurre avec le poireau, le fenouil et un jet de vin blanc sec, puis à peine mijoté pendant une demi-heure et jamais, jamais bouilli, de sorte qu'il reste clair, délicat et prêt à devenir une sauce, un velours, ou un bain de pochage.",
   "cuisine": "Français",
   "culture": "Français classique",
   "category": "stocks",
@@ -259,7 +259,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "wine_base",
         "ing_07",
@@ -293,7 +293,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "infused_fumet"
       ],
@@ -310,7 +310,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Fumet lumineux, clair, légèrement parfumé avec une profondeur savoureuse propre et une légère luminosité de vin.",
-            "action": "Refroidissez-vous au-dessus de la glace et entreposez-la en velours, en bisque, en risotto ou en liquide de braconnage."
+            "action": "Refroidissez-vous au-dessus de la glace et entreposez-la en velours, en bisque, en risotto ou en liquide de pochage."
           },
           {
             "state": "Overdone",

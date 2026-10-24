@@ -4,7 +4,7 @@ export default {
   "slug": "thai-fish-cakes",
   "author": "ForkRecipe Kitchen",
   "title": "Cakes Thai (Tod Mun Pla)",
-  "description": "Des gâteaux de poisson bonifiés et chargés d'herbes pétrissent jusqu'à ce qu'ils ressortent, frits dans l'huile jusqu'à ce qu'ils soient dorés — l'énergie protéique des poissons, élevés à l'aide de feuilles de chaux kaffir et de pâte de curry rouge ardent.",
+  "description": "Des gâteaux de poisson bonifiés et chargés d'herbes pétrissent jusqu'à ce qu'ils ressortent, frits dans l'huile jusqu'à ce qu'ils soient dorés — l'énergie protéique des poissons, élevés à l'aide de feuilles de combava et de pâte de curry rouge ardent.",
   "cuisine": "Thaï",
   "culture": "Centre thaïlandais",
   "category": "seafood",
@@ -80,11 +80,11 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Aromatic",
-      "name": "Feuilles de chaux kaffir, tige centrale enlevée, finement cuffonade",
+      "name": "Feuilles de citron vert kaffir, tige centrale enlevée, finement cuffonade",
       "ratioValue": 8,
       "defaultUnit": "pcs",
       "substitutions": [
-        "zeste de chaux (1 c. à thé) — moins floral, utilisation en dernier recours"
+        "zeste de citron vert (1 c. à thé) — moins floral, utilisation en dernier recours"
       ]
     },
     {
@@ -124,7 +124,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -165,7 +165,7 @@ export default {
         "ing_06"
       ],
       "outputState": "seasoned_fish_paste",
-      "instructions": "Transférer la pâte de poisson dans un bol. Ajouter la chaux kaffir et les haricots tranchés. Pliez fermement avec une spatule — pas doucement, mais avec une pression réelle pour distribuer les ajouts sans briser le réseau de protéines déjà développé. A ce stade, de nombreux cuisiniers thaïlandais giflent le mélange contre le bol 10–15 fois: soulever et jeter la pâte dans le bol pour chasser les bulles d'air et encore resserrer le réseau. Réfrigérer la pâte pendant 15 minutes — le refroidissement facilite la formation.",
+      "instructions": "Transférer la pâte de poisson dans un bol. Ajouter le citron vert kaffir et les haricots tranchés. Pliez fermement avec une spatule — pas doucement, mais avec une pression réelle pour distribuer les ajouts sans briser le réseau de protéines déjà développé. A ce stade, de nombreux cuisiniers thaïlandais giflent le mélange contre le bol 10–15 fois: soulever et jeter la pâte dans le bol pour chasser les bulles d'air et encore resserrer le réseau. Réfrigérer la pâte pendant 15 minutes — le refroidissement facilite la formation.",
       "visualCue": {
         "primaryTarget": "Une pâte rouge-orange avec des taches visibles de feuille de lime de kaffir vert profond et des rondelles de haricots vert vif réparties dans tout. La pâte devrait contenir un pic lorsqu'elle est écorcée.",
         "spectrum": [
@@ -176,7 +176,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Haricots et chaux kaffir distribués uniformément. La pâte tient un pic clair lorsqu'elle est écopée d'une cuillère et libérée. Refroidie et facile à manipuler.",
+            "description": "Haricots et citron vert kaffir distribués uniformément. La pâte tient un pic clair lorsqu'elle est écopée d'une cuillère et libérée. Refroidie et facile à manipuler.",
             "action": "Commencez à façonner immédiatement pendant le froid."
           },
           {
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "seasoned_fish_paste",
         "ing_08"
@@ -198,7 +198,7 @@ export default {
       "outputState": "fried_fish_cakes",
       "instructions": "Chauffer l'huile dans un wok ou une poêle profonde à 175°C (350°F). Mouiller vos paumes avec de l'eau froide. Scoop 2 cuillères à soupe tasées de pâte et se forment en un disque plat de 1,5 cm d'épaisseur et de 7 cm de diamètre — ils devraient ressembler à des rondelles de hockey, pas des balles. Glissez doucement dans l'huile. Fry 4-5 à la fois sans fouler. Cuire 2 à 3 minutes de chaque côté jusqu'à ce qu'il y ait un brun doré profond partout. Les gâteaux flotteront et souffleront légèrement pendant qu'ils cuisineront — un bon signe. Testez l'un en coupant en deux: il doit être cuit à travers sans centre translucide et une texture intérieure dense et généreuse.",
       "visualCue": {
-        "primaryTarget": "Des disques bruns dorés qui flottent à la surface de l'huile, légèrement gonflés. Flacons vert visible de chaux kaffir et de haricots qui pèlent dans la croûte.",
+        "primaryTarget": "Des disques bruns dorés qui flottent à la surface de l'huile, légèrement gonflés. Flacons vert visible de citron vert kaffir et de haricots qui pèlent dans la croûte.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -221,7 +221,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "fried_fish_cakes"
       ],

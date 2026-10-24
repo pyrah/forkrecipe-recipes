@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -167,7 +167,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_06",
         "ing_07"
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "chocolate_yolk_base",
         "stiff_meringue"
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "sachertorte_batter"
       ],
@@ -259,7 +259,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "baked_sachertorte_layers",
         "ing_08",

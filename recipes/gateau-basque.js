@@ -145,7 +145,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_08",
         "ing_09",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "hot_pastry_cream"
       ],
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -271,7 +271,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "egg_butter_mixture",
         "ing_01",
@@ -304,7 +304,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "basque_shortcrust"
       ],
@@ -334,7 +334,7 @@ export default {
     },
     {
       "nodeId": "step_7",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "chilled_shortcrust",
         "chilled_pastry_cream",
@@ -366,7 +366,7 @@ export default {
     },
     {
       "nodeId": "step_8",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_gateau"
       ],

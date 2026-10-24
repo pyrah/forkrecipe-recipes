@@ -4,7 +4,7 @@ export default {
   "slug": "tempeh-rendang",
   "author": "ForkRecipe Kitchen",
   "title": "Tempeh Rendang",
-  "description": "Rendang végétalien indonésien où des plaques de tempeh fermenté de soja sont lentement mijotées dans une pâte de lait de coco aromatique avec galangal, citronnelle et de la chaux de kaffir jusqu'à ce que la noix de coco sèche et que le tempeh soit incrusté dans une couche d'épices foncée et brûlée.",
+  "description": "Rendang végétalien indonésien où des plaques de tempeh fermenté de soja sont lentement mijotées dans une pâte de lait de coco aromatique avec galangal, citronnelle et du citron vert de kaffir jusqu'à ce que la noix de coco sèche et que le tempeh soit incrusté dans une couche d'épices foncée et brûlée.",
   "cuisine": "Indonésien",
   "culture": "Sumatran Ouest",
   "category": "proteins",
@@ -76,11 +76,11 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Aromatic",
-      "name": "Feuilles de chaux de Kaffir",
+      "name": "Feuilles de citron vert de Kaffir",
       "ratioValue": 8,
       "defaultUnit": "whole",
       "substitutions": [
-        "feuilles de laurier + zeste de chaux"
+        "feuilles de laurier + zeste de citron vert"
       ]
     },
     {
@@ -181,7 +181,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "rendang_paste",
         "ing_15"
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_paste",
         "ing_01",
@@ -260,7 +260,7 @@ export default {
         "ing_14"
       ],
       "outputState": "simmering_rendang",
-      "instructions": "Ajouter le tempeh à la pâte frite et mélanger pour enrober. Verser dans le lait de coco, ajouter la citronnelle, le galangal, les feuilles de chaux de kaffir, la feuille de curcuma, le sel et le sucre de palme. Mélanger. Porter à ébullition, puis laisser mijoter à moyen terme. Cuire à découvert, en remuant toutes les 10 minutes pour éviter le collage.",
+      "instructions": "Ajouter le tempeh à la pâte frite et mélanger pour enrober. Verser dans le lait de coco, ajouter la citronnelle, le galangal, les feuilles de citron vert de kaffir, la feuille de curcuma, le sel et le sucre de palme. Mélanger. Porter à ébullition, puis laisser mijoter à moyen terme. Cuire à découvert, en remuant toutes les 10 minutes pour éviter le collage.",
       "visualCue": {
         "primaryTarget": "Un ragoût de noix de coco riche et parfumé, légèrement bouillonnant avec la couleur jaune-orange visible du curcuma et rouge profond des chilis. Les pièces de Tempeh sont submergées.",
         "spectrum": [
@@ -271,7 +271,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Sauce de noix de coco foncée unifiée, parfumée à la citronnelle et à la chaux kaffir. Tempeh commence à absorber la couleur. Bubbling régulièrement.",
+            "description": "Sauce de noix de coco foncée unifiée, parfumée à la citronnelle et au citron vert kaffir. Tempeh commence à absorber la couleur. Bubbling régulièrement.",
             "action": "Continuer à mijoter à découvert jusqu'à ce que le lait de coco diminue considérablement."
           },
           {
@@ -285,7 +285,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "simmering_rendang"
       ],
@@ -315,7 +315,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_tempeh_rendang",
         "ing_16"

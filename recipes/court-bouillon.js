@@ -4,14 +4,14 @@ export default {
   "slug": "court-bouillon",
   "author": "ForkRecipe Kitchen",
   "title": "Cour-Bouillon",
-  "description": "Un bouillon aromatique rapide et acidulé, le liquide de braconnage français classique pour poissons et crustacés. L'eau mijotée de mirépoix, de vin, d'herbes et d'une forte éclaboussure de vinaigre, puis refroidie si délicate chair glisse doucement et émerge parfumée plutôt que lavée. Pas un stock de longue cuisson, mais un bain parfumé construit en moins d'une heure.",
+  "description": "Un bouillon aromatique rapide et acidulé, le liquide de pochage français classique pour poissons et crustacés. L'eau mijotée de mirépoix, de vin, d'herbes et d'une forte éclaboussure de vinaigre, puis refroidie si délicate chair glisse doucement et émerge parfumée plutôt que lavée. Pas un stock de longue cuisson, mais un bain parfumé construit en moins d'une heure.",
   "cuisine": "Français",
   "culture": "Français classique",
   "category": "stocks",
   "tags": [
     "court-bouillon",
     "français",
-    "braconnage",
+    "pochage",
     "poissons",
     "crustacés",
     "aromatiques",
@@ -153,7 +153,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "cold_infusion",
         "ing_06",
@@ -190,7 +190,7 @@ export default {
         "infused_broth"
       ],
       "outputState": "court_bouillon",
-      "instructions": "Pour le braconnage de poissons entiers ou de mollusques, laissez le bouillon refroidir à chaud ou même froid avant l'entrée des fruits de mer, de sorte que la chair chauffe doucement et reste humide — un ébullition violent saisit et la durcit. Pour le braconnage des filets ou comme bain prêt, presser le bouillon dans un tamis fin, presser les aromatiques et jeter les solides. Goûtez et ajustez le sel et une pression finale d'acide. Utiliser dans la journée ou congeler.",
+      "instructions": "Pour le pochage de poissons entiers ou de mollusques, laissez le bouillon refroidir à chaud ou même froid avant l'entrée des fruits de mer, de sorte que la chair chauffe doucement et reste humide — un ébullition violent saisit et la durcit. Pour le pochage des filets ou comme bain prêt, presser le bouillon dans un tamis fin, presser les aromatiques et jeter les solides. Goûtez et ajustez le sel et une pression finale d'acide. Utiliser dans la journée ou congeler.",
       "visualCue": {
         "primaryTarget": "Un liquide d'ambre doré propre, tendu, suffisamment clair pour être lu, sentant équilibré entre le vin, l'herbe, les agrumes et le sel sans aucune note dominante.",
         "spectrum": [

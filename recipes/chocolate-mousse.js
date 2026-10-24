@@ -144,7 +144,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Température",
+      "action": "Tempérer",
       "inputs": [
         "melted_chocolate",
         "ing_03",
@@ -177,7 +177,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_06"
       ],
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "chocolate_base",
         "french_meringue",

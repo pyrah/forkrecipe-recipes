@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "rendered_salt_pork",
         "ing_02"
@@ -168,7 +168,7 @@ export default {
       "outputState": "sweated_onion",
       "instructions": "Ajouter l'oignon en dés à la graisse fondue dans le pot à feu moyen. Cuire en remuant toutes les 2 minutes, de 8 à 10 minutes jusqu'à ce qu'il soit complètement adouci et translucide. Les oignons doivent être doux et productifs, et non brunis. New England chowder est une chowder blanche; toute caramélisation des aromatiques la teintera jaune-brun et ajoutera de la douceur qui combat la saumure.",
       "visualCue": {
-        "primaryTarget": "Les oignons sont complètement translucides et boiteux, réduits à environ 60% de leur volume brut. Pas de bords dorés ou bruns.",
+        "primaryTarget": "Les oignons sont complètement translucides et mou, réduits à environ 60% de leur volume brut. Pas de bords dorés ou bruns.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "sweated_onion",
         "ing_03"
@@ -222,7 +222,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "veloute_base",
         "ing_04",
@@ -256,7 +256,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "potato_chowder",
         "ing_06",

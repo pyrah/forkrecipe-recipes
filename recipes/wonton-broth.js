@@ -124,7 +124,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -155,7 +155,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_bones",
         "ing_03",
@@ -165,7 +165,7 @@ export default {
         "ing_07"
       ],
       "outputState": "simmered_broth",
-      "instructions": "Transférer les os blanchis dans un pot propre. Ajouter l'eau froide, les crevettes séchées rincées, le nœud de pétoncle attaché, les tranches de gingembre meurtris et le vin Shaoxing. Porter à mijoter à feu moyen-vif — cette transition vers le premier mijot produira à nouveau de la mousse; l'écumer avec une écume fine ou une louche, mais il y aura beaucoup moins que dans le blanch. Une fois que le bouillon atteint une mijotée douce, réduire la chaleur pour maintenir le mérest tremblant de la surface — de minuscules bulles à peine là, montant du bas. Ceci est essentiel : un ébullition enroulé émulsifie la graisse et les protéines dans le liquide et crée un bouillon blanc nuageux ; un véritable bouillon cantonais doit rester clair. Maintenez ce doux mijoter pendant 2 heures, en écrémant occasionnellement.",
+      "instructions": "Transférer les os blanchis dans un pot propre. Ajouter l'eau froide, les crevettes séchées rincées, le nœud de pétoncle attaché, les tranches de gingembre meurtris et le vin Shaoxing. Porter à mijoter à feu moyen-vif — cette transition vers le premier mijot produira à nouveau de la mousse; l'écumer avec une écume fine ou une louche, mais il y aura beaucoup moins que dans le blanch. Une fois que le bouillon atteint une mijotée douce, réduire la chaleur pour maintenir le mérest tremblant de la surface — de minuscules bulles à peine là, montant du bas. Ceci est essentiel : un ébullition enroulé émulsifie la graisse et les protéines dans le liquide et crée un bouillon blanc nuageux ; un véritable bouillon cantonais doit rester clair. Maintenez ce doux mijoter pendant 2 heures, en écrèment occasionnellement.",
       "visualCue": {
         "primaryTarget": "Un pot de bouillon tremblant doucement avec juste le murmure le plus faible du mouvement à la surface — quelques bulles paresseuses se cassent toutes les quelques secondes. Le liquide est un or jaune clair, avec les os visibles en dessous et les crevettes séchées flottant.",
         "spectrum": [
@@ -190,7 +190,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "simmered_broth"
       ],
@@ -211,7 +211,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le surécrémage a enlevé trop de graisse, et le bouillon a l'air aqueux et pâle avec aucun des éclats dorés qui marque un bouillon cantonais bien nourri.",
+            "description": "Le surécrèmege a enlevé trop de graisse, et le bouillon a l'air aqueux et pâle avec aucun des éclats dorés qui marque un bouillon cantonais bien nourri.",
             "action": "La saveur sera toujours excellente. Une petite bruine d'huile neutre ou de graisse de poulet (si disponible) tombée sur chaque bol au moment du service rétablira la richesse visuelle et texturale."
           }
         ]
@@ -220,7 +220,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "strained_broth",
         "ing_08",

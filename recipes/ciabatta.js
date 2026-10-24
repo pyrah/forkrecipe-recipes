@@ -101,7 +101,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "shaggy_dough"
       ],
@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "developed_dough",
         "ing_06"
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "proofed_loaves"
       ],

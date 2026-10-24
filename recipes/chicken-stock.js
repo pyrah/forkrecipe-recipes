@@ -106,7 +106,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -137,7 +137,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "blanched_bones",
         "ing_02",
@@ -148,7 +148,7 @@ export default {
         "ing_07"
       ],
       "outputState": "simmered_stock",
-      "instructions": "Couvrez les os blanchis avec le reste de l'eau froide — il devrait s'asseoir à environ 3 cm au - dessus d'eux. Porter lentement à feu, puis laisser mijoter au plus doux où seulement quelques bulles brisent la surface chaque seconde ou deux. Après 30 minutes, ajouter l'oignon, la carotte, le céleri, le bouquet garni et les grains de poivre. Tenez ce tremble nu, découvert, pendant 3-4 heures, mousse écrémante et graisse de surface avec une louche chaque fois qu'il se rassemble. Ne la laissez jamais bouillir — bouillir la graisse et les protéines dans le liquide et la rendre trouble et grasse.",
+      "instructions": "Couvrez les os blanchis avec le reste de l'eau froide — il devrait s'asseoir à environ 3 cm au - dessus d'eux. Porter lentement à feu, puis laisser mijoter au plus doux où seulement quelques bulles brisent la surface chaque seconde ou deux. Après 30 minutes, ajouter l'oignon, la carotte, le céleri, le bouquet garni et les grains de poivre. Tenez ce tremble nu, découvert, pendant 3-4 heures, mousse écrèmente et graisse de surface avec une louche chaque fois qu'il se rassemble. Ne la laissez jamais bouillir — bouillir la graisse et les protéines dans le liquide et la rendre trouble et grasse.",
       "visualCue": {
         "primaryTarget": "La surface bouge à peine: une bulle paresseuse ou un éclat s'élevant ici et là, avec un mince rideau de vapeur. Le liquide s'amplifie graduellement à l'or pâle et goûte distinctement du poulet avec une note de derrière végétale douce.",
         "spectrum": [

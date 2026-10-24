@@ -63,7 +63,7 @@ export default {
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": [
-        "pécans",
+        "noix de noix de pécan",
         "noisettes"
       ]
     },
@@ -137,7 +137,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_02"
       ],
@@ -199,7 +199,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
@@ -229,7 +229,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "roasted_sprouts",
         "crispy_pancetta",

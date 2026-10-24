@@ -4,12 +4,12 @@ export default {
   "slug": "pecan-pie-filling",
   "author": "ForkRecipe Kitchen",
   "title": "Remplissage de la tarte aux pois",
-  "description": "Une crème ambrée, parfumée au caramel, liée au sirop de maïs et aux œufs entiers, versé sur des pacanes grillées qui s'élèvent à la surface et laque sur une couronne brillante et recouverte de craquelin.",
+  "description": "Une crème ambrée, parfumée au caramel, liée au sirop de maïs et aux œufs entiers, versé sur des noix de pécan grillées qui s'élèvent à la surface et laque sur une couronne brillante et recouverte de craquelin.",
   "cuisine": "Américain",
   "culture": "Sud",
   "category": "desserts",
   "tags": [
-    "pécan",
+    "noix de pécan",
     "sirop de maïs",
     "sud",
     "tarte",
@@ -75,7 +75,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Protein",
-      "name": "moitiés de pécan",
+      "name": "moitiés de noix de pécan",
       "ratioValue": 5,
       "defaultUnit": "parts",
       "substitutions": [
@@ -104,14 +104,14 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_05"
       ],
       "outputState": "toasted_pecans",
-      "instructions": "Étendre les moitiés de pécan sur une plaque sèche en une seule couche. Faire cuire à 175 C (350 F) pendant 8-10 minutes, en remuant une fois à mi-chemin. Vous ne faites pas que griller pour la couleur — vous chassez l'humidité pour que les noix restent croustillantes à travers un long four à l'intérieur d'une crème humide.",
+      "instructions": "Étendre les moitiés de noix de pécan sur une plaque sèche en une seule couche. Faire cuire à 175 C (350 F) pendant 8-10 minutes, en remuant une fois à mi-chemin. Vous ne faites pas que griller pour la couleur — vous chassez l'humidité pour que les noix restent croustillantes à travers un long four à l'intérieur d'une crème humide.",
       "visualCue": {
-        "primaryTarget": "Les pécans sont uniformément une ombre plus profonde — un brun rougeâtre chaud plutôt que le bronzage pâle qu'ils ont commencé comme. La cuisine sent le beurre chaud et le caramel.",
+        "primaryTarget": "Les noix de noix de pécan sont uniformément une ombre plus profonde — un brun rougeâtre chaud plutôt que le bronzage pâle qu'ils ont commencé comme. La cuisine sent le beurre chaud et le caramel.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -126,15 +126,15 @@ export default {
           {
             "state": "Overdone",
             "description": "Les noix sont brun foncé à noir aux bords. L'odeur est amère et acride plutôt que caramel-sweet.",
-            "action": "Jeter et recommencer — les pacanes brûlées ruineront la tarte finie avec une amertume persistante."
+            "action": "Jeter et recommencer — les noix de pécan brûlées ruineront la tarte finie avec une amertume persistante."
           }
         ]
       },
-      "feelCue": "Une noix de pécan parfaitement grillée s'éclate proprement lorsqu'elle est cassée et sèche entre les doigts, sans graisse brute cireuse. Frottez-en un entre vos paumes; l'huile libérée doit sentir immédiatement du caramel, pas des noix crues."
+      "feelCue": "Une noix de noix de pécan parfaitement grillée s'éclate proprement lorsqu'elle est cassée et sèche entre les doigts, sans graisse brute cireuse. Frottez-en un entre vos paumes; l'huile libérée doit sentir immédiatement du caramel, pas des noix crues."
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -168,7 +168,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "syrup_base",
         "ing_03"
@@ -186,7 +186,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Ambre lisse, profond, avec une surface satinée et très peu de bulles. Verse uniformément une cuillère dans un ruisseau stable.",
-            "action": "Verser sur les pacanes grillées dans la coquille de tarte non cuite."
+            "action": "Verser sur les noix de pécan grillées dans la coquille de tarte non cuite."
           },
           {
             "state": "Overdone",
@@ -199,24 +199,24 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "filling_batter",
         "toasted_pecans"
       ],
       "outputState": "unbaked_pie",
-      "instructions": "Disposer les moitiés de pécan grillées dans des cercles concentriques dans une coquille de tarte de 9 pouces non cuite, côté plat vers le bas, couvrant tout le fond. Versez la pâte de remplissage doucement sur eux — les pacanes flotteront et redistribueront. N'essayez pas de les tenir en place; ils s'arrangeront comme ils font cuire. Remplir à moins de 1 cm du bord de la croûte.",
+      "instructions": "Disposer les moitiés de noix de pécan grillées dans des cercles concentriques dans une coquille de tarte de 9 pouces non cuite, côté plat vers le bas, couvrant tout le fond. Versez la pâte de remplissage doucement sur eux — les noix de pécan flotteront et redistribueront. N'essayez pas de les tenir en place; ils s'arrangeront comme ils font cuire. Remplir à moins de 1 cm du bord de la croûte.",
       "visualCue": {
-        "primaryTarget": "Les pécans flottent près de la surface dans une couche uniforme, partiellement submergée dans le remplissage ambre. La coque est remplie juste en dessous de la jante sans ouverture.",
+        "primaryTarget": "Les noix de noix de pécan flottent près de la surface dans une couche uniforme, partiellement submergée dans le remplissage ambre. La coque est remplie juste en dessous de la jante sans ouverture.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Shell est moins de 75% plein. Trop peu de pécans — le rapport noix-à-garde sera faux.",
-            "action": "Ajouter plus de remplissage ou plus de pécans. Ne pas dépasser la jante."
+            "description": "Shell est moins de 75% plein. Trop peu de noix de noix de pécan — le rapport noix-à-garde sera faux.",
+            "action": "Ajouter plus de remplissage ou plus de noix de noix de pécan. Ne pas dépasser la jante."
           },
           {
             "state": "Perfect",
-            "description": "Les pécans forment une couche presque continue qui se chevauche juste sous la surface du remplissage. Le remplissage atteint 5 à 8 mm du bord de la croûte.",
+            "description": "Les noix de noix de pécan forment une couche presque continue qui se chevauche juste sous la surface du remplissage. Le remplissage atteint 5 à 8 mm du bord de la croûte.",
             "action": "Cuire immédiatement à 175 °C (350 °F)."
           },
           {
@@ -230,14 +230,14 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "unbaked_pie"
       ],
       "outputState": "baked_pie",
       "instructions": "Faire cuire à 175 °C (350 °F) sur le support intermédiaire inférieur pendant 50 à 60 minutes. Bouclier le bord de la croûte avec du papier ou un bouclier à tarte après les 20 premières minutes. Les ensembles de crème de l'extérieur vers l'intérieur — les bords vont se raffermir tandis que le centre apparaît encore liquide. Ne pas trop cuire en attendant que le centre se ferme dans le four; il finira la cuisson hors-chauffage.",
       "visualCue": {
-        "primaryTarget": "Le haut de pacane est une acajou laquée profonde. Les bords du remplissage sont entièrement réglés. Le centre oscille comme de la gélatine — un tourbillon lent et unifié à travers toute la tarte, pas une éclaboussure liquide.",
+        "primaryTarget": "Le haut de noix de pécan est une acajou laquée profonde. Les bords du remplissage sont entièrement réglés. Le centre oscille comme de la gélatine — un tourbillon lent et unifié à travers toute la tarte, pas une éclaboussure liquide.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -246,7 +246,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les bords sont fermes et mats. Le centre a un vagabond lent qui déplace toute la tarte comme une masse. Les pécans sont laqués profondément et parfumés.",
+            "description": "Les bords sont fermes et mats. Le centre a un vagabond lent qui déplace toute la tarte comme une masse. Les noix de noix de pécan sont laqués profondément et parfumés.",
             "action": "Laisser refroidir complètement sur une grille — au moins 2 heures — avant de trancher."
           },
           {

@@ -69,7 +69,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Citrus",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.3,
       "defaultUnit": "part",
       "substitutions": [
@@ -98,7 +98,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -112,7 +112,7 @@ export default {
           {
             "state": "Underdone",
             "description": "Après seulement 5 minutes de trempage, l'eau est rouge-rose vif mais fine-tâche — les fleurs n'ont pas libéré toute leur tartness ou leur profondeur florale. C'est comme de l'eau de couleur.",
-            "action": "Accroche-toi pendant 15 à 20 minutes. Vérifiez par dégustation : elle devrait être agressivement tarte et florale, plus que vous voulez boire propre."
+            "action": "Accroche-toi pendant 15 à 20 minutes. Vérifiez par dégustation : elle devrait être agressivement acidulée et florale, plus que vous voulez boire propre."
           },
           {
             "state": "Perfect",
@@ -161,14 +161,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "sweetened_concentrate",
         "ing_04",
         "ing_05"
       ],
       "outputState": "finished_agua_fresca",
-      "instructions": "Incorporer le jus de lime dans le concentré sucré chaud, puis verser dans un grand pichet et ajouter l'eau froide pour la dilution. Bien mélanger et goûter : ajuster la chaux, le sucre ou l'eau. Réfrigérer pendant au moins 1 heure, ou placer au-dessus d'un bol de glace pour accélérer le refroidissement. La saveur s'affine et s'éclaircit lorsque le froid — ce qui a un goût presque trop chaud sera tout à fait rafraîchissant à la température de service. Servir sur beaucoup de glace. Notez que l'hibiscus agua fresca s'estompe d'un pourpre vif à un rouge brique plus terne sur 24 heures au réfrigérateur, mais la saveur n'est pas affectée; remuer avant de servir comme un nuage des pigments fixés est purement esthétique.",
+      "instructions": "Incorporer le jus de lime dans le concentré sucré chaud, puis verser dans un grand pichet et ajouter l'eau froide pour la dilution. Bien mélanger et goûter : ajuster le citron vert, le sucre ou l'eau. Réfrigérer pendant au moins 1 heure, ou placer au-dessus d'un bol de glace pour accélérer le refroidissement. La saveur s'affine et s'éclaircit lorsque le froid — ce qui a un goût presque trop chaud sera tout à fait rafraîchissant à la température de service. Servir sur beaucoup de glace. Notez que l'hibiscus agua fresca s'estompe d'un pourpre vif à un rouge brique plus terne sur 24 heures au réfrigérateur, mais la saveur n'est pas affectée; remuer avant de servir comme un nuage des pigments fixés est purement esthétique.",
       "visualCue": {
         "primaryTarget": "Une boisson vive et transparente pour enfants lorsqu'elle est versée sur la glace, la couleur du jus de pamplemousse rouge rubis, quelque part entre le rouge et le magenta. Quand vous tenez le verre à la lumière, il brille un rubis presque comme un bijou translucide.",
         "spectrum": [
@@ -179,7 +179,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Crimson glacé, vif, tart-sweet avec une note florale. La chaux éclaire l'hibiscus sans goûter distinctement la chaux. Chaque gorgée laisse la bouche propre et fraîche. La couleur est très belle dans un verre.",
+            "description": "Crimson glacé, vif, tart-sweet avec une note florale. La citron vert éclaire l'hibiscus sans goûter distinctement le citron vert. Chaque gorgée laisse la bouche propre et fraîche. La couleur est très belle dans un verre.",
             "action": "Servir immédiatement sur la glace avec un coin de lime sur le bord."
           },
           {

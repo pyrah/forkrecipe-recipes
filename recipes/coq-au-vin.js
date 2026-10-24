@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "rendered_lardons",
         "ing_01",
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "softened_base",
         "ing_08",
@@ -269,7 +269,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "wine_base",
         "ing_04",
@@ -308,7 +308,7 @@ export default {
         "ing_11"
       ],
       "outputState": "finished_coq_au_vin",
-      "instructions": "Pendant que le poulet repose, faire sauter les oignons perlés et les champignons dans un peu de beurre jusqu'à ce qu'ils soient dorés et glacés. Si la sauce de cuisson est mince, lever le poulet et laisser mijoter la sauce à découvert pour réduire, en écrémant toute graisse de la surface. Repliez le poulet, les lardons, les oignons et les champignons dans la sauce, chauffez doucement et corrigez l'assaisonnement. Reposez-vous 10 minutes avant de servir.",
+      "instructions": "Pendant que le poulet repose, faire sauter les oignons perlés et les champignons dans un peu de beurre jusqu'à ce qu'ils soient dorés et glacés. Si la sauce de cuisson est mince, lever le poulet et laisser mijoter la sauce à découvert pour réduire, en écrèment toute graisse de la surface. Repliez le poulet, les lardons, les oignons et les champignons dans la sauce, chauffez doucement et corrigez l'assaisonnement. Reposez-vous 10 minutes avant de servir.",
       "visualCue": {
         "primaryTarget": "Une sauce brillante et foncée since le poulet et les légumes, juste assez épais pour envelopper l'arrière d'une cuillère et tenir une ligne propre quand vous tirez un doigt à travers elle.",
         "spectrum": [

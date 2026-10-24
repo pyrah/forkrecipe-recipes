@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "sweated_aromatics",
         "ing_01",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "tomato_base",
         "ing_05",
@@ -218,12 +218,12 @@ export default {
       "outputState": "simmered_tomate",
       "instructions": "Verser dans le bouillon blanc, mettre dans le bouquet garni, et assaisonner légèrement avec du sel (aller facile si vous avez utilisé le porc salé). Portez à la frémissante et maintenez-la là, partiellement couverte, pendant une heure et demie ou plus, en écumant la graisse et la souillure qui se rassemblent à la surface. La sauce doit s'arroser, ne jamais bouillir.",
       "visualCue": {
-        "primaryTarget": "Une sauce rouge approfondissement, lisse de mousse et de graisse de surface d'un écrémage régulier, assez épaisse pour enrober légèrement une cuillère. Le bouquet garni a imprégné son parfum.",
+        "primaryTarget": "Une sauce rouge approfondissement, lisse de mousse et de graisse de surface d'un écrèmege régulier, assez épaisse pour enrober légèrement une cuillère. Le bouquet garni a imprégné son parfum.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Mince et aqueuse, dégustation de pièces séparées — le stock ici, la tomate là — avec un film gras et de lard gris sur le dessus.",
-            "action": "Gardez-le à mijoter lentement et patinez patiemment. Temps marié avec écrémage est ce qui fusionne et clarifie la sauce."
+            "action": "Gardez-le à mijoter lentement et patinez patiemment. Temps marié avec écrèmege est ce qui fusionne et clarifie la sauce."
           },
           {
             "state": "Perfect",

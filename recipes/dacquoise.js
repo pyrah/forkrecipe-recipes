@@ -109,7 +109,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
@@ -139,7 +139,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "stiff_meringue",
         "toasted_hazelnut_flour",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "dacquoise_batter"
       ],
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_06",
         "ing_07",

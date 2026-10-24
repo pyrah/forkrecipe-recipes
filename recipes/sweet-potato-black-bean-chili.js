@@ -5,7 +5,7 @@ export default {
   "parentSlug": null,
   "author": "ForkRecipe Kitchen",
   "title": "Pommes de terre douces et piments de haricots noirs",
-  "description": "Un chili épais et fumé de cubes de patates douces et de haricots noirs mijotés de tomates grillées au feu, de chipotle et de cumin. Douce et terreuse avec une chaleur smoldering, illuminé à la fin avec la chaux et la coriandre.",
+  "description": "Un chili épais et fumé de cubes de patates douces et de haricots noirs mijotés de tomates grillées au feu, de chipotle et de cumin. Douce et terreuse avec une chaleur smoldering, illuminé à la fin avec le citron vert et la coriandre.",
   "cuisine": "Américain",
   "culture": "d'inspiration sud-ouest",
   "category": "grains",
@@ -206,7 +206,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "softened_sofrito",
         "ing_05",
@@ -268,7 +268,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Les épices collent noir sur le pot et sentent l'acride.",
-            "action": "Déglacer immédiatement avec le stock; équilibrer toute amertume avec de la chaux supplémentaire à la fin."
+            "action": "Déglacer immédiatement avec le stock; équilibrer toute amertume avec du citron vert supplémentaire à la fin."
           }
         ]
       },
@@ -276,7 +276,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_chili_base",
         "ing_11",
@@ -298,7 +298,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le chili est assez épais pour être posé sur une cuillère; la patate douce est entièrement tendre.",
-            "action": "Terminer avec la chaux et la coriandre."
+            "action": "Terminer avec le citron vert et la coriandre."
           },
           {
             "state": "Overdone",
@@ -311,7 +311,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "simmered_chili",
         "ing_15",
@@ -327,7 +327,7 @@ export default {
           {
             "state": "Underdone",
             "description": "Le Chili a un goût lourd et plat.",
-            "action": "Ajouter plus de chaux et une pincée de sel."
+            "action": "Ajouter plus de citron vert et une pincée de sel."
           },
           {
             "state": "Perfect",
@@ -336,12 +336,12 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Trop aigre de l'excès de chaux.",
+            "description": "Trop aigre de l'excès de citron vert.",
             "action": "Incorporer une pincée de sucre ou plus de haricots pour rééquilibrer."
           }
         ]
       },
-      "feelCue": "La chaux devrait réveiller le chili — la première cuillère doit avoir un goût vif et non boueux."
+      "feelCue": "La citron vert devrait réveiller le chili — la première cuillère doit avoir un goût vif et non boueux."
     }
   ]
 };

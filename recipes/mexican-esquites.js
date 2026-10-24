@@ -4,7 +4,7 @@ export default {
   "slug": "mexican-esquites",
   "author": "ForkRecipe Kitchen",
   "title": "Esquites (Salade de maïs de la rue mexicaine)",
-  "description": "Des grains de maïs carbonisé ont été jetés au chaud avec de la créma, de la chaux, du cotija et de la poudre de chile.",
+  "description": "Des grains de maïs carbonisé ont été jetés au chaud avec de la crème, du citron vert, du cotija et de la poudre de chile.",
   "cuisine": "Mexicain",
   "culture": "Mexicain",
   "category": "vegetables",
@@ -48,7 +48,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Dairy",
-      "name": "Crème créma ou aigre mexicaine",
+      "name": "Crème crème ou aigre mexicaine",
       "ratioValue": 80,
       "defaultUnit": "g",
       "substitutions": [
@@ -80,7 +80,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Citrus",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "ml",
       "substitutions": []
@@ -134,7 +134,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_10",
@@ -166,7 +166,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "charred_corn",
         "ing_02",
@@ -176,7 +176,7 @@ export default {
         "ing_07"
       ],
       "outputState": "dressed_esquites",
-      "instructions": "Alors que le maïs est encore chaud, transférer dans un bol. Ajouter le créma, la mayonnaise, le jus de lime, la poudre de chile et les pétoncles tranchés. Jetez immédiatement — la chaleur du maïs réchauffera la vinaigrette et l'aidera à enrober chaque grain. Goûtez et ajustez : plus de chaux pour la luminosité, plus de chile pour la chaleur, une pincée de sel si nécessaire. La vinaigrette doit être crémeuse, acidulée et épicée; chaque morsure doit avoir les quatre éléments simultanément.",
+      "instructions": "Alors que le maïs est encore chaud, transférer dans un bol. Ajouter le crème, la mayonnaise, le jus de lime, la poudre de chile et les pétoncles tranchés. Jetez immédiatement — la chaleur du maïs réchauffera la vinaigrette et l'aidera à enrober chaque grain. Goûtez et ajustez : plus de citron vert pour la luminosité, plus de chile pour la chaleur, une pincée de sel si nécessaire. La vinaigrette doit être crémeuse, acidulée et épicée; chaque morsure doit avoir les quatre éléments simultanément.",
       "visualCue": {
         "primaryTarget": "Amandes de maïs carbonisé entièrement enrobées d'une vinaigrette crémeuse jaune pâle avec des taches rouge chile visibles et de l'échalon vert.",
         "spectrum": [
@@ -187,21 +187,21 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Chaque noyau est enduit. Le mélange est chaud, à la vapeur, et l'odeur de char se mêle à la chaux et à la crème. Le pétoncle est distribué partout.",
+            "description": "Chaque noyau est enduit. Le mélange est chaud, à la vapeur, et l'odeur de char se mêle au citron vert et à la crème. Le pétoncle est distribué partout.",
             "action": "Assietter et finir avec le cotija et les herbes."
           },
           {
             "state": "Overdone",
             "description": "La vinaigrette est passée de crémeux à mince de trop de jus de lime.",
-            "action": "Ajouter une cuillère à soupe supplémentaire de créma pour restaurer le corps."
+            "action": "Ajouter une cuillère à soupe supplémentaire de crème pour restaurer le corps."
           }
         ]
       },
-      "feelCue": "Goûtez une cuillerée — la première saveur devrait être le maïs sucré, puis la crème, puis la luminosité de la chaux couper à travers, puis une chaleur construire à partir du chile. Si un élément domine, ajustez."
+      "feelCue": "Goûtez une cuillerée — la première saveur devrait être le maïs sucré, puis la crème, puis la luminosité du citron vert couper à travers, puis une chaleur construire à partir du chile. Si un élément domine, ajustez."
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "dressed_esquites",
         "ing_04",

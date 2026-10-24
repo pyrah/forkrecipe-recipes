@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soaked_peas",
         "ing_02",
@@ -176,7 +176,7 @@ export default {
         "ing_09"
       ],
       "outputState": "tender_peas_with_ham",
-      "instructions": "Placer les pois drainés et le jarret dans une casserole ou un four hollandais. Ajouter l'oignon, l'ail cassé, la laurier, le thym, la cayenne, et une pincée généreuse de sel. Couvrir d'eau froide de 5 cm. Porter à ébullition, en écrémant toute mousse grise de la surface. Réduire en mijotant doucement et régulièrement. Cuire de 60 à 75 minutes, vérifier toutes les 20 minutes et ajouter de l'eau chaude pour garder les pois juste immergés. Lorsque les pois sont complètement tendres, retirez le jarret et laissez-le refroidir pour le manipuler. Tirez toute la viande de l'os dans des morceaux généreux et retournez-la dans le pot. Jeter la peau et les os. Goûtez le bouillon — il devrait être profondément fumé, salé et légèrement épicé.",
+      "instructions": "Placer les pois drainés et le jarret dans une casserole ou un four hollandais. Ajouter l'oignon, l'ail cassé, la laurier, le thym, la cayenne, et une pincée généreuse de sel. Couvrir d'eau froide de 5 cm. Porter à ébullition, en écrèment toute mousse grise de la surface. Réduire en mijotant doucement et régulièrement. Cuire de 60 à 75 minutes, vérifier toutes les 20 minutes et ajouter de l'eau chaude pour garder les pois juste immergés. Lorsque les pois sont complètement tendres, retirez le jarret et laissez-le refroidir pour le manipuler. Tirez toute la viande de l'os dans des morceaux généreux et retournez-la dans le pot. Jeter la peau et les os. Goûtez le bouillon — il devrait être profondément fumé, salé et légèrement épicé.",
       "visualCue": {
         "primaryTarget": "Des pois entièrement tendres dans un bouillon riche, brun-ambre, légèrement fumé. La viande de jambon est en morceaux doux et chaggy distribués dans le pot.",
         "spectrum": [
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "tender_peas_with_ham",
         "ing_08"
@@ -232,7 +232,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "finished_hoppin_john",
         "ing_10"

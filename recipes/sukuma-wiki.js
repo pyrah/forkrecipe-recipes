@@ -127,11 +127,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Prenez une poignée de greens de la chuffonade — ils devraient se sentir frais, légèrement humides et printemps. Chaque ruban doit tenir sa forme lorsqu'il est maintenu entre deux doigts et ne pas être complètement boiteux."
+      "feelCue": "Prenez une poignée de greens de la chuffonade — ils devraient se sentir frais, légèrement humides et printemps. Chaque ruban doit tenir sa forme lorsqu'il est maintenu entre deux doigts et ne pas être complètement mou."
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "tomato_onion_base",
         "chiffonade_greens",
@@ -188,7 +188,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les verts sont devenus gris kaki et sont complètement boiteux, libérant plus d'eau dans la casserole.",
+            "description": "Les verts sont devenus gris kaki et sont complètement ramollis, libérant plus d'eau dans la casserole.",
             "action": "Servir immédiatement. Le wiki de sukuma trop cuit est encore comestible ; juste moins vibrant. La prochaine fois, réduisez le temps de cuisson."
           }
         ]
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "cooking_sukuma"
       ],

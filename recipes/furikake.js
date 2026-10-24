@@ -96,7 +96,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_03"
       ],
@@ -126,7 +126,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_01",
         "ing_06",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_02"
       ],
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "toasted_sesame",
         "seasoned_katsuobushi",

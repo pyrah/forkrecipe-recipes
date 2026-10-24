@@ -132,7 +132,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "L'échalote a macéré pendant des heures et est devenu boiteux et terne, le vinaigre goûtant plat et trop oignon.",
+            "description": "L'échalote a macéré pendant des heures et est devenu mou et terne, le vinaigre goûtant plat et trop oignon.",
             "action": "Encore utilisable: épuisez un peu d'échalote s'il domine, et illuminez avec quelques gouttes de vinaigre frais."
           }
         ]
@@ -141,7 +141,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "seasoned_vinegar",
         "ing_02",
@@ -173,7 +173,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Émulsifier",
+      "action": "Émulsionner",
       "inputs": [
         "mustard_base",
         "ing_06"
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "emulsion",
         "ing_05"

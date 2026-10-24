@@ -113,7 +113,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Jeu",
+      "action": "Faire prendre",
       "inputs": [
         "ing_01"
       ],
@@ -143,7 +143,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "strained_ricotta",
         "ing_02"
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "sweetened_ricotta",
         "ing_03",
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "cannoli_cream",
         "ing_07"

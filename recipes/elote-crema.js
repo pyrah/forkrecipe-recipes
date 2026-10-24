@@ -4,7 +4,7 @@ export default {
   "slug": "elote-crema",
   "author": "ForkRecipe Kitchen",
   "title": "Éloté Créma",
-  "description": "La crème mayonnaise épicée et tannante qui enrobe le maïs de rue mexicain — créma, mayo et citron vert se mélange avec de la poudre de chili dans la sauce essentielle pour les éloutes et les esquites.",
+  "description": "La crème mayonnaise épicée et tannante qui enrobe le maïs de rue mexicain — crème, mayo et citron vert se mélange avec de la poudre de chili dans la sauce essentielle pour les éloutes et les esquites.",
   "cuisine": "Mexicain",
   "culture": "Mexico",
   "category": "condiments",
@@ -14,7 +14,7 @@ export default {
     "Produits de la rue",
     "Mayo",
     "Chili",
-    "Chaux"
+    "citron vert"
   ],
   "difficulty": 1,
   "activeTime": "10 min",
@@ -59,7 +59,7 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": [
@@ -108,7 +108,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -117,7 +117,7 @@ export default {
         "ing_05"
       ],
       "outputState": "elote_crema_base",
-      "instructions": "Dans un bol moyen, mélanger la mayonnaise et le créma mexicain. Frottez ensemble jusqu'à ce qu'il y ait une homogénéité complète — aucune stries de chaque composant ne doit rester. Ajouter le jus de lime frais un peu à la fois, fouetter en continu; il éclaircira légèrement le mélange et le rendra brillant. Ajouter la poudre de chili et le sel. Frottez vigoureusement pendant 30 secondes. Le créma doit être lisse, brillant et assez épais pour s'accrocher à une cuillère sans courir immédiatement. Goûtez à ce point - la chaux devrait être clairement présente, le chili devrait donner de la chaleur plutôt que de la chaleur, et la saveur globale devrait être crémeuse, tannante et plus.",
+      "instructions": "Dans un bol moyen, mélanger la mayonnaise et le crème mexicain. Frottez ensemble jusqu'à ce qu'il y ait une homogénéité complète — aucune stries de chaque composant ne doit rester. Ajouter le jus de lime frais un peu à la fois, fouetter en continu; il éclaircira légèrement le mélange et le rendra brillant. Ajouter la poudre de chili et le sel. Frottez vigoureusement pendant 30 secondes. Le crème doit être lisse, brillant et assez épais pour s'accrocher à une cuillère sans courir immédiatement. Goûtez à ce point - le citron vert devrait être clairement présente, le chili devrait donner de la chaleur plutôt que de la chaleur, et la saveur globale devrait être crémeuse, tannante et plus.",
       "visualCue": {
         "primaryTarget": "Une sauce lisse, pâle-corale avec une couleur uniforme à travers — pas de stries de mayo blanc ou de crème — assez brillante pour attraper la lumière, et assez épaisse pour tenir sa forme sur une cuillère.",
         "spectrum": [
@@ -129,11 +129,11 @@ export default {
           {
             "state": "Perfect",
             "description": "Une crème uniforme pâle-corale, lisse et brillante, avec une saveur qui est tannante, crémeuse et chaudement épicée dans une mesure égale.",
-            "action": "Goûtez et ajustez la chaux pour la tarte et le sel pour l'épine dorsale salée avant d'ajouter la garniture."
+            "action": "Goûtez et ajustez le citron vert pour la tarte et le sel pour l'épine dorsale salée avant d'ajouter la garniture."
           },
           {
             "state": "Overdone",
-            "description": "La sauce est très fine et aqueuse — probablement trop de jus de lime cassé l'émulsion, ou le créma était très mince.",
+            "description": "La sauce est très fine et aqueuse — probablement trop de jus de lime cassé l'émulsion, ou le crème était très mince.",
             "action": "fouetter dans une autre cuillère de mayo pour recoller et épaissir."
           }
         ]
@@ -142,14 +142,14 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "elote_crema_base",
         "ing_06",
         "ing_07"
       ],
       "outputState": "finished_elote_crema",
-      "instructions": "Pliez la moitié du cotija émietté dans la base créma et remuez pour le combiner — le sel du cotija assaisonnera la sauce. Goûtez encore et ajustez si nécessaire. Transférer dans un bol peu profond pour tremper des épis entiers, ou dans une bouteille de compression pour esquites (gottes de maïs). Juste avant de servir, époussetez généreusement la surface avec de la poudre de chili supplémentaire ou Tajín et dispersez le cotija restant. La sauce peut être composée jusqu'à 3 jours à l'avance et réfrigérée; les saveurs s'améliorent pendant la nuit comme la chaux moelle et les fleurs de chili.",
+      "instructions": "Pliez la moitié du cotija émietté dans la base crème et remuez pour le combiner — le sel du cotija assaisonnera la sauce. Goûtez encore et ajustez si nécessaire. Transférer dans un bol peu profond pour tremper des épis entiers, ou dans une bouteille de compression pour esquites (gottes de maïs). Juste avant de servir, époussetez généreusement la surface avec de la poudre de chili supplémentaire ou Tajín et dispersez le cotija restant. La sauce peut être composée jusqu'à 3 jours à l'avance et réfrigérée; les saveurs s'améliorent pendant la nuit comme le citron vert moelle et les fleurs de chili.",
       "visualCue": {
         "primaryTarget": "Une sauce aux tons coralliens et à la crème épaisse parsemée de croûtes de cotija blanc, surmontée d'une poussière de poudre de chili rouge vif, prête à être roulée à l'intérieur.",
         "spectrum": [
@@ -160,13 +160,13 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Une sauce richement parfumée et crémeuse avec cotija fournissant des poches salées, poudre de chili donnant la couleur et la chaleur, la chaux gardant tout lumineux.",
+            "description": "Une sauce richement parfumée et crémeuse avec cotija fournissant des poches salées, poudre de chili donnant la couleur et la chaleur, le citron vert gardant tout lumineux.",
             "action": "Servir immédiatement avec du maïs grillé ou réfrigérer jusqu'à 3 jours."
           },
           {
             "state": "Overdone",
             "description": "Trop de cotija a rendu la sauce gritty et très salée.",
-            "action": "Ajouter une autre poupée de créma et une pression de chaux pour équilibrer le sel et lisser la texture."
+            "action": "Ajouter une autre poupée de crème et une pression de citron vert pour équilibrer le sel et lisser la texture."
           }
         ]
       },

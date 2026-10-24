@@ -96,7 +96,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "ing_04",
         "ing_05"
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "cooked_mochi",
         "anko_wrapped_strawberries",

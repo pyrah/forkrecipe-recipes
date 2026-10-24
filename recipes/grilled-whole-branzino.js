@@ -118,7 +118,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Score",
+      "action": "Inciser",
       "inputs": [
         "ing_01"
       ],
@@ -148,7 +148,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "scored_fish",
         "ing_02",
@@ -186,7 +186,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "seasoned_stuffed_fish"
       ],
@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "grilled_branzino",
         "ing_03"

@@ -108,7 +108,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_07",
         "ing_06"
@@ -171,11 +171,11 @@ export default {
           }
         ]
       },
-      "feelCue": "La pâte mélangée doit se sentir comme de l'argile lourde et humide — elle tire la cuillère dans des cordes épaisses et lentes et atterrit avec une pente dense. Il se sentira radicalement différent de la pâte de blé : pas de springness, pas d'élasticité, juste une masse sombre et granuleuse."
+      "feelCue": "La pâte mélangée doit se sentir comme de l'argile lourde et humide — elle tire la cuillère dans des cordes épaisses et lentes et atterrit avec une infusion dense. Il se sentira radicalement différent de la pâte de blé : pas de springness, pas d'élasticité, juste une masse sombre et granuleuse."
     },
     {
       "nodeId": "step_3",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "rye_batter_dough"
       ],
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "proofed_rye_loaf"
       ],

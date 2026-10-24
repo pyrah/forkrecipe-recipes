@@ -118,7 +118,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Le chou est boiteux et translucide. Une généreuse piscine de saumure en bas. Quand vous pressez un poing, le liquide coule.",
+            "description": "Le chou est mou et translucide. Une généreuse piscine de saumure en bas. Quand vous pressez un poing, le liquide coule.",
             "action": "Emballez dans votre vaisseau de fermentation."
           },
           {
@@ -128,7 +128,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Le chou se transforme sous vos mains, du croustillant au soyeux et boiteux. Vos mains seront taillées à partir de la saumure, ce qui signifie qu'il y a assez de sel et assez de liquide."
+      "feelCue": "Le chou se transforme sous vos mains, du croustillant au soyeux et mou. Vos mains seront taillées à partir de la saumure, ce qui signifie qu'il y a assez de sel et assez de liquide."
     },
     {
       "nodeId": "step_3",
@@ -162,7 +162,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_vessel"
       ],

@@ -102,7 +102,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_07",
         "ing_01"
@@ -163,7 +163,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -197,7 +197,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "peeled_soft_boiled_eggs",
         "cooled_tare"

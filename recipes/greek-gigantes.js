@@ -141,7 +141,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_01"
       ],
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -190,7 +190,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Les trois légumes sont complètement boiteux, sucrés et légèrement dorés. Le mélange ressemble à une pile douce et parfumée. Celery a perdu son vert vif, tournant un jade muet.",
+            "description": "Les trois légumes sont complètement ramollis, sucrés et légèrement dorés. Le mélange ressemble à une pile douce et parfumée. Celery a perdu son vert vif, tournant un jade muet.",
             "action": "Ajouter la pâte de tomate à pincer."
           },
           {
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soffritto",
         "ing_05",
@@ -240,7 +240,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "tomato_sauce",
         "parboiled_beans",

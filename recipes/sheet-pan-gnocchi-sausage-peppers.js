@@ -155,7 +155,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "ing_01",
         "ing_03",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "seasoned_tray",
         "ing_02"
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "roasted_tray",
         "ing_10",

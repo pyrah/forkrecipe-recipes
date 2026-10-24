@@ -116,7 +116,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_04",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_02"
       ],

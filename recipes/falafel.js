@@ -216,7 +216,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "falafel_paste",
         "ing_10",
@@ -248,7 +248,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "shaped_falafel",
         "ing_12"

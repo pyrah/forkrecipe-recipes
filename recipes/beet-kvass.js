@@ -116,7 +116,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Appuyez sur",
+      "action": "Presser",
       "inputs": [
         "brine",
         "ing_01",
@@ -149,7 +149,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_kvass_jar"
       ],

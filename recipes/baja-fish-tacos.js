@@ -4,7 +4,7 @@ export default {
   "slug": "baja-fish-tacos",
   "author": "ForkRecipe Kitchen",
   "title": "Tacos de poissons de Baja",
-  "description": "Le poisson blanc grillé à la bière frit à une coquille dorée éclatantement croustillante, enveloppé dans des tortillas chaudes de maïs avec du chou déchiqueté, du créma et un éjaculation de chaux — le taco qui a mis Ensenada sur la carte.",
+  "description": "Le poisson blanc grillé à la bière frit à une coquille dorée éclatantement croustillante, enveloppé dans des tortillas chaudes de maïs avec du chou déchiqueté, du crème et un éjaculation de citron vert — le taco qui a mis Ensenada sur la carte.",
   "cuisine": "Mexicain",
   "culture": "Baja Californien",
   "category": "seafood",
@@ -108,11 +108,11 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Garnish",
-      "name": "Choux blancs éraflés, créma mexicain, quartiers de citron vert et sauce chaude",
+      "name": "Choux blancs éraflés, crème mexicain, quartiers de citron vert et sauce chaude",
       "ratioValue": 2,
       "defaultUnit": "parts",
       "substitutions": [
-        "crème aigre pour créma, coleslaw mix"
+        "crème aigre pour crème, coleslaw mix"
       ]
     }
   ],
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "beer_batter",
@@ -184,7 +184,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_07"
       ],
@@ -214,14 +214,14 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "fried_fish",
         "warmed_tortillas",
         "ing_08"
       ],
       "outputState": "baja_fish_tacos",
-      "instructions": "Travailler rapidement alors que le poisson est encore chaud et croustillant, déposer deux tortillas chaudes légèrement chevauchant sur une plaque (style Baja utilise deux par taco pour le support structurel). Ajouter une bande de poisson frit dans le centre. Garnir d'un monticule lâche de chou déchiqueté, d'une généreuse bruine de créma, d'une pression de lime et d'un soupçon de sauce chaude. Mangez immédiatement — la pâte s'adoucit dans les 5 minutes suivant le contact avec les garnitures humides.",
+      "instructions": "Travailler rapidement alors que le poisson est encore chaud et croustillant, déposer deux tortillas chaudes légèrement chevauchant sur une plaque (style Baja utilise deux par taco pour le support structurel). Ajouter une bande de poisson frit dans le centre. Garnir d'un monticule lâche de chou déchiqueté, d'une généreuse bruine de crème, d'une pression de lime et d'un soupçon de sauce chaude. Mangez immédiatement — la pâte s'adoucit dans les 5 minutes suivant le contact avec les garnitures humides.",
       "visualCue": {
         "primaryTarget": "Taco double-tortille pliée avec une bande de poisson doré visible au sommet, chou blanc et crème drapant les côtés, lime-brillant et vif.",
         "spectrum": [
@@ -232,7 +232,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Le poisson est encore chaud et visiblement croquant, les garnitures sont fraîches et rafraîchissantes contre le poisson chaud, la tortilla est souple et doublée. Le contraste des textures — pâte croustillante, chou frais, créma soyeux — est tout le point.",
+            "description": "Le poisson est encore chaud et visiblement croquant, les garnitures sont fraîches et rafraîchissantes contre le poisson chaud, la tortilla est souple et doublée. Le contraste des textures — pâte croustillante, chou frais, crème soyeux — est tout le point.",
             "action": "Mangez dans les 2 minutes suivant l'assemblage."
           },
           {

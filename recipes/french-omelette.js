@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "rolled_omelette",
         "ing_05"

@@ -141,7 +141,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Crème",
+      "action": "Crémer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "shortcrust_pastry"
       ],
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05"
       ],
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_06",
         "ing_07",
@@ -268,7 +268,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "blind_baked_shell",
         "rendered_lardons",

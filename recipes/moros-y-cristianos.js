@@ -148,13 +148,13 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_09"
       ],
       "outputState": "cooked_beans_with_liquid",
-      "instructions": "Égoutter et rincer les haricots noirs trempés et les déposer dans un grand pot. Couvrir d'eau froide de 8 cm. Ajouter les feuilles de la baie. Porter à ébullition à feu vif, en écrémant toute mousse grise qui monte à la surface dans les 10 premières minutes. Réduire à mijoter doucement et cuire pendant 45-60 minutes jusqu'à ce que les haricots soient complètement tendres mais conservent leur forme. Le liquide de cuisson va devenir un noir-violet profond et dramatique — ce liquide est de l'or liquide; c'est ce qui fait tourner le riz. Ne pas ajouter de sel jusqu'à ce que les haricots soient cuits — le sel avant la tendresse durcit la peau.",
+      "instructions": "Égoutter et rincer les haricots noirs trempés et les déposer dans un grand pot. Couvrir d'eau froide de 8 cm. Ajouter les feuilles de la baie. Porter à ébullition à feu vif, en écrèment toute mousse grise qui monte à la surface dans les 10 premières minutes. Réduire à mijoter doucement et cuire pendant 45-60 minutes jusqu'à ce que les haricots soient complètement tendres mais conservent leur forme. Le liquide de cuisson va devenir un noir-violet profond et dramatique — ce liquide est de l'or liquide; c'est ce qui fait tourner le riz. Ne pas ajouter de sel jusqu'à ce que les haricots soient cuits — le sel avant la tendresse durcit la peau.",
       "visualCue": {
         "primaryTarget": "Les haricots sont rampants, complètement tendres, et le liquide de cuisson est un violet-noir profond et opaque. Les peaux sont intactes.",
         "spectrum": [
@@ -179,7 +179,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_06",
         "ing_03",
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "sofrito",
         "cooked_beans_with_liquid",
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "seasoned_bean_base",
         "ing_02"
@@ -278,7 +278,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "rice_in_beans",
         "ing_12"

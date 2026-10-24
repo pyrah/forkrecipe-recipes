@@ -122,7 +122,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -159,7 +159,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "marinated_beef"
       ],
@@ -170,7 +170,7 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Couleur beige-gris partout. Pas de caramélisation. Pale et boiteux, libérant de l'eau sur la casserole.",
+            "description": "Couleur beige-gris partout. Pas de caramélisation. Pale et mou, libérant de l'eau sur la casserole.",
             "action": "La poêle n'est pas assez chaude ou est surpeuplée. Retirer la moitié du lot, chauffer la manivelle et attendre que la poêle se rétablisse avant de continuer."
           },
           {
@@ -189,7 +189,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "grilled_bulgogi",
         "ing_09"

@@ -193,7 +193,7 @@ export default {
     {
       "ingId": "ing_19",
       "role": "Acid",
-      "name": "Coins de chaux",
+      "name": "Coins de citron vert",
       "ratioValue": 60,
       "defaultUnit": "g",
       "substitutions": []
@@ -202,7 +202,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Toast",
+      "action": "Faire griller",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "toasted_chilies",
         "charred_aromatics",
@@ -302,7 +302,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "ing_01",
         "ing_16"
@@ -333,7 +333,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_beef",
         "birria_sauce",
@@ -367,7 +367,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "braised_birria",
         "ing_17",
@@ -375,7 +375,7 @@ export default {
         "ing_19"
       ],
       "outputState": "finished_birria",
-      "instructions": "Écraser le bœuf avec deux fourchettes et revenir au consommé. Goûtez et ajustez le sel. Déposer la viande et le bouillon dans des bols. Garnir d'oignon blanc en dés et de coriandre. Servir les coins de chaux à côté. Pour les tacos, tremper les tortillas dans la casquette rouge du consommé avant le grillage, remplir de viande et de fromage de biria, et servir avec le consommé pour tremper.",
+      "instructions": "Écraser le bœuf avec deux fourchettes et revenir au consommé. Goûtez et ajustez le sel. Déposer la viande et le bouillon dans des bols. Garnir d'oignon blanc en dés et de coriandre. Servir les coins de citron vert à côté. Pour les tacos, tremper les tortillas dans la casquette rouge du consommé avant le grillage, remplir de viande et de fromage de biria, et servir avec le consommé pour tremper.",
       "visualCue": {
         "primaryTarget": "Garnet profond consommé avec des lambeaux de bœuf foncé et tendre. Oignon blanc vif et coriandre verte sur le dessus. Le bouchon gras de la surface du bouillon est un rouge vif de l'huile de chili.",
         "spectrum": [

@@ -106,17 +106,17 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Aromatic",
-      "name": "Feuilles de chaux de Kaffir (torées)",
+      "name": "Feuilles de citron vert de Kaffir (torées)",
       "ratioValue": 3,
       "defaultUnit": "parts",
       "substitutions": [
-        "zeste de chaux"
+        "zeste de citron vert"
       ]
     },
     {
       "ingId": "ing_09",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 8,
       "defaultUnit": "parts",
       "substitutions": []
@@ -125,7 +125,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bloom",
+      "action": "Faire infuser",
       "inputs": [
         "ing_02",
         "ing_03"
@@ -152,11 +152,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Lorsque la pâte de curry est bien fleurie, le parfum est extraordinaire: des couches de citronnelle, de galangal, de chaux de kaffir et de piment se lèvent ensemble dans un nuage aromatique."
+      "feelCue": "Lorsque la pâte de curry est bien fleurie, le parfum est extraordinaire: des couches de citronnelle, de galangal, de citron vert de kaffir et de piment se lèvent ensemble dans un nuage aromatique."
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "bloomed_paste",
         "ing_03",
@@ -187,11 +187,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Une sauce au curry thaïlandais bien équilibrée devrait goûter quatre choses simultanément : la chaleur, la douceur, le sel et le fantôme d'agrumes de la chaux kaffir. Si quelqu'un domine, ajustez."
+      "feelCue": "Une sauce au curry thaïlandais bien équilibrée devrait goûter quatre choses simultanément : la chaleur, la douceur, le sel et le fantôme d'agrumes du citron vert kaffir. Si quelqu'un domine, ajustez."
     },
     {
       "nodeId": "step_3",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "curry_sauce",
         "ing_01"
@@ -218,11 +218,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Le poisson braconné dans le curry a l'impression qu'il a à peine besoin d'une fourchette — il se retrouve au toucher et tombe dans de grands flocons humides plutôt que de petits miettes sèches."
+      "feelCue": "Le poisson poché dans le curry a l'impression qu'il a à peine besoin d'une fourchette — il se retrouve au toucher et tombe dans de grands flocons humides plutôt que de petits miettes sèches."
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "cooked_curry",
         "ing_07",
@@ -240,12 +240,12 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Le basilic vient de se flétrir de la chaleur résiduelle. La luminosité de la chaux traverse la richesse. Les couleurs sont vives.",
+            "description": "Le basilic vient de se flétrir de la chaleur résiduelle. La luminosité du citron vert traverse la richesse. Les couleurs sont vives.",
             "action": "Servir immédiatement sur le riz jasmin."
           },
           {
             "state": "Overdone",
-            "description": "Le basilic a été ajouté à la chaleur et est devenu complètement noir et amer. La chaux a été ajoutée trop tôt et s'estompée.",
+            "description": "Le basilic a été ajouté à la chaleur et est devenu complètement noir et amer. La citron vert a été ajoutée trop tôt et s'estompée.",
             "action": "Ajouter le basilic frais déchiré sur le dessus à la table à la place."
           }
         ]

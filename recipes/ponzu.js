@@ -133,11 +133,11 @@ export default {
           }
         ]
       },
-      "feelCue": "À ce stade brut, il doit avoir un goût de tarte agressive et salé, presque trop vif pour siroter. L'umami penchant à venir le tournera et l'approfondira, alors résistez à l'envie de l'adoucir maintenant."
+      "feelCue": "À ce stade brut, il doit avoir un goût acidulé agressive et salé, presque trop vif pour siroter. L'umami penchant à venir le tournera et l'approfondira, alors résistez à l'envie de l'adoucir maintenant."
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "ponzu_base",
         "ing_05",
@@ -169,7 +169,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "steeped_ponzu"
       ],

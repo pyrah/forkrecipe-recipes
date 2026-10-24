@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Agenouillement",
+      "action": "Pétrir",
       "inputs": [
         "shaggy_enriched_dough",
         "ing_05"
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Preuve",
+      "action": "Faire lever",
       "inputs": [
         "developed_milk_dough"
       ],
@@ -293,7 +293,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "panned_milk_bread",
         "ing_10"

@@ -149,14 +149,14 @@ export default {
       "defaultUnit": "to taste",
       "substitutions": [
         "Échalotes frites",
-        "coins de chaux"
+        "coins de citron vert"
       ]
     }
   ],
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -166,7 +166,7 @@ export default {
         "ing_06"
       ],
       "outputState": "poached_chicken_and_ginger_broth",
-      "instructions": "Mettre le poulet, l'eau froide, le gingembre, les blancs d'oignon, l'ail et le sel dans une casserole de 6 litres. Faire mijoter lentement à feu moyen, en écrémant la mousse grise à mesure qu'elle monte. Réduire en mijotant à nu (boulons paresseux occasionnels) et cuire de 25 à 30 minutes, jusqu'à ce que les cuisses lisent au moins 165°F (74°C) et que la viande soit tendre. Élevez le poulet pour le refroidir; étirez le gingembre, le pétoncle et l'ail, ou laissez le gingembre pour plus de punch.",
+      "instructions": "Mettre le poulet, l'eau froide, le gingembre, les blancs d'oignon, l'ail et le sel dans une casserole de 6 litres. Faire mijoter lentement à feu moyen, en écrèment la mousse grise à mesure qu'elle monte. Réduire en mijotant à nu (boulons paresseux occasionnels) et cuire de 25 à 30 minutes, jusqu'à ce que les cuisses lisent au moins 165°F (74°C) et que la viande soit tendre. Élevez le poulet pour le refroidir; étirez le gingembre, le pétoncle et l'ail, ou laissez le gingembre pour plus de punch.",
       "visualCue": {
         "primaryTarget": "Un bouillon clair et doré avec de petites perles de graisse à la surface et un poulet opaque à l'os.",
         "spectrum": [
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "poached_chicken_and_ginger_broth",
         "ing_07",

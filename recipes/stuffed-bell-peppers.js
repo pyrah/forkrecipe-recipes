@@ -4,7 +4,7 @@ export default {
   "slug": "stuffed-bell-peppers",
   "author": "ForkRecipe Kitchen",
   "title": "Poivrons à cloches farcis méditerranéens",
-  "description": "Poivrons rouges doux farcis de riz herbé, de noix de pin et de groseilles, cuits jusqu'à ce que les poivrons s'adoucissent et s'effondrent autour de leur remplissage parfumé.",
+  "description": "Poivrons rouges doux farcis de riz herbé, de pignons de pin et de groseilles, cuits jusqu'à ce que les poivrons s'adoucissent et s'effondrent autour de leur remplissage parfumé.",
   "cuisine": "Méditerranée",
   "culture": "Grec",
   "category": "vegetables",
@@ -150,7 +150,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_02"
       ],
@@ -180,7 +180,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -197,17 +197,17 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "L'oignon est encore blanc et croquant; les noix de pin sont décolorées et savoureuses.",
+            "description": "L'oignon est encore blanc et croquant; les pignons de pin sont décolorées et savoureuses.",
             "action": "Continuer la cuisson à feu moyen, en remuant – l'oignon a besoin de plus de temps pour adoucir et sucrer."
           },
           {
             "state": "Perfect",
-            "description": "L'oignon est fondant doux et doré. Les noix de pin sont un bronzage chaud. La poêle sent l'oignon doux, la cannelle et les noix grillées.",
+            "description": "L'oignon est fondant doux et doré. Les pignons de pin sont un bronzage chaud. La poêle sent l'oignon doux, la cannelle et les noix grillées.",
             "action": "Retirer du feu et plier dans le riz et les herbes fraîches."
           },
           {
             "state": "Overdone",
-            "description": "Les noix de pin sont brun foncé et sentent amer. L'oignon est bruni aux bords.",
+            "description": "Les pignons de pin sont brun foncé et sentent amer. L'oignon est bruni aux bords.",
             "action": "Enlevez les pignons les plus foncés. L'amertume se dissipera un peu dans le four mais évitera cette prochaine fois."
           }
         ]
@@ -226,7 +226,7 @@ export default {
       "outputState": "assembled_filling",
       "instructions": "Mélanger la base sautée avec le riz, la menthe et le persil. Jetez à distribuer uniformément. Goût — le remplissage doit être assaisonné avec assurance, car le riz absorbera le sel de la passata pendant la cuisson. Couper le dessus des poivrons et enlever les graines et les membranes. Remplissez chaque poivre d'environ trois quarts de plein — le riz va se développer.",
       "visualCue": {
-        "primaryTarget": "Le remplissage est un mélange cohésif et bijouté : riz pâle parsemé de noix de pin doré, de groseilles foncées et d'herbes vertes vives.",
+        "primaryTarget": "Le remplissage est un mélange cohésif et bijouté : riz pâle parsemé de pignons de pin doré, de groseilles foncées et d'herbes vertes vives.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -249,7 +249,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "assembled_filling",
         "ing_10",

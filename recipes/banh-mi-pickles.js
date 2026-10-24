@@ -92,7 +92,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sel",
+      "action": "Saler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -101,7 +101,7 @@ export default {
       "outputState": "salted_vegetables",
       "instructions": "Mélanger le daikon julienned et la carotte dans un grand bol. Saupoudrer le sel et bien jeter. Laisser reposer 15 minutes. Le sel tire de l'eau des légumes par osmose, comprimant leurs parois cellulaires et les rendant plus croquants après le décapage et mieux en mesure d'absorber la saumure. Après 15 minutes, le bol aura une piscine de liquide et les légumes auront très légèrement ramolli. Rincer soigneusement sous l'eau froide pour enlever le sel de surface, puis presser fermement les légumes dans vos mains sur l'évier pour retirer le plus de liquide possible. Sèchez-la avec une serviette propre.",
       "visualCue": {
-        "primaryTarget": "Après le salage, les légumes doivent être légèrement boiteux, mais garder leur forme — non pas molle, ni cru. Le bol contient du liquide visible tiré par le sel.",
+        "primaryTarget": "Après le salage, les légumes doivent être légèrement mou, mais garder leur forme — non pas molle, ni cru. Le bol contient du liquide visible tiré par le sel.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -115,7 +115,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les légumes ont été salés pendant plus d'une heure et sont très boiteux et aqueux, ayant libéré trop de liquide.",
+            "description": "Les légumes ont été salés pendant plus d'une heure et sont très mou et aqueux, ayant libéré trop de liquide.",
             "action": "Rincer, serrer et continuer. La texture sera légèrement plus douce, mais la saveur sera encore bonne."
           }
         ]
@@ -156,7 +156,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "salted_vegetables",
         "pickling_brine"

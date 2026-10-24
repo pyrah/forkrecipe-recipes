@@ -84,7 +84,7 @@ export default {
       "ratioValue": 4,
       "defaultUnit": "chunks",
       "substitutions": [
-        "bois de pécan",
+        "bois de noix de pécan",
         "Bois de pomme (mince, plus sucré)"
       ]
     },
@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fumée",
+      "action": "Fumer",
       "inputs": [
         "rubbed_shoulder",
         "ing_05",
@@ -174,7 +174,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "stalled_shoulder"
       ],
@@ -204,7 +204,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "probe_tender_shoulder"
       ],
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "rested_pork",
         "ing_06",

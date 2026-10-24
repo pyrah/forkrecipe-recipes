@@ -100,7 +100,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "ing_01"
       ],
@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "steamed_rice",
         "seasoned_coconut_cream"
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "dressed_rice"
       ],
@@ -253,7 +253,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "rested_sticky_rice",
         "ing_05",

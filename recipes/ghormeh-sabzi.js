@@ -13,7 +13,7 @@ export default {
     "persienne",
     "herbe",
     "agneau",
-    "chaux séchée"
+    "citron vert séchée"
   ],
   "difficulty": 3,
   "activeTime": "30 min",
@@ -94,7 +94,7 @@ export default {
       "ratioValue": 6,
       "defaultUnit": "parts",
       "substitutions": [
-        "chaux noire séchée",
+        "citron vert noire séchée",
         "2 c. à soupe de jus de lime frais en dernier recours"
       ]
     },
@@ -142,7 +142,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_01",
         "ing_08",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "browned_lamb_base",
         "fried_herb_mixture",
@@ -225,12 +225,12 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le ragoût est encore brun-vert plutôt que foncé; l'agneau est ferme et mâcheux; les chaux séchées sont encore dures.",
+            "description": "Le ragoût est encore brun-vert plutôt que foncé; l'agneau est ferme et mâcheux; les citron vert séchées sont encore dures.",
             "action": "Continuer le braisage — ghormeh sabzi ne peut pas être précipité; le changement de couleur prend du temps."
           },
           {
             "state": "Perfect",
-            "description": "Le ragoût est sombre et presque vert-noir, profondément salé avec une auresse ronde des chaux. L'agneau se sépare sans résistance. La sauce est épaisse et enrobée.",
+            "description": "Le ragoût est sombre et presque vert-noir, profondément salé avec une auresse ronde des citron vert. L'agneau se sépare sans résistance. La sauce est épaisse et enrobée.",
             "action": "Bouche : ajuster le sel et laisser reposer couvert pendant 15 minutes avant de servir."
           },
           {
@@ -240,23 +240,23 @@ export default {
           }
         ]
       },
-      "feelCue": "Après 2 heures, pressez une chaux séchée contre le côté de la casserole — elle devrait se compresser facilement, sa surdité entièrement lixiviée dans le ragoût."
+      "feelCue": "Après 2 heures, pressez un citron vert séchée contre le côté de la casserole — elle devrait se compresser facilement, sa surdité entièrement lixiviée dans le ragoût."
     },
     {
       "nodeId": "step_4",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "braised_ghormeh_sabzi",
         "ing_11"
       ],
       "outputState": "finished_ghormeh_sabzi",
-      "instructions": "Goûtez soigneusement le ragoût. La saveur doit être profondément savore, amère-herbe et aigre - la surdité est la caractéristique déterminante. S'il manque d'aurore, pressez une chaux séchée adoucie sur le côté du pot pour libérer le jus restant. S'il manque de profondeur, laisser mijoter pendant 10 minutes pour se concentrer. Réglez le sel. Servir sur le riz persan (tahdig si possible), avec les citrons secs placés sur le dessus comme garniture.",
+      "instructions": "Goûtez soigneusement le ragoût. La saveur doit être profondément savore, amère-herbe et aigre - la surdité est la caractéristique déterminante. S'il manque d'aurore, pressez un citron vert séchée adoucie sur le côté du pot pour libérer le jus restant. S'il manque de profondeur, laisser mijoter pendant 10 minutes pour se concentrer. Réglez le sel. Servir sur le riz persan (tahdig si possible), avec les citrons secs placés sur le dessus comme garniture.",
       "visualCue": {
         "primaryTarget": "Un ragoût très foncé, avec de l'agneau et des haricots visibles, la sauce assez épaisse pour enrober une cuillère d'une couche sombre et opaque.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le ragoût est aqueux et de couleur claire; l'herbe et la chaux sont minces.",
+            "description": "Le ragoût est aqueux et de couleur claire; l'herbe et le citron vert sont minces.",
             "action": "Laisser mijoter à découvert pendant 15 à 20 minutes pour réduire et concentrer."
           },
           {

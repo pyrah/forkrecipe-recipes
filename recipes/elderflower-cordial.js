@@ -117,7 +117,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "hot_syrup",
         "ing_01",

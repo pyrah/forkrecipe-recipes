@@ -198,7 +198,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_onion_base",
         "ing_07",
@@ -240,7 +240,7 @@ export default {
         "ing_13"
       ],
       "outputState": "finished_carrot_lentil_soup",
-      "instructions": "Purée avec un mélangeur d'immersion jusqu'à ce qu'elle soit complètement lisse (ou mélangée en lots, remplissant le bocal à moitié plein et aspirant le couvercle). Incorporer le lait de coco et le réchauffer sans bouillir. Ajouter le jus de lime et le sel au goût — habituellement 1,5–2 c. à thé. Finissez avec de l'eau à une consistance versable. Garnir de coriandre et de flocons de chili. Pour congeler : refroidir dans des récipients peu profonds, réfrigérer dans les 2 heures et congeler jusqu'à 3 mois. Il se met en place épais lorsqu'il est froid; desserrer avec de l'eau en réchauffant et ajouter de la chaux fraîche.",
+      "instructions": "Purée avec un mélangeur d'immersion jusqu'à ce qu'elle soit complètement lisse (ou mélangée en lots, remplissant le bocal à moitié plein et aspirant le couvercle). Incorporer le lait de coco et le réchauffer sans bouillir. Ajouter le jus de lime et le sel au goût — habituellement 1,5–2 c. à thé. Finissez avec de l'eau à une consistance versable. Garnir de coriandre et de flocons de chili. Pour congeler : refroidir dans des récipients peu profonds, réfrigérer dans les 2 heures et congeler jusqu'à 3 mois. Il se met en place épais lorsqu'il est froid; desserrer avec de l'eau en réchauffant et ajouter du citron vert fraîche.",
       "visualCue": {
         "primaryTarget": "Soupe orangée et brillante qui coule dans un ruban épais.",
         "spectrum": [
@@ -251,7 +251,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Soie et uniforme, enrobant l'arrière d'une cuillère; brillant à la chaux, doux à la carotte.",
+            "description": "Soie et uniforme, enrobant l'arrière d'une cuillère; brillant au citron vert, doux à la carotte.",
             "action": "Servez."
           },
           {

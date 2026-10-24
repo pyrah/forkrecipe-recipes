@@ -4,7 +4,7 @@ export default {
   "slug": "tom-kha-gai",
   "author": "ForkRecipe Kitchen",
   "title": "Tom Kha Gai",
-  "description": "Un bouillon de lait de coco soyeux et ivoire infusé de la chaleur florale du galangal et du parfum d'agrumes de la citronnelle, assez riche pour enrober une cuillère, mais brillant avec de la chaux et de la sauce de poisson. Torn champignons et poulet tendre braconner doucement dans la chaleur, en absorbant la chaleur en couches du bouillon.",
+  "description": "Un bouillon de lait de coco soyeux et ivoire infusé de la chaleur florale du galangal et du parfum d'agrumes de la citronnelle, assez riche pour enrober une cuillère, mais brillant avec du citron vert et de la sauce de poisson. Torn champignons et poulet tendre braconner doucement dans la chaleur, en absorbant la chaleur en couches du bouillon.",
   "cuisine": "Thaï",
   "culture": "Centre thaïlandais",
   "category": "stocks",
@@ -90,11 +90,11 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Herb",
-      "name": "Feuilles de chaux kaffir (chaux makrut), déchirées",
+      "name": "Feuilles de citron vert kaffir (citron vert makrut), déchirées",
       "ratioValue": 6,
       "defaultUnit": "leaves",
       "substitutions": [
-        "Bandes de zeste de chaux (inférieures)"
+        "Bandes de zeste de citron vert (inférieures)"
       ]
     },
     {
@@ -159,7 +159,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Infuse",
+      "action": "Infuser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -169,7 +169,7 @@ export default {
         "ing_10"
       ],
       "outputState": "infused_broth",
-      "instructions": "Verser le lait de coco et le bouillon de poulet dans une casserole moyenne. Ajouter les tranches de galangal, les morceaux de citronnelle meurtris, les feuilles de lime kaffir déchirées et les piments d'oiseaux légèrement meurtris (mais entiers). Portez à feu doux à feu moyen — jamais un ébullition qui brisera le lait de coco et le rendra grainé et huileux. Laisser mijoter pendant 10 minutes, presser parfois les aromatiques avec une cuillère. Le bouillon doit porter une fragrance florale complexe : le soap-citrus de la chaux kaffir, le punch chaud du galangal, le vert citronné des tiges. N'enlevez pas encore les aromatiques — ils vont s'enfoncer tout au long de la cuisson et sont enlevés avant de servir, pas avant. Les piments sont laissés entiers de sorte qu'ils libèrent une légère chaleur de fond sans l'intensité perçante du chili fendu ou haché.",
+      "instructions": "Verser le lait de coco et le bouillon de poulet dans une casserole moyenne. Ajouter les tranches de galangal, les morceaux de citronnelle meurtris, les feuilles de lime kaffir déchirées et les piments d'oiseaux légèrement meurtris (mais entiers). Portez à feu doux à feu moyen — jamais un ébullition qui brisera le lait de coco et le rendra grainé et huileux. Laisser mijoter pendant 10 minutes, presser parfois les aromatiques avec une cuillère. Le bouillon doit porter une fragrance florale complexe : le soap-citrus du citron vert kaffir, le punch chaud du galangal, le vert citronné des tiges. N'enlevez pas encore les aromatiques — ils vont s'enfoncer tout au long de la cuisson et sont enlevés avant de servir, pas avant. Les piments sont laissés entiers de sorte qu'ils libèrent une légère chaleur de fond sans l'intensité perçante du chili fendu ou haché.",
       "visualCue": {
         "primaryTarget": "Un bouillon blanc ivoire avec un doux carquois de mouvement à la surface — de petites bulles dérivent aux bords, pas un ébullition central.",
         "spectrum": [
@@ -180,7 +180,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Le bouillon est un ivoire doux et crémeux et sent intensément la chaux galangale et kaffir. De petites gouttelettes de graisse peuvent être visibles à la surface. Les piments d'oiseau ont légèrement gonflé.",
+            "description": "Le bouillon est un ivoire doux et crémeux et sent intensément le citron vert galangale et kaffir. De petites gouttelettes de graisse peuvent être visibles à la surface. Les piments d'oiseau ont légèrement gonflé.",
             "action": "Ajouter les champignons et le poulet maintenant."
           },
           {
@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "infused_broth",
         "ing_03",
@@ -226,7 +226,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "cooked_soup",
         "ing_07",
@@ -234,14 +234,14 @@ export default {
         "ing_12"
       ],
       "outputState": "seasoned_soup",
-      "instructions": "Ajouter la sauce de poisson, le sucre de palme et le jus de lime hors feu ou au-dessus de la flamme la plus basse. Mélanger pour dissoudre le sucre. Goût et ajustez - Tom kha gai doit être simultanément riche (coconut), aigre (lime), salé (sauce de poisson), avec douceur de fond (sucre de palm) et chaleur lente (galangal et chili). Commencez par les quantités énumérées et ajustez en petits incréments. La chaux va en dernier et ne doit pas bouillir après l'ajout — bouillir détruit sa note supérieure brillante et la rend amère. La saveur correcte est soyeuse-riche en bouche immédiatement, puis aigre et lumineux milieu-palais, puis une longue chaleur traînante du galangal. Si elle a un goût plat, elle a besoin de plus de chaux; si elle a un goût dur, elle a besoin de plus de sucre de palme.",
+      "instructions": "Ajouter la sauce de poisson, le sucre de palme et le jus de lime hors feu ou au-dessus de la flamme la plus basse. Mélanger pour dissoudre le sucre. Goût et ajustez - Tom kha gai doit être simultanément riche (coconut), aigre (lime), salé (sauce de poisson), avec douceur de fond (sucre de palm) et chaleur lente (galangal et chili). Commencez par les quantités énumérées et ajustez en petits incréments. La citron vert va en dernier et ne doit pas bouillir après l'ajout — bouillir détruit sa note supérieure brillante et la rend amère. La saveur correcte est soyeuse-riche en bouche immédiatement, puis aigre et lumineux milieu-palais, puis une longue chaleur traînante du galangal. Si elle a un goût plat, elle a besoin de plus de citron vert; si elle a un goût dur, elle a besoin de plus de sucre de palme.",
       "visualCue": {
         "primaryTarget": "Broth est une crème d'ivoire lisse et uniforme avec une teinte dorée subtile du galangal et du chili. Pas de courbure visible ou de marées d'huile.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Le bouillon goûte le lait de coco et le stock mais manque de luminosité ou de complexité. La sauce de poisson et la chaux n'ont pas été ajoutées.",
-            "action": "Ajouter la sauce de poisson, la chaux et le sucre de palme dans les proportions indiquées, puis goûter et ajuster."
+            "description": "Le bouillon goûte le lait de coco et le stock mais manque de luminosité ou de complexité. La sauce de poisson et le citron vert n'ont pas été ajoutées.",
+            "action": "Ajouter la sauce de poisson, le citron vert et le sucre de palme dans les proportions indiquées, puis goûter et ajuster."
           },
           {
             "state": "Perfect",
@@ -250,22 +250,22 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le bouillon a un goût fortement aigre ou fortement salé: de la chaux ou de la sauce de poisson a été ajoutée trop fortement.",
+            "description": "Le bouillon a un goût fortement aigre ou fortement salé: du citron vert ou de la sauce de poisson a été ajoutée trop fortement.",
             "action": "Équilibre avec un petit ajout de lait de coco et de sucre de palme pour arrondir les bords."
           }
         ]
       },
-      "feelCue": "Le bouillon fini sur une cuillère à dégustation doit se sentir soyeux et enduit, comme de la crème fine — pas aqueuse, pas granuleuse. L'acide de la chaux devrait rendre les bords de votre langue légèrement teintés, tandis que la chaleur du galangal se calme chaudement à l'arrière de votre gorge."
+      "feelCue": "Le bouillon fini sur une cuillère à dégustation doit se sentir soyeux et enduit, comme de la crème fine — pas aqueuse, pas granuleuse. L'acide du citron vert devrait rendre les bords de votre langue légèrement teintés, tandis que la chaleur du galangal se calme chaudement à l'arrière de votre gorge."
     },
     {
       "nodeId": "step_4",
-      "action": "Garnir",
+      "action": "Dresser",
       "inputs": [
         "seasoned_soup",
         "ing_11"
       ],
       "outputState": "finished_tom_kha_gai",
-      "instructions": "Déposer la soupe dans des bols profonds, en veillant à ce que chaque bol reçoive des portions égales de poulet, de champignons et de bouillon. Les aromates — galangales, citronnelle, feuilles de chaux kaffir et piments d'oiseaux — restent dans le bol pour la beauté visuelle et l'arôme continu mais sont poussés sur le côté et ne sont pas mangés. Scatter les feuilles de coriandre fraîche sur le dessus de chaque bol. Servir immédiatement pendant la cuisson du bouillon. Fournissez une petite cuillère pour le bouillon et les baguettes ou une fourchette pour les solides. À table, les diners peuvent presser de la chaux supplémentaire sur leur bol. La soupe ne s'améliore pas en position debout: la chaux devient amère, le lait de coco peut se séparer et le poulet devient caoutchouteux.",
+      "instructions": "Déposer la soupe dans des bols profonds, en veillant à ce que chaque bol reçoive des portions égales de poulet, de champignons et de bouillon. Les aromates — galangales, citronnelle, feuilles de combava et piments d'oiseaux — restent dans le bol pour la beauté visuelle et l'arôme continu mais sont poussés sur le côté et ne sont pas mangés. Scatter les feuilles de coriandre fraîche sur le dessus de chaque bol. Servir immédiatement pendant la cuisson du bouillon. Fournissez une petite cuillère pour le bouillon et les baguettes ou une fourchette pour les solides. À table, les diners peuvent presser du citron vert supplémentaire sur leur bol. La soupe ne s'améliore pas en position debout: le citron vert devient amère, le lait de coco peut se séparer et le poulet devient caoutchouteux.",
       "visualCue": {
         "primaryTarget": "Un beau bol d'ivoire avec un poulet blanc doré visible, des champignons d'or foncé et une coriandre verte éparpillée sur une surface crème soyeuse.",
         "spectrum": [

@@ -89,7 +89,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_jar"
       ],
@@ -119,7 +119,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "active_ferment"
       ],

@@ -194,7 +194,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "lion_head_mixture",
         "ing_11"
@@ -225,7 +225,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "seared_meatballs",
         "ing_08",

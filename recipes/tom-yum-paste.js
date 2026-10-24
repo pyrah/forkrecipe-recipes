@@ -4,7 +4,7 @@ export default {
   "slug": "tom-yum-paste",
   "author": "ForkRecipe Kitchen",
   "title": "Tom Yum Paste",
-  "description": "Une pâte aromatique concentrée de citronnelle, de galangal, de chaux de kaffir, de chilis séchés et de crevette, l'épine dorsale de la soupe la plus célèbre de Thaïlande, comprimée dans une cuillère qui sent le pays entier. Une cuillère à soupe dissoute dans un bouillon chaud évoque un bol de brillance aigre, épicée et à base de plantes.",
+  "description": "Une pâte aromatique concentrée de citronnelle, de galangal, de citron vert de kaffir, de chilis séchés et de crevette, l'épine dorsale de la soupe la plus célèbre de Thaïlande, comprimée dans une cuillère qui sent le pays entier. Une cuillère à soupe dissoute dans un bouillon chaud évoque un bol de brillance aigre, épicée et à base de plantes.",
   "cuisine": "Thaï",
   "culture": "Centre thaïlandais",
   "category": "condiments",
@@ -59,11 +59,11 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Citrus",
-      "name": "Zeste de chaux de Kaffir (à partir de 2 feuilles, ou pelage de chaux de Kaffir)",
+      "name": "Zeste de citron vert de Kaffir (à partir de 2 feuilles, ou pelage de citron vert de Kaffir)",
       "ratioValue": 1,
       "defaultUnit": "parts",
       "substitutions": [
-        "zeste de chaux frais (moins complexe)"
+        "zeste de citron vert frais (moins complexe)"
       ]
     },
     {
@@ -108,11 +108,11 @@ export default {
     {
       "ingId": "ing_08",
       "role": "Acid",
-      "name": "Feuilles de chaux séchées, émiettées (ou fraîches, très fines)",
+      "name": "Feuilles de citron vert séchées, émiettées (ou fraîches, très fines)",
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": [
-        "zeste de chaux supplémentaire"
+        "zeste de citron vert supplémentaire"
       ]
     },
     {
@@ -137,7 +137,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -170,7 +170,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "aromatic_base",
         "ing_04",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Livre",
+      "action": "Piler",
       "inputs": [
         "chili_allium_paste",
         "ing_07",

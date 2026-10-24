@@ -139,7 +139,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -171,7 +171,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "pepper_base",
         "ing_05",
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "tomato_base",
         "ing_07",
@@ -236,7 +236,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Chop",
+      "action": "Hacher",
       "inputs": [
         "ing_01"
       ],
@@ -266,7 +266,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "seasoned_base",
         "prepared_okra",

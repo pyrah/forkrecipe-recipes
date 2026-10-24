@@ -120,7 +120,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -152,7 +152,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "blanched_bones",
         "ing_03",
@@ -188,7 +188,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Abat-jour",
+      "action": "Écumer",
       "inputs": [
         "milky_broth"
       ],
@@ -218,7 +218,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Poignée",
+      "action": "Filtrer",
       "inputs": [
         "skimmed_broth",
         "ing_09"

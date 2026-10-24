@@ -160,7 +160,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "prepped_seafood_and_ham",
         "ing_07"
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "fried_seafood_and_ham",
         "ing_04",
@@ -224,7 +224,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "aromatics_cooked_into_oil",
         "ing_08",
@@ -257,7 +257,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Frais",
+      "action": "Refroidir",
       "inputs": [
         "combined_xo_sauce"
       ],

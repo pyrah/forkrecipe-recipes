@@ -172,7 +172,7 @@ export default {
         "ing_10"
       ],
       "outputState": "soup_base",
-      "instructions": "Ajouter le cumin et la moitié du pul biber dans le pot et remuer constamment pendant 60 secondes jusqu'à ce que les épices soient parfumées et grillées dans la graisse — c'est ce qu'on appelle la floraison et il active les composés de saveur soluble dans la graisse que l'eau seule ne peut pas extraire. Ajouter les lentilles rouges rincées et mélanger pour enrober l'huile épicée. Verser le bouillon, porter à ébullition, puis laisser mijoter régulièrement. Cuire à découvert pendant 20 à 25 minutes, en écrémant toute mousse qui monte dans les 5 premières minutes, jusqu'à ce que les lentilles aient complètement dissous dans le liquide.",
+      "instructions": "Ajouter le cumin et la moitié du pul biber dans le pot et remuer constamment pendant 60 secondes jusqu'à ce que les épices soient parfumées et grillées dans la graisse — c'est ce qu'on appelle la floraison et il active les composés de saveur soluble dans la graisse que l'eau seule ne peut pas extraire. Ajouter les lentilles rouges rincées et mélanger pour enrober l'huile épicée. Verser le bouillon, porter à ébullition, puis laisser mijoter régulièrement. Cuire à découvert pendant 20 à 25 minutes, en écrèment toute mousse qui monte dans les 5 premières minutes, jusqu'à ce que les lentilles aient complètement dissous dans le liquide.",
       "visualCue": {
         "primaryTarget": "Une soupe épaisse et uniforme orange-or sans grains visibles de lentilles. La surface doit à peine s'enrouler avec une mijotée douce.",
         "spectrum": [

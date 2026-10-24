@@ -118,7 +118,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -181,14 +181,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "fried_rempah",
         "ing_05",
         "ing_08"
       ],
       "outputState": "spiced_stock",
-      "instructions": "Verser le stock dans le rempa frit et mélanger. Ajouter l'eau du tamarin. Porter à ébullition, puis laisser mijoter. Cuire à découvert pendant 20 minutes, en écrémant toute mousse. Le bouillon s'assombrira et s'amplifiera lorsque le rempa s'intègre pleinement au stock.",
+      "instructions": "Verser le stock dans le rempa frit et mélanger. Ajouter l'eau du tamarin. Porter à ébullition, puis laisser mijoter. Cuire à découvert pendant 20 minutes, en écrèment toute mousse. Le bouillon s'assombrira et s'amplifiera lorsque le rempa s'intègre pleinement au stock.",
       "visualCue": {
         "primaryTarget": "Broth est une riche couleur rouge brique à ambre, légèrement épaissie, avec une fine couche d'huile de chili à la surface.",
         "spectrum": [

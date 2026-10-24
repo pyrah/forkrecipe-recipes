@@ -130,7 +130,7 @@ export default {
       "ratioValue": 1,
       "defaultUnit": "whole",
       "substitutions": [
-        "Chaux"
+        "citron vert"
       ]
     },
     {
@@ -145,13 +145,13 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_02"
       ],
       "outputState": "poached_haddock",
-      "instructions": "Placez le côté peau d'aiglefin dans une grande casserole. Verser le lait — il devrait couvrir le poisson. Porter à la plus petite mijoter à feu moyen-doux. Dès que le lait commence à trembler et que de petites bulles apparaissent autour des bords (pas un ébullition complet), éteignez la chaleur, couvrez la poêle et laissez le poisson pocher dans la chaleur résiduelle pendant 8-10 minutes. Soulevez le poisson et réservez le lait de braconnage. Lorsqu'elle est assez fraîche pour être manipulée, éplucher et jeter la peau, puis la flanquer dans de gros morceaux, en vérifiant les os des épingles.",
+      "instructions": "Placez le côté peau d'aiglefin dans une grande casserole. Verser le lait — il devrait couvrir le poisson. Porter à la plus petite mijoter à feu moyen-doux. Dès que le lait commence à trembler et que de petites bulles apparaissent autour des bords (pas un ébullition complet), éteignez la chaleur, couvrez la poêle et laissez le poisson pocher dans la chaleur résiduelle pendant 8-10 minutes. Soulevez le poisson et réservez le lait de pochage. Lorsqu'elle est assez fraîche pour être manipulée, éplucher et jeter la peau, puis la flanquer dans de gros morceaux, en vérifiant les os des épingles.",
       "visualCue": {
         "primaryTarget": "Larges flocons blancs à or pâle, humides et opaques, sans translucidité restante, peau enlevée proprement.",
         "spectrum": [
@@ -163,7 +163,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Le poisson s'éclabousse dans de grandes pièces d'or humides au toucher d'une fourchette. Pas de translucidité brute. Le lait est opaque et blanc avec des huiles de poisson fondues.",
-            "action": "Retirer le poisson et réserver le lait de braconnage pour le riz."
+            "action": "Retirer le poisson et réserver le lait de pochage pour le riz."
           },
           {
             "state": "Overdone",
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Bouillir",
+      "action": "Faire bouillir",
       "inputs": [
         "ing_08"
       ],
@@ -206,14 +206,14 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_04",
         "ing_05",
         "ing_06"
       ],
       "outputState": "curried_rice_base",
-      "instructions": "Dans une grande casserole, faire fondre le beurre à feu moyen. Ajouter l'oignon en dés avec une pincée de sel et cuire en remuant pendant 8 à 10 minutes jusqu'à ce qu'il soit doux, translucide et commence à devenir or pâle aux bords. Ajouter la poudre de curry et remuer pendant 60 à 90 secondes jusqu'à ce que les épices fleurissent et deviennent parfumées et sombres. Ajouter le riz rincé et mélanger pour enrober chaque grain dans le beurre épicé — environ 1 minute. Mesurer 450 ml du lait de braconnage d'aiglefin réservé (s'il y a lieu de le verser avec de l'eau) et le verser sur le riz. Assaisonner légèrement avec du sel, se souvenir que le poisson et le lait sont déjà salés. Porter à ébullition, laisser mijoter au minimum, couvrir soigneusement et cuire 12 minutes. Retirer du feu et de la vapeur, couvrir pendant 5 minutes.",
+      "instructions": "Dans une grande casserole, faire fondre le beurre à feu moyen. Ajouter l'oignon en dés avec une pincée de sel et cuire en remuant pendant 8 à 10 minutes jusqu'à ce qu'il soit doux, translucide et commence à devenir or pâle aux bords. Ajouter la poudre de curry et remuer pendant 60 à 90 secondes jusqu'à ce que les épices fleurissent et deviennent parfumées et sombres. Ajouter le riz rincé et mélanger pour enrober chaque grain dans le beurre épicé — environ 1 minute. Mesurer 450 ml du lait de pochage d'aiglefin réservé (s'il y a lieu de le verser avec de l'eau) et le verser sur le riz. Assaisonner légèrement avec du sel, se souvenir que le poisson et le lait sont déjà salés. Porter à ébullition, laisser mijoter au minimum, couvrir soigneusement et cuire 12 minutes. Retirer du feu et de la vapeur, couvrir pendant 5 minutes.",
       "visualCue": {
         "primaryTarget": "Les grains de riz sont séparés, dorés-jaunes du curcuma dans la poudre de curry, sans eau de pooling ou collant.",
         "spectrum": [
@@ -238,7 +238,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "curried_rice_base",
         "poached_haddock",

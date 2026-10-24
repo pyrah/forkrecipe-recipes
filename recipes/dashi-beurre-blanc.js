@@ -119,7 +119,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -128,7 +128,7 @@ export default {
         "ing_05"
       ],
       "outputState": "reduction_base",
-      "instructions": "Combinez le dashi, le saké, le mirin, l'échalote hachée et le vinaigre de riz dans une petite casserole à fond lourd – l'acier inoxydable est idéal, car il vous permet de voir clairement la couleur de la réduction. Porter à ébullition sur une hauteur moyenne, puis laisser mijoter vigoureusement et cuire jusqu'à ce que le liquide soit réduit à un glaçage — environ 2 à 3 cuillères à soupe de liquide sirupeux hautement concentré. Cela prend 12-15 minutes. La réduction est le fondement de la sauce entière et doit être cuite soigneusement pour chasser tout l'alcool du saké et du mirin. Si vous pouvez encore sentir de l'alcool cru dans la vapeur, continuez à réduire. La réduction finie doit sentir intensément la mer (dashi), le caramel doux (mirin) et l'échalote. L'échalote sera devenue très douce et presque translucide, suspendue dans la glaçure. Ne pas extirper l'échalote — il fournit corps et saveur supplémentaires. La couleur s'approfondira de l'or pâle à un ambre plus foncé.",
+      "instructions": "Combinez le dashi, le saké, le mirin, l'échalote hachée et le vinaigre de riz dans une petite casserole à fond lourd – l'acier inoxydable est idéal, car il vous permet de voir clairement la couleur de la réduction. Porter à ébullition sur une hauteur moyenne, puis laisser mijoter vigoureusement et cuire jusqu'à ce que le liquide soit réduit à un glaçage — environ 2 à 3 cuillères à soupe de liquide sirupeux hautement concentré. Cela prend 12-15 minutes. La réduction est le fondement de la sauce entière et doit être cuite soigneusement pour chasser tout l'alcool du saké et du mirin. Si vous pouvez encore sentir de l'alcool cru dans la vapeur, continuez à réduire. La réduction finie doit sentir intensément la mer (dashi), le caramel doux (mirin) et l'échalote. L'échalote sera devenue très douce et presque translucide, suspendue dans la glaçure. Ne pas extraire l'échalote — il fournit corps et saveur supplémentaires. La couleur s'approfondira de l'or pâle à un ambre plus foncé.",
       "visualCue": {
         "primaryTarget": "Une glaçure sombre et presque sirupeuse avec des morceaux d'échalote adoucis. Lorsque vous penchez la casserole, elle se déplace lentement et enrobe les côtés. Le volume doit être de 2 à 3 cuillères à soupe.",
         "spectrum": [
@@ -153,7 +153,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "reduction_base",
         "ing_06",
@@ -185,7 +185,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "mounted_sauce",
         "ing_08"

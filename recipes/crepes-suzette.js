@@ -196,7 +196,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Caramélisation",
+      "action": "Caraméliser",
       "inputs": [
         "ing_07",
         "ing_09"
@@ -227,7 +227,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Monter",
+      "action": "Monter au beurre",
       "inputs": [
         "orange_caramel",
         "ing_08"
@@ -258,7 +258,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "beurre_suzette",
         "stack_of_crepes"

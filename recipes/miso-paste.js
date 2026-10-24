@@ -82,7 +82,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Repos",
+      "action": "Laisser reposer",
       "inputs": [
         "ing_01"
       ],
@@ -112,7 +112,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "soaked_soybeans"
       ],
@@ -142,7 +142,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "cooked_soybeans",
         "ing_04"
@@ -235,7 +235,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "miso_mixture"
       ],

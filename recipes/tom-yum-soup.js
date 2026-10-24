@@ -65,7 +65,7 @@ export default {
     {
       "ingId": "ing_04",
       "role": "Aromatic",
-      "name": "Feuilles de chaux de Kaffir, légèrement meurtries et déchirées",
+      "name": "Feuilles de citron vert de Kaffir, légèrement meurtries et déchirées",
       "ratioValue": 5,
       "defaultUnit": "parts",
       "substitutions": []
@@ -160,8 +160,8 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Le bouillon a diminué de façon significative et peut avoir un goût légèrement amer à partir de la chaux de kaffir sur-extractée.",
-            "action": "Retirer les feuilles de chaux kaffir; ajouter un jet d'eau pour reconstituer le volume."
+            "description": "Le bouillon a diminué de façon significative et peut avoir un goût légèrement amer à partir du citron vert de kaffir sur-extractée.",
+            "action": "Retirer les feuilles de combava; ajouter un jet d'eau pour reconstituer le volume."
           }
         ]
       },
@@ -239,23 +239,23 @@ export default {
         "ing_10"
       ],
       "outputState": "finished_tom_yum",
-      "instructions": "Hors chaleur (critique — le jus de lime perd de la luminosité lorsqu'il mijote), ajouter la sauce de poisson et le jus de lime. Bouche et équilibre : sauce de poisson pour sel, chaux pour aigrer et ajuster le niveau de chili au goût. La soupe doit être amère et chaude dans une mesure égale. Déposer dans des bols, garnir et servir immédiatement — cette soupe n'attend pas.",
+      "instructions": "Hors chaleur (critique — le jus de lime perd de la luminosité lorsqu'il mijote), ajouter la sauce de poisson et le jus de lime. Bouche et équilibre : sauce de poisson pour sel, citron vert pour aigrer et ajuster le niveau de chili au goût. La soupe doit être amère et chaude dans une mesure égale. Déposer dans des bols, garnir et servir immédiatement — cette soupe n'attend pas.",
       "visualCue": {
         "primaryTarget": "Bouillon clair et doré avec des crevettes roses vives, des herbes vertes flottantes et des taches de chili orange — une soupe qui semble aussi électrifiante qu'elle le goûte.",
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "La soupe a un goût plat, surtout de l'eau de citronnelle — la sauce de poisson et la chaux n'ont pas encore été ajoutées.",
+            "description": "La soupe a un goût plat, surtout de l'eau de citronnelle — la sauce de poisson et le citron vert n'ont pas encore été ajoutées.",
             "action": "Ajouter la sauce de poisson d'abord (saison), puis le jus de lime petit à petit, dégustation au fur et à mesure."
           },
           {
             "state": "Perfect",
-            "description": "Les saveurs frappent en séquence : d'abord la chaleur des piments, puis la luminosité aigre de la chaux, puis la profondeur salée de la sauce de poisson et de crevettes. Chaque élément est distinct et fort.",
+            "description": "Les saveurs frappent en séquence : d'abord la chaleur des piments, puis la luminosité aigre du citron vert, puis la profondeur salée de la sauce de poisson et de crevettes. Chaque élément est distinct et fort.",
             "action": "Louche et garnir immédiatement."
           },
           {
             "state": "Overdone",
-            "description": "Sur saison — soit trop salé (trop de sauce de poisson) ou trop acide (trop de chaux). Les saveurs s'écrasent.",
+            "description": "Sur saison — soit trop salé (trop de sauce de poisson) ou trop acide (trop de citron vert). Les saveurs s'écrasent.",
             "action": "Ajouter une petite quantité d'eau et une pincée de sucre pour équilibrer. Le sucre doit être à peine perceptible."
           }
         ]

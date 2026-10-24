@@ -90,7 +90,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Liquid",
-      "name": "Bouillon de cuisson de poulet (la liqueur de braconnage, tendue)",
+      "name": "Bouillon de cuisson de poulet (la liqueur de pochage, tendue)",
       "ratioValue": 40,
       "defaultUnit": "parts",
       "substitutions": [
@@ -121,13 +121,13 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "ing_01",
         "ing_05"
       ],
       "outputState": "poached_chicken",
-      "instructions": "Placer le poulet dans un pot profond, couvrir d'eau froide, ajouter une pincée de sel et laisser mijoter lentement. Écraser la mousse grise à mesure qu'elle monte. Pocher doucement, ne jamais bouillir dur, pendant environ 45 minutes pour les seins ou jusqu'à 75 minutes pour un oiseau entier, jusqu'à ce que la viande soit cuite et tendre. Soulevez le poulet et réservez-le, et souchez et gardez le bouillon de braconnage.",
+      "instructions": "Placer le poulet dans un pot profond, couvrir d'eau froide, ajouter une pincée de sel et laisser mijoter lentement. Écraser la mousse grise à mesure qu'elle monte. Pocher doucement, ne jamais bouillir dur, pendant environ 45 minutes pour les seins ou jusqu'à 75 minutes pour un oiseau entier, jusqu'à ce que la viande soit cuite et tendre. Soulevez le poulet et réservez-le, et souchez et gardez le bouillon de pochage.",
       "visualCue": {
         "primaryTarget": "Bouillon clair et doré à peine tremblant à la surface, et poulet dont les jus sont clairs lorsqu'ils sont percés au point le plus épais.",
         "spectrum": [
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_02",
         "ing_03",

@@ -4,7 +4,7 @@ export default {
   "slug": "stuffed-peppers",
   "author": "ForkRecipe Kitchen",
   "title": "Poivrons à cloches farcis de riz",
-  "description": "Poivrons de pomme de terre remplis de riz herbacé, de noix de pin et de groseilles dans un mélange qui sent la menthe fraîche et l'aneth, cuits dans un bouillon parfumé de tomates jusqu'à ce que le riz soit gonflé et que les poivrons soient tendres et légèrement carbonisés au sommet — la gemme du dimanche de Yiayia.",
+  "description": "Poivrons de pomme de terre remplis de riz herbacé, de pignons de pin et de groseilles dans un mélange qui sent la menthe fraîche et l'aneth, cuits dans un bouillon parfumé de tomates jusqu'à ce que le riz soit gonflé et que les poivrons soient tendres et légèrement carbonisés au sommet — la gemme du dimanche de Yiayia.",
   "cuisine": "Méditerranée",
   "culture": "Grec",
   "category": "vegetables",
@@ -205,7 +205,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_03",
         "ing_04",
@@ -255,7 +255,7 @@ export default {
       "outputState": "rice_filling",
       "instructions": "Ajouter le riz non cuit, les tomates concassées, la cannelle, l'alspice, le sel et le poivre dans la poêle. Incorporer bien le riz avec la tomate et l'huile. Cuire 2 minutes jusqu'à ce que le riz devienne translucide aux bords. Retirer du feu et plier dans l'aneth, la menthe, le persil, les groseilles et les pignons grillés. Goûtez le mélange et assaisonnez - il doit être bien assaisonné car les saveurs se mêlent au four.",
       "visualCue": {
-        "primaryTarget": "Un mélange de riz parfumé de coraux et de pins, parsemé de groseilles foncées, de noix de pin ivoire et d'herbes vertes. Les grains de riz sont translucides aux bords de la saute courte.",
+        "primaryTarget": "Un mélange de riz parfumé de coraux et de pins, parsemé de groseilles foncées, de pignons de pin ivoire et d'herbes vertes. Les grains de riz sont translucides aux bords de la saute courte.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -278,7 +278,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "prepped_pepper_shells",
         "rice_filling",

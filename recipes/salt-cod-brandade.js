@@ -124,7 +124,7 @@ export default {
           {
             "state": "Perfect",
             "description": "Un mince flocon a le goût d'un poisson assaisonné, suffisamment salé pour savoir qu'il s'agit de morue salée, mais pas de morue dure ou de cocu. La chair est molle et légèrement molle.",
-            "action": "Allez au braconnage."
+            "action": "Allez au pochage."
           },
           {
             "state": "Overdone",
@@ -143,14 +143,14 @@ export default {
         "ing_07"
       ],
       "outputState": "poached_cod",
-      "instructions": "Placer la morue désaltée dans une grande casserole et couvrir d'eau froide fraîche. Ajoutez le thym. Portez - vous lentement à une mijotée nue — de minuscules bulles montant aux bords, l'eau tremblant mais ne bouillant pas. Poché pendant 10-12 minutes. Ne pas faire bouillir : faire bouillir à ce stade pousse la protéine dans une dalle dure et caoutchouteuse et brise les fines paillettes. La morue est faite lorsqu'elle se flocait facilement le long de ses coutures naturelles lorsqu'elle est enrobée d'une fourchette. Soulevez, jetez l'eau de braconnage et laissez-la refroidir.",
+      "instructions": "Placer la morue désaltée dans une grande casserole et couvrir d'eau froide fraîche. Ajoutez le thym. Portez - vous lentement à une mijotée nue — de minuscules bulles montant aux bords, l'eau tremblant mais ne bouillant pas. Poché pendant 10-12 minutes. Ne pas faire bouillir : faire bouillir à ce stade pousse la protéine dans une dalle dure et caoutchouteuse et brise les fines paillettes. La morue est faite lorsqu'elle se flocait facilement le long de ses coutures naturelles lorsqu'elle est enrobée d'une fourchette. Soulevez, jetez l'eau de pochage et laissez-la refroidir.",
       "visualCue": {
         "primaryTarget": "La morue est uniformément blanc ivoire et opaque, les flocons s'ouvrent visiblement aux coutures lorsqu'ils sont pressés. La peau et les os sont facilement identifiables pour l'enlèvement.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "La partie la plus épaisse de la morue est encore translucide au centre et les flocons résistent à la séparation. La chair est printanière et pas encore tendre.",
-            "action": "Retourner à l'eau de braconnage (hors ébullition) et laisser reposer 3 minutes de plus dans la chaleur résiduelle."
+            "action": "Retourner à l'eau de pochage (hors ébullition) et laisser reposer 3 minutes de plus dans la chaleur résiduelle."
           },
           {
             "state": "Perfect",

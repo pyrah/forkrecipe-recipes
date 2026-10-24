@@ -115,7 +115,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Hydrate",
+      "action": "Hydrater",
       "inputs": [
         "ing_01",
         "yeast_slurry"
@@ -146,7 +146,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Autolyse",
+      "action": "Autolyser",
       "inputs": [
         "shaggy_mass"
       ],
@@ -176,7 +176,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Sel",
+      "action": "Saler",
       "inputs": [
         "rested_dough",
         "ing_03"
@@ -207,7 +207,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "seasoned_dough"
       ],
@@ -237,7 +237,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "developed_dough"
       ],
@@ -267,7 +267,7 @@ export default {
     },
     {
       "nodeId": "step_7",
-      "action": "Forme",
+      "action": "Façonner",
       "inputs": [
         "bulk_dough"
       ],

@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Ferment",
+      "action": "Fermenter",
       "inputs": [
         "packed_kimchi"
       ],
@@ -286,7 +286,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Agressivement aigre et doux, la saumure plate et surgissante, le chou boiteux.",
+            "description": "Agressivement aigre et doux, la saumure plate et surgissante, le chou mou.",
             "action": "Réfrigérer immédiatement et utiliser le kimchi trop mûr pour cuisiner — kimchi jjigae, riz frit et crêpes l'adorent."
           }
         ]

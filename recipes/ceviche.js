@@ -4,7 +4,7 @@ export default {
   "slug": "ceviche",
   "author": "ForkRecipe Kitchen",
   "title": "Ceviche",
-  "description": "Limeño ceviche à son plus pur — des cubes de poisson blanc nacré clignotaient dans de la chaux crue, de l'ail et de l'aji jusqu'à ce que les bords deviennent opaques, nageant dans la leche de tigre nuageuse, ardente et agrumes que les Péruviens boivent directement dans le bol. La patate douce fraîche et le maïs croquant chevauchent à côté pour apprivoiser la brûlure.",
+  "description": "Limeño ceviche à son plus pur — des cubes de poisson blanc nacré clignotaient dans du citron vert crue, de l'ail et de l'aji jusqu'à ce que les bords deviennent opaques, nageant dans la leche de tigre nuageuse, ardente et agrumes que les Péruviens boivent directement dans le bol. La patate douce fraîche et le maïs croquant chevauchent à côté pour apprivoiser la brûlure.",
   "cuisine": "Pérou",
   "culture": "Limeño",
   "category": "seafood",
@@ -12,7 +12,7 @@ export default {
     "Ceviche",
     "périuvien",
     "Poisson cru",
-    "Chaux",
+    "citron vert",
     "Aji",
     "leche de tigre"
   ],
@@ -50,7 +50,7 @@ export default {
     {
       "ingId": "ing_02",
       "role": "Citrus",
-      "name": "Jus de chaux frais (choix/chaux mexicaine préférée, jamais embouteillé)",
+      "name": "Jus de citron vert frais (choix/citron vert mexicaine préférée, jamais embouteillé)",
       "ratioValue": 60,
       "defaultUnit": "parts",
       "substitutions": [
@@ -138,13 +138,13 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_09",
         "ing_07"
       ],
       "outputState": "prepped_garnishes",
-      "instructions": "Faire bouillir la patate douce non pelée entière jusqu'à ce qu'un couteau glisse sans résistance, 20 à 30 minutes, puis refroidir, peler et trancher en rondelles épaisses — il doit être prêt à servir avant que le poisson ne touche jamais la chaux. Pendant ce temps, couper le papier d'oignon rouge-mince et le tremper dans l'eau glacée pendant 10 minutes pour retirer sa bouchée brute, puis l'égoutter et bien le sécher. Camote froide, douce et croquante, l'oignon moelleux sont les contrepoids à l'acide et à la chaleur qui viennent ensuite.",
+      "instructions": "Faire bouillir la patate douce non pelée entière jusqu'à ce qu'un couteau glisse sans résistance, 20 à 30 minutes, puis refroidir, peler et trancher en rondelles épaisses — il doit être prêt à servir avant que le poisson ne touche jamais le citron vert. Pendant ce temps, couper le papier d'oignon rouge-mince et le tremper dans l'eau glacée pendant 10 minutes pour retirer sa bouchée brute, puis l'égoutter et bien le sécher. Camote froide, douce et croquante, l'oignon moelleux sont les contrepoids à l'acide et à la chaleur qui viennent ensuite.",
       "visualCue": {
         "primaryTarget": "Les rondelles de patates douces sont tendres et orange brillant, tenant leur forme; l'oignon rouge est croquant, translucide et ne dégage plus d'odeur vive.",
         "spectrum": [
@@ -180,7 +180,7 @@ export default {
       "outputState": "leche_de_tigre",
       "instructions": "Pressez les limes doucement à la main, sans les mettre à la croûte, qui libère des huiles amères. Dans un bol, fouetter le jus de lime frais avec l'ail râpé, l'aji haché, le gingembre en option et le sel jusqu'à ce que le sel se dissout. C'est la leche de tigre, le lait du tigre: il doit goûter agressivement brillant, ailky, chaud, et une touche trop salée sur lui-même, parce que le poisson va rapidement l'équilibrer.",
       "visualCue": {
-        "primaryTarget": "Un liquide pâle, légèrement nuageux, versable, avec de l'ail et du piment, sentant fortement la chaux avec un piment au nez.",
+        "primaryTarget": "Un liquide pâle, légèrement nuageux, versable, avec de l'ail et du piment, sentant fortement le citron vert avec un piment au nez.",
         "spectrum": [
           {
             "state": "Underdone",
@@ -199,11 +199,11 @@ export default {
           }
         ]
       },
-      "feelCue": "Plongez un bout de doigt et goûtez: il devrait vous faire un peu de wince et chaud à l'arrière de la gorge. Si vos yeux arrosent du piment et de la chaux, c'est tout à fait juste — le poisson maladroit arrondira tous ces coins tranchants."
+      "feelCue": "Plongez un bout de doigt et goûtez: il devrait vous faire un peu de wince et chaud à l'arrière de la gorge. Si vos yeux arrosent du piment et du citron vert, c'est tout à fait juste — le poisson maladroit arrondira tous ces coins tranchants."
     },
     {
       "nodeId": "step_3",
-      "action": "Cure",
+      "action": "Saler et laisser reposer",
       "inputs": [
         "ing_01",
         "leche_de_tigre"
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "cured_fish",
         "ing_07",
@@ -243,14 +243,14 @@ export default {
         "ing_10"
       ],
       "outputState": "finished_ceviche",
-      "instructions": "Hors de la chaleur de l'acide, plier doucement l'oignon rouge drainé et la plupart de la coriandre dans le poisson guéri afin qu'ils restent croustillants et lumineux. Goûtez la leche de tigre une dernière fois et corrigez le sel, la chaux et la chaleur. Déposer le poisson et son liquide nuageux dans un bol froid peu profond, pencher les rondelles de patate douce contre un côté, disperser le maïs ou le châtaigne grillé, et couronner avec le reste de la coriandre. Servir immédiatement, tandis que tout est glacé et le remède est à son maximum.",
+      "instructions": "Hors de la chaleur de l'acide, plier doucement l'oignon rouge drainé et la plupart de la coriandre dans le poisson guéri afin qu'ils restent croustillants et lumineux. Goûtez la leche de tigre une dernière fois et corrigez le sel, le citron vert et la chaleur. Déposer le poisson et son liquide nuageux dans un bol froid peu profond, pencher les rondelles de patate douce contre un côté, disperser le maïs ou le châtaigne grillé, et couronner avec le reste de la coriandre. Servir immédiatement, tandis que tout est glacé et le remède est à son maximum.",
       "visualCue": {
         "primaryTarget": "Un monticule scintillant de poissons à bord opaque dans une piscine de leche de tigre laiteuse, verte et rouge, avec une camote orange vive et du maïs pâle encadrant le bol.",
         "spectrum": [
           {
             "state": "Underdone",
             "description": "Le bol a l'air pâle et goûte timide — pas assez de sel ou de piment, l'oignon à peine présent.",
-            "action": "Ajuster la leche de tigre avec du sel, une pression de chaux, et plus haché aji, puis plier à travers et re-plaquer."
+            "action": "Ajuster la leche de tigre avec du sel, une pression de citron vert, et plus haché aji, puis plier à travers et re-plaquer."
           },
           {
             "state": "Perfect",

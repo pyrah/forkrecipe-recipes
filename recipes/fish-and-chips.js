@@ -137,7 +137,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Blanch",
+      "action": "Blanchir",
       "inputs": [
         "ing_07",
         "ing_08"
@@ -201,7 +201,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "ing_01",
         "ing_06",
@@ -234,7 +234,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Fry",
+      "action": "Frire",
       "inputs": [
         "par_fried_chips",
         "ing_08"
@@ -265,7 +265,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "battered_fish",
         "finished_chips",
@@ -289,7 +289,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Tout est resté trop longtemps — la pâte s'est adoucie de la vapeur, les copeaux sont devenus boiteux et froids.",
+            "description": "Tout est resté trop longtemps — la pâte s'est adoucie de la vapeur, les copeaux sont devenus mou et froids.",
             "action": "Retourner les jetons à la friteuse à 190 C pendant 90 secondes. Il n'y a pas de secours pour la pâte molle — évitez cette situation en servant immédiatement."
           }
         ]

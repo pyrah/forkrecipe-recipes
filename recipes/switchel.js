@@ -85,7 +85,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -117,7 +117,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "switchel_concentrate",
         "ing_04",

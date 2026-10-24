@@ -107,7 +107,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "ing_01"
       ],
@@ -172,7 +172,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Streep",
+      "action": "Infuser",
       "inputs": [
         "sliced_onions",
         "pickling_brine"
@@ -203,7 +203,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Refroidissement",
+      "action": "Réfrigérer",
       "inputs": [
         "pickling_onions"
       ],
@@ -224,7 +224,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Après plus de 3 semaines, les oignons deviennent boiteux, très aigres, et perdent leur couleur vive à un brun rougeâtre boueux.",
+            "description": "Après plus de 3 semaines, les oignons deviennent mou, très aigres, et perdent leur couleur vive à un brun rougeâtre boueux.",
             "action": "Jetez et faites un lot frais. La saumure elle-même peut être réutilisée une fois pour une seconde, cornichon plus léger."
           }
         ]

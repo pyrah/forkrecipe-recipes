@@ -178,7 +178,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -247,7 +247,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Découpe",
+      "action": "Mélanger",
       "inputs": [
         "ing_09",
         "ing_10",
@@ -282,7 +282,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "tostada_shells",
         "refried_black_beans",
@@ -290,7 +290,7 @@ export default {
         "ing_14"
       ],
       "outputState": "finished_tostadas",
-      "instructions": "Étaler environ 3 cuillères à soupe de haricots chauds sur chaque coquille, laissant une bordure mince. Pile sur la griffe de l'avocat, disperser avec le cotija, et servir à la fois avec des coins de chaux supplémentaires. Assemblez-vous à la table pour que les coquilles restent croquantes.",
+      "instructions": "Étaler environ 3 cuillères à soupe de haricots chauds sur chaque coquille, laissant une bordure mince. Pile sur la griffe de l'avocat, disperser avec le cotija, et servir à la fois avec des coins de citron vert supplémentaires. Assemblez-vous à la table pour que les coquilles restent croquantes.",
       "visualCue": {
         "primaryTarget": "Coquilles dorées avec une couche de haricots noirs, un tas de griffes vertes et des miettes de fromage blanc sur le dessus.",
         "spectrum": [

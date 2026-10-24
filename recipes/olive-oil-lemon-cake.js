@@ -202,7 +202,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "cake_batter",
         "ing_10"
@@ -233,7 +233,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Glace",
+      "action": "Glacer",
       "inputs": [
         "baked_lemon_cake",
         "ing_09",

@@ -144,7 +144,7 @@ export default {
     {
       "ingId": "ing_13",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 1,
       "defaultUnit": "tbsp",
       "substitutions": [
@@ -155,7 +155,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -187,7 +187,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_04"
       ],
@@ -217,7 +217,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Chaleur",
+      "action": "Chauffer",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -253,7 +253,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "spinach_puree",
         "south_indian_tadka",
@@ -267,18 +267,18 @@ export default {
         "spectrum": [
           {
             "state": "Underdone",
-            "description": "Tadka a été complètement agité et n'est pas visible à la surface. Le jus de chaux n'a pas été ajouté. Le dal a un goût plat et unidimensionnel.",
-            "action": "Pressez la chaux sur le dessus. Si le tadka était agité, arrosez une cuillère à café de ghee supplémentaire sur le dessus pour restaurer une certaine richesse de surface."
+            "description": "Tadka a été complètement agité et n'est pas visible à la surface. Le jus de citron vert n'a pas été ajouté. Le dal a un goût plat et unidimensionnel.",
+            "action": "Pressez le citron vert sur le dessus. Si le tadka était agité, arrosez une cuillère à café de ghee supplémentaire sur le dessus pour restaurer une certaine richesse de surface."
           },
           {
             "state": "Perfect",
-            "description": "Vert foncé et brillant, avec les composants du tadka visibles sur la surface et la luminosité de la chaux coupant à travers la richesse. L'odeur est superposée, complexe et impossible à décrire en moins de quatre mots.",
+            "description": "Vert foncé et brillant, avec les composants du tadka visibles sur la surface et la luminosité du citron vert coupant à travers la richesse. L'odeur est superposée, complexe et impossible à décrire en moins de quatre mots.",
             "action": "Servir immédiatement."
           },
           {
             "state": "Overdone",
-            "description": "Le dal est devenu très épais et stodgy. Le tadka a été absorbé et la surface est terne. Le goût de chaux est perdu dans la richesse.",
-            "action": "Finis avec de l'eau chaude pour se détendre. Arrosez avec du ghee frais et une pression supplémentaire de chaux pour réintroduire la luminosité."
+            "description": "Le dal est devenu très épais et stodgy. Le tadka a été absorbé et la surface est terne. Le goût de citron vert est perdu dans la richesse.",
+            "action": "Finis avec de l'eau chaude pour se détendre. Arrosez avec du ghee frais et une pression supplémentaire de citron vert pour réintroduire la luminosité."
           }
         ]
       },

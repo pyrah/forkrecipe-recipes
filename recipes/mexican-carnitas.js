@@ -123,7 +123,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -191,12 +191,12 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "crisped_carnitas"
       ],
       "outputState": "finished_carnitas",
-      "instructions": "Goûtez les carnitas et ajustez le sel. Pressez le reste du jus d'orange frais sur la viande chaude – l'acide crèvera contre le saindoux chaud et illuminera la saveur de façon spectaculaire. Servir immédiatement sur des tortillas de maïs chaudes avec des oignons blancs en dés, de la coriandre fraîche, de la salsa verde et des quartiers de chaux. Les carnitas sont les meilleurs dans les 30 minutes suivant la cuisson — la texture change à mesure qu'ils refroidissent.",
+      "instructions": "Goûtez les carnitas et ajustez le sel. Pressez le reste du jus d'orange frais sur la viande chaude – l'acide crèvera contre le saindoux chaud et illuminera la saveur de façon spectaculaire. Servir immédiatement sur des tortillas de maïs chaudes avec des oignons blancs en dés, de la coriandre fraîche, de la salsa verde et des quartiers de citron vert. Les carnitas sont les meilleurs dans les 30 minutes suivant la cuisson — la texture change à mesure qu'ils refroidissent.",
       "visualCue": {
         "primaryTarget": "Coller des tranches de porc avec des taches dorées visibles, acajou et foncées. La vapeur monte quand le jus d'orange frappe.",
         "spectrum": [

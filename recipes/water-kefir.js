@@ -85,7 +85,7 @@ export default {
       "ratioValue": 1,
       "defaultUnit": "slice",
       "substitutions": [
-        "tranche de chaux",
+        "tranche de citron vert",
         "tranche d'orange"
       ]
     },

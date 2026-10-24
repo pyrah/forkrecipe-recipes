@@ -91,7 +91,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 30,
       "defaultUnit": "g",
       "substitutions": [
@@ -213,7 +213,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "brasa_marinade"
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "marinated_chicken"
       ],
@@ -274,7 +274,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_12",
         "ing_13",
@@ -308,7 +308,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "roasted_brasa_chicken",
         "aji_verde"

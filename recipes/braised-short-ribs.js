@@ -146,7 +146,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Sear",
+      "action": "Saisir",
       "inputs": [
         "seasoned_ribs",
         "ing_04"
@@ -209,7 +209,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_05",
         "ing_06",
@@ -243,7 +243,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Déglacement",
+      "action": "Déglacer",
       "inputs": [
         "soffritto",
         "ing_10"
@@ -274,7 +274,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "wine_base",
         "seared_ribs",
@@ -307,7 +307,7 @@ export default {
     },
     {
       "nodeId": "step_6",
-      "action": "Réduire",
+      "action": "Faire réduire",
       "inputs": [
         "braised_ribs"
       ],

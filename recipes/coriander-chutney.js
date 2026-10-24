@@ -4,7 +4,7 @@ export default {
   "slug": "coriander-chutney",
   "author": "ForkRecipe Kitchen",
   "title": "Coriandre Chutney",
-  "description": "Un chutney vif, vert électrique blitzé de la coriandre fraîche et de la menthe avec la chaleur de chili vert et la luminosité de la chaux — le genre de contrepoint frais, herbacé qui fait chaque samosa, chaat, et bouchée grillée viennent en vie.",
+  "description": "Un chutney vif, vert électrique blitzé de la coriandre fraîche et de la menthe avec la chaleur de chili vert et la luminosité du citron vert — le genre de contrepoint frais, herbacé qui fait chaque samosa, chaat, et bouchée grillée viennent en vie.",
   "cuisine": "Indiens",
   "culture": "Nationaux",
   "category": "condiments",
@@ -81,7 +81,7 @@ export default {
     {
       "ingId": "ing_06",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": [
@@ -110,7 +110,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -122,7 +122,7 @@ export default {
         "ing_08"
       ],
       "outputState": "blended_chutney",
-      "instructions": "Mélanger tous les ingrédients dans un mélangeur ou le pot d'un mélangeur d'immersion. Commencez avec l'eau et le jus de lime au fond afin que les lames s'attrapent facilement. Mélanger en haut pendant 60 à 90 secondes, en grattant les côtés une fois, jusqu'à ce que le chutney soit très lisse et uniformément vert vif. Goûtez et ajustez : ajoutez plus de chaux pour la luminosité, plus de chili pour la chaleur, ou une pincée de sel si plat.",
+      "instructions": "Mélanger tous les ingrédients dans un mélangeur ou le pot d'un mélangeur d'immersion. Commencez avec l'eau et le jus de lime au fond afin que les lames s'attrapent facilement. Mélanger en haut pendant 60 à 90 secondes, en grattant les côtés une fois, jusqu'à ce que le chutney soit très lisse et uniformément vert vif. Goûtez et ajustez : ajoutez plus de citron vert pour la luminosité, plus de chili pour la chaleur, ou une pincée de sel si plat.",
       "visualCue": {
         "primaryTarget": "Une purée d'une couleur vert-électrique intense, sans herbe visible, uniformément lisse, lumineuse comme de la peinture fraîche.",
         "spectrum": [
@@ -147,7 +147,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Finition",
+      "action": "Terminer",
       "inputs": [
         "blended_chutney"
       ],
@@ -173,7 +173,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Une cuillère sur la langue devrait délivrer trois vagues dans l'ordre: la fraîcheur herbacée d'abord, puis la luminosité de la chaux, puis une chaleur de chili lente s'étendant à l'arrière de la gorge."
+      "feelCue": "Une cuillère sur la langue devrait délivrer trois vagues dans l'ordre: la fraîcheur herbacée d'abord, puis la luminosité du citron vert, puis une chaleur de chili lente s'étendant à l'arrière de la gorge."
     }
   ]
 };

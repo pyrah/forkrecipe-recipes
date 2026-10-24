@@ -60,11 +60,11 @@ export default {
     {
       "ingId": "ing_03",
       "role": "Acid",
-      "name": "Jus d'orange amère (ou parties égales d'orange et de chaux)",
+      "name": "Jus d'orange amère (ou parties égales d'orange et de citron vert)",
       "ratioValue": 120,
       "defaultUnit": "ml",
       "substitutions": [
-        "1 partie jus d'orange + 1 partie pamplemousse blanc + 1 partie chaux"
+        "1 partie jus d'orange + 1 partie pamplemousse blanc + 1 partie citron vert"
       ]
     },
     {
@@ -144,7 +144,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "ing_02",
         "ing_03",
@@ -174,7 +174,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Surtransformé et chaud à partir du mélangeur — l'arôme a terned et les notes supérieures d'agrumes ont volatilisé.",
-            "action": "Utiliser comme-est. La plus faible acidité signifie que vous pouvez vouloir une pression supplémentaire de chaux après cuisson."
+            "action": "Utiliser comme-est. La plus faible acidité signifie que vous pouvez vouloir une pression supplémentaire de citron vert après cuisson."
           }
         ]
       },
@@ -182,7 +182,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_01",
         "achiote_recado",
@@ -214,7 +214,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Brise",
+      "action": "Braiser",
       "inputs": [
         "wrapped_pork"
       ],
@@ -244,7 +244,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Tranche",
+      "action": "Trancher",
       "inputs": [
         "braised_cochinita"
       ],

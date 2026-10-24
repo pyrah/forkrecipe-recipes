@@ -136,7 +136,7 @@ export default {
     {
       "ingId": "ing_12",
       "role": "Citrus",
-      "name": "Jus de chaux",
+      "name": "Jus de citron vert",
       "ratioValue": 15,
       "defaultUnit": "ml",
       "substitutions": [
@@ -147,7 +147,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_02"
@@ -178,7 +178,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "charred_tomatillos"
       ],
@@ -194,7 +194,7 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Une sauce verte vive, légèrement texturée, pas lisse, pas molle. La couleur est un vert olive profond légèrement muté de l'ombrage. Sensations de tarte à la chaux, de fumée et de piment.",
+            "description": "Une sauce verte vive, légèrement texturée, pas lisse, pas molle. La couleur est un vert olive profond légèrement muté de l'ombrage. Sensations de tarte au citron vert, de fumée et de piment.",
             "action": "Construisez la sauce dans la casserole."
           },
           {
@@ -208,7 +208,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Saucisse",
+      "action": "Faire revenir",
       "inputs": [
         "ing_07",
         "ing_05",
@@ -241,7 +241,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Laisser mijoter",
+      "action": "Mijoter",
       "inputs": [
         "spiced_aromatics",
         "verde_sauce",
@@ -275,7 +275,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Pochette",
+      "action": "Pocher",
       "inputs": [
         "verde_shakshuka_sauce",
         "ing_04",

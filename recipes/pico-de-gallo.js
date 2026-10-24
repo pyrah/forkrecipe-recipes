@@ -81,7 +81,7 @@ export default {
     {
       "ingId": "ing_05",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 10,
       "defaultUnit": "%",
       "substitutions": [
@@ -108,7 +108,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Sérum",
+      "action": "Couper en dés",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -140,7 +140,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "diced_vegetables",
         "ing_04",
@@ -149,7 +149,7 @@ export default {
         "ing_07"
       ],
       "outputState": "seasoned_pico",
-      "instructions": "Mélanger tous les légumes en dés dans un bol. Ajouter la coriandre, le jus de lime et le sel. Plier doucement avec une cuillère — ne pas remuer vigoureusement ou les tomates se décomposent. Goûtez immédiatement : la chaux doit être affirmée et le sel doit tout sauter vers l'avant. Ne pas sous-sel; le pico de gallo a besoin de plus de sel que de se sentir à l'aise lors de la dégustation d'une cuillère simple parce qu'il est servi avec des croustilles de tortillas non salées ou du maïs uni. Laissez le pico s'asseoir pendant 10 minutes avant de servir afin que le sel tire les jus de tomate et qu'ils se mettent dans le bol, créant une saumure naturelle légère.",
+      "instructions": "Mélanger tous les légumes en dés dans un bol. Ajouter la coriandre, le jus de lime et le sel. Plier doucement avec une cuillère — ne pas remuer vigoureusement ou les tomates se décomposent. Goûtez immédiatement : le citron vert doit être affirmée et le sel doit tout sauter vers l'avant. Ne pas sous-sel; le pico de gallo a besoin de plus de sel que de se sentir à l'aise lors de la dégustation d'une cuillère simple parce qu'il est servi avec des croustilles de tortillas non salées ou du maïs uni. Laissez le pico s'asseoir pendant 10 minutes avant de servir afin que le sel tire les jus de tomate et qu'ils se mettent dans le bol, créant une saumure naturelle légère.",
       "visualCue": {
         "primaryTarget": "Une salsa scintillante et scintillante — les tomates commencent juste à pleurer un peu de jus dans le bol, la coriandre vert vif et parfumée, toute la chose rouge vif et vert avec l'oignon blanc montrant clairement à travers.",
         "spectrum": [
@@ -160,8 +160,8 @@ export default {
           },
           {
             "state": "Perfect",
-            "description": "Un petit bassin de jus de rose au fond du bol ; tout brille et est profondément parfumé avec de la chaux et de la coriandre ; les saveurs vives, lumineuses et équilibrées.",
-            "action": "Goûtez pour l'ajustement final de la chaux et du sel, puis servez en 20 minutes pour une texture optimale."
+            "description": "Un petit bassin de jus de rose au fond du bol ; tout brille et est profondément parfumé avec du citron vert et de la coriandre ; les saveurs vives, lumineuses et équilibrées.",
+            "action": "Goûtez pour l'ajustement final du citron vert et du sel, puis servez en 20 minutes pour une texture optimale."
           },
           {
             "state": "Overdone",
@@ -170,7 +170,7 @@ export default {
           }
         ]
       },
-      "feelCue": "Goûtez une petite cuillère : la texture doit être assez épaisse — vous devriez pouvoir la mâcher — avec l'acide de la chaux qui frappe immédiatement, la douceur de la tomate qui suit, et une chaleur de construction lente du jalapeño à la fin. Si tout a le même goût à la fois, il faut plus de sel pour soulever les saveurs individuelles."
+      "feelCue": "Goûtez une petite cuillère : la texture doit être assez épaisse — vous devriez pouvoir la mâcher — avec l'acide du citron vert qui frappe immédiatement, la douceur de la tomate qui suit, et une chaleur de construction lente du jalapeño à la fin. Si tout a le même goût à la fois, il faut plus de sel pour soulever les saveurs individuelles."
     }
   ]
 };

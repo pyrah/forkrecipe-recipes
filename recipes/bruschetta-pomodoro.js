@@ -100,7 +100,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Marinaté",
+      "action": "Faire mariner",
       "inputs": [
         "ing_02",
         "ing_04",
@@ -125,7 +125,7 @@ export default {
           },
           {
             "state": "Overdone",
-            "description": "Les tomates ont libéré un liquide excessif et ont l'air déchiquetées; le basilic est sombre et boiteux; l'acidité est nette.",
+            "description": "Les tomates ont libéré un liquide excessif et ont l'air déchiquetées; le basilic est sombre et mou; l'acidité est nette.",
             "action": "Égoutter une partie de l'excès de liquide mais pas la totalité — un peu de jus est essentiel pour que le toast absorbe."
           }
         ]
@@ -134,7 +134,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Grille",
+      "action": "Griller",
       "inputs": [
         "ing_01"
       ],
@@ -164,7 +164,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Assemblage",
+      "action": "Assembler",
       "inputs": [
         "toasted_bread",
         "ing_03",

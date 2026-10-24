@@ -92,7 +92,7 @@ export default {
     {
       "ingId": "ing_07",
       "role": "Acid",
-      "name": "Jus de chaux frais",
+      "name": "Jus de citron vert frais",
       "ratioValue": 0.5,
       "defaultUnit": "parts",
       "substitutions": []
@@ -101,7 +101,7 @@ export default {
   "processNodes": [
     {
       "nodeId": "step_1",
-      "action": "Rôtis",
+      "action": "Rôtir",
       "inputs": [
         "ing_01",
         "ing_02",
@@ -134,7 +134,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Mélange",
+      "action": "Mixer",
       "inputs": [
         "charred_vegetables",
         "ing_05",
@@ -142,7 +142,7 @@ export default {
         "ing_07"
       ],
       "outputState": "blended_salsa",
-      "instructions": "Peler l'ail rôti et transférer tous les légumes rôtis et leurs jus accumulés dans un mélangeur. Ajouter la coriandre, le sel et le jus de lime. Pulse 4 à 5 fois pour une texture rugueuse, ou mélanger pendant 30 à 45 secondes pour une sauce plus lisse. Ne pas surbrouiller — une certaine texture est traditionnelle et désirable. Goûtez immédiatement et ajustez le sel et la chaux.",
+      "instructions": "Peler l'ail rôti et transférer tous les légumes rôtis et leurs jus accumulés dans un mélangeur. Ajouter la coriandre, le sel et le jus de lime. Pulse 4 à 5 fois pour une texture rugueuse, ou mélanger pendant 30 à 45 secondes pour une sauce plus lisse. Ne pas surbrouiller — une certaine texture est traditionnelle et désirable. Goûtez immédiatement et ajustez le sel et le citron vert.",
       "visualCue": {
         "primaryTarget": "Une sauce vert olive clair à moyen avec des taches visibles d'omble foncé et de coriandre. Pas complètement lisse — vous pouvez voir de petits morceaux partout. La couleur est vive et appétissante.",
         "spectrum": [
@@ -159,15 +159,15 @@ export default {
           {
             "state": "Overdone",
             "description": "Pale, mousseux, complètement lisse. La couleur est devenue gris-vert par suroxydation. La saveur Char a disparu.",
-            "action": "La saveur est encore bonne — servir comme une salsa de style plus lisse. Ajouter une touche de chaux pour raviver la luminosité."
+            "action": "La saveur est encore bonne — servir comme une salsa de style plus lisse. Ajouter une touche de citron vert pour raviver la luminosité."
           }
         ]
       },
-      "feelCue": "Une cuillère doit avoir un goût immédiat et lumineux: l'acide doit d'abord frapper, puis la chaleur se construit lentement. Si la chaleur vient en premier, ajoutez plus de chaux. S'il a un goût plat, ajouter du sel dans de minuscules pinces jusqu'à ce que la luminosité s'enflamme."
+      "feelCue": "Une cuillère doit avoir un goût immédiat et lumineux: l'acide doit d'abord frapper, puis la chaleur se construit lentement. Si la chaleur vient en premier, ajoutez plus de citron vert. S'il a un goût plat, ajouter du sel dans de minuscules pinces jusqu'à ce que la luminosité s'enflamme."
     },
     {
       "nodeId": "step_3",
-      "action": "Saison",
+      "action": "Assaisonner",
       "inputs": [
         "blended_salsa",
         "ing_06"
@@ -190,7 +190,7 @@ export default {
           {
             "state": "Overdone",
             "description": "Salé ou si épicé il est difficile à manger par la cuillère. Les lèvres bourdonnent immédiatement au contact.",
-            "action": "Pour le surselage : mélanger dans un autre tomatillo rôti ou une petite quantité d'avocat. Pour surpis: le même remède, ou servir avec créma."
+            "action": "Pour le surselage : mélanger dans un autre tomatillo rôti ou une petite quantité d'avocat. Pour surpis: le même remède, ou servir avec crème."
           }
         ]
       },

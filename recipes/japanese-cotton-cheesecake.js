@@ -157,7 +157,7 @@ export default {
     },
     {
       "nodeId": "step_2",
-      "action": "Whisk",
+      "action": "Fouetter",
       "inputs": [
         "cream_cheese_base",
         "ing_04",
@@ -191,7 +191,7 @@ export default {
     },
     {
       "nodeId": "step_3",
-      "action": "Whip",
+      "action": "Fouetter",
       "inputs": [
         "ing_07",
         "ing_08",
@@ -223,7 +223,7 @@ export default {
     },
     {
       "nodeId": "step_4",
-      "action": "Plier",
+      "action": "Incorporer délicatement",
       "inputs": [
         "yolk_batter",
         "swiss_meringue"
@@ -254,7 +254,7 @@ export default {
     },
     {
       "nodeId": "step_5",
-      "action": "Cuire",
+      "action": "Cuire au four",
       "inputs": [
         "cheesecake_batter"
       ],
