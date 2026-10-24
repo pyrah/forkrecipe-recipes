@@ -1,12 +1,12 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// RECIPE TEMPLATE — reference only. NOT loaded by the app.
+// MODÈLE DE RECETTE — référence uniquement. NON chargé par l’application.
 //
-// src/data/recipes/index.js explicitly skips this file. To author a real recipe:
-//   1. Copy this file to src/data/recipes/<slug>.js
+// src/data/recipes/index.js ignore explicitement ce fichier. Pour créer une recette :
+//   1. Copiez ce fichier vers src/data/recipes/<slug>.js
 //   2. `slug` MUST equal the filename (without .js). The glob loader keys on it.
 //   3. Fill in every field. Run `npm run validate` before committing.
 //
-// CONSTRAINTS the validator enforces (see scripts/validate-recipes.js):
+// CONTRAINTES vérifiées par le validateur (voir scripts/validate-recipes.js) :
 //   • slug === filename
 //   • category   ∈ keys of CATEGORIES   (src/data/categories.js)
 //   • author     ∈ keys of USERS        (src/data/users.js) — add yourself there
@@ -15,7 +15,7 @@
 //   • every processNode.inputs entry is either a real ingId OR a prior
 //     node's outputState (this drives the dependency graph + diff engine)
 //
-// FORKS: if this recipe derives from another, see the FORK block at the bottom.
+// VARIANTES : si cette recette dérive d’une autre, consultez le bloc dédié en bas.
 // Forks MUST reuse the parent's ingIds for unchanged ingredients so diff.js can
 // track add/remove/modify by stable id. Only new ingredients get new ids.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -26,13 +26,13 @@ export default {
   slug: "template-slug",                 // kebab-case, MUST match filename
   author: "ForkRecipe Kitchen",             // must be a key in src/data/users.js
 
-  title: "Recipe Title",
-  description: "One or two evocative, sensory sentences. This is the README.",
+  title: "Nom de la recette",
+  description: "Une ou deux phrases évocatrices et sensorielles qui présentent la recette.",
   cuisine: "Cuisine",                    // e.g. "French", "Italian", "Thai"
-  culture: "Region",                     // e.g. "Ligurian", "Central Thai"
+  culture: "Région",                     // e.g. "Ligurian", "Central Thai"
   category: "sauces",                    // must be an id in src/data/categories.js
 
-  tags: ["tag1", "tag2"],
+  tags: ["étiquette1", "étiquette2"],
   difficulty: 2,                         // 1 (easy) – 5 (hard)
   activeTime: "20 min",                  // human string
   totalTime: "45 min",                   // human string
@@ -45,7 +45,7 @@ export default {
   createdAt: "2025-01-01",               // YYYY-MM-DD
   updatedAt: "2025-01-01",               // YYYY-MM-DD
 
-  // All six axes required, each 0–5 (higher = more intense).
+  // Les six axes sont obligatoires, chacun de 0 à 5 (plus le score est élevé, plus la saveur est intense).
   flavorRadar: { sweet: 0, salty: 0, sour: 0, bitter: 0, umami: 0, heat: 0 },
 
   // role MUST be a key in RoleColor (schema.js): Structure, Hydration, Fat,
@@ -98,7 +98,7 @@ export default {
   ],
 
   // ───────────────────────────────────────────────────────────────────────────
-  // FORK-ONLY FIELDS — delete this block for original recipes.
+  // CHAMPS RÉSERVÉS AUX VARIANTES — supprimez ce bloc pour une recette originale.
   // Also required when forking:
   //   • register in src/data/forks.js → FORK_REGISTRY[parentSlug].push(thisSlug)
   //   • add a history in src/data/commits.js keyed by this slug, first commit

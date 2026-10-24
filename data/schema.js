@@ -26,12 +26,12 @@ export const RoleColor = {
 };
 
 export const FlavorAxes = [
-  { key: "sweet",  label: "Sweet" },
-  { key: "salty",  label: "Salty" },
-  { key: "sour",   label: "Sour" },
-  { key: "bitter", label: "Bitter" },
+  { key: "sweet",  label: "Sucré" },
+  { key: "salty",  label: "Salé" },
+  { key: "sour",   label: "Acide" },
+  { key: "bitter", label: "Amer" },
   { key: "umami",  label: "Umami" },
-  { key: "heat",   label: "Heat" },
+  { key: "heat",   label: "Piquant" },
 ];
 
 export const ActionIcons = {

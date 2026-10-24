@@ -1,49 +1,32 @@
-# ForkRecipe — Open Recipe Dataset
+# ForkRecipe — Catalogue de recettes ouvert
 
-The recipe catalog behind [ForkRecipe](https://forkrecipe.com) — "recipes with lineage."
+Le catalogue de recettes de [ForkRecipe](https://forkrecipe.com), « des recettes avec leur filiation ».
 
-ForkRecipe treats recipes like code: every dish traces back to a canonical **Mother Recipe**,
-and every variation is a **fork** with a real diff against its parent. This repo is just the
-data layer — the recipe content itself, structured and open.
+ForkRecipe traite les recettes comme du code : chaque plat remonte à une **recette mère** de référence, et chaque variante est un **fork** dont les différences avec la recette parente sont explicites. Ce dépôt ne contient que les données : les recettes sont structurées et ouvertes.
 
-## What's here
+## Contenu du dépôt
 
-916 recipes as schema-valid JS modules in [`recipes/`](./recipes), one file per dish, plus
-[`recipes/_template.js`](./recipes/_template.js) documenting the schema (ingredients with
-baker's-percentage-style ratios, structured process steps, flavor profile, cuisine/category
-tags, etc.).
+963 recettes sous forme de modules JavaScript conformes au schéma se trouvent dans [recipes/](./recipes), à raison d’un fichier par plat. Le fichier [recipes/_template.js](./recipes/_template.js) documente le schéma : proportions inspirées des pourcentages de boulanger, étapes de préparation structurées, profil aromatique, étiquettes de cuisine et de catégorie, etc.
 
-`data/` holds the small support tables the schema depends on — categories, the author
-registry, ingredient-role colors, and the actual fork lineage graph (`forks.js`) and
-per-recipe commit history (`commits.js`). `scripts/validate-recipes.js` checks every recipe
-against all of it:
+Le dossier data/ contient les tables auxiliaires utilisées par le schéma : catégories, registre des auteurs, couleurs des rôles d’ingrédients, graphe de filiation des forks (forks.js) et historique des commits par recette (commits.js). Le script scripts/validate-recipes.js vérifie l’ensemble :
 
-```
-npm run validate
-```
+    npm run validate
 
-No dependencies to install — it's plain Node. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for
-how to add or fork a recipe.
+Aucune dépendance à installer : le projet utilise uniquement Node.js. Consultez [CONTRIBUTING.md](./CONTRIBUTING.md) pour ajouter une recette ou créer une variante.
 
-Content is either originally authored for ForkRecipe or adapted from public-domain sources.
-All recipes here are licensed **CC BY-SA 4.0** (see [`LICENSE`](./LICENSE)) — reuse and remix
-freely, share alike, with attribution.
+Les contenus ont été créés pour ForkRecipe ou adaptés de sources du domaine public. Toutes les recettes sont sous licence **CC BY-SA 4.0** (voir [LICENSE](./LICENSE)) : réutilisez-les et adaptez-les librement, avec attribution et partage à l’identique.
 
-## What's not here
+## Ce que ce dépôt ne contient pas
 
-This is the dataset only — not the ForkRecipe app itself (the fork/diff engine, auth, the
-AI content pipeline, admin tooling). The live product is at
-[forkrecipe.com](https://forkrecipe.com).
+Ce dépôt contient uniquement le jeu de données, pas l’application ForkRecipe (moteur de forks et de différences, authentification, pipeline de contenu IA, outils d’administration). Le produit en ligne est disponible sur [forkrecipe.com](https://forkrecipe.com).
 
-## Licence and trademarks
+## Licence et marques
 
-The recipes are **CC BY-SA 4.0** ([`LICENSE`](./LICENSE)): credit ForkRecipe and share adaptations alike.
-Copyright © 2026 [FoodML](https://foodml.xyz) and the contributors in `data/users.js`.
+Les recettes sont sous licence **CC BY-SA 4.0** ([LICENSE](./LICENSE)) : créditez ForkRecipe et partagez les adaptations sous la même licence.  
+Copyright © 2026 [FoodML](https://foodml.xyz) et les contributeurs répertoriés dans data/users.js.
 
-"ForkRecipe", its logo and "FoodML" are trademarks of FoodML, and the licence doesn't cover them: say your work is
-*from* or *adapted from* the ForkRecipe dataset, but don't call it ForkRecipe. Details in [`NOTICE`](./NOTICE).
+« ForkRecipe », son logo et « FoodML » sont des marques de FoodML et ne sont pas couverts par la licence. Présentez votre travail comme *issu du jeu de données ForkRecipe* ou *adapté de celui-ci* ; ne l’appelez pas ForkRecipe. Consultez [NOTICE](./NOTICE) pour plus de détails.
 
-## Author
+## Auteur
 
-ForkRecipe is a [FoodML](https://foodml.xyz) project, built by [Michael Gutowski](https://www.linkedin.com/in/futurechef/) — a chef who also ships
-software. More at [chefmjg.com](https://chefmjg.com).
+ForkRecipe est un projet [FoodML](https://foodml.xyz), créé par [Michael Gutowski](https://www.linkedin.com/in/futurechef/), chef et développeur. En savoir plus sur [chefmjg.com](https://chefmjg.com).

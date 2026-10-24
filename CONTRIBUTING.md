@@ -1,63 +1,42 @@
-# Contributing to the ForkRecipe dataset
+# Contribuer au jeu de données ForkRecipe
 
-This is the recipe data behind [forkrecipe.com](https://forkrecipe.com) — not the app itself.
-Contributions here are recipes: new ones, fixes to existing ones, or forks (variations)
-of existing ones. All accepted content is licensed CC BY-SA 4.0, same as everything else
-in this repo.
+Ce dépôt contient les recettes de [forkrecipe.com](https://forkrecipe.com), pas l’application elle-même. Les contributions portent sur les recettes : nouvelles recettes, corrections ou variantes (forks) de recettes existantes. Tout contenu accepté est publié sous licence CC BY-SA 4.0, comme le reste du dépôt.
 
-## Before you start
+## Avant de commencer
 
-```
-git clone https://github.com/futurechef/forkrecipe-recipes
-cd forkrecipe-recipes
-npm run validate
-```
+    git clone https://github.com/futurechef/forkrecipe-recipes
+    cd forkrecipe-recipes
+    npm run validate
 
-No dependencies to install — the validator is plain Node (see `scripts/validate-recipes.js`).
-You should see `✓ 915 recipe(s) valid. No errors.` before you change anything.
+Aucune dépendance à installer : le validateur utilise uniquement Node.js (voir scripts/validate-recipes.js). Avant toute modification, vous devriez obtenir le résultat : « ✓ 963 recettes valides. Aucune erreur. »
 
-## Adding a new recipe
+## Ajouter une recette
 
-1. Copy `recipes/_template.js` to `recipes/<your-slug>.js` (kebab-case, must match the
-   `slug` field exactly — the validator checks this).
-2. Fill in every field. The template comments explain each one, including:
-   - `category` must be one of the ids in `data/categories.js`
-   - `author` must be a key in `data/users.js` — **add yourself there** with your name
-     and a `recipesAuthored` count (this repo credits real contributors by name, not
-     invented personas — see the note at the top of `users.js`)
-   - `flavorRadar` needs all six axes (`sweet salty sour bitter umami heat`), 0–5
-   - every `ingredient.role` must be a key in `RoleColor` (`data/schema.js`)
-   - every `processNode.inputs` entry must resolve to a real `ingId` or an earlier
-     step's `outputState` — this is what drives the ingredient dependency graph
-3. Run `npm run validate`. Fix anything it flags before opening a PR.
+1. Copiez recipes/_template.js vers recipes/<votre-slug>.js (en minuscules, avec des tirets ; il doit correspondre exactement au champ slug, vérifié par le validateur).
+2. Renseignez tous les champs. Les commentaires du modèle les expliquent, notamment :
+   - category doit être l’un des identifiants définis dans data/categories.js ;
+   - author doit être une clé de data/users.js : **ajoutez-y votre nom** et votre compteur recipesAuthored. Le dépôt crédite de vrais contributeurs, pas des pseudonymes inventés (voir la note en tête de users.js) ;
+   - flavorRadar doit contenir les six axes (sweet, salty, sour, bitter, umami, heat), chacun de 0 à 5 ;
+   - chaque ingredient.role doit correspondre à une clé de RoleColor dans data/schema.js ;
+   - chaque valeur de processNode.inputs doit désigner un ingId existant ou le outputState d’une étape précédente. Ces références alimentent le graphe de dépendance des ingrédients.
+3. Lancez npm run validate et corrigez les erreurs signalées avant d’ouvrir une pull request.
 
-## Forking an existing recipe
+## Créer une variante d’une recette existante
 
-If your recipe is a deliberate variation of one already here (a substitution, a technique
-change, a regional twist):
+Si votre recette est une variante délibérée (substitution, changement de technique ou adaptation régionale) :
 
-1. Copy the recipe you're forking, not the blank template, and keep its `ingId`s for any
-   ingredient you don't change — that's what lets the diff (and, in the live app, the fork
-   graph) track exactly what moved.
-2. Fill in the `FORK-ONLY FIELDS` block at the bottom of `_template.js`: `parentSlug`,
-   a one-line `forkNote` explaining what changed and why, and the `changes` counts.
-3. Register the fork in `data/forks.js` — add your slug to
-   `FORK_REGISTRY["<parent-slug>"]`.
-4. Add a commit entry in `data/commits.js` keyed by your slug — first entry
-   `type: "initial"`, message starting `"Fork: ..."`.
-5. `npm run validate` — it checks that every fork's `parentSlug` resolves, that it's
-   registered in `forks.js`, and warns (not fails) if it's missing from `commits.js`.
+1. Copiez la recette à modifier, pas le modèle vierge. Conservez les ingId des ingrédients inchangés : le système pourra ainsi suivre précisément les différences et, dans l’application, les liens entre variantes.
+2. Renseignez le bloc FORK-ONLY FIELDS en bas de _template.js : parentSlug, une phrase forkNote expliquant le changement et sa raison, ainsi que les compteurs changes.
+3. Inscrivez la variante dans data/forks.js en ajoutant son slug à FORK_REGISTRY["<slug-parent>"].
+4. Ajoutez une entrée à son nom dans data/commits.js. La première entrée doit avoir type: "initial" et un message commençant par "Fork: ...".
+5. Lancez npm run validate. Le validateur vérifie que parentSlug existe et que la variante est inscrite dans forks.js. Il signale, sans faire échouer la validation, une entrée manquante dans commits.js.
 
-## What makes a good PR here
+## Une bonne pull request
 
-- **Specific over generic.** `instructions` and `visualCue` fields exist so a cook who's
-  never made the dish can tell when a step is actually done — "cook until golden" is worse
-  than "6–8 minutes, until the edges pull from the pan and it smells nutty, not raw."
-- **Real, not scraped.** Content should be your own knowledge/testing or adapted from
-  public-domain sources — see the licensing notes in the README. Don't paste in copyrighted
-  recipe prose from a commercial site or cookbook still under copyright.
-- **One recipe (or one fork) per PR** unless they're genuinely related — makes review sane.
+- **Soyez précis.** Les champs instructions et visualCue doivent permettre à une personne qui ne connaît pas le plat de reconnaître la fin d’une étape. « Cuire jusqu’à ce que ce soit doré » est moins utile que « 6 à 8 minutes, jusqu’à ce que les bords se détachent de la poêle et que l’odeur soit grillée, sans note de farine crue ».
+- **Publiez du contenu original ou correctement adapté.** Les recettes doivent venir de vos connaissances ou essais, ou de sources du domaine public (voir les notes de licence dans le README). Ne copiez pas le texte protégé d’un site commercial ou d’un livre encore soumis au droit d’auteur.
+- **Une recette ou une variante par pull request**, sauf si plusieurs changements sont réellement liés. Cela facilite la relecture.
 
 ## Questions
 
-Open an issue, or reach out via [LinkedIn](https://www.linkedin.com/in/futurechef/).
+Ouvrez une issue ou contactez-nous sur [LinkedIn](https://www.linkedin.com/in/futurechef/).
